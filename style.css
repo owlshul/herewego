@@ -775,6 +775,118 @@ kbd {
   font-weight: var(--font-bold);
 }
 
+/* =============================================================================
+   SKILL-BASED COURSE (SBC) STYLES
+   ============================================================================= */
+.sbc-paper-entry {
+  border-top: 3.5px solid var(--color-powder-brown);
+}
+
+.sbc-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill-sbc {
+  background: rgba(168, 128, 97, 0.14);
+  color: var(--color-powder-brown);
+  border: 1px solid rgba(168, 128, 97, 0.3);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.sbc-prompt-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-s);
+  padding: 18px 20px;
+  margin-top: 14px;
+}
+
+.sbc-prompt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.94rem;
+  color: var(--text-heading);
+}
+
+.sbc-topic-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.sbc-topic-en, .sbc-topic-hi {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-s);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sbc-lang-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-powder-brown);
+}
+
+.sbc-question-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-body);
+  font-style: italic;
+  margin: 0;
+}
+
+.sbc-guidelines-box {
+  background: color-mix(in srgb, var(--color-powder-brown-bg) 30%, var(--bg-surface));
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-s);
+  padding: 12px 16px;
+}
+
+.sbc-guidelines-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-heading);
+  margin: 0 0 8px 0;
+}
+
+.sbc-guidelines-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.84rem;
+  color: var(--text-body);
+  line-height: 1.55;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+@media (max-width: 768px) {
+  .sbc-topic-box {
+    grid-template-columns: 1fr;
+  }
+}
+
 .section-subheading {
   font-family: var(--font-heading);
   font-size: 0.92rem;

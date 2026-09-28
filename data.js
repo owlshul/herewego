@@ -22,6 +22,18 @@ const portalData = {
   // ---------------------------------------------------------------------------
   verifiedAnnouncements: [
     {
+      id: "va-sbc-1",
+      title: "SBC Internal Assessment: Handwritten Assignment Due 20 Oct (12 Marks)",
+      date: "28 Sept 2026, 10:15 PM",
+      sender: "Official Notice",
+      source: "Official Announcements",
+      type: "assessment",
+      priority: true,
+      summary: "Handwritten Assignment for SBC-Elections and Data-Driven Electoral Analysis (7-8 pages). Submit PDF on Google Classroom by 20th October (12 Marks).",
+      exactQuote: "NOTICE @all Regarding Internal Assessment in SBC-Elections and Data-Driven Electoral Analysis. As part of the Internal Assessment please prepare a handwritten assignment on the topic: Why it is important to study elections from both micro and macro level? Discuss Various Methods of analysing Electoral Data and their importance in understanding voting behaviour. चुनाव का सूक्षम और वृहत दोनों स्तरो से अध्ययन करना क्यों महत्वपूर्ण है ? चुनावी आंकड़ों के विश्लेषण के विभिन्न तरीको और मतदाता व्यव्हार को समझने में उनके महत्व पर चर्चा करें। Submit it on Google Classroom by 20th October. Total 12 marks. 7 to 8 pages. It must be handwritten. Upload the pdf on Google Classroom after writing it.",
+      tags: ["#SBC", "#ElectionsData", "#InternalAssessment", "#20Oct", "#Handwritten"]
+    },
+    {
       id: "va-1",
       title: "DPII Continuous Assessment on 9 Oct (20 Marks)",
       date: "28 Sept 2026, 11:52 AM",
@@ -302,6 +314,41 @@ const portalData = {
         ]
       }
     ]
+  },
+
+  // ---------------------------------------------------------------------------
+  // SKILL-BASED COURSE (SBC) INTERNAL ASSESSMENT (Due 20 October 2026)
+  // ---------------------------------------------------------------------------
+  sbcAssessment: {
+    id: "sbc-elections-ia-20oct",
+    code: "PS-SBC 01",
+    name: "Elections and Data-Driven Electoral Analysis",
+    shortName: "SBC",
+    category: "Skill-Based Course (SBC)",
+    type: "Internal Assessment (Handwritten Assignment)",
+    deadlineFormatted: "Tuesday, 20 October 2026",
+    isoDeadline: "2026-10-20T23:59:59+05:30",
+    totalMarks: 12,
+    pageRequirement: "7 to 8 Pages (Strictly Handwritten)",
+    submissionMode: "Google Classroom (PDF Upload)",
+    faculty: "Dr. Sudhir Singh, Dr. Sitaram Kumbhakar, Dr. Anjali Yogi & Dr. Shivam Choudhary",
+    status: "active",
+    statusText: "Active Assignment · Due 20 Oct",
+    topicEnglish: "Why it is important to study elections from both micro and macro level? Discuss Various Methods of analysing Electoral Data and their importance in understanding voting behaviour.",
+    topicHindi: "चुनाव का सूक्षम और वृहत दोनों स्तरो से अध्ययन करना क्यों महत्वपूर्ण है ? चुनावी आंकड़ों के विश्लेषण के विभिन्न तरीको और मतदाता व्यव्हार को समझने में उनके महत्व पर चर्चा करें।",
+    guidelines: [
+      "Assignment must be strictly handwritten (7 to 8 pages in length).",
+      "Total 12 marks allocated for internal continuous assessment.",
+      "Scan clearly and compile into a single organized PDF file.",
+      "Upload the PDF directly to the official Google Classroom portal.",
+      "Submission deadline: Tuesday, 20th October 2026."
+    ],
+    citation: {
+      sender: "Official Notice",
+      date: "28 Sept 2026, 10:15 PM",
+      source: "Official Announcements",
+      quote: "NOTICE @all Regarding Internal Assessment in SBC-Elections and Data-Driven Electoral Analysis. As part of the Internal Assessment please prepare a handwritten assignment on the topic: Why it is important to study elections from both micro and macro level? Discuss Various Methods of analysing Electoral Data and their importance in understanding voting behaviour. चुनाव का सूक्षम और वृहत दोनों स्तरो से अध्ययन करना क्यों महत्वपूर्ण है ? चुनावी आंकड़ों के विश्लेषण के विभिन्न तरीको और मतदाता व्यव्हार को समझने में उनके महत्व पर चर्चा करें। Submit it on Google Classroom by 20th October. Total 12 marks. 7 to 8 pages. It must be handwritten. Upload the pdf on Google Classroom after writing it."
+    }
   },
 
   // ---------------------------------------------------------------------------

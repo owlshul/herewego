@@ -101,7 +101,7 @@ function renderAssessmentsView() {
 
   const papers = portalData.upcomingCycle.papers;
 
-  container.innerHTML = papers.map(paper => {
+  const corePapersHtml = papers.map(paper => {
     // Footnote Note in italics (e.g. Unit II exclusion)
     const fn = paper.footnoteNote;
     const fnAttrs = fn && fn.citation ? `
@@ -244,7 +244,85 @@ function renderAssessmentsView() {
       </article>
     `;
   }).join('');
-}
+
+    // Skill-Based Course (SBC) Internal Assessment Card
+    let sbcHtml = '';
+    const sbc = portalData.sbcAssessment;
+    if (sbc) {
+      const sbcCit = sbc.citation;
+      const sbcCitAttrs = sbcCit ? `
+        data-citation-sender="${escapeHtml(sbcCit.sender)}"
+        data-citation-date="${escapeHtml(sbcCit.date)}"
+        data-citation-source="${escapeHtml(sbcCit.source)}"
+        data-citation-quote="${escapeHtml(sbcCit.quote)}"
+      ` : '';
+
+      sbcHtml = `
+        <article class="paper-entry sbc-paper-entry" data-paper-code="PS-SBC 01 sbc">
+          <div class="sbc-badge-row">
+            <span class="pill pill-sbc">Skill-Based Course (SBC)</span>
+            <span class="status-pill status-found" style="font-size: 0.74rem;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              Due: ${escapeHtml(sbc.deadlineFormatted)}
+            </span>
+          </div>
+
+          <div class="paper-header" style="margin-top: 10px;">
+            <div class="paper-title-wrap">
+              <h3 class="paper-title">
+                <span class="code">${escapeHtml(sbc.code)}:</span> ${escapeHtml(sbc.name)}
+              </h3>
+              <div class="paper-meta-strip">
+                <span class="meta-item"><strong>Due Date:</strong> ${escapeHtml(sbc.deadlineFormatted)}</span>
+                <span class="meta-dot">·</span>
+                <span class="meta-item"><strong>Marks:</strong> ${escapeHtml(sbc.totalMarks)} Marks</span>
+                <span class="meta-dot">·</span>
+                <span class="meta-item"><strong>Length:</strong> ${escapeHtml(sbc.pageRequirement)}</span>
+                <span class="meta-dot">·</span>
+                <span class="meta-item"><strong>Submission:</strong> ${escapeHtml(sbc.submissionMode)}</span>
+                <span class="meta-dot">·</span>
+                <span class="meta-item"><strong>Faculty:</strong> ${escapeHtml(sbc.faculty)}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Assignment Prompt Card -->
+          <div class="sbc-prompt-card">
+            <div class="sbc-prompt-header">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                <strong>Internal Assessment Assignment Topic (Handwritten Assignment)</strong>
+              </div>
+              ${sbcCit ? `<button type="button" class="proof-qmark citation-trigger" ${sbcCitAttrs} title="View WhatsApp Notice Proof" aria-label="View WhatsApp Notice Proof">?</button>` : ''}
+            </div>
+
+            <div class="sbc-topic-box">
+              <div class="sbc-topic-en">
+                <span class="sbc-lang-tag">English</span>
+                <p class="sbc-question-text">“${escapeHtml(sbc.topicEnglish)}”</p>
+              </div>
+              <div class="sbc-topic-hi">
+                <span class="sbc-lang-tag">हिन्दी (Hindi)</span>
+                <p class="sbc-question-text">“${escapeHtml(sbc.topicHindi)}”</p>
+              </div>
+            </div>
+
+            <div class="sbc-guidelines-box">
+              <h5 class="sbc-guidelines-title">Submission Instructions &amp; Checklist:</h5>
+              <ul class="sbc-guidelines-list">
+                <li><strong>Strictly Handwritten:</strong> Write the assignment by hand (length: <strong>7 to 8 pages</strong>).</li>
+                <li><strong>Weightage:</strong> Total <strong>12 Marks</strong>.</li>
+                <li><strong>Submission:</strong> Scan your handwritten sheets into a clean single PDF and upload it to <strong>Google Classroom</strong>.</li>
+                <li><strong>Deadline:</strong> <strong>Tuesday, 20 October 2026</strong>.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    container.innerHTML = corePapersHtml + sbcHtml;
+  }
 
 // 2. Master Drives & Important Links View (Categorized)
 function renderDrivesView() {
