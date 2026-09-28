@@ -139,7 +139,6 @@ const portalData = {
         status: "confirmed",
         statusText: "Syllabus Confirmed",
         faculty: "Prof. Ujjwal Kumar Singh",
-        syllabusPdf: "syllabus/CC2_Democracy_and_Political_Institutions.pdf",
         clarificationCallout: null,
         footnoteNote: {
           text: "Unit II (Dr. Garima Das and Dr. Binit Kumar Sinha) is excluded from this assessment. This test strictly examines Prof. Ujjwal Kumar Singh's portion (Unit I & Unit IV).",
@@ -225,7 +224,6 @@ const portalData = {
         status: "confirmed",
         statusText: "Syllabus Confirmed",
         faculty: "Dr. Ningthoujam Koiremba Singh",
-        syllabusPdf: "syllabus/CC1_Key_Texts_in_Political_Philosophy.pdf",
         clarificationCallout: null,
         footnoteNote: null,
         syllabusCitation: {
@@ -289,7 +287,6 @@ const portalData = {
         status: "pending",
         statusText: "Not notified yet",
         faculty: "To be informed",
-        syllabusPdf: "syllabus/CC3_Theories_of_International_Relations.pdf",
         clarificationCallout: null,
         syllabusTopics: [
           {
@@ -445,8 +442,8 @@ const portalData = {
 
     {
       categoryId: "syllabi",
-      categoryTitle: "Official Course Syllabi (Embedded PDFs)",
-      categoryDesc: "Complete official department syllabus documents for Sem 1 core papers.",
+      categoryTitle: "Official Course Syllabi & Verified Readings",
+      categoryDesc: "Complete official department syllabus text & verified drive reading links.",
       items: [
         {
           id: "syllabus-card-101",
@@ -454,10 +451,8 @@ const portalData = {
           name: "PS-CC 101: Key Texts in Political Philosophy",
           curatorLabel: "Official Syllabus",
           curators: "Department of Political Science, DU",
-          url: "syllabus/CC1_Key_Texts_in_Political_Philosophy.pdf",
-          badge: "Official Syllabus PDF",
-          isPdf: true,
-          btnText: "Read Embedded"
+          badge: "Official Verified Syllabus",
+          isSyllabusText: true
         },
         {
           id: "syllabus-card-102",
@@ -465,10 +460,8 @@ const portalData = {
           name: "PS-CC 102: Democracy & Political Institutions in India",
           curatorLabel: "Official Syllabus",
           curators: "Department of Political Science, DU",
-          url: "syllabus/CC2_Democracy_and_Political_Institutions.pdf",
-          badge: "Official Syllabus PDF",
-          isPdf: true,
-          btnText: "Read Embedded"
+          badge: "Official Verified Syllabus",
+          isSyllabusText: true
         },
         {
           id: "syllabus-card-103",
@@ -476,10 +469,8 @@ const portalData = {
           name: "PS-CC 103: Theories of International Relations",
           curatorLabel: "Official Syllabus",
           curators: "Department of Political Science, DU",
-          url: "syllabus/CC3_Theories_of_International_Relations.pdf",
-          badge: "Official Syllabus PDF",
-          isPdf: true,
-          btnText: "Read Embedded"
+          badge: "Official Verified Syllabus",
+          isSyllabusText: true
         }
       ]
     },
@@ -620,5 +611,4 @@ const portalData = {
         ]
       }
     ]
-  }
-};
+  }};

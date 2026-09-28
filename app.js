@@ -267,18 +267,32 @@ function renderDrivesView() {
       </div>
       <div class="drives-clean-grid">
         ${section.items.map(drive => {
+          if (drive.isSyllabusText) {
+            return `
+              <div class="drive-box drive-box--syllabus" id="${drive.id}" data-paper-code="${drive.paperCode || ''}" style="grid-column: 1 / -1;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
+                  <div>
+                    <span class="pill" style="margin-bottom: 6px; display: inline-block;">${drive.badge}</span>
+                    <h3 class="drive-box-title">${escapeHtml(drive.name)}</h3>
+                    <p class="drive-box-curator">${drive.curatorLabel || 'Curator'}: <strong>${escapeHtml(drive.curators)}</strong></p>
+                  </div>
+                  <button type="button" class="btn-drive-main btn-syllabus-toggle" id="btn-fs-${drive.id}" onclick="toggleDrivesSyllabus('${escapeJsString(drive.paperCode)}')" style="width: auto;">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                    <span>View Full Syllabus &amp; Drive Readings</span>
+                    <span class="toggle-arrow" id="arrow-fs-${drive.id}">▾</span>
+                  </button>
+                </div>
+                <div class="drives-full-syllabus-panel" id="panel-fs-${drive.id}" style="display: none; margin-top: 14px;">
+                  <div class="full-syllabus-body">
+                    ${(portalData.fullSyllabi && portalData.fullSyllabi[drive.paperCode]) || '<p>Syllabus content loading...</p>'}
+                  </div>
+                </div>
+              </div>
+            `;
+          }
+
           const isPdf = !!drive.isPdf;
-          const actionHtml = isPdf ? `
-            <div class="drive-box-actions">
-              <button type="button" class="btn-drive-main btn-drive-embed" onclick="openPdfModal('${escapeJsString(drive.url)}', '${escapeJsString(drive.name)}')">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                <span>Read Embedded</span>
-              </button>
-              <a href="${drive.url}" target="_blank" rel="noopener noreferrer" class="btn-drive-sub" title="Open PDF in new tab" aria-label="Open PDF in new tab">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              </a>
-            </div>
-          ` : `
+          const actionHtml = `
             <a href="${drive.url}" target="_blank" rel="noopener noreferrer" class="btn-drive-main">
               <span>${escapeHtml(drive.btnText || 'Open Link')}</span>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
@@ -286,7 +300,7 @@ function renderDrivesView() {
           `;
 
           return `
-            <div class="drive-box${isPdf ? ' drive-box--pdf' : ''}" id="${drive.id}" data-paper-code="${drive.paperCode || ''}">
+            <div class="drive-box" id="${drive.id}" data-paper-code="${drive.paperCode || ''}">
               <div>
                 <span class="pill" style="margin-bottom: 6px; display: inline-block;">${drive.badge}</span>
                 <h3 class="drive-box-title">${escapeHtml(drive.name)}</h3>
@@ -806,32 +820,48 @@ function toggleUnitReadings(unitKey) {
 }
 
 // -----------------------------------------------------------------------------
-// REDIRECT FROM SYLLABUS HEADING TO DRIVES & LINKS SYLLABUS CARD
+// TOGGLE FULL COURSE SYLLABUS & VERIFIED DRIVE READINGS IN DRIVES SECTION
+// -----------------------------------------------------------------------------
+function toggleDrivesSyllabus(paperCode, forceOpen) {
+  const card = document.querySelector(`.drive-box[data-paper-code="${paperCode}"]`);
+  if (!card) return;
+
+  const cardId = card.id;
+  const panel = document.getElementById(`panel-fs-${cardId}`);
+  const arrow = document.getElementById(`arrow-fs-${cardId}`);
+  const btn = document.getElementById(`btn-fs-${cardId}`);
+
+  if (!panel) return;
+
+  const shouldOpen = forceOpen ? true : panel.style.display === 'none';
+  panel.style.display = shouldOpen ? 'block' : 'none';
+
+  if (arrow) arrow.textContent = shouldOpen ? '▴' : '▾';
+  if (btn) {
+    btn.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+    if (shouldOpen) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// REDIRECT / SCROLL TO FULL SYLLABUS CARD IN DRIVES SECTION
 // -----------------------------------------------------------------------------
 function navigateToSyllabusCard(paperCode) {
   const drivesTab = document.querySelector('.tab-btn[data-view="drives"]');
   if (drivesTab) drivesTab.click();
 
   setTimeout(() => {
-    let targetCard = null;
-    if (paperCode) {
-      targetCard = document.querySelector(`.drive-box[data-paper-code="${paperCode}"]`);
-    }
-    if (!targetCard) {
-      // Fallback search
-      const cards = document.querySelectorAll('.drive-box--pdf');
-      for (const c of cards) {
-        if (c.textContent.includes(paperCode)) {
-          targetCard = c;
-          break;
-        }
-      }
-    }
+    let targetCard = document.querySelector(`.drive-box[data-paper-code="${paperCode}"]`);
     if (!targetCard) {
       targetCard = document.getElementById('cat-syllabi');
     }
 
     if (targetCard) {
+      toggleDrivesSyllabus(paperCode, true);
       targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
       targetCard.classList.add('pulse-card-highlight');
       setTimeout(() => {
@@ -840,107 +870,5 @@ function navigateToSyllabusCard(paperCode) {
     }
   }, 120);
 }
-
-// -----------------------------------------------------------------------------
-// EMBEDDED PDF MODAL VIEWER (PDF.js Canvas Renderer)
-// -----------------------------------------------------------------------------
-let currentPdfLoadingTask = null;
-
-async function openPdfModal(url, title) {
-  const modal = document.getElementById('pdf-modal');
-  const container = document.getElementById('pdf-canvas-container');
-  const titleEl = document.getElementById('pdf-modal-title');
-  const extLink = document.getElementById('pdf-modal-external');
-  const fallbackLink = document.getElementById('pdf-modal-fallback-link');
-
-  if (!modal || !container) return;
-
-  if (titleEl) titleEl.textContent = title || 'Official Syllabus PDF';
-  if (extLink) extLink.href = url;
-  if (fallbackLink) fallbackLink.href = url;
-
-  modal.classList.add('pdf-modal--visible');
-  modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-
-  container.innerHTML = '<div class="pdf-loading-notice"><div class="pdf-loading-spinner"></div><span>Loading Syllabus PDF...</span></div>';
-
-  if (!window.pdfjsLib) {
-    // Fallback if pdf.js script didn't load
-    container.innerHTML = `<iframe src="${url}" class="pdf-modal-iframe" title="PDF Reader"></iframe>`;
-    return;
-  }
-
-  try {
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-    if (currentPdfLoadingTask) {
-      currentPdfLoadingTask.destroy();
-    }
-    currentPdfLoadingTask = pdfjsLib.getDocument(url);
-    const pdf = await currentPdfLoadingTask.promise;
-
-    container.innerHTML = '';
-    const dpr = window.devicePixelRatio || 1;
-
-    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-      const page = await pdf.getPage(pageNum);
-      // High-DPI scale for sharp text
-      const renderScale = 1.8;
-      const viewport = page.getViewport({ scale: renderScale });
-
-      const canvas = document.createElement('canvas');
-      canvas.className = 'pdf-page-canvas';
-      const ctx = canvas.getContext('2d');
-      canvas.height = viewport.height;
-      canvas.width = viewport.width;
-
-      const pageWrap = document.createElement('div');
-      pageWrap.className = 'pdf-page-wrap';
-      pageWrap.appendChild(canvas);
-
-      if (pdf.numPages > 1) {
-        const pageBadge = document.createElement('div');
-        pageBadge.className = 'pdf-page-badge';
-        pageBadge.textContent = `Page ${pageNum} of ${pdf.numPages}`;
-        pageWrap.appendChild(pageBadge);
-      }
-
-      container.appendChild(pageWrap);
-
-      await page.render({ canvasContext: ctx, viewport: viewport }).promise;
-    }
-
-  } catch (err) {
-    console.error('PDF.js render error:', err);
-    container.innerHTML = `
-      <div class="pdf-fallback-container">
-        <p>Could not render PDF inline automatically on this browser.</p>
-        <a href="${url}" target="_blank" rel="noopener noreferrer" class="btn-pdf-fallback-big">Open Full PDF in New Tab ↗</a>
-      </div>
-    `;
-  }
-}
-
-function closePdfModal() {
-  const modal = document.getElementById('pdf-modal');
-  const container = document.getElementById('pdf-canvas-container');
-  if (!modal) return;
-
-  modal.classList.remove('pdf-modal--visible');
-  modal.setAttribute('aria-hidden', 'true');
-  if (container) container.innerHTML = '';
-  if (currentPdfLoadingTask) {
-    currentPdfLoadingTask.destroy();
-    currentPdfLoadingTask = null;
-  }
-  document.body.style.overflow = '';
-}
-
-// Global ESC key listener to close PDF modal
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    closePdfModal();
-  }
-});
 
 

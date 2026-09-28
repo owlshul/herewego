@@ -19,7 +19,7 @@
   <meta name="twitter:description" content="Test ka info abhi tak. Last updated: 28 September 2026, 1:40 PM." />
   <meta name="twitter:image"       content="icon-512.png" />
 
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="icon-192.png" />
@@ -239,33 +239,6 @@
     </div>
   </div>
 
-  <!-- Embedded PDF Reader Modal -->
-  <div id="pdf-modal" class="pdf-modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="pdf-modal-backdrop" onclick="closePdfModal()"></div>
-    <div class="pdf-modal-dialog">
-      <div class="pdf-modal-header">
-        <div class="pdf-modal-title-wrap">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-          <span id="pdf-modal-title" class="pdf-modal-title">Official Syllabus PDF</span>
-        </div>
-        <div class="pdf-modal-actions">
-          <a id="pdf-modal-external" href="#" target="_blank" rel="noopener noreferrer" class="btn-pdf-external" title="Open full PDF in new tab">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            <span class="hide-mobile">Open Full PDF</span>
-          </a>
-          <button type="button" class="btn-pdf-close" onclick="closePdfModal()" aria-label="Close PDF Viewer" title="Close (Esc)">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-          </button>
-        </div>
-      </div>
-      <div class="pdf-modal-body">
-        <div id="pdf-canvas-container" class="pdf-canvas-container"></div>
-      </div>
-      <div class="pdf-modal-footer hide-desktop">
-        <a id="pdf-modal-fallback-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-pdf-fallback">Tap here to open full PDF directly ↗</a>
-      </div>
-    </div>
-  </div>
 
   <!-- Global Toast Notification -->
   <div id="global-toast" class="toast"></div>
@@ -283,8 +256,8 @@
     </div>
   </div>
 
-  <script src="data.js?v=3"></script>
-  <script src="app.js?v=3"></script>
+  <script src="data.js?v=5"></script>
+  <script src="app.js?v=5"></script>
   <script>
     // Service Worker
     if ('serviceWorker' in navigator) {
