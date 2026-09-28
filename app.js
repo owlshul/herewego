@@ -823,7 +823,7 @@ function openSyllabusModal(paperCode) {
 
   if (!modal || !contentEl) return;
 
-  const syllabusHtml = (portalData.fullSyllabi && portalData.fullSyllabi[paperCode]) || '<p>Syllabus content unavailable.</p>';
+  const syllabusHtml = (portalData.fullSyllabi && portalData.fullSyllabi[paperCode]) || (typeof courseSyllabiData !== 'undefined' && courseSyllabiData[paperCode]) || '<p>Syllabus content unavailable.</p>';
   
   if (titleEl) {
     titleEl.textContent = paperCode ? `${paperCode} — Official Course Syllabus & Drive Readings` : 'Official Course Syllabus';
