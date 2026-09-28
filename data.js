@@ -410,7 +410,7 @@ const portalData = {
   drivesSections: [
     {
       categoryId: "drives",
-      categoryTitle: "📂 Master Course Drives",
+      categoryTitle: "Master Course Drives",
       categoryDesc: "Central CR drive, faculty shared drives, and semester-wide archives.",
       items: [
         {
@@ -445,7 +445,7 @@ const portalData = {
 
     {
       categoryId: "syllabi",
-      categoryTitle: "📜 Official Course Syllabi (Embedded PDFs)",
+      categoryTitle: "Official Course Syllabi (Embedded PDFs)",
       categoryDesc: "Complete official department syllabus documents for Sem 1 core papers.",
       items: [
         {
@@ -486,7 +486,7 @@ const portalData = {
 
     {
       categoryId: "portals",
-      categoryTitle: "🌐 Official Portals & Community Groups",
+      categoryTitle: "Official Portals & Community Groups",
       categoryDesc: "Official DU department portal and batch discussion groups.",
       items: [
         {

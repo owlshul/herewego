@@ -1749,7 +1749,16 @@ kbd {
   font-weight: var(--font-bold);
   color: var(--text-heading);
   margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+
+.drives-category-title svg {
+  color: var(--color-powder-brown);
+  flex-shrink: 0;
+}
+
 
 .drives-category-desc {
   font-size: 0.82rem;
