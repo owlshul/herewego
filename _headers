@@ -1,0 +1,12 @@
+# Service Worker should never be cached on CDN
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+  Expires: 0
+
+# HTML, JS, CSS revalidation
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/*.js
+  Cache-Control: public, max-age=0, must-revalidate
+/*.css
+  Cache-Control: public, max-age=0, must-revalidate

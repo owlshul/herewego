@@ -1,11 +1,11 @@
 // herewego. — minimal service worker for PWA installability
-const CACHE = 'herewego-v2';
+const CACHE = 'herewego-v3';
 const ASSETS = [
   '/',
   '/index.html',
-  '/style.css',
-  '/app.js',
-  '/data.js',
+  '/style.css?v=3',
+  '/app.js?v=3',
+  '/data.js?v=3',
   '/icon-192.png',
   '/icon-512.png'
 ];
@@ -25,9 +25,22 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
-  // Network-first for navigation, cache-first for assets
-  if (e.request.mode === 'navigate') {
-    e.respondWith(fetch(e.request).catch(() => caches.match('/index.html')));
+  // Network-first for navigation, app script & styles so updates load instantly
+  const url = e.request.url;
+  const isDynamicAsset = e.request.mode === 'navigate' || url.includes('app.js') || url.includes('data.js') || url.includes('style.css');
+
+  if (isDynamicAsset) {
+    e.respondWith(
+      fetch(e.request)
+        .then(response => {
+          if (response && response.status === 200) {
+            const resClone = response.clone();
+            caches.open(CACHE).then(cache => cache.put(e.request, resClone));
+          }
+          return response;
+        })
+        .catch(() => caches.match(e.request))
+    );
   } else {
     e.respondWith(
       caches.match(e.request).then(cached => cached || fetch(e.request))
