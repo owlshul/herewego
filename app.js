@@ -240,7 +240,7 @@ function renderAssessmentsView() {
   }).join('');
 }
 
-// 2. Master Drives Hub View
+// 2. Master Drives & Important Links View
 function renderDrivesView() {
   const container = document.getElementById('drives-grid-container');
   if (!container) return;
@@ -250,16 +250,17 @@ function renderDrivesView() {
       <div>
         <span class="pill" style="margin-bottom: 6px; display: inline-block;">${drive.badge}</span>
         <h3 class="drive-box-title">${escapeHtml(drive.name)}</h3>
-        <p class="drive-box-curator">Curator: <strong>${escapeHtml(drive.curators)}</strong></p>
+        <p class="drive-box-curator">${drive.curatorLabel || 'Curator'}: <strong>${escapeHtml(drive.curators)}</strong></p>
         <p class="drive-box-desc">${escapeHtml(drive.description)}</p>
       </div>
       <a href="${drive.url}" target="_blank" rel="noopener noreferrer" class="btn-drive-main">
-        <span>Open Drive Repository</span>
+        <span>${escapeHtml(drive.btnText || 'Open Link')}</span>
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
       </a>
     </div>
   `).join('');
 }
+
 
 // 3. Merged Announcements & Verified Citations View
 function renderMergedNoticesView() {

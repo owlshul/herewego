@@ -1,5 +1,5 @@
 // herewego. — minimal service worker for PWA installability
-const CACHE = 'herewego-v1';
+const CACHE = 'herewego-v2';
 const ASSETS = [
   '/',
   '/index.html',

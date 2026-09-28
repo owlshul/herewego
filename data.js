@@ -402,32 +402,58 @@ const portalData = {
   },
 
   // ---------------------------------------------------------------------------
-  // MASTER DRIVES
+  // MASTER DRIVES & IMPORTANT LINKS
   // ---------------------------------------------------------------------------
   masterDrives: [
     {
       id: "drive-central",
-      name: "North Campus Central Readings Drive",
-      curators: "CR Sujal Vishwakarma",
+      name: "CR Maintained Drive (North Campus)",
+      curatorLabel: "Maintained by",
+      curators: "Sujal Vishwakarma / CRs",
       url: "https://drive.google.com/drive/folders/14aDMmng2MdpaOqH-WRKY724J598sfuJx",
-      description: "Main central repository managed by CRs, containing organized subfolders for CC-101, CC-102, and CC-103.",
-      badge: "Master Central Repository"
+      description: "Central repository managed by CRs, containing organized subfolders for CC-101, CC-102, and CC-103.",
+      badge: "CR Maintained Drive",
+      btnText: "Open Drive Repository"
     },
     {
       id: "drive-dpii-garima",
-      name: "DPII Dedicated Drive (Dr. Garima Das)",
-      curators: "Dr. Garima Das",
+      name: "Faculty Shared Drive (DPII)",
+      curatorLabel: "Shared by",
+      curators: "Dr. Garima Das · Suggested by Prof. Ujjwal Kumar Singh",
       url: "https://drive.google.com/drive/folders/1gL9IVzLxIhe4BSoghS_FbXaAT6qkcTjZ",
-      description: "Standalone repository shared by Dr. Garima Das covering full book scans and essential readings for Indian Democracy & Institutions.",
-      badge: "DPII Dedicated"
+      description: "Shared by Dr. Garima Das covering textbook scans and essential readings for Indian Democracy & Institutions.",
+      badge: "Faculty Shared Drive",
+      btnText: "Open Drive Repository"
     },
     {
       id: "drive-master-sem1",
-      name: "Master Semester 1 All-in-One Drive",
+      name: "Batch Master Archive Drive (Sem 1)",
+      curatorLabel: "Curator",
       curators: "Batch Archive",
       url: "https://drive.google.com/drive/folders/1NDn8uOtrcdISW99hR9mB4y9yGxVve0uV",
       description: "Comprehensive batch-wide repository organized systematically across all core semester 1 subjects.",
-      badge: "Complete Sem 1 Archive"
+      badge: "Archive Drive",
+      btnText: "Open Drive Repository"
+    },
+    {
+      id: "link-dept-website",
+      name: "Department of Political Science, DU",
+      curatorLabel: "Official Portal",
+      curators: "University of Delhi",
+      url: "https://polscience.du.ac.in/",
+      description: "Official department website for notices, faculty contact directories, examination circulars, and university guidelines.",
+      badge: "Official Website",
+      btnText: "Visit Department Website"
+    },
+    {
+      id: "link-unfiltered-wa",
+      name: "North & South Campus Unfiltered Chat",
+      curatorLabel: "Community Group",
+      curators: "North & South Campus Batch",
+      url: "https://chat.whatsapp.com/KZ9uTlm2BYULtVyTEQ7tNQ?mode=gi_t",
+      description: "Unofficial and unfiltered WhatsApp discussion group for both North and South Campus students (active when CRs close official groups).",
+      badge: "WhatsApp Group",
+      btnText: "Join WhatsApp Group"
     }
   ],
 
