@@ -1605,6 +1605,129 @@ kbd {
 /* =============================================================================
    DIRECTORY (WHO'S WHO) — BY PAPER & STREAMLINED CRs
    ============================================================================= */
+.curator-card {
+  background: linear-gradient(135deg, var(--bg-surface) 0%, color-mix(in srgb, var(--color-powder-brown-bg) 40%, var(--bg-surface)) 100%);
+  border: 1.5px solid var(--color-powder-brown);
+  border-radius: var(--radius-m);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  box-shadow: 0 3px 12px rgba(168, 128, 97, 0.12);
+  margin-bottom: var(--space-l);
+}
+
+.curator-card-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.curator-header-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.curator-avatar {
+  font-size: 1.5rem;
+  line-height: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.curator-name-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.curator-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  margin: 0;
+}
+
+.curator-badge-me {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: var(--color-powder-brown);
+  color: #ffffff;
+  padding: 1px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.curator-tagline {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-powder-brown);
+  background: var(--color-powder-brown-bg);
+  border: 1px solid rgba(168, 128, 97, 0.25);
+  padding: 1px 7px;
+  border-radius: 4px;
+}
+
+.curator-role {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.curator-note {
+  font-size: 0.84rem;
+  color: var(--text-body);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.curator-note svg {
+  color: var(--color-powder-brown);
+  flex-shrink: 0;
+}
+
+.btn-wa-curator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: #ffffff;
+  font-size: 0.84rem;
+  font-weight: 700;
+  padding: 9px 16px;
+  border-radius: var(--radius-s);
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
+  transition: all var(--trans-fast);
+  white-space: nowrap;
+}
+
+.btn-wa-curator:hover {
+  background: #20bd5a;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+  text-decoration: none;
+}
+
 .cr-etiquette-callout {
   margin-bottom: var(--space-m);
 }
@@ -2346,31 +2469,66 @@ kbd {
 }
 
 /* =============================================================================
-   RESPONSIVE DESIGN & MOBILE OPTIMIZATION
+   RESPONSIVE DESIGN & MOBILE OPTIMIZATION (COMPACT & FAST SCROLLING)
    ============================================================================= */
 @media (max-width: 768px) {
+  :root {
+    --space-xl: 18px;
+    --space-l: 14px;
+    --space-m: 10px;
+    --space-s: 6px;
+    --space-xs: 4px;
+  }
+
+  body {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
   .container {
-    padding: 0 16px;
+    padding: 0 12px;
+  }
+
+  /* Section Intro Bars & Titles */
+  .section-intro-bar {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+  }
+  .section-intro-bar h2 {
+    font-size: 1.18rem;
+    margin-bottom: 2px;
+  }
+  .section-desc {
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+  .sub-filter-row {
+    margin-bottom: 12px;
+    gap: 4px;
+  }
+  .chip {
+    font-size: 0.74rem;
+    padding: 3px 8px;
   }
 
   /* Navbar */
   .navbar-inner {
-    height: 56px;
+    height: 50px;
     gap: 8px;
   }
   .brand-title {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
   .search-container {
     flex-shrink: 1;
   }
   .search-input {
-    width: 125px;
-    font-size: 0.82rem;
-    padding-right: 12px;
+    width: 110px;
+    font-size: 0.78rem;
+    padding: 5px 8px 5px 28px;
   }
   .search-input:focus {
-    width: 175px;
+    width: 150px;
   }
   .search-kbd {
     display: none;
@@ -2378,44 +2536,63 @@ kbd {
 
   /* Hero & Meme */
   .hero-section {
-    padding: var(--space-m) 0 var(--space-s);
+    padding: 10px 0 6px;
   }
   .hero-meme-gif {
-    max-width: 240px;
+    max-width: 200px;
     height: auto;
-    max-height: 85px;
+    max-height: 70px;
   }
   .hero-quote {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+  }
+  .hero-subtitle {
+    font-size: 0.76rem;
+  }
+  .hero-batch-strip {
+    margin-top: 4px;
+    gap: 6px;
+    font-size: 0.72rem;
   }
 
   /* Countdown Strip */
   .countdown-strip {
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
-    padding: 12px 16px;
+    gap: 8px;
+    padding: 8px 12px;
+    margin-top: 8px;
+  }
+  .countdown-label-group {
+    gap: 4px;
+  }
+  .countdown-label-group strong {
+    font-size: 0.82rem;
+  }
+  .countdown-label-group span {
+    font-size: 0.72rem;
   }
   .countdown-timer {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 6px;
+    gap: 4px;
   }
   .timer-slot {
     flex: 1;
     min-width: 0;
-    padding: 8px 4px;
+    padding: 5px 2px;
     text-align: center;
   }
   .timer-slot .val {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
   }
   .timer-slot .lbl {
-    font-size: 0.62rem;
+    font-size: 0.58rem;
   }
 
-  /* Navigation Tabs: Fully visible 3 tabs without horizontal scrolling */
+  /* Navigation Tabs */
   .tab-label-full {
     display: none;
   }
@@ -2424,7 +2601,7 @@ kbd {
   }
   .tabs-scroll-wrap {
     margin: 0;
-    padding: 6px 0;
+    padding: 4px 0;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 4px;
@@ -2436,8 +2613,8 @@ kbd {
     min-width: 0;
     justify-content: center;
     text-align: center;
-    padding: 7px 2px;
-    font-size: 0.76rem;
+    padding: 6px 2px;
+    font-size: 0.74rem;
     gap: 4px;
     white-space: nowrap;
     border-radius: var(--radius-xs);
@@ -2446,84 +2623,370 @@ kbd {
   }
   .tab-btn svg {
     flex-shrink: 0;
-    width: 12px;
-    height: 12px;
+    width: 11px;
+    height: 11px;
   }
 
   .hide-mobile {
     display: none;
   }
 
-  /* Assessments & Papers */
+  /* =========================================================================
+     COMPACT ASSESSMENTS VIEW
+     ========================================================================= */
   .paper-card,
   .paper-entry {
-    padding: 14px 12px;
-    margin-bottom: 14px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
   }
   .paper-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
-    margin-bottom: 6px;
+    gap: 2px;
+    margin-bottom: 4px;
   }
   .paper-title {
-    font-size: 1.05rem;
-    line-height: 1.32;
+    font-size: 0.98rem;
+    line-height: 1.3;
   }
   .paper-meta-strip {
-    font-size: 0.78rem;
-    gap: 6px;
+    font-size: 0.75rem;
+    gap: 4px;
     margin-top: 2px;
+    line-height: 1.3;
+  }
+  .syllabus-clean-wrap {
+    margin: 8px 0 4px;
+  }
+  .syllabus-clean-header {
+    font-size: 0.74rem;
+    margin-bottom: 4px;
+  }
+  .syllabus-item-group {
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+  }
+  .syllabus-unit-title {
+    font-size: 0.88rem;
+  }
+  .clean-topic-row {
+    font-size: 0.82rem;
+    padding-left: 12px;
+    line-height: 1.4;
+    margin-bottom: 2px;
+  }
+  .btn-toggle-readings {
+    padding: 2px 6px;
+    font-size: 0.68rem;
+    gap: 3px;
+  }
+  .unit-readings-panel {
+    margin-top: 6px;
+    padding: 6px 8px;
+  }
+  .unit-readings-note {
+    font-size: 0.74rem;
+    margin-bottom: 4px;
   }
   .reading-row {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
-    padding: 8px 10px;
+    gap: 6px;
+    padding: 5px 6px;
+  }
+  .reading-info {
+    gap: 4px;
+    font-size: 0.8rem;
+  }
+  .reading-link {
+    font-size: 0.82rem;
+  }
+  .reading-author-meta {
+    font-size: 0.74rem;
+  }
+  .reading-scope-note {
+    font-size: 0.72rem;
   }
   .reading-actions {
     width: auto;
     display: flex;
-    gap: 6px;
+    gap: 4px;
     margin-top: 0;
   }
-  .reading-actions a {
-    padding: 4px 8px;
-    font-size: 0.75rem;
+  .reading-actions a,
+  .btn-open-drive {
+    padding: 3px 6px;
+    font-size: 0.7rem;
   }
-  .folder-row-item {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    padding: 8px 10px;
+  .drive-link-row {
+    padding: 4px 6px;
+    gap: 5px;
   }
-  .folder-row-item .btn-open-drive {
-    width: auto;
-    flex-shrink: 0;
-    padding: 4px 8px;
-    font-size: 0.75rem;
+  .drive-link-label {
+    font-size: 0.78rem;
+  }
+  .drive-link-scope {
+    font-size: 0.72rem;
+  }
+  .syllabus-footnote-line {
+    margin-top: 6px;
+    font-size: 0.76rem;
+    line-height: 1.4;
   }
 
-  /* Grids & Actions */
-  .drive-links-grid,
-  .cr-grid,
-  .dse-grid {
+  /* SBC Card Compact */
+  .sbc-badge-row {
+    gap: 6px;
+  }
+  .pill-sbc {
+    font-size: 0.68rem;
+    padding: 2px 6px;
+  }
+  .sbc-prompt-card {
+    padding: 10px 12px;
+    margin-top: 8px;
+  }
+  .sbc-prompt-header {
+    font-size: 0.84rem;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+  }
+  .sbc-topic-box {
     grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .sbc-topic-en,
+  .sbc-topic-hi {
+    padding: 8px 10px;
+    gap: 4px;
+  }
+  .sbc-lang-tag {
+    font-size: 0.68rem;
+  }
+  .sbc-question-text {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+  .sbc-guidelines-box {
+    padding: 8px 10px;
+  }
+  .sbc-guidelines-title {
+    font-size: 0.76rem;
+    margin-bottom: 4px;
+  }
+  .sbc-guidelines-list {
+    padding-left: 14px;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    gap: 3px;
+  }
+
+  /* =========================================================================
+     COMPACT DRIVES & IMPORTANT LINKS SECTION (No more infinite scrolling!)
+     ========================================================================= */
+  .drives-horizontal-wrap {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .drives-category-group {
+    padding: 10px 12px;
+    border-radius: 6px;
+  }
+  .drives-category-header {
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+  }
+  .drives-category-title {
+    font-size: 0.92rem;
+    gap: 6px;
+    margin-bottom: 2px;
+  }
+  .drives-category-desc {
+    font-size: 0.72rem;
+    line-height: 1.3;
+  }
+  .drives-clean-grid {
+    gap: 8px;
+  }
+  .drive-box {
+    padding: 8px 10px;
+    gap: 6px;
+    border-radius: 5px;
+    border-top-width: 2.5px;
+  }
+  .drive-box-title {
+    font-size: 0.88rem;
+    margin-bottom: 2px;
+    line-height: 1.25;
+  }
+  .drive-box-curator {
+    font-size: 0.72rem;
+    margin-bottom: 2px;
+  }
+  .drive-box-desc {
+    font-size: 0.76rem;
+    line-height: 1.35;
   }
   .btn-drive-main {
     width: 100%;
-    text-align: center;
+    padding: 6px 10px;
+    font-size: 0.76rem;
+    border-radius: 4px;
+    gap: 4px;
+  }
+  .btn-syllabus-reader {
+    width: 100% !important;
+    padding: 6px 10px;
+    font-size: 0.76rem;
+  }
+
+  /* =========================================================================
+     COMPACT WHO'S WHO DIRECTORY
+     ========================================================================= */
+  .curator-card {
+    padding: 10px 12px;
+    gap: 8px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  .curator-avatar {
+    width: 34px;
+    height: 34px;
+    font-size: 1.15rem;
+  }
+  .curator-name {
+    font-size: 0.96rem;
+  }
+  .curator-badge-me {
+    font-size: 0.62rem;
+    padding: 1px 5px;
+  }
+  .curator-tagline {
+    font-size: 0.7rem;
+    padding: 1px 5px;
+  }
+  .curator-role {
+    font-size: 0.74rem;
+  }
+  .curator-note {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+  .curator-card-right {
+    width: 100%;
+  }
+  .btn-wa-curator {
+    width: 100%;
     justify-content: center;
+    padding: 6px 10px;
+    font-size: 0.78rem;
+    border-radius: 4px;
+  }
+
+  .cr-etiquette-callout {
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    font-size: 0.76rem;
+  }
+  .crs-clean-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .cr-clean-card {
+    padding: 8px 10px;
+    gap: 2px;
+    border-radius: 5px;
+  }
+  .cr-clean-name {
+    font-size: 0.88rem;
+  }
+  .cr-clean-role {
+    font-size: 0.7rem;
+  }
+  .cr-clean-phone {
+    font-size: 0.76rem;
+    margin: 2px 0 4px;
+  }
+  .btn-wa-only {
+    padding: 5px 8px;
+    font-size: 0.74rem;
+    border-radius: 4px;
+  }
+
+  /* Faculty Tables Compact */
+  #view-directory h3 {
+    font-size: 0.96rem;
+    margin: 14px 0 4px !important;
+  }
+  #view-directory p {
+    font-size: 0.76rem !important;
+    margin-bottom: 8px !important;
+  }
+  .faculty-paper-group {
+    margin-bottom: 12px;
+  }
+  .faculty-paper-title {
+    font-size: 0.92rem;
+    margin-bottom: 2px;
+  }
+  .faculty-venue-tag {
+    font-size: 0.68rem;
+    margin-bottom: 4px;
+  }
+  .faculty-table-wrap {
+    margin-bottom: 4px;
+  }
+  .clean-faculty-table {
+    min-width: 440px;
+    font-size: 0.76rem;
+  }
+  .clean-faculty-table th {
+    padding: 6px 8px;
+    font-size: 0.66rem;
+  }
+  .clean-faculty-table td {
+    padding: 6px 8px;
+    line-height: 1.3;
+  }
+  .clean-faculty-table .pill {
+    font-size: 0.64rem;
+    padding: 1px 5px;
+  }
+
+  .dse-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .dse-card {
+    padding: 6px 8px;
+    border-radius: 5px;
+  }
+  .dse-code {
+    font-size: 0.68rem;
+  }
+  .dse-title {
+    font-size: 0.84rem;
+    margin: 1px 0 2px;
+  }
+  .dse-fac {
+    font-size: 0.72rem;
   }
 
   /* Footer */
+  .footer {
+    padding: 12px 0;
+  }
   .footer-inner {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 8px;
+    font-size: 0.75rem;
   }
 
   /* PDF Modal Mobile */
@@ -2544,39 +3007,39 @@ kbd {
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 10px;
+    padding: 0 8px;
   }
   .batch-tag {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
   }
   .hero-quote {
-    font-size: 1.05rem;
+    font-size: 0.92rem;
   }
   .hero-meme-gif {
-    height: 85px;
+    height: 60px;
   }
   .tab-btn {
-    padding: 6px 2px;
-    font-size: 0.74rem;
+    padding: 5px 2px;
+    font-size: 0.72rem;
   }
   .tab-btn svg {
     display: none; /* Hide icon on tiny screens to let text breathe */
   }
   .timer-slot .val {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
   }
   .timer-slot .lbl {
-    font-size: 0.58rem;
+    font-size: 0.54rem;
   }
   .paper-entry {
-    padding: 14px 10px;
+    padding: 8px 10px;
   }
   .section-subheading {
-    font-size: 0.88rem;
+    font-size: 0.82rem;
   }
   .chip {
-    font-size: 0.74rem;
-    padding: 3px 8px;
+    font-size: 0.7rem;
+    padding: 2px 6px;
   }
 }
 
