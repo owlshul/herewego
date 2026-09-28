@@ -554,10 +554,8 @@ const portalData = {
   // ---------------------------------------------------------------------------
   directory: {
     curator: {
-      name: "Anshul",
-      titleBadge: "Me",
-      tagline: "“I'm Batman”",
-      role: "Portal Curator · MA Political Science (2026–2028)",
+      name: "Me",
+      role: "Batman",
       phone: "+91 95880 55573",
       cleanPhone: "919588055573",
       waUrl: "https://wa.me/919588055573?text=Hi%20Anshul,%20regarding%20the%20MA%20Pol%20Sci%20assessments/readings:",

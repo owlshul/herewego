@@ -440,31 +440,19 @@ function renderDirectoryView() {
   const sbcContainer = document.getElementById('sbc-container');
   const dseContainer = document.getElementById('dse-container');
 
-  // Portal Curator ("Me / I'm Batman") Card
+  // Portal Curator ("Me / Batman") Card
   if (curatorContainer && portalData.directory.curator) {
     const curator = portalData.directory.curator;
     curatorContainer.innerHTML = `
       <div class="curator-card">
         <div class="curator-card-left">
-          <div class="curator-header-row">
-            <span class="curator-avatar" role="img" aria-label="Batman">🦇</span>
-            <div>
-              <div class="curator-name-wrap">
-                <h3 class="curator-name">${escapeHtml(curator.name)}</h3>
-                <span class="curator-badge-me">${escapeHtml(curator.titleBadge || 'Me')}</span>
-                <span class="curator-tagline">${escapeHtml(curator.tagline)}</span>
-              </div>
-              <div class="curator-role">${escapeHtml(curator.role)}</div>
-            </div>
-          </div>
-          <p class="curator-note">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-            <span>${escapeHtml(curator.note)}</span>
-          </p>
+          <div class="curator-name">${escapeHtml(curator.name)}</div>
+          <div class="curator-role">${escapeHtml(curator.role)}</div>
+          <p class="curator-note">${escapeHtml(curator.note)}</p>
         </div>
         <div class="curator-card-right">
-          <a href="${curator.waUrl}" target="_blank" rel="noopener noreferrer" class="btn-wa-curator">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-1.119-.059-.42-.136-.935-.316-1.574-.755-.837-.577-1.396-1.428-1.583-1.688-.187-.26-.395-.572-.395-.898 0-.327.172-.489.233-.559.062-.07.135-.088.18-.088s.09.002.128.006c.041.004.097-.015.151.117.057.136.194.474.211.51.018.036.029.077.006.124-.023.045-.034.074-.068.113-.035.039-.073.088-.105.118-.035.035-.072.074-.031.144.041.07.182.301.39.488.269.24.496.314.566.349.07.035.112.029.153-.018.042-.047.178-.207.226-.278.048-.07.095-.059.16-.035.065.024.414.195.485.231.07.035.118.053.136.083.018.03.018.423-.126.828z"/></svg>
+          <a href="${curator.waUrl}" target="_blank" rel="noopener noreferrer" class="btn-wa-only">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-1.119-.059-.42-.136-.935-.316-1.574-.755-.837-.577-1.396-1.428-1.583-1.688-.187-.26-.395-.572-.395-.898 0-.327.172-.489.233-.559.062-.07.135-.088.18-.088s.09.002.128.006c.041.004.097-.015.151.117.057.136.194.474.211.51.018.036.029.077.006.124-.023.045-.034.074-.068.113-.035.039-.073.088-.105.118-.035.035-.072.074-.031.144.041.07.182.301.39.488.269.24.496.314.566.349.07.035.112.029.153-.018.042-.047.178-.207.226-.278.048-.07.095-.059.16-.035.065.024.414.195.485.231.07.035.118.053.136.083.018.03.018.423-.126.828z"/></svg>
             <span>Message on WhatsApp</span>
           </a>
         </div>

@@ -1606,126 +1606,46 @@ kbd {
    DIRECTORY (WHO'S WHO) — BY PAPER & STREAMLINED CRs
    ============================================================================= */
 .curator-card {
-  background: linear-gradient(135deg, var(--bg-surface) 0%, color-mix(in srgb, var(--color-powder-brown-bg) 40%, var(--bg-surface)) 100%);
-  border: 1.5px solid var(--color-powder-brown);
-  border-radius: var(--radius-m);
-  padding: 16px 20px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-s);
+  padding: 14px 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 14px;
-  box-shadow: 0 3px 12px rgba(168, 128, 97, 0.12);
-  margin-bottom: var(--space-l);
+  gap: 12px;
+  margin-bottom: var(--space-m);
 }
 
 .curator-card-left {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 3px;
   min-width: 0;
 }
 
-.curator-header-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.curator-avatar {
-  font-size: 1.5rem;
-  line-height: 1;
-  background: var(--bg-card);
-  border: 1px solid var(--border-card);
-  border-radius: 50%;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-}
-
-.curator-name-wrap {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
 .curator-name {
-  font-size: 1.15rem;
-  font-weight: 800;
+  font-size: 1.05rem;
+  font-weight: var(--font-bold);
   color: var(--text-heading);
   margin: 0;
 }
 
-.curator-badge-me {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 700;
-  background: var(--color-powder-brown);
-  color: #ffffff;
-  padding: 1px 6px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.curator-tagline {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--color-powder-brown);
-  background: var(--color-powder-brown-bg);
-  border: 1px solid rgba(168, 128, 97, 0.25);
-  padding: 1px 7px;
-  border-radius: 4px;
-}
-
 .curator-role {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
 }
 
 .curator-note {
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   color: var(--text-body);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin: 0;
+  margin: 2px 0 0;
   line-height: 1.4;
 }
 
-.curator-note svg {
-  color: var(--color-powder-brown);
+.curator-card .btn-wa-only {
   flex-shrink: 0;
-}
-
-.btn-wa-curator {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #25D366;
-  color: #ffffff;
-  font-size: 0.84rem;
-  font-weight: 700;
-  padding: 9px 16px;
-  border-radius: var(--radius-s);
-  text-decoration: none;
-  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
-  transition: all var(--trans-fast);
-  white-space: nowrap;
-}
-
-.btn-wa-curator:hover {
-  background: #20bd5a;
-  color: #ffffff;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
-  text-decoration: none;
 }
 
 .cr-etiquette-callout {
@@ -2850,41 +2770,25 @@ kbd {
   .curator-card {
     padding: 10px 12px;
     gap: 8px;
-    border-radius: 6px;
-    margin-bottom: 12px;
-  }
-  .curator-avatar {
-    width: 34px;
-    height: 34px;
-    font-size: 1.15rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
   }
   .curator-name {
-    font-size: 0.96rem;
-  }
-  .curator-badge-me {
-    font-size: 0.62rem;
-    padding: 1px 5px;
-  }
-  .curator-tagline {
-    font-size: 0.7rem;
-    padding: 1px 5px;
+    font-size: 0.92rem;
   }
   .curator-role {
     font-size: 0.74rem;
   }
   .curator-note {
-    font-size: 0.75rem;
+    font-size: 0.76rem;
     line-height: 1.3;
   }
   .curator-card-right {
     width: 100%;
   }
-  .btn-wa-curator {
+  .curator-card .btn-wa-only {
     width: 100%;
     justify-content: center;
-    padding: 6px 10px;
-    font-size: 0.78rem;
-    border-radius: 4px;
   }
 
   .cr-etiquette-callout {
