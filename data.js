@@ -405,91 +405,109 @@ const portalData = {
   },
 
   // ---------------------------------------------------------------------------
-  // MASTER DRIVES & IMPORTANT LINKS
+  // MASTER DRIVES & IMPORTANT LINKS (CATEGORIZED)
   // ---------------------------------------------------------------------------
-  masterDrives: [
+  drivesSections: [
     {
-      id: "drive-central",
-      name: "CR Maintained Drive (North Campus)",
-      curatorLabel: "Maintained by",
-      curators: "Sujal Vishwakarma / CRs",
-      url: "https://drive.google.com/drive/folders/14aDMmng2MdpaOqH-WRKY724J598sfuJx",
-      description: "Central repository managed by CRs, containing organized subfolders for CC-101, CC-102, and CC-103.",
-      badge: "CR Maintained Drive",
-      btnText: "Open Drive Repository"
+      categoryId: "drives",
+      categoryTitle: "📂 Master Course Drives",
+      categoryDesc: "Central CR drive, faculty shared drives, and semester-wide archives.",
+      items: [
+        {
+          id: "drive-central",
+          name: "CR Maintained Drive (North Campus)",
+          curatorLabel: "Maintained by",
+          curators: "Sujal Vishwakarma / CRs",
+          url: "https://drive.google.com/drive/folders/14aDMmng2MdpaOqH-WRKY724J598sfuJx",
+          badge: "CR Maintained Drive",
+          btnText: "Open Drive Repository"
+        },
+        {
+          id: "drive-dpii-garima",
+          name: "Faculty Shared Drive (DPII)",
+          curatorLabel: "Shared by",
+          curators: "Dr. Garima Das · Suggested by Prof. Ujjwal Kumar Singh",
+          url: "https://drive.google.com/drive/folders/1gL9IVzLxIhe4BSoghS_FbXaAT6qkcTjZ",
+          badge: "Faculty Shared Drive",
+          btnText: "Open Drive Repository"
+        },
+        {
+          id: "drive-master-sem1",
+          name: "Batch Master Archive Drive (Sem 1)",
+          curatorLabel: "Curator",
+          curators: "Batch Archive",
+          url: "https://drive.google.com/drive/folders/1NDn8uOtrcdISW99hR9mB4y9yGxVve0uV",
+          badge: "Archive Drive",
+          btnText: "Open Drive Repository"
+        }
+      ]
     },
+
     {
-      id: "drive-dpii-garima",
-      name: "Faculty Shared Drive (DPII)",
-      curatorLabel: "Shared by",
-      curators: "Dr. Garima Das · Suggested by Prof. Ujjwal Kumar Singh",
-      url: "https://drive.google.com/drive/folders/1gL9IVzLxIhe4BSoghS_FbXaAT6qkcTjZ",
-      description: "Shared by Dr. Garima Das covering textbook scans and essential readings for Indian Democracy & Institutions.",
-      badge: "Faculty Shared Drive",
-      btnText: "Open Drive Repository"
+      categoryId: "syllabi",
+      categoryTitle: "📜 Official Course Syllabi (Embedded PDFs)",
+      categoryDesc: "Complete official department syllabus documents for Sem 1 core papers.",
+      items: [
+        {
+          id: "syllabus-card-101",
+          paperCode: "PS-CC 101",
+          name: "PS-CC 101: Key Texts in Political Philosophy",
+          curatorLabel: "Official Syllabus",
+          curators: "Department of Political Science, DU",
+          url: "syllabus/CC1_Key_Texts_in_Political_Philosophy.pdf",
+          badge: "Official Syllabus PDF",
+          isPdf: true,
+          btnText: "Read Embedded"
+        },
+        {
+          id: "syllabus-card-102",
+          paperCode: "PS-CC 102",
+          name: "PS-CC 102: Democracy & Political Institutions in India",
+          curatorLabel: "Official Syllabus",
+          curators: "Department of Political Science, DU",
+          url: "syllabus/CC2_Democracy_and_Political_Institutions.pdf",
+          badge: "Official Syllabus PDF",
+          isPdf: true,
+          btnText: "Read Embedded"
+        },
+        {
+          id: "syllabus-card-103",
+          paperCode: "PS-CC 103",
+          name: "PS-CC 103: Theories of International Relations",
+          curatorLabel: "Official Syllabus",
+          curators: "Department of Political Science, DU",
+          url: "syllabus/CC3_Theories_of_International_Relations.pdf",
+          badge: "Official Syllabus PDF",
+          isPdf: true,
+          btnText: "Read Embedded"
+        }
+      ]
     },
+
     {
-      id: "drive-master-sem1",
-      name: "Batch Master Archive Drive (Sem 1)",
-      curatorLabel: "Curator",
-      curators: "Batch Archive",
-      url: "https://drive.google.com/drive/folders/1NDn8uOtrcdISW99hR9mB4y9yGxVve0uV",
-      description: "Comprehensive batch-wide repository organized systematically across all core semester 1 subjects.",
-      badge: "Archive Drive",
-      btnText: "Open Drive Repository"
-    },
-    {
-      id: "link-dept-website",
-      name: "Department of Political Science, DU",
-      curatorLabel: "Official Portal",
-      curators: "University of Delhi",
-      url: "https://polscience.du.ac.in/",
-      description: "Official department website for notices, faculty contact directories, examination circulars, and university guidelines.",
-      badge: "Official Website",
-      btnText: "Visit Department Website"
-    },
-    {
-      id: "link-unfiltered-wa",
-      name: "North & South Campus Unfiltered Chat",
-      curatorLabel: "Community Group",
-      curators: "North & South Campus Batch",
-      url: "https://chat.whatsapp.com/KZ9uTlm2BYULtVyTEQ7tNQ?mode=gi_t",
-      description: "Unofficial and unfiltered WhatsApp discussion group for both North and South Campus students (active when CRs close official groups).",
-      badge: "WhatsApp Group",
-      btnText: "Join WhatsApp Group"
-    },
-    {
-      id: "syllabus-cc101",
-      name: "PS-CC 101: Key Texts in Political Philosophy",
-      curatorLabel: "Official Syllabus",
-      curators: "Department of Political Science, DU",
-      url: "syllabus/CC1_Key_Texts_in_Political_Philosophy.pdf",
-      description: "Complete official department syllabus covering all 4 units, prescribed translations, texts, and comprehensive secondary readings.",
-      badge: "Official Syllabus PDF",
-      isPdf: true,
-      btnText: "View Embedded"
-    },
-    {
-      id: "syllabus-cc102",
-      name: "PS-CC 102: Democracy & Political Institutions in India",
-      curatorLabel: "Official Syllabus",
-      curators: "Department of Political Science, DU",
-      url: "syllabus/CC2_Democracy_and_Political_Institutions.pdf",
-      description: "Complete official department syllabus covering all 4 units, institutional frameworks, constitutional debates, and essential readings.",
-      badge: "Official Syllabus PDF",
-      isPdf: true,
-      btnText: "View Embedded"
-    },
-    {
-      id: "syllabus-cc103",
-      name: "PS-CC 103: Theories of International Relations",
-      curatorLabel: "Official Syllabus",
-      curators: "Department of Political Science, DU",
-      url: "syllabus/CC3_Theories_of_International_Relations.pdf",
-      description: "Complete official department syllabus covering all 4 units, classical & critical IR traditions, security studies, and reading lists.",
-      badge: "Official Syllabus PDF",
-      isPdf: true,
-      btnText: "View Embedded"
+      categoryId: "portals",
+      categoryTitle: "🌐 Official Portals & Community Groups",
+      categoryDesc: "Official DU department portal and batch discussion groups.",
+      items: [
+        {
+          id: "link-dept-website",
+          name: "Department of Political Science, DU",
+          curatorLabel: "Official Portal",
+          curators: "University of Delhi",
+          url: "https://polscience.du.ac.in/",
+          badge: "Official Website",
+          btnText: "Visit Department Website"
+        },
+        {
+          id: "link-unfiltered-wa",
+          name: "North & South Campus Unfiltered Chat",
+          curatorLabel: "Community Group",
+          curators: "North & South Campus Batch",
+          url: "https://chat.whatsapp.com/KZ9uTlm2BYULtVyTEQ7tNQ?mode=gi_t",
+          badge: "WhatsApp Group",
+          btnText: "Join WhatsApp Group"
+        }
+      ]
     }
   ],
 

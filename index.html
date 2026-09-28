@@ -27,6 +27,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="herewego." />
+  <!-- PDF.js for native in-browser canvas PDF rendering -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body>
 
@@ -257,7 +259,7 @@
         </div>
       </div>
       <div class="pdf-modal-body">
-        <iframe id="pdf-modal-frame" src="" class="pdf-modal-iframe" title="PDF Reader"></iframe>
+        <div id="pdf-canvas-container" class="pdf-canvas-container"></div>
       </div>
       <div class="pdf-modal-footer hide-desktop">
         <a id="pdf-modal-fallback-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-pdf-fallback">Tap here to open full PDF directly ↗</a>
