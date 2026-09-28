@@ -124,12 +124,20 @@ function renderAssessmentsView() {
     ` : '';
 
     const syllabusHeaderHtml = `
-      <h4 class="section-subheading syllabus-subheading">
-        ${syllabusCit ? `
-          <button type="button" class="proof-qmark citation-trigger" ${syllabusCitAttrs} title="Hover to view WhatsApp proof" aria-label="View WhatsApp syllabus proof">?</button>
+      <div class="syllabus-header-row">
+        <h4 class="section-subheading syllabus-subheading">
+          ${syllabusCit ? `
+            <button type="button" class="proof-qmark citation-trigger" ${syllabusCitAttrs} title="Hover to view WhatsApp proof" aria-label="View WhatsApp syllabus proof">?</button>
+          ` : ''}
+          <span>Syllabus</span>
+        </h4>
+        ${paper.syllabusPdf ? `
+          <button type="button" class="btn-syllabus-pdf-chip" onclick="openPdfModal('${escapeJsString(paper.syllabusPdf)}', '${escapeJsString(paper.code)}: ${escapeJsString(paper.name)} — Official Syllabus')">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            <span>Official Syllabus PDF</span>
+          </button>
         ` : ''}
-        <span>Syllabus</span>
-      </h4>
+      </div>
     `;
 
     // Syllabus Clean List with direct Readings/Drives toggle button
@@ -245,21 +253,39 @@ function renderDrivesView() {
   const container = document.getElementById('drives-grid-container');
   if (!container) return;
 
-  container.innerHTML = portalData.masterDrives.map(drive => `
-    <div class="drive-box">
-      <div>
-        <span class="pill" style="margin-bottom: 6px; display: inline-block;">${drive.badge}</span>
-        <h3 class="drive-box-title">${escapeHtml(drive.name)}</h3>
-        <p class="drive-box-curator">${drive.curatorLabel || 'Curator'}: <strong>${escapeHtml(drive.curators)}</strong></p>
-        <p class="drive-box-desc">${escapeHtml(drive.description)}</p>
+  container.innerHTML = portalData.masterDrives.map(drive => {
+    const isPdf = !!drive.isPdf;
+    const actionHtml = isPdf ? `
+      <div class="drive-box-actions">
+        <button type="button" class="btn-drive-main btn-drive-embed" onclick="openPdfModal('${escapeJsString(drive.url)}', '${escapeJsString(drive.name)}')">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          <span>View Embedded</span>
+        </button>
+        <a href="${drive.url}" target="_blank" rel="noopener noreferrer" class="btn-drive-sub" title="Open PDF in new tab" aria-label="Open PDF in new tab">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
       </div>
+    ` : `
       <a href="${drive.url}" target="_blank" rel="noopener noreferrer" class="btn-drive-main">
         <span>${escapeHtml(drive.btnText || 'Open Link')}</span>
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
       </a>
-    </div>
-  `).join('');
+    `;
+
+    return `
+      <div class="drive-box${isPdf ? ' drive-box--pdf' : ''}">
+        <div>
+          <span class="pill" style="margin-bottom: 6px; display: inline-block;">${drive.badge}</span>
+          <h3 class="drive-box-title">${escapeHtml(drive.name)}</h3>
+          <p class="drive-box-curator">${drive.curatorLabel || 'Curator'}: <strong>${escapeHtml(drive.curators)}</strong></p>
+          <p class="drive-box-desc">${escapeHtml(drive.description)}</p>
+        </div>
+        ${actionHtml}
+      </div>
+    `;
+  }).join('');
 }
+
 
 
 // 3. Merged Announcements & Verified Citations View
@@ -761,3 +787,44 @@ function toggleUnitReadings(unitKey) {
     }
   }
 }
+
+// -----------------------------------------------------------------------------
+// EMBEDDED PDF MODAL VIEWER
+// -----------------------------------------------------------------------------
+function openPdfModal(url, title) {
+  const modal = document.getElementById('pdf-modal');
+  const frame = document.getElementById('pdf-modal-frame');
+  const titleEl = document.getElementById('pdf-modal-title');
+  const extLink = document.getElementById('pdf-modal-external');
+  const fallbackLink = document.getElementById('pdf-modal-fallback-link');
+
+  if (!modal || !frame) return;
+
+  if (titleEl) titleEl.textContent = title || 'Official Syllabus PDF';
+  frame.src = url;
+  if (extLink) extLink.href = url;
+  if (fallbackLink) fallbackLink.href = url;
+
+  modal.classList.add('pdf-modal--visible');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePdfModal() {
+  const modal = document.getElementById('pdf-modal');
+  const frame = document.getElementById('pdf-modal-frame');
+  if (!modal) return;
+
+  modal.classList.remove('pdf-modal--visible');
+  modal.setAttribute('aria-hidden', 'true');
+  if (frame) frame.src = '';
+  document.body.style.overflow = '';
+}
+
+// Global ESC key listener to close PDF modal
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closePdfModal();
+  }
+});
+

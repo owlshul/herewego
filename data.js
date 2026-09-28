@@ -139,6 +139,7 @@ const portalData = {
         status: "confirmed",
         statusText: "Syllabus Confirmed",
         faculty: "Prof. Ujjwal Kumar Singh",
+        syllabusPdf: "syllabus/CC2_Democracy_and_Political_Institutions.pdf",
         clarificationCallout: null,
         footnoteNote: {
           text: "Unit II (Dr. Garima Das and Dr. Binit Kumar Sinha) is excluded from this assessment. This test strictly examines Prof. Ujjwal Kumar Singh's portion (Unit I & Unit IV).",
@@ -224,6 +225,7 @@ const portalData = {
         status: "confirmed",
         statusText: "Syllabus Confirmed",
         faculty: "Dr. Ningthoujam Koiremba Singh",
+        syllabusPdf: "syllabus/CC1_Key_Texts_in_Political_Philosophy.pdf",
         clarificationCallout: null,
         footnoteNote: null,
         syllabusCitation: {
@@ -287,6 +289,7 @@ const portalData = {
         status: "pending",
         statusText: "Not notified yet",
         faculty: "To be informed",
+        syllabusPdf: "syllabus/CC3_Theories_of_International_Relations.pdf",
         clarificationCallout: null,
         syllabusTopics: [
           {
@@ -454,6 +457,39 @@ const portalData = {
       description: "Unofficial and unfiltered WhatsApp discussion group for both North and South Campus students (active when CRs close official groups).",
       badge: "WhatsApp Group",
       btnText: "Join WhatsApp Group"
+    },
+    {
+      id: "syllabus-cc101",
+      name: "PS-CC 101: Key Texts in Political Philosophy",
+      curatorLabel: "Official Syllabus",
+      curators: "Department of Political Science, DU",
+      url: "syllabus/CC1_Key_Texts_in_Political_Philosophy.pdf",
+      description: "Complete official department syllabus covering all 4 units, prescribed translations, texts, and comprehensive secondary readings.",
+      badge: "Official Syllabus PDF",
+      isPdf: true,
+      btnText: "View Embedded"
+    },
+    {
+      id: "syllabus-cc102",
+      name: "PS-CC 102: Democracy & Political Institutions in India",
+      curatorLabel: "Official Syllabus",
+      curators: "Department of Political Science, DU",
+      url: "syllabus/CC2_Democracy_and_Political_Institutions.pdf",
+      description: "Complete official department syllabus covering all 4 units, institutional frameworks, constitutional debates, and essential readings.",
+      badge: "Official Syllabus PDF",
+      isPdf: true,
+      btnText: "View Embedded"
+    },
+    {
+      id: "syllabus-cc103",
+      name: "PS-CC 103: Theories of International Relations",
+      curatorLabel: "Official Syllabus",
+      curators: "Department of Political Science, DU",
+      url: "syllabus/CC3_Theories_of_International_Relations.pdf",
+      description: "Complete official department syllabus covering all 4 units, classical & critical IR traditions, security studies, and reading lists.",
+      badge: "Official Syllabus PDF",
+      isPdf: true,
+      btnText: "View Embedded"
     }
   ],
 
