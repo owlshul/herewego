@@ -875,11 +875,9 @@ async function openPdfModal(url, title) {
 
     for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
       const page = await pdf.getPage(pageNum);
-      const unscaledViewport = page.getViewport({ scale: 1 });
-
-      const containerWidth = Math.min(container.clientWidth - 32, 840) || 720;
-      const scale = containerWidth / unscaledViewport.width;
-      const viewport = page.getViewport({ scale: scale * Math.min(dpr, 2) });
+      // High-DPI scale for sharp text
+      const renderScale = 1.8;
+      const viewport = page.getViewport({ scale: renderScale });
 
       const canvas = document.createElement('canvas');
       canvas.className = 'pdf-page-canvas';
@@ -887,22 +885,22 @@ async function openPdfModal(url, title) {
       canvas.height = viewport.height;
       canvas.width = viewport.width;
 
-      canvas.style.width = `${viewport.width / Math.min(dpr, 2)}px`;
-      canvas.style.height = `${viewport.height / Math.min(dpr, 2)}px`;
-
       const pageWrap = document.createElement('div');
       pageWrap.className = 'pdf-page-wrap';
       pageWrap.appendChild(canvas);
 
-      const pageBadge = document.createElement('div');
-      pageBadge.className = 'pdf-page-badge';
-      pageBadge.textContent = `Page ${pageNum} of ${pdf.numPages}`;
-      pageWrap.appendChild(pageBadge);
+      if (pdf.numPages > 1) {
+        const pageBadge = document.createElement('div');
+        pageBadge.className = 'pdf-page-badge';
+        pageBadge.textContent = `Page ${pageNum} of ${pdf.numPages}`;
+        pageWrap.appendChild(pageBadge);
+      }
 
       container.appendChild(pageWrap);
 
       await page.render({ canvasContext: ctx, viewport: viewport }).promise;
     }
+
   } catch (err) {
     console.error('PDF.js render error:', err);
     container.innerHTML = `
