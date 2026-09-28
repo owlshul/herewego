@@ -270,22 +270,16 @@ function renderDrivesView() {
           if (drive.isSyllabusText) {
             return `
               <div class="drive-box drive-box--syllabus" id="${drive.id}" data-paper-code="${drive.paperCode || ''}" style="grid-column: 1 / -1;">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
                   <div>
                     <span class="pill" style="margin-bottom: 6px; display: inline-block;">${drive.badge}</span>
-                    <h3 class="drive-box-title">${escapeHtml(drive.name)}</h3>
+                    <h3 class="drive-box-title" style="margin-bottom: 4px;">${escapeHtml(drive.name)}</h3>
                     <p class="drive-box-curator">${drive.curatorLabel || 'Curator'}: <strong>${escapeHtml(drive.curators)}</strong></p>
                   </div>
-                  <button type="button" class="btn-drive-main btn-syllabus-toggle" id="btn-fs-${drive.id}" onclick="toggleDrivesSyllabus('${escapeJsString(drive.paperCode)}')" style="width: auto;">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-                    <span>View Full Syllabus &amp; Drive Readings</span>
-                    <span class="toggle-arrow" id="arrow-fs-${drive.id}">▾</span>
+                  <button type="button" class="btn-drive-main btn-syllabus-reader" id="btn-fs-${drive.id}" onclick="openSyllabusModal('${escapeJsString(drive.paperCode)}')" style="width: auto;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+                    <span>Read Full Syllabus &amp; Drive Readings</span>
                   </button>
-                </div>
-                <div class="drives-full-syllabus-panel" id="panel-fs-${drive.id}" style="display: none; margin-top: 14px;">
-                  <div class="full-syllabus-body">
-                    ${(portalData.fullSyllabi && portalData.fullSyllabi[drive.paperCode]) || '<p>Syllabus content loading...</p>'}
-                  </div>
                 </div>
               </div>
             `;
@@ -820,35 +814,52 @@ function toggleUnitReadings(unitKey) {
 }
 
 // -----------------------------------------------------------------------------
-// TOGGLE FULL COURSE SYLLABUS & VERIFIED DRIVE READINGS IN DRIVES SECTION
+// SYLLABUS & READINGS READER MODAL (EXPANDED BIGGER WINDOW OVERLAY)
 // -----------------------------------------------------------------------------
-function toggleDrivesSyllabus(paperCode, forceOpen) {
-  const card = document.querySelector(`.drive-box[data-paper-code="${paperCode}"]`);
-  if (!card) return;
+function openSyllabusModal(paperCode) {
+  const modal = document.getElementById('syllabus-reader-modal');
+  const titleEl = document.getElementById('syllabus-reader-title');
+  const contentEl = document.getElementById('syllabus-reader-content');
 
-  const cardId = card.id;
-  const panel = document.getElementById(`panel-fs-${cardId}`);
-  const arrow = document.getElementById(`arrow-fs-${cardId}`);
-  const btn = document.getElementById(`btn-fs-${cardId}`);
+  if (!modal || !contentEl) return;
 
-  if (!panel) return;
-
-  const shouldOpen = forceOpen ? true : panel.style.display === 'none';
-  panel.style.display = shouldOpen ? 'block' : 'none';
-
-  if (arrow) arrow.textContent = shouldOpen ? '▴' : '▾';
-  if (btn) {
-    btn.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
-    if (shouldOpen) {
-      btn.classList.add('active');
-    } else {
-      btn.classList.remove('active');
-    }
+  const syllabusHtml = (portalData.fullSyllabi && portalData.fullSyllabi[paperCode]) || '<p>Syllabus content unavailable.</p>';
+  
+  if (titleEl) {
+    titleEl.textContent = paperCode ? `${paperCode} — Official Course Syllabus & Drive Readings` : 'Official Course Syllabus';
   }
+
+  contentEl.innerHTML = `<div class="full-syllabus-body">${syllabusHtml}</div>`;
+  
+  modal.style.display = 'flex';
+  void modal.offsetWidth; // force reflow for CSS transition
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
 }
 
+function closeSyllabusModal() {
+  const modal = document.getElementById('syllabus-reader-modal');
+  if (!modal) return;
+
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+
+  setTimeout(() => {
+    modal.style.display = 'none';
+  }, 250);
+}
+
+// Close modal on Escape key press
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeSyllabusModal();
+  }
+});
+
 // -----------------------------------------------------------------------------
-// REDIRECT / SCROLL TO FULL SYLLABUS CARD IN DRIVES SECTION
+// REDIRECT TO SYLLABUS IN DRIVES SECTION & POP OPEN READER MODAL
 // -----------------------------------------------------------------------------
 function navigateToSyllabusCard(paperCode) {
   const drivesTab = document.querySelector('.tab-btn[data-view="drives"]');
@@ -856,19 +867,16 @@ function navigateToSyllabusCard(paperCode) {
 
   setTimeout(() => {
     let targetCard = document.querySelector(`.drive-box[data-paper-code="${paperCode}"]`);
-    if (!targetCard) {
-      targetCard = document.getElementById('cat-syllabi');
-    }
-
     if (targetCard) {
-      toggleDrivesSyllabus(paperCode, true);
       targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
       targetCard.classList.add('pulse-card-highlight');
       setTimeout(() => {
         targetCard.classList.remove('pulse-card-highlight');
       }, 2200);
     }
+    openSyllabusModal(paperCode);
   }, 120);
 }
+
 
 
