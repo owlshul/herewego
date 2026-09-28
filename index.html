@@ -139,11 +139,19 @@
         <div class="section-intro-bar">
           <div>
             <h2>Master Drives &amp; Important Links</h2>
-            <p class="section-desc">Course drives, official department website, and community WhatsApp channels.</p>
+            <p class="section-desc">Course drives, official course syllabi, and community WhatsApp channels.</p>
           </div>
         </div>
 
-        <div id="drives-grid-container" class="drives-clean-grid">
+        <!-- Horizontal Category Filter Chips -->
+        <div class="sub-filter-row" id="drives-sub-filters">
+          <button class="chip active" data-dfilter="all" onclick="filterDrivesSection('all')">All Categories</button>
+          <button class="chip" data-dfilter="drives" onclick="filterDrivesSection('drives')">Course Drives</button>
+          <button class="chip" data-dfilter="syllabi" onclick="filterDrivesSection('syllabi')">Course Syllabi</button>
+          <button class="chip" data-dfilter="portals" onclick="filterDrivesSection('portals')">Portals &amp; Groups</button>
+        </div>
+
+        <div id="drives-grid-container" class="drives-horizontal-wrap">
           <!-- Injected by app.js -->
         </div>
       </section>

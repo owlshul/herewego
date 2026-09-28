@@ -75,6 +75,9 @@ function initTabs() {
       if (targetView === 'assessments') {
         filterAssessments('all');
       }
+      if (targetView === 'drives') {
+        filterDrivesSection('all');
+      }
     });
   });
 }
@@ -877,6 +880,43 @@ function navigateToSyllabusCard(paperCode) {
     openSyllabusModal(paperCode);
   }, 120);
 }
+
+// -----------------------------------------------------------------------------
+// FILTER DRIVES HORIZONTAL CATEGORY SECTIONS
+// -----------------------------------------------------------------------------
+function filterDrivesSection(filterId) {
+  const chips = document.querySelectorAll('#drives-sub-filters .chip');
+  chips.forEach(chip => {
+    if (chip.getAttribute('data-dfilter') === filterId) {
+      chip.classList.add('active');
+    } else {
+      chip.classList.remove('active');
+    }
+  });
+
+  const container = document.getElementById('drives-grid-container');
+  if (container) {
+    if (filterId === 'all') {
+      container.classList.remove('drives-single-col');
+    } else {
+      container.classList.add('drives-single-col');
+    }
+  }
+
+  const categoryGroups = document.querySelectorAll('.drives-category-group');
+  categoryGroups.forEach(group => {
+    if (filterId === 'all') {
+      group.classList.remove('hidden');
+    } else {
+      if (group.id === `cat-${filterId}`) {
+        group.classList.remove('hidden');
+      } else {
+        group.classList.add('hidden');
+      }
+    }
+  });
+}
+
 
 
 
