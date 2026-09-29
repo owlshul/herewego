@@ -604,36 +604,164 @@ kbd {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.compilation-meta-notice {
+/* =============================================================================
+   ASSESSMENT HEADER META STRIP & COLLAPSIBLE NOTES
+   ============================================================================= */
+.assessment-header-strip {
   margin-bottom: var(--space-m);
-  padding: 8px 12px;
-  background-color: color-mix(in srgb, var(--color-powder-brown-bg) 60%, var(--bg-surface));
+}
+
+.last-updated-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 8px;
+}
+
+.last-updated-pill svg {
+  color: var(--color-powder-brown);
+  flex-shrink: 0;
+}
+
+.last-updated-pill strong {
+  color: var(--text-heading);
+}
+
+.assessment-notes-details {
+  background-color: color-mix(in srgb, var(--color-powder-brown-bg) 45%, var(--bg-surface));
   border: 1px solid var(--border-subtle);
   border-left: 3px solid var(--color-powder-brown);
   border-radius: var(--radius-xs);
-  font-size: 0.78rem;
-  line-height: 1.45;
-  color: var(--text-muted);
+  overflow: hidden;
+  transition: all var(--trans-fast);
 }
 
-.compilation-source {
-  margin-bottom: 2px;
+.assessment-notes-details[open] {
+  background-color: color-mix(in srgb, var(--color-powder-brown-bg) 65%, var(--bg-surface));
+  border-color: var(--border-card);
 }
 
-.compilation-feedback {
+.assessment-notes-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-powder-brown);
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  transition: background-color var(--trans-fast);
+}
+
+.assessment-notes-summary::-webkit-details-marker {
+  display: none;
+}
+
+.assessment-notes-summary:hover {
+  background-color: rgba(168, 128, 97, 0.08);
+}
+
+.summary-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.summary-left svg {
+  color: var(--color-powder-brown);
+  flex-shrink: 0;
+}
+
+.summary-arrow {
+  font-size: 0.75rem;
+  color: var(--color-powder-brown);
+  transition: transform 0.2s ease;
+}
+
+.assessment-notes-details[open] .summary-arrow {
+  transform: rotate(180deg);
+}
+
+.assessment-notes-body {
+  padding: 10px 14px 12px;
+  border-top: 1px dashed var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.8rem;
+  line-height: 1.5;
   color: var(--text-body);
 }
 
-.compilation-feedback .dm-link {
+.note-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.note-num-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--color-powder-brown);
+  background: var(--color-powder-brown-bg);
+  border: 1px solid rgba(168, 128, 97, 0.25);
+  padding: 1px 6px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.note-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.note-text em {
+  font-style: italic;
+  color: var(--text-heading);
+}
+
+.note-text strong {
+  color: var(--text-heading);
+  font-weight: 600;
+}
+
+.note-text .dm-link {
   color: var(--color-saddle-brown);
   font-weight: var(--font-semibold);
   text-decoration: underline;
   text-underline-offset: 2px;
-  transition: color var(--trans-fast);
 }
 
-.compilation-feedback .dm-link:hover {
+.note-text .dm-link:hover {
   color: var(--accent);
+}
+
+.proof-qmark-inline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: var(--font-bold);
+  background-color: var(--color-powder-brown-bg);
+  color: var(--color-powder-brown);
+  border: 1px solid var(--color-powder-brown-border);
+  line-height: 1;
+  vertical-align: middle;
+  margin: 0 2px;
 }
 
 .section-intro-bar {
@@ -2418,10 +2546,24 @@ kbd {
     font-size: 1.18rem;
     margin-bottom: 2px;
   }
-  .section-desc {
-    font-size: 0.78rem;
-    line-height: 1.35;
+  .assessment-header-strip {
+    margin-bottom: 8px;
   }
+  .last-updated-pill {
+    font-size: 0.74rem;
+    padding: 3px 8px;
+    margin-bottom: 6px;
+  }
+  .assessment-notes-summary {
+    padding: 7px 10px;
+    font-size: 0.76rem;
+  }
+  .assessment-notes-body {
+    padding: 8px 10px 10px;
+    font-size: 0.76rem;
+    gap: 6px;
+  }
+
   .sub-filter-row {
     margin-top: 10px;
     margin-bottom: 14px;
