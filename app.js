@@ -928,10 +928,23 @@ function openSyllabusModal(paperCode) {
   const syllabusHtml = (portalData.fullSyllabi && portalData.fullSyllabi[paperCode]) || (typeof courseSyllabiData !== 'undefined' && courseSyllabiData[paperCode]) || '<p>Syllabus content unavailable.</p>';
   
   if (titleEl) {
-    titleEl.textContent = paperCode ? `${paperCode} — Official Course Syllabus & Drive Readings` : 'Official Course Syllabus';
+    const paperNames = {
+      'PS-CC 101': 'Key Texts in Political Philosophy',
+      'PS-CC 102': 'Democracy & Political Institutions in India',
+      'PS-CC 103': 'Theories of International Relations',
+      'PS-CC 104': 'Security Studies',
+      'PS-SBC 01': 'Elections & Electoral Analysis'
+    };
+    const paperName = paperNames[paperCode] || '';
+    if (paperName) {
+      titleEl.innerHTML = `<span class="reader-code-badge">${escapeHtml(paperCode)}:</span> <span class="reader-paper-title">${escapeHtml(paperName)}</span>`;
+    } else {
+      titleEl.textContent = paperCode ? `${paperCode} — Official Syllabus` : 'Official Course Syllabus';
+    }
   }
 
   contentEl.innerHTML = `<div class="full-syllabus-body">${syllabusHtml}</div>`;
+  contentEl.scrollTop = 0;
   
   modal.style.display = 'flex';
   void modal.offsetWidth; // force reflow for CSS transition
