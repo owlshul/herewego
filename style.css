@@ -2423,12 +2423,26 @@ kbd {
     line-height: 1.35;
   }
   .sub-filter-row {
-    margin-bottom: 12px;
-    gap: 4px;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    gap: 8px;
+    padding-top: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
   }
   .chip {
-    font-size: 0.74rem;
-    padding: 3px 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 7px 14px;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-pill);
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
 
   /* Navbar */
@@ -2533,18 +2547,20 @@ kbd {
     min-width: 0;
     justify-content: center;
     text-align: center;
-    padding: 6px 2px;
-    font-size: 0.74rem;
+    padding: 8px 4px;
+    font-size: 0.76rem;
+    min-height: 38px;
     gap: 4px;
     white-space: nowrap;
     border-radius: var(--radius-xs);
     overflow: hidden;
     text-overflow: ellipsis;
+    touch-action: manipulation;
   }
   .tab-btn svg {
     flex-shrink: 0;
-    width: 11px;
-    height: 11px;
+    width: 12px;
+    height: 12px;
   }
 
   .hide-mobile {
@@ -2597,58 +2613,73 @@ kbd {
     margin-bottom: 2px;
   }
   .btn-toggle-readings {
-    padding: 2px 6px;
-    font-size: 0.68rem;
-    gap: 3px;
+    padding: 7px 14px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    min-height: 34px;
+    gap: 6px;
+    border-radius: 4px;
+    touch-action: manipulation;
+    margin-top: 4px;
   }
   .unit-readings-panel {
-    margin-top: 6px;
-    padding: 6px 8px;
+    margin-top: 8px;
+    padding: 8px 10px;
   }
   .unit-readings-note {
-    font-size: 0.74rem;
-    margin-bottom: 4px;
+    font-size: 0.76rem;
+    margin-bottom: 6px;
   }
   .reading-row {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 6px;
-    padding: 5px 6px;
+    gap: 8px;
+    padding: 7px 8px;
   }
   .reading-info {
-    gap: 4px;
-    font-size: 0.8rem;
-  }
-  .reading-link {
+    gap: 5px;
     font-size: 0.82rem;
   }
+  .reading-link {
+    font-size: 0.84rem;
+  }
   .reading-author-meta {
-    font-size: 0.74rem;
+    font-size: 0.76rem;
   }
   .reading-scope-note {
-    font-size: 0.72rem;
+    font-size: 0.74rem;
   }
   .reading-actions {
     width: auto;
     display: flex;
-    gap: 4px;
+    gap: 6px;
     margin-top: 0;
   }
   .reading-actions a,
   .btn-open-drive {
-    padding: 3px 6px;
-    font-size: 0.7rem;
+    padding: 6px 12px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    touch-action: manipulation;
   }
   .drive-link-row {
-    padding: 4px 6px;
-    gap: 5px;
+    padding: 8px 10px;
+    min-height: 36px;
+    gap: 7px;
+    border-radius: 4px;
+    touch-action: manipulation;
   }
   .drive-link-label {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
   }
   .drive-link-scope {
-    font-size: 0.72rem;
+    font-size: 0.74rem;
   }
   .syllabus-footnote-line {
     margin-top: 6px;
@@ -2753,15 +2784,21 @@ kbd {
   }
   .btn-drive-main {
     width: 100%;
-    padding: 6px 10px;
-    font-size: 0.76rem;
-    border-radius: 4px;
-    gap: 4px;
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    min-height: 38px;
+    border-radius: 5px;
+    gap: 6px;
+    touch-action: manipulation;
   }
   .btn-syllabus-reader {
     width: 100% !important;
-    padding: 6px 10px;
-    font-size: 0.76rem;
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    min-height: 38px;
+    touch-action: manipulation;
   }
 
   /* =========================================================================
@@ -2817,9 +2854,12 @@ kbd {
     margin: 2px 0 4px;
   }
   .btn-wa-only {
-    padding: 5px 8px;
-    font-size: 0.74rem;
+    padding: 7px 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    min-height: 36px;
     border-radius: 4px;
+    touch-action: manipulation;
   }
 
   /* Faculty Tables Compact */
@@ -2923,8 +2963,9 @@ kbd {
     height: 60px;
   }
   .tab-btn {
-    padding: 5px 2px;
-    font-size: 0.72rem;
+    padding: 7px 3px;
+    font-size: 0.74rem;
+    min-height: 36px;
   }
   .tab-btn svg {
     display: none; /* Hide icon on tiny screens to let text breathe */
@@ -2942,8 +2983,9 @@ kbd {
     font-size: 0.82rem;
   }
   .chip {
-    font-size: 0.7rem;
-    padding: 2px 6px;
+    font-size: 0.8rem;
+    padding: 6px 13px;
+    min-height: 34px;
   }
 }
 
