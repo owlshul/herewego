@@ -564,7 +564,7 @@ const portalData = {
     crs: [
       { name: "Drishti Falwaria", phone: "+91 92057 09965", cleanPhone: "919205709965", role: "Class Representative" },
       { name: "Shruti Gupta", phone: "+91 80518 84973", cleanPhone: "918051884973", role: "Class Representative" },
-      { name: "Sujal Vishwakarma", phone: "+91 96965 33151", cleanPhone: "919696533151", role: "Class Representative (Official Updates)" }
+      { name: "Sujal Vishwakarma", phone: "+91 96965 33151", cleanPhone: "919696533151", role: "Class Representative" }
     ],
     crEtiquette: "Kindly do not call during class hours. Kindly be respectful and avoid personal messages after 8:30 PM.",
 
