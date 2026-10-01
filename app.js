@@ -184,7 +184,6 @@ function renderAssessmentsView() {
                   ${unit.items.map(r => `
                     <div class="reading-row">
                       <div class="reading-info">
-                        <span class="reading-type-label">${escapeHtml(r.type || 'Reading')}:</span>
                         ${r.url ? `
                           <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="reading-link">
                             <span>${escapeHtml(r.title)}</span>

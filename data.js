@@ -13,7 +13,7 @@ const portalData = {
     batch: "MA Political Science (2026–2028)",
     campus: "North Campus, University of Delhi",
     classroom: "Room No. 18, Satyakam Bhawan",
-    lastUpdated: "1 October 2026, 7:50 PM IST",
+    lastUpdated: "1 October 2026, 7:55 PM IST",
     curator: "Anshul"
   },
 
@@ -198,50 +198,43 @@ const portalData = {
                 title: "The Indian Constitution: Cornerstone of a Nation",
                 author: "Granville Austin",
                 scope: "Constituent Assembly debates & constitutional architecture · Unit 1(b)",
-                url: "https://drive.google.com/drive/folders/1LveKm7f8jMRKodPKRWwuYE8sTM_-te4-?usp=drive_link",
-                type: "Core Text"
+                url: "https://drive.google.com/drive/folders/1LveKm7f8jMRKodPKRWwuYE8sTM_-te4-?usp=drive_link"
               },
               {
                 title: "Working a Democratic Constitution: The Indian Experience",
                 author: "Granville Austin",
                 scope: "Freedoms, First Amendment & Preventive Detention debates · Unit 1(b & c)",
-                url: "https://drive.google.com/drive/folders/1LveKm7f8jMRKodPKRWwuYE8sTM_-te4-?usp=drive_link",
-                type: "Core Text"
+                url: "https://drive.google.com/drive/folders/1LveKm7f8jMRKodPKRWwuYE8sTM_-te4-?usp=drive_link"
               },
               {
                 title: "The Indian Constitution: An Introduction",
                 author: "Madhav Khosla",
                 scope: "Preventive detention & fundamental rights framework · Unit 1(c)",
-                url: null,
-                type: "Recommended Reading"
+                url: null
               },
               {
                 title: "States of Emergency in States of Asia: A Comparative Study",
                 author: "Venkat Iyer",
                 scope: "Chapters 5 to 7: Preventive Detention & Extraordinary Powers · Unit 1(c)",
-                url: null,
-                type: "Recommended Reading"
+                url: null
               },
               {
                 title: "Offend, Shock, or Disturb: Free Speech under the Indian Constitution",
                 author: "Gautam Bhatia",
                 scope: "Constitutional freedoms & reasonable restrictions · Unit 1(c)",
-                url: null,
-                type: "Referenced Reading"
+                url: null
               },
               {
                 title: "First Amendment to the Constitution of India (Debates & Original Draft)",
                 author: "Constituent Assembly / Parliamentary Records",
                 scope: "Reasonable restrictions and debate over extraordinary laws · Unit 1(c)",
-                url: null,
-                type: "Primary Source"
+                url: null
               },
               {
                 title: "Constitutionalism as a Site of State Formative Practices: Accumulation and Legitimacy",
                 author: "Upendra Baxi (in Rajeev Bhargava ed., Politics and Ethics of the Indian Constitution)",
                 scope: "Debates on Indian constitutionalism and representation · Unit 1(b)",
-                url: null,
-                type: "Referenced Reading"
+                url: null
               }
             ]
           },
@@ -274,22 +267,19 @@ const portalData = {
                 title: "On India's post-colonial engagement with the Rule of Law (2013)",
                 author: "Moiz Tundawala",
                 scope: "Assigned by Prof. Ujjwal Kumar Singh in class for Rule of Law & Criminal Law Decolonization",
-                url: "https://drive.google.com/drive/folders/1sdPzuuK49RzaY_B9AXogy5TAYMJto9Yq?usp=drive_link",
-                type: "Assigned Reading"
+                url: "https://drive.google.com/drive/folders/1sdPzuuK49RzaY_B9AXogy5TAYMJto9Yq?usp=drive_link"
               },
               {
                 title: "Introduction to the Study of the Law of the Constitution (The Rule of Law)",
                 author: "A.V. Dicey",
                 scope: "Classical formulation of the Rule of Law · Unit 4(a)",
-                url: null,
-                type: "Foundational Text"
+                url: null
               },
               {
                 title: "The Rule of Law in India: Theory and Practice",
                 author: "Upendra Baxi",
                 scope: "Critical perspective on post-colonial Rule of Law · Unit 4(a)",
-                url: null,
-                type: "Referenced Reading"
+                url: null
               }
             ]
           }
@@ -349,8 +339,7 @@ const portalData = {
                 title: "Meaning and Understanding in the History of Ideas (1969)",
                 author: "Quentin Skinner",
                 scope: "Prescribed reading for Unit I Theories of Interpretation · Question option in 9 Oct CA",
-                url: "https://drive.google.com/drive/folders/1HSORAokjkAHdZqDAiMqeVNSVDE_t8Yri?usp=drive_link",
-                type: "Core Reading"
+                url: "https://drive.google.com/drive/folders/1HSORAokjkAHdZqDAiMqeVNSVDE_t8Yri?usp=drive_link"
               }
             ]
           },
@@ -367,8 +356,7 @@ const portalData = {
                 title: "On the Social Contract (Judith R. Masters & Roger D. Masters Translation)",
                 author: "Jean-Jacques Rousseau",
                 scope: "Read Book 1 (Chapters 1-9) & Book 2 · Question option in 9 Oct CA",
-                url: "https://drive.google.com/file/d/16QbinQGaVEMWM-x8K7QWqOhv4WSo9VG9/view?usp=drivesdk",
-                type: "Prescribed Text"
+                url: "https://drive.google.com/file/d/16QbinQGaVEMWM-x8K7QWqOhv4WSo9VG9/view?usp=drivesdk"
               }
             ]
           }
