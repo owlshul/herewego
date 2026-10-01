@@ -13,7 +13,7 @@ const portalData = {
     batch: "MA Political Science (2026–2028)",
     campus: "North Campus, University of Delhi",
     classroom: "Room No. 18, Satyakam Bhawan",
-    lastUpdated: "1 October 2026, 4:00 PM IST",
+    lastUpdated: "1 October 2026, 6:40 PM IST",
     curator: "Anshul"
   },
 
@@ -21,6 +21,42 @@ const portalData = {
   // MERGED ANNOUNCEMENTS & VERIFIED CITATIONS (One unified dispute-settler feed)
   // ---------------------------------------------------------------------------
   verifiedAnnouncements: [
+    {
+      id: "va-ir-final",
+      title: "IR Internal Assessment Confirmed for 9 Oct (24 Marks · 3 Qs, Attempt 2)",
+      date: "1 Oct 2026, 5:52 PM",
+      sender: "Official Department Notice (via Sachin Choudhary)",
+      source: "Official Announcements",
+      type: "assessment",
+      priority: true,
+      summary: "24 Marks IA confirmed for Friday, 9 October 2026. Format: 3 questions of which 2 need to be attempted (2 × 12M = 24M). Syllabus: Eurocentrism & Multiple Births of IR, Critical Theory, Post-Modernism & Post-Structuralism.",
+      exactQuote: "Regarding Internal Assessment of CC-Theories of International Relations on 9th October' Friday. Total 24 Marks. 3 Questions of which 2 needs to be attempted. Syllabus: Eurocentrism and Multiple Births of IR, Critical Theory, Post Modernism and Post Structuralism.",
+      tags: ["#CC103", "#IR", "#Confirmed", "#9Oct", "#24Marks"]
+    },
+    {
+      id: "va-dpii-final",
+      title: "DPII Final Syllabus Confirmed: Unit I(b & c) and Unit IV(a) · 20 Marks",
+      date: "1 Oct 2026, 5:50 PM",
+      sender: "Prof. Ujjwal Kumar Singh (Official Course Breakdown)",
+      source: "Faculty Notification",
+      type: "assessment",
+      priority: true,
+      summary: "Final syllabus confirmed for Friday, 9 October CA (20 Marks): Unit I covers Topic b (Indian Constitutionalism debates: Constituent Assembly) and Topic c (Freedoms, emergency, preventive detention). Unit IV covers Topic a (Rule of Law & criminal law decolonization). Unit I(a) and Units II & III are excluded.",
+      exactQuote: "Correct syllabus confirmed today by Prof. Ujjwal Kumar Singh: Unit I: Historical Understanding of Democracy and Constitutionalism in India (Topic b: Salient features of Indian constitutionalism: representation, key debates in the Constituent Assembly; Topic c: Constitutional freedoms and reasonable restrictions, emergency provisions, first amendment, preventive detention) & Unit IV: Rule of Law, Rights and Accountability (Topic a: Rule of law and the decolonization of criminal laws). Topic 1a and Units 2 & 3 are excluded.",
+      tags: ["#CC102", "#DPII", "#Confirmed", "#9Oct", "#20Marks"]
+    },
+    {
+      id: "va-ktpp-final",
+      title: "KTPP Continuous Assessment on 9 Oct: 15 Marks (Rousseau vs Skinner) + 30 Oct CA",
+      date: "1 Oct 2026, 12:57 PM",
+      sender: "Dr. Ningthoujam Koiremba Singh",
+      source: "Faculty Direct Confirmation",
+      type: "assessment",
+      priority: true,
+      summary: "Continuous Assessment on 9 Oct is 15 Marks with an option between 2 questions (Rousseau: Social Contract or Quentin Skinner 1969; attempt 1 question). The second CA of 20 Marks is scheduled for Friday, 30 October 2026.",
+      exactQuote: "guys I just confirmed with koiremba sir regarding the CA, so it has been reduced to 15 marks and there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1, the next CA of 20 marks will be on 30th Oct.",
+      tags: ["#CC101", "#KTPP", "#Confirmed", "#9Oct", "#15Marks"]
+    },
     {
       id: "va-sbc-1",
       title: "SBC Internal Assessment: Handwritten Assignment Due 20 Oct (12 Marks)",
@@ -32,66 +68,6 @@ const portalData = {
       summary: "Handwritten Assignment for SBC-Elections and Data-Driven Electoral Analysis (7-8 pages). Submit PDF on Google Classroom by 20th October (12 Marks).",
       exactQuote: "NOTICE @all Regarding Internal Assessment in SBC-Elections and Data-Driven Electoral Analysis. As part of the Internal Assessment please prepare a handwritten assignment on the topic: Why it is important to study elections from both micro and macro level? Discuss Various Methods of analysing Electoral Data and their importance in understanding voting behaviour. चुनाव का सूक्षम और वृहत दोनों स्तरो से अध्ययन करना क्यों महत्वपूर्ण है ? चुनावी आंकड़ों के विश्लेषण के विभिन्न तरीको और मतदाता व्यव्हार को समझने में उनके महत्व पर चर्चा करें। Submit it on Google Classroom by 20th October. Total 12 marks. 7 to 8 pages. It must be handwritten. Upload the pdf on Google Classroom after writing it.",
       tags: ["#SBC", "#ElectionsData", "#InternalAssessment", "#20Oct", "#Handwritten"]
-    },
-    {
-      id: "va-1",
-      title: "DPII Continuous Assessment on 9 Oct (20 Marks)",
-      date: "28 Sept 2026, 11:52 AM",
-      sender: "Sujal Vishwakarma (CR)",
-      source: "Official Announcements",
-      type: "assessment",
-      priority: true,
-      summary: "20 Marks Continuous Assessment confirmed for Friday, 9 October 2026 covering Unit I (Topics a & c) and Unit IV (Topic a).",
-      exactQuote: "Regarding Continuous Assessment of CC-Democracy and Political Institutions in India on 9th October' Friday. Total 20 Marks. Unit I=Historical Understanding of Democracy and Constitutionalism in India (Topic a, Topic c), Unit IV=Rule of law, rights and accountability (Topic a).",
-      tags: ["#CC102", "#DPII", "#Confirmed", "#9Oct"]
-    },
-    {
-      id: "va-sc-2",
-      title: "South Campus Update: DPII Syllabus Lists Unit 1(b) instead of 1(a)",
-      date: "1 Oct 2026",
-      sender: "South Campus Updates",
-      source: "South Campus Batch Updates",
-      type: "contrast",
-      priority: true,
-      summary: "South Campus updates identify Unit 1(b) (Indian constitutionalism debates: Baxi, Austin, Bhargava) instead of Unit 1(a) (ancient republics), matching topics covered in class lectures.",
-      exactQuote: "South Campus scope for 9 Oct DPII CA covers Unit 1(b) & (c) and Unit 4(a). Unit 1(b) covers Indian constitutionalism debates (transformative, postcolonial, liberal, democratic) taught by Prof. Ujjwal Kumar Singh.",
-      tags: ["#SouthCampus", "#CC102", "#DPII", "#Contrast", "#Unit1b"]
-    },
-    {
-      id: "va-2",
-      title: "KTPP Continuous Assessment on 9 Oct (40 Marks · 2 Qs × 20M)",
-      date: "28 Sept 2026, 12:43 PM",
-      sender: "Sujal Vishwakarma (CR)",
-      source: "Official Announcements",
-      type: "assessment",
-      priority: true,
-      summary: "40 Marks CA covering Dr. Ningthoujam Koiremba Singh's components: Unit I (Theories of Interpretation) & Unit III (Rousseau: Social Contract).",
-      exactQuote: "Regarding Continuous Assessment of CC-Key Texts in Political Philosophy on 9th October' Friday. Total 40 Marks (2 Question of 20 mark each). Unit I= Introduction (Topic b: Theories of Interpretation), Unit III (Topic c: Rousseau - Social Contract).",
-      tags: ["#CC101", "#KTPP", "#Confirmed", "#9Oct"]
-    },
-    {
-      id: "va-sc-1",
-      title: "South Campus Update: KTPP CA Reduced to 15 Marks (Rousseau vs Skinner) + 30 Oct CA",
-      date: "1 Oct 2026, 12:57 PM",
-      sender: "Akansha / SDC Student Rep",
-      source: "Faculty Direct Confirmation (Dr. Koiremba Singh)",
-      type: "contrast",
-      priority: true,
-      summary: "Faculty direct confirmation: 9 Oct CA reduced to 15 Marks with an option between 2 questions (Rousseau OR Quentin Skinner; attempt 1). Subsequent 20 Marks CA scheduled for 30 October 2026.",
-      exactQuote: "guys I just confirmed with koiremba sir regarding the CA, so it has been reduced to 15 marks and there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1, the next CA of 20 marks will be on 30th Oct.",
-      tags: ["#SouthCampus", "#CC101", "#KTPP", "#Contrast", "#15Marks"]
-    },
-    {
-      id: "va-3",
-      title: "DPII Scope Clarification: Unit II (Judiciary & Executive) is Strictly EXCLUDED",
-      date: "28 Sept 2026, 11:48 AM - 12:10 PM",
-      sender: "CRs & Batch Discussion (+91 95820 06595 & +91 93135 08513)",
-      source: "Batch Discussion",
-      type: "clarification",
-      priority: true,
-      summary: "Important clarification: Do NOT revise Dr. Garima Das or Dr. Binit Sinha readings. This test strictly examines Prof. Ujjwal Kumar Singh's portion.",
-      exactQuote: "Unit 1(a) & (c), Unit 4(a). Excluding Garima ma'am and bipin sir readings of unit 2.",
-      tags: ["#CC102", "#Scope", "#ExclusionNotice"]
     },
     {
       id: "va-4",
@@ -177,44 +153,29 @@ const portalData = {
         faculty: "Prof. Ujjwal Kumar Singh",
         clarificationCallout: null,
         footnoteNote: {
-          text: "Unit II (Dr. Garima Das and Dr. Binit Kumar Sinha) is excluded from this assessment. This test strictly examines Prof. Ujjwal Kumar Singh's portion (Unit I & Unit IV).",
+          text: "Unit I Topic a (Ancient Indian Republics), Unit II (Dr. Garima Das and Dr. Binit Kumar Sinha), and Unit III are strictly excluded. This assessment strictly examines Prof. Ujjwal Kumar Singh's portion: Unit I (b & c) and Unit IV (a).",
           citation: {
-            sender: "Batch Discussion (+91 95820 06595 & +91 93135 08513)",
-            date: "28 Sept 2026, 11:48 AM",
-            source: "Batch Discussion Chat",
-            quote: "Unit 1(a) & (c), Unit 4(a). Excluding Garima ma'am and bipin sir readings of unit 2."
-          }
-        },
-        southCampusContrast: {
-          badge: "South Campus Update",
-          status: "Syllabus Scope Differential",
-          date: "1 Oct 2026",
-          title: "Syllabus Difference: Unit 1(b) instead of Unit 1(a)",
-          northNotice: "Unit I Topic a (Ancient Indian Republics) & Topic c",
-          southNotice: "Unit I Topic b (Constitutionalism Debates: Baxi, Austin, Bhargava) & Topic c",
-          notes: "South Campus updates identify Unit 1(b) (Key debates on Indian constitutionalism: transformative, postcolonial, liberal, democratic) instead of Unit 1(a). Prof. Ujjwal Kumar Singh covered constitutionalism debates (Upendra Baxi, Rajeev Bhargava, Granville Austin) in lectures, whereas ancient republics (1a) was not taught in depth.",
-          citation: {
-            sender: "South Campus Academic Updates",
+            sender: "Prof. Ujjwal Kumar Singh / Verified Course Breakdown",
             date: "1 Oct 2026",
-            source: "South Campus Batch Updates",
-            quote: "In South Campus, the syllabus is specified as Unit 1(b) (Indian Constitutionalism debates - Austin, Baxi, Bhargava) along with 1(c) and 4(a), rather than 1(a) which was not covered in class lectures."
+            source: "Official Faculty Syllabus Breakdown",
+            quote: "Unit I (b & c) and Unit IV (a). Topic 1a and Units 2 & 3 are strictly excluded."
           }
         },
         syllabusCitation: {
-          sender: "Sujal Vishwakarma (CR)",
-          date: "28 Sept 2026, 11:52 AM",
-          source: "Official Announcements",
-          quote: "Regarding Continuous Assessment of CC-Democracy and Political Institutions in India on 9th October' Friday. Total 20 Marks. Unit I=Historical Understanding of Democracy and Constitutionalism in India (Topic a, Topic c), Unit IV=Rule of law, rights and accountability (Topic a)."
+          sender: "Prof. Ujjwal Kumar Singh (Verified Syllabus)",
+          date: "1 Oct 2026, 5:50 PM",
+          source: "Faculty Notice",
+          quote: "Correct syllabus confirmed today by Prof. Ujjwal Kumar Singh: Unit I (Topic b: Salient features of Indian constitutionalism: representation, key debates in the Constituent Assembly; Topic c: Constitutional freedoms and reasonable restrictions, emergency provisions, first amendment, preventive detention) & Unit IV (Topic a: Rule of law and the decolonization of criminal laws)."
         },
         syllabusTopics: [
           {
             unit: "Unit I",
             unitTitle: "Historical Understanding of Democracy and Constitutionalism in India",
             topics: [
-              "Topic a: Republics and constitutions in ancient India",
+              "Topic b: Salient features of Indian constitutionalism: representation, key debates in the Constituent Assembly of India (Upendra Baxi, Rajeev Bhargava, Granville Austin)",
               "Topic c: Constitutional freedoms and reasonable restrictions, emergency provisions, first amendment, preventive detention and debate over extraordinary laws"
             ],
-            readingsNote: "No finalized readings were told in class or notices. Here are the specific drives available for Unit I:",
+            readingsNote: "Folders and readings available for Unit I:",
             drives: [
               {
                 name: "Unit 1 — Faculty Shared Drive",
@@ -278,35 +239,26 @@ const portalData = {
         shortName: "KTPP",
         date: "Friday, 9 October 2026",
         mode: "Continuous Assessment (CA)",
-        totalMarks: 40,
-        pattern: "2 Questions of 20 marks each",
+        totalMarks: 15,
+        pattern: "15 Marks · Option between 2 Questions (Rousseau or Quentin Skinner) · Attempt 1",
         status: "confirmed",
         statusText: "Syllabus Confirmed",
         faculty: "Dr. Ningthoujam Koiremba Singh",
         clarificationCallout: null,
-        footnoteNote: null,
-        southCampusContrast: {
-          badge: "South Campus Update",
-          status: "Pattern & Weightage Differential",
-          date: "1 Oct 2026, 12:57 PM",
-          confirmedWith: "Dr. Ningthoujam Koiremba Singh",
-          title: "Continuous Assessment Reduced to 15 Marks + Choice of 1 Question (Rousseau or Skinner)",
-          northNotice: "40 Marks · 2 Questions of 20 Marks each (Unit I-b & Unit III-c)",
-          southNotice: "15 Marks · Choice between 2 Questions: Rousseau OR Quentin Skinner · Attempt 1",
-          secondCaDate: "Friday, 30 October 2026 (20 Marks)",
-          notes: "Dr. Ningthoujam Koiremba Singh confirmed to South Campus that the 9 Oct CA is reduced to 15 Marks (choice of 1 question: Rousseau or Quentin Skinner). The remaining 20 Marks CA is scheduled for Friday, 30 October 2026.",
+        footnoteNote: {
+          text: "Continuous Assessment on 9 Oct is 15 Marks (choice between 1 question on Rousseau or 1 question on Quentin Skinner; attempt 1). The remaining 20 Marks CA is scheduled for Friday, 30 October 2026 (Total: 15M + 20M = 35M).",
           citation: {
-            sender: "Akansha / SDC Student Rep",
+            sender: "Dr. Ningthoujam Koiremba Singh",
             date: "1 Oct 2026, 12:57 PM",
-            source: "Faculty Direct Confirmation (South Campus)",
+            source: "Faculty Direct Confirmation",
             quote: "guys I just confirmed with koiremba sir regarding the CA, so it has been reduced to 15 marks and there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1, the next CA of 20 marks will be on 30th Oct."
           }
         },
         syllabusCitation: {
-          sender: "Sujal Vishwakarma (CR)",
-          date: "28 Sept 2026, 12:43 PM",
-          source: "Official Announcements",
-          quote: "Regarding Continuous Assessment of CC-Key Texts in Political Philosophy on 9th October' Friday. Total 40 Marks (2 Question of 20 mark each). Unit I= Introduction (Topic b: Theories of Interpretation), Unit III (Topic c: Rousseau - Social Contract)."
+          sender: "Dr. Ningthoujam Koiremba Singh",
+          date: "1 Oct 2026, 12:57 PM",
+          source: "Faculty Confirmation",
+          quote: "Continuous Assessment on 9th October: 15 Marks (Option between Rousseau and Quentin Skinner; attempt 1). Second CA of 20 Marks on 30th October."
         },
         syllabusTopics: [
           {
@@ -332,7 +284,7 @@ const portalData = {
               {
                 title: "Meaning and Understanding in the History of Ideas (1969)",
                 author: "Quentin Skinner",
-                scope: "Prescribed reading for Unit I Theories of Interpretation · Question option in South Campus CA",
+                scope: "Prescribed reading for Unit I Theories of Interpretation · Question option in 9 Oct CA",
                 url: "https://drive.google.com/drive/folders/1HSORAokjkAHdZqDAiMqeVNSVDE_t8Yri?usp=drive_link",
                 type: "Core Reading"
               }
@@ -342,7 +294,7 @@ const portalData = {
             unit: "Unit III",
             unitTitle: "Rousseau",
             topics: [
-              "Topic c: Rousseau - Social Contract"
+              "Topic c: Rousseau - Social Contract (Books 1 & 2)"
             ],
             readingsNote: "Prescribed translation shared by Dr. Ningthoujam Koiremba Singh:",
             drives: [],
@@ -350,9 +302,9 @@ const portalData = {
               {
                 title: "On the Social Contract (Judith R. Masters & Roger D. Masters Translation)",
                 author: "Jean-Jacques Rousseau",
-                scope: "Read only Book/Chapters 1 & 2 (there's still confusion, waiting for CR's final confirmation)",
+                scope: "Read Book 1 (Chapters 1-9) & Book 2 · Question option in 9 Oct CA",
                 url: "https://drive.google.com/file/d/16QbinQGaVEMWM-x8K7QWqOhv4WSo9VG9/view?usp=drivesdk",
-                type: "Specific Reading"
+                type: "Prescribed Text"
               }
             ]
           }
@@ -365,23 +317,117 @@ const portalData = {
         name: "Theories of International Relations",
         shortName: "IR",
         date: "Friday, 9 October 2026",
-        mode: "Continuous Assessment / IA",
-        totalMarks: null,
-        pattern: "Not notified yet",
-        status: "pending",
-        statusText: "Not notified yet",
-        faculty: "To be informed",
+        mode: "Internal Assessment (IA)",
+        totalMarks: 24,
+        pattern: "3 Questions of which 2 need to be attempted (2 Qs × 12M = 24 Marks)",
+        status: "confirmed",
+        statusText: "Syllabus Confirmed",
+        faculty: "Prof. Navnita C. Behera & Prof. Sanjeev Kumar HM",
         clarificationCallout: null,
+        footnoteNote: {
+          text: "Total 24 Marks Internal Assessment on Friday, 9 October 2026. The test will have 3 questions, of which students must attempt 2 questions (12 Marks each).",
+          citation: {
+            sender: "Official Notice (via Sachin Choudhary)",
+            date: "1 Oct 2026, 5:52 PM",
+            source: "Official Department Announcements",
+            quote: "Regarding Internal Assessment of CC-Theories of International Relations on 9th October' Friday. Total 24 Marks. 3 Questions of which 2 needs to be attempted. Syllabus: Eurocentrism and Multiple Births of IR, Critical Theory, Post Modernism and Post Structuralism."
+          }
+        },
+        syllabusCitation: {
+          sender: "Official Notice",
+          date: "1 Oct 2026, 5:52 PM",
+          source: "Official Announcements",
+          quote: "NOTICE: Regarding Internal Assessment of CC-Theories of International Relations on 9th October' Friday. Total 24 Marks. 3 Questions of which 2 needs to be attempted. Syllabus: Eurocentrism and Multiple Births of IR, Critical Theory, Post Modernism and Post Structuralism."
+        },
         syllabusTopics: [
           {
-            unit: "",
-            unitTitle: "Not notified yet",
+            unit: "Unit I",
+            unitTitle: "Introduction: Evolution of the Discipline",
             topics: [
-              "To be informed"
+              "Topic a: The Eurocentric Origin of the Discipline",
+              "Topic b: Understanding the Multiple Births of the Discipline"
             ],
-            readingsNote: "Not notified yet. To be informed.",
-            drives: [],
+            readingsNote: "Readings and drives available for Unit I:",
+            drives: [
+              {
+                name: "Unit 1 Drive (Eurocentrism & Births of Discipline)",
+                scope: "Shared by Prof. Navnita C. Behera / CR Drive",
+                url: "https://drive.google.com/drive/folders/14aDMmng2MdpaOqH-WRKY724J598sfuJx"
+              },
+              {
+                name: "IR Master Archive Drive",
+                scope: "Archive Drive",
+                url: "https://drive.google.com/drive/folders/1NDn8uOtrcdISW99hR9mB4y9yGxVve0uV"
+              }
+            ],
             items: []
+          },
+          {
+            unit: "Unit II",
+            unitTitle: "Major Paradigms in IR",
+            topics: [
+              "Topic c: Critical Theory (Frankfurt School, Robert Cox, Andrew Linklater)"
+            ],
+            readingsNote: "Readings and drive links for Critical Theory in IR:",
+            drives: [
+              {
+                name: "Unit 2 Drive (Marxism, Neo-Marxism & Critical Theory)",
+                scope: "CR Maintained Drive",
+                url: "https://drive.google.com/drive/folders/1zE156TnEDLHwdK2oxEcNTCpurzlICC8Y"
+              }
+            ],
+            items: [
+              {
+                title: "Social Forces, States and World Orders: Beyond International Relations Theory",
+                author: "Robert W. Cox",
+                scope: "Core text for Critical Theory in IR",
+                url: "https://drive.google.com/file/d/1bqGghxvhxgod3YRIz9W4L4k9mvaxvBxI/view?usp=drivesdk",
+                type: "Core Reading"
+              },
+              {
+                title: "Gramsci, Hegemony and International Relations: An Essay in Method",
+                author: "Robert W. Cox",
+                scope: "Core text for Critical Theory in IR",
+                url: "https://drive.google.com/file/d/1IZrqNLNUHSAX3vftJBxBAFALpRO2IEY1/view?usp=drivesdk",
+                type: "Core Reading"
+              },
+              {
+                title: "Marx and Critical Theory",
+                author: "Andrew Linklater",
+                scope: "Critical Theory in IR",
+                url: "https://drive.google.com/file/d/1v9_C4n2V5EmzP-l6ZjRjalzRR-1TDTQq/view?usp=drivesdk",
+                type: "Core Reading"
+              }
+            ]
+          },
+          {
+            unit: "Unit III",
+            unitTitle: "Alternative Approaches in IR",
+            topics: [
+              "Topic c: Post-Modernism and Post-Structuralism"
+            ],
+            readingsNote: "Drives and readings for Post-Modernism & Post-Structuralism in IR:",
+            drives: [
+              {
+                name: "IR Master Archive Drive",
+                scope: "Archive Drive",
+                url: "https://drive.google.com/drive/folders/1NDn8uOtrcdISW99hR9mB4y9yGxVve0uV"
+              },
+              {
+                name: "CR Maintained Drive (North Campus)",
+                scope: "CR Maintained Drive",
+                url: "https://drive.google.com/drive/folders/14aDMmng2MdpaOqH-WRKY724J598sfuJx"
+              }
+            ],
+            items: [
+              {
+                title: "The Poverty of Neorealism",
+                author: "Richard K. Ashley",
+                scope: "Post-Structuralist critique in IR",
+                url: "https://drive.google.com/file/d/1x-PvUZ32ZHGlfnNp7hPKR2Yq88mh8Ubc/view?usp=drivesdk",
+                type: "Core Reading"
+              }
+            ]
           }
         ]
       }
