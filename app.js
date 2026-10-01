@@ -185,18 +185,30 @@ function renderAssessmentsView() {
                     <div class="reading-row">
                       <div class="reading-info">
                         <span class="reading-type-label">${escapeHtml(r.type || 'Reading')}:</span>
-                        <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="reading-link">
-                          <span>${escapeHtml(r.title)}</span>
-                        </a>
+                        ${r.url ? `
+                          <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="reading-link">
+                            <span>${escapeHtml(r.title)}</span>
+                          </a>
+                        ` : `
+                          <span class="reading-link reading-link--no-url" style="color: var(--text-main); font-weight: 600;">
+                            <span>${escapeHtml(r.title)}</span>
+                          </span>
+                        `}
                         <span class="reading-author-meta">${escapeHtml(r.author)}</span>
                         ${r.scope ? `<span class="reading-scope-note">(${escapeHtml(r.scope)})</span>` : ''}
                       </div>
-                      <div class="reading-actions">
-                        <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="btn-open-drive">
-                          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                          Drive
-                        </a>
-                      </div>
+                      ${r.url ? `
+                        <div class="reading-actions">
+                          <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="btn-open-drive">
+                            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            Drive
+                          </a>
+                        </div>
+                      ` : `
+                        <div class="reading-actions">
+                          <span class="badge-source-note" style="font-size: 0.72rem; color: var(--text-muted); opacity: 0.85; padding: 2px 6px; border: 1px dashed var(--border-color); border-radius: 4px;">Referenced in Class</span>
+                        </div>
+                      `}
                     </div>
                   `).join('')}
                 </div>

@@ -13,7 +13,7 @@ const portalData = {
     batch: "MA Political Science (2026–2028)",
     campus: "North Campus, University of Delhi",
     classroom: "Room No. 18, Satyakam Bhawan",
-    lastUpdated: "1 October 2026, 6:40 PM IST",
+    lastUpdated: "1 October 2026, 7:30 PM IST",
     curator: "Anshul"
   },
 
@@ -175,7 +175,7 @@ const portalData = {
               "Topic b: Salient features of Indian constitutionalism: representation, key debates in the Constituent Assembly of India (Upendra Baxi, Rajeev Bhargava, Granville Austin)",
               "Topic c: Constitutional freedoms and reasonable restrictions, emergency provisions, first amendment, preventive detention and debate over extraordinary laws"
             ],
-            readingsNote: "Folders and readings available for Unit I:",
+            readingsNote: "Exact readings referenced in class & department discussion for Unit I:",
             drives: [
               {
                 name: "Unit 1 — Faculty Shared Drive",
@@ -193,7 +193,57 @@ const portalData = {
                 url: "https://drive.google.com/drive/folders/1LPajBK1-XYiApxgV9i8dllMzgK01mCeF?usp=drive_link"
               }
             ],
-            items: []
+            items: [
+              {
+                title: "The Indian Constitution: Cornerstone of a Nation",
+                author: "Granville Austin",
+                scope: "Constituent Assembly debates & constitutional architecture · Unit 1(b)",
+                url: "https://drive.google.com/drive/folders/1LveKm7f8jMRKodPKRWwuYE8sTM_-te4-?usp=drive_link",
+                type: "Core Text"
+              },
+              {
+                title: "Working a Democratic Constitution: The Indian Experience",
+                author: "Granville Austin",
+                scope: "Freedoms, First Amendment & Preventive Detention debates · Unit 1(b & c)",
+                url: "https://drive.google.com/drive/folders/1LveKm7f8jMRKodPKRWwuYE8sTM_-te4-?usp=drive_link",
+                type: "Core Text"
+              },
+              {
+                title: "The Indian Constitution: An Introduction",
+                author: "Madhav Khosla",
+                scope: "Preventive detention & fundamental rights framework · Unit 1(c)",
+                url: null,
+                type: "Recommended Reading"
+              },
+              {
+                title: "States of Emergency in States of Asia: A Comparative Study",
+                author: "Venkat Iyer",
+                scope: "Chapters 5 to 7: Preventive Detention & Extraordinary Powers · Unit 1(c)",
+                url: null,
+                type: "Recommended Reading"
+              },
+              {
+                title: "Offend, Shock, or Disturb: Free Speech under the Indian Constitution",
+                author: "Gautam Bhatia",
+                scope: "Constitutional freedoms & reasonable restrictions · Unit 1(c)",
+                url: null,
+                type: "Referenced Reading"
+              },
+              {
+                title: "First Amendment to the Constitution of India (Debates & Original Draft)",
+                author: "Constituent Assembly / Parliamentary Records",
+                scope: "Reasonable restrictions and debate over extraordinary laws · Unit 1(c)",
+                url: null,
+                type: "Primary Source"
+              },
+              {
+                title: "Constitutionalism as a Site of State Formative Practices: Accumulation and Legitimacy",
+                author: "Upendra Baxi (in Rajeev Bhargava ed., Politics and Ethics of the Indian Constitution)",
+                scope: "Debates on Indian constitutionalism and representation · Unit 1(b)",
+                url: null,
+                type: "Referenced Reading"
+              }
+            ]
           },
           {
             unit: "Unit IV",
@@ -201,7 +251,7 @@ const portalData = {
             topics: [
               "Topic a: Rule of law and the decolonization of criminal laws"
             ],
-            readingsNote: "Assigned class reading & specific drives available for Unit IV:",
+            readingsNote: "Assigned class reading & foundational texts for Unit IV:",
             drives: [
               {
                 name: "Unit 4 — Faculty Shared Drive",
@@ -226,6 +276,20 @@ const portalData = {
                 scope: "Assigned by Prof. Ujjwal Kumar Singh in class for Rule of Law & Criminal Law Decolonization",
                 url: "https://drive.google.com/drive/folders/1sdPzuuK49RzaY_B9AXogy5TAYMJto9Yq?usp=drive_link",
                 type: "Assigned Reading"
+              },
+              {
+                title: "Introduction to the Study of the Law of the Constitution (The Rule of Law)",
+                author: "A.V. Dicey",
+                scope: "Classical formulation of the Rule of Law · Unit 4(a)",
+                url: null,
+                type: "Foundational Text"
+              },
+              {
+                title: "The Rule of Law in India: Theory and Practice",
+                author: "Upendra Baxi",
+                scope: "Critical perspective on post-colonial Rule of Law · Unit 4(a)",
+                url: null,
+                type: "Referenced Reading"
               }
             ]
           }
@@ -366,9 +430,9 @@ const portalData = {
             unit: "Unit II",
             unitTitle: "Major Paradigms in IR",
             topics: [
-              "Topic c: Critical Theory (Frankfurt School, Robert Cox, Andrew Linklater)"
+              "Topic c: Critical Theory"
             ],
-            readingsNote: "Readings and drive links for Critical Theory in IR:",
+            readingsNote: "Readings uploaded on Department Google Drive (Unit II folder). Specific chapter selections awaited from faculty.",
             drives: [
               {
                 name: "Unit 2 Drive (Marxism, Neo-Marxism & Critical Theory)",
@@ -376,29 +440,7 @@ const portalData = {
                 url: "https://drive.google.com/drive/folders/1zE156TnEDLHwdK2oxEcNTCpurzlICC8Y"
               }
             ],
-            items: [
-              {
-                title: "Social Forces, States and World Orders: Beyond International Relations Theory",
-                author: "Robert W. Cox",
-                scope: "Core text for Critical Theory in IR",
-                url: "https://drive.google.com/file/d/1bqGghxvhxgod3YRIz9W4L4k9mvaxvBxI/view?usp=drivesdk",
-                type: "Core Reading"
-              },
-              {
-                title: "Gramsci, Hegemony and International Relations: An Essay in Method",
-                author: "Robert W. Cox",
-                scope: "Core text for Critical Theory in IR",
-                url: "https://drive.google.com/file/d/1IZrqNLNUHSAX3vftJBxBAFALpRO2IEY1/view?usp=drivesdk",
-                type: "Core Reading"
-              },
-              {
-                title: "Marx and Critical Theory",
-                author: "Andrew Linklater",
-                scope: "Critical Theory in IR",
-                url: "https://drive.google.com/file/d/1v9_C4n2V5EmzP-l6ZjRjalzRR-1TDTQq/view?usp=drivesdk",
-                type: "Core Reading"
-              }
-            ]
+            items: []
           },
           {
             unit: "Unit III",
@@ -406,7 +448,7 @@ const portalData = {
             topics: [
               "Topic c: Post-Modernism and Post-Structuralism"
             ],
-            readingsNote: "Drives and readings for Post-Modernism & Post-Structuralism in IR:",
+            readingsNote: "Readings uploaded on Department Google Drive. As discussed in department groups, specific reading portions/chapters for Post-Modernism & Post-Structuralism will be clarified by faculty.",
             drives: [
               {
                 name: "IR Master Archive Drive",
@@ -419,15 +461,7 @@ const portalData = {
                 url: "https://drive.google.com/drive/folders/14aDMmng2MdpaOqH-WRKY724J598sfuJx"
               }
             ],
-            items: [
-              {
-                title: "The Poverty of Neorealism",
-                author: "Richard K. Ashley",
-                scope: "Post-Structuralist critique in IR",
-                url: "https://drive.google.com/file/d/1x-PvUZ32ZHGlfnNp7hPKR2Yq88mh8Ubc/view?usp=drivesdk",
-                type: "Core Reading"
-              }
-            ]
+            items: []
           }
         ]
       }
