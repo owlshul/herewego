@@ -13,7 +13,7 @@ const portalData = {
     batch: "MA Political Science (2026–2028)",
     campus: "North Campus, University of Delhi",
     classroom: "Room No. 18, Satyakam Bhawan",
-    lastUpdated: "28 September 2026, 3:00 PM IST",
+    lastUpdated: "1 October 2026, 4:00 PM IST",
     curator: "Anshul"
   },
 
@@ -46,6 +46,18 @@ const portalData = {
       tags: ["#CC102", "#DPII", "#Confirmed", "#9Oct"]
     },
     {
+      id: "va-sc-2",
+      title: "South Campus Update: DPII Syllabus Lists Unit 1(b) instead of 1(a)",
+      date: "1 Oct 2026",
+      sender: "South Campus Updates",
+      source: "South Campus Batch Updates",
+      type: "contrast",
+      priority: true,
+      summary: "South Campus updates identify Unit 1(b) (Indian constitutionalism debates: Baxi, Austin, Bhargava) instead of Unit 1(a) (ancient republics), matching topics covered in class lectures.",
+      exactQuote: "South Campus scope for 9 Oct DPII CA covers Unit 1(b) & (c) and Unit 4(a). Unit 1(b) covers Indian constitutionalism debates (transformative, postcolonial, liberal, democratic) taught by Prof. Ujjwal Kumar Singh.",
+      tags: ["#SouthCampus", "#CC102", "#DPII", "#Contrast", "#Unit1b"]
+    },
+    {
       id: "va-2",
       title: "KTPP Continuous Assessment on 9 Oct (40 Marks · 2 Qs × 20M)",
       date: "28 Sept 2026, 12:43 PM",
@@ -56,6 +68,18 @@ const portalData = {
       summary: "40 Marks CA covering Dr. Ningthoujam Koiremba Singh's components: Unit I (Theories of Interpretation) & Unit III (Rousseau: Social Contract).",
       exactQuote: "Regarding Continuous Assessment of CC-Key Texts in Political Philosophy on 9th October' Friday. Total 40 Marks (2 Question of 20 mark each). Unit I= Introduction (Topic b: Theories of Interpretation), Unit III (Topic c: Rousseau - Social Contract).",
       tags: ["#CC101", "#KTPP", "#Confirmed", "#9Oct"]
+    },
+    {
+      id: "va-sc-1",
+      title: "South Campus Update: KTPP CA Reduced to 15 Marks (Rousseau vs Skinner) + 30 Oct CA",
+      date: "1 Oct 2026, 12:57 PM",
+      sender: "Akansha / SDC Student Rep",
+      source: "Faculty Direct Confirmation (Dr. Koiremba Singh)",
+      type: "contrast",
+      priority: true,
+      summary: "Faculty direct confirmation: 9 Oct CA reduced to 15 Marks with an option between 2 questions (Rousseau OR Quentin Skinner; attempt 1). Subsequent 20 Marks CA scheduled for 30 October 2026.",
+      exactQuote: "guys I just confirmed with koiremba sir regarding the CA, so it has been reduced to 15 marks and there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1, the next CA of 20 marks will be on 30th Oct.",
+      tags: ["#SouthCampus", "#CC101", "#KTPP", "#Contrast", "#15Marks"]
     },
     {
       id: "va-3",
@@ -161,6 +185,21 @@ const portalData = {
             quote: "Unit 1(a) & (c), Unit 4(a). Excluding Garima ma'am and bipin sir readings of unit 2."
           }
         },
+        southCampusContrast: {
+          badge: "South Campus Update",
+          status: "Syllabus Scope Differential",
+          date: "1 Oct 2026",
+          title: "Syllabus Difference: Unit 1(b) instead of Unit 1(a)",
+          northNotice: "Unit I Topic a (Ancient Indian Republics) & Topic c",
+          southNotice: "Unit I Topic b (Constitutionalism Debates: Baxi, Austin, Bhargava) & Topic c",
+          notes: "South Campus updates identify Unit 1(b) (Key debates on Indian constitutionalism: transformative, postcolonial, liberal, democratic) instead of Unit 1(a). Prof. Ujjwal Kumar Singh covered constitutionalism debates (Upendra Baxi, Rajeev Bhargava, Granville Austin) in lectures, whereas ancient republics (1a) was not taught in depth.",
+          citation: {
+            sender: "South Campus Academic Updates",
+            date: "1 Oct 2026",
+            source: "South Campus Batch Updates",
+            quote: "In South Campus, the syllabus is specified as Unit 1(b) (Indian Constitutionalism debates - Austin, Baxi, Bhargava) along with 1(c) and 4(a), rather than 1(a) which was not covered in class lectures."
+          }
+        },
         syllabusCitation: {
           sender: "Sujal Vishwakarma (CR)",
           date: "28 Sept 2026, 11:52 AM",
@@ -201,7 +240,7 @@ const portalData = {
             topics: [
               "Topic a: Rule of law and the decolonization of criminal laws"
             ],
-            readingsNote: "No finalized readings were told in class or notices. Here are the specific drives available for Unit IV:",
+            readingsNote: "Assigned class reading & specific drives available for Unit IV:",
             drives: [
               {
                 name: "Unit 4 — Faculty Shared Drive",
@@ -219,7 +258,15 @@ const portalData = {
                 url: "https://drive.google.com/drive/folders/1D0VqPfbICB5_CQbYGVy4QgGfxj6XJXFG?usp=drive_link"
               }
             ],
-            items: []
+            items: [
+              {
+                title: "On India's post-colonial engagement with the Rule of Law (2013)",
+                author: "Moiz Tundawala",
+                scope: "Assigned by Prof. Ujjwal Kumar Singh in class for Rule of Law & Criminal Law Decolonization",
+                url: "https://drive.google.com/drive/folders/1sdPzuuK49RzaY_B9AXogy5TAYMJto9Yq?usp=drive_link",
+                type: "Assigned Reading"
+              }
+            ]
           }
         ]
       },
@@ -238,6 +285,23 @@ const portalData = {
         faculty: "Dr. Ningthoujam Koiremba Singh",
         clarificationCallout: null,
         footnoteNote: null,
+        southCampusContrast: {
+          badge: "South Campus Update",
+          status: "Pattern & Weightage Differential",
+          date: "1 Oct 2026, 12:57 PM",
+          confirmedWith: "Dr. Ningthoujam Koiremba Singh",
+          title: "Continuous Assessment Reduced to 15 Marks + Choice of 1 Question (Rousseau or Skinner)",
+          northNotice: "40 Marks · 2 Questions of 20 Marks each (Unit I-b & Unit III-c)",
+          southNotice: "15 Marks · Choice between 2 Questions: Rousseau OR Quentin Skinner · Attempt 1",
+          secondCaDate: "Friday, 30 October 2026 (20 Marks)",
+          notes: "Dr. Ningthoujam Koiremba Singh confirmed to South Campus that the 9 Oct CA is reduced to 15 Marks (choice of 1 question: Rousseau or Quentin Skinner). The remaining 20 Marks CA is scheduled for Friday, 30 October 2026.",
+          citation: {
+            sender: "Akansha / SDC Student Rep",
+            date: "1 Oct 2026, 12:57 PM",
+            source: "Faculty Direct Confirmation (South Campus)",
+            quote: "guys I just confirmed with koiremba sir regarding the CA, so it has been reduced to 15 marks and there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1, the next CA of 20 marks will be on 30th Oct."
+          }
+        },
         syllabusCitation: {
           sender: "Sujal Vishwakarma (CR)",
           date: "28 Sept 2026, 12:43 PM",
@@ -249,9 +313,9 @@ const portalData = {
             unit: "Unit I",
             unitTitle: "Introduction",
             topics: [
-              "Topic b: Theories of Interpretation"
+              "Topic b: Theories of Interpretation (Specifically Quentin Skinner 1969 & Terence Ball)"
             ],
-            readingsNote: "No finalized readings were told individually. Here are the folders shared for Unit 1:",
+            readingsNote: "Folders and core text for Unit 1 (Theories of Interpretation):",
             drives: [
               {
                 name: "Unit 1 — CR Maintained Drive",
@@ -264,7 +328,15 @@ const portalData = {
                 url: "https://drive.google.com/drive/folders/1HSORAokjkAHdZqDAiMqeVNSVDE_t8Yri?usp=drive_link"
               }
             ],
-            items: []
+            items: [
+              {
+                title: "Meaning and Understanding in the History of Ideas (1969)",
+                author: "Quentin Skinner",
+                scope: "Prescribed reading for Unit I Theories of Interpretation · Question option in South Campus CA",
+                url: "https://drive.google.com/drive/folders/1HSORAokjkAHdZqDAiMqeVNSVDE_t8Yri?usp=drive_link",
+                type: "Core Reading"
+              }
+            ]
           },
           {
             unit: "Unit III",

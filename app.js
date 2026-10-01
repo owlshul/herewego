@@ -219,6 +219,60 @@ function renderAssessmentsView() {
       `;
     }).join('');
 
+    // South Campus Differential Update (rendered below North Campus details only if different)
+    let southCampusHtml = '';
+    if (paper.southCampusContrast) {
+      const sc = paper.southCampusContrast;
+      const scCit = sc.citation;
+      const scCitAttrs = scCit ? `
+        data-citation-sender="${escapeHtml(scCit.sender)}"
+        data-citation-date="${escapeHtml(scCit.date)}"
+        data-citation-source="${escapeHtml(scCit.source)}"
+        data-citation-quote="${escapeHtml(scCit.quote)}"
+      ` : '';
+
+      southCampusHtml = `
+        <div class="south-campus-contrast-card">
+          <div class="sc-contrast-header">
+            <div class="sc-badge-group">
+              <span class="pill pill-contrast">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 3h5v5"></path><path d="M8 21H3v-5"></path><path d="M21 3l-7 7"></path><path d="M3 21l7-7"></path></svg>
+                ${escapeHtml(sc.badge)}
+              </span>
+              <span class="sc-verified-tag">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                ${escapeHtml(sc.date)}${sc.confirmedWith ? ` · Direct with ${escapeHtml(sc.confirmedWith)}` : ''}
+              </span>
+            </div>
+            ${scCit ? `
+              <button type="button" class="proof-qmark citation-trigger" ${scCitAttrs} title="View WhatsApp verification" aria-label="View South Campus WhatsApp verification">?</button>
+            ` : ''}
+          </div>
+
+          <h4 class="sc-contrast-title">${escapeHtml(sc.title)}</h4>
+
+          <div class="sc-comparison-grid">
+            <div class="sc-comparison-col sc-col-north">
+              <span class="sc-col-label">North Campus Notice</span>
+              <span class="sc-col-val">${escapeHtml(sc.northNotice)}</span>
+            </div>
+            <div class="sc-comparison-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+            </div>
+            <div class="sc-comparison-col sc-col-south">
+              <span class="sc-col-label">South Campus Update</span>
+              <span class="sc-col-val"><strong>${escapeHtml(sc.southNotice)}</strong></span>
+            </div>
+          </div>
+
+          <div class="sc-details-box">
+            ${sc.secondCaDate ? `<p class="sc-detail-line"><strong>Subsequent CA:</strong> Next <strong>20 Marks CA</strong> scheduled for <strong>${escapeHtml(sc.secondCaDate)}</strong>.</p>` : ''}
+            <p class="sc-detail-note">${escapeHtml(sc.notes)}</p>
+          </div>
+        </div>
+      `;
+    }
+
     return `
       <article class="paper-entry" data-paper-code="${paper.code}">
         <div class="paper-header">
@@ -241,6 +295,8 @@ function renderAssessmentsView() {
           ${syllabusHtml}
           ${footnoteHtml}
         </div>
+
+        ${southCampusHtml}
       </article>
     `;
   }).join('');
