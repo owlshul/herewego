@@ -102,6 +102,27 @@ function renderAssessmentsView() {
   const papers = portalData.upcomingCycle.papers;
 
   const corePapersHtml = papers.map(paper => {
+    // Important Strategy Warning Callout
+    const warn = paper.warningCallout;
+    const warnAttrs = warn && warn.citation ? `
+      data-citation-sender="${escapeHtml(warn.citation.sender)}"
+      data-citation-date="${escapeHtml(warn.citation.date)}"
+      data-citation-source="${escapeHtml(warn.citation.source)}"
+      data-citation-quote="${escapeHtml(warn.citation.quote)}"
+    ` : '';
+
+    const warningCalloutHtml = warn ? `
+      <div class="callout" data-callout="warning" style="margin: 0 0 12px 0;">
+        <div class="callout-title">
+          <span>⚠️ ${escapeHtml(warn.title || 'Important Strategy Warning')}</span>
+          ${warn.citation ? ` <button type="button" class="proof-qmark citation-trigger" ${warnAttrs} title="View WhatsApp verification" aria-label="View WhatsApp verification">?</button>` : ''}
+        </div>
+        <div class="callout-body">
+          <p style="margin: 0; font-size: 0.88rem; line-height: 1.45;">${escapeHtml(warn.text)}</p>
+        </div>
+      </div>
+    ` : '';
+
     // Footnote Note in italics (e.g. Unit II exclusion)
     const fn = paper.footnoteNote;
     const fnAttrs = fn && fn.citation ? `
@@ -315,6 +336,7 @@ function renderAssessmentsView() {
         </div>
 
         <div class="syllabus-clean-wrap">
+          ${warningCalloutHtml}
           ${syllabusHeaderHtml}
           ${syllabusHtml}
           ${footnoteHtml}

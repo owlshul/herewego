@@ -13,7 +13,7 @@ const portalData = {
     batch: "MA Political Science (2026–2028)",
     campus: "North Campus, University of Delhi",
     classroom: "Room No. 18, Satyakam Bhawan",
-    lastUpdated: "1 October 2026, 8:25 PM IST",
+    lastUpdated: "1 October 2026, 9:05 PM IST",
     curator: "Anshul"
   },
 
@@ -21,6 +21,18 @@ const portalData = {
   // MERGED ANNOUNCEMENTS & VERIFIED CITATIONS (One unified dispute-settler feed)
   // ---------------------------------------------------------------------------
   verifiedAnnouncements: [
+    {
+      id: "va-ktpp-sujal-final",
+      title: "KTPP Continuous Assessment: 16 Marks (Attempt 1 of 2) & Crucial Strategy Warning",
+      date: "1 Oct 2026, 9:00 PM",
+      sender: "Sujal Vishwakarma (CR)",
+      source: "WhatsApp: North Campus Announcements (Core Papers)",
+      type: "assessment",
+      priority: true,
+      summary: "Official pattern confirmed for Friday, 9 October: Total 16 Marks (1 question to be answered out of 2). Topics: Rousseau & Interpretation of Text (Main Focus on Skinner). Warning: Do not prepare only one topic thinking there is choice — questions can be interrelated or drawn from the same topic.",
+      exactQuote: "Regarding Continuous Assessment of CC-Key Texts In Political Philosophy on 9th October' Friday. Total 16 Mark (1 Question), 2 Questions will be there out of which only 1 needs to be answered. Rousseau and Interpretation of Text (Main Focus on Skinner). And don't think that since there is an option so you can either prepare Skinner or Rousseau. Both the questions can be interrelated or can be from the same topic.",
+      tags: ["#CC101", "#KTPP", "#ContinuousAssessment", "#Warning", "#16Marks"]
+    },
     {
       id: "va-ir-final",
       title: "IR Internal Assessment Confirmed for 9 Oct (24 Marks · 3 Qs, Attempt 2)",
@@ -396,33 +408,42 @@ const portalData = {
         shortName: "KTPP",
         date: "Friday, 9 October 2026",
         mode: "Continuous Assessment (CA)",
-        totalMarks: 15,
-        pattern: "15 Marks · Option between 2 Questions (Rousseau or Quentin Skinner) · Attempt 1",
+        totalMarks: 16,
+        pattern: "Continuous Assessment · 16 Marks (1 Question to be answered out of 2)",
         status: "confirmed",
         statusText: "Syllabus Confirmed",
         faculty: "Dr. Ningthoujam Koiremba Singh",
-        clarificationCallout: null,
-        footnoteNote: {
-          text: "Continuous Assessment on 9 Oct is 15 Marks (choice between 1 question on Rousseau or 1 question on Quentin Skinner; attempt 1). The remaining 20 Marks CA is scheduled for Friday, 30 October 2026 (Total: 15M + 20M = 35M).",
+        warningCallout: {
+          title: "Strategy Warning on Choice: Prepare Both Topics!",
+          text: "Don't think that since there is an option so you can either prepare Skinner or Rousseau. Both the questions can be interrelated or can be from the same topic!",
           citation: {
-            sender: "Akansha (+91 93115 38286)",
-            date: "1 Oct 2026, 12:57 PM",
-            source: "WhatsApp: South campus (Department of Political Science 2026-2028) 🎓",
-            quote: "guys I just confirmed with koiremba sir regarding the CA, so it has been reduced to 15 marks and there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1, the next CA of 20 marks will be on 30th Oct."
+            sender: "Sujal Vishwakarma (CR)",
+            date: "1 Oct 2026",
+            source: "WhatsApp: North Campus Announcements (Core Papers)",
+            quote: "Regarding Continuous Assessment of CC-Key Texts In Political Philosophy on 9th October' Friday. Total 16 Mark (1 Question), 2 Questions will be there out of which only 1 needs to be answered. Rousseau and Interpretation of Text (Main Focus on Skinner). And don't think that since there is an option so you can either prepare Skinner or Rousseau. Both the questions can be interrelated or can be from the same topic."
+          }
+        },
+        footnoteNote: {
+          text: "Continuous Assessment on 9 Oct is 16 Marks (1 question out of 2). Covers Rousseau and Interpretation of Text (Main Focus on Skinner). Warning: Do not prepare only one topic thinking there is choice — questions can be interrelated or drawn from the same topic.",
+          citation: {
+            sender: "Sujal Vishwakarma (CR)",
+            date: "1 Oct 2026",
+            source: "WhatsApp: North Campus Announcements (Core Papers)",
+            quote: "Regarding Continuous Assessment of CC-Key Texts In Political Philosophy on 9th October' Friday. Total 16 Mark (1 Question), 2 Questions will be there out of which only 1 needs to be answered. Rousseau and Interpretation of Text (Main Focus on Skinner). And don't think that since there is an option so you can either prepare Skinner or Rousseau. Both the questions can be interrelated or can be from the same topic."
           }
         },
         syllabusCitation: {
-          sender: "Akansha (+91 93115 38286)",
-          date: "1 Oct 2026, 12:57 PM",
-          source: "WhatsApp: South campus (Department of Political Science 2026-2028) 🎓",
-          quote: "guys I just confirmed with koiremba sir regarding the CA, so it has been reduced to 15 marks and there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1, the next CA of 20 marks will be on 30th Oct."
+          sender: "Sujal Vishwakarma (CR)",
+          date: "1 Oct 2026",
+          source: "WhatsApp: North Campus Announcements (Core Papers)",
+          quote: "Regarding Continuous Assessment of CC-Key Texts In Political Philosophy on 9th October' Friday. Total 16 Mark (1 Question), 2 Questions will be there out of which only 1 needs to be answered. Rousseau and Interpretation of Text (Main Focus on Skinner). And don't think that since there is an option so you can either prepare Skinner or Rousseau. Both the questions can be interrelated or can be from the same topic."
         },
         syllabusTopics: [
           {
             unit: "Unit I",
-            unitTitle: "Introduction",
+            unitTitle: "Introduction: Interpretation of Text (Focus on Skinner)",
             topics: [
-              "Topic b: Theories of Interpretation (Specifically Quentin Skinner 1969 & Terence Ball)"
+              "Topic b: Theories of Interpretation (Main Focus on Quentin Skinner)"
             ],
             // 1. Official DU Syllabus Prescribed Readings
             syllabusReadings: [
@@ -451,7 +472,7 @@ const portalData = {
               }
             ],
             // 3. Faculty References & Class Discussions
-            classReadingsNote: "Dr. Ningthoujam Koiremba Singh confirmed choice of 1 question between Skinner (1969) or Rousseau:",
+            classReadingsNote: "Readings for Interpretation of Text / Skinner (Choice of 1 question with Rousseau · Warning: questions may be interrelated):",
             classReadings: [
               {
                 author: "Quentin Skinner",
@@ -462,10 +483,16 @@ const portalData = {
             ],
             classProofs: [
               {
+                sender: "Sujal Vishwakarma (CR)",
+                chat: "WhatsApp (North Campus Announcements)",
+                date: "1 Oct 2026",
+                quote: "Total 16 Mark (1 Question), 2 Questions will be there out of which only 1 needs to be answered. Rousseau and Interpretation of Text (Main Focus on Skinner). And don't think that since there is an option so you can either prepare Skinner or Rousseau. Both the questions can be interrelated or can be from the same topic."
+              },
+              {
                 sender: "Akansha (+91 93115 38286)",
                 chat: "WhatsApp (South Campus Pol Sci)",
                 date: "1 Oct 2026, 12:57 PM",
-                quote: "guys I just confirmed with koiremba sir regarding the CA, so it has been reduced to 15 marks and there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1"
+                quote: "guys I just confirmed with koiremba sir regarding the CA... there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1"
               }
             ]
           },
@@ -502,7 +529,7 @@ const portalData = {
               }
             ],
             // 3. Faculty References & Class Discussions
-            classReadingsNote: "Prescribed translation shared by Dr. Ningthoujam Koiremba Singh for 9 Oct CA:",
+            classReadingsNote: "Prescribed translation shared by Dr. Ningthoujam Koiremba Singh for 9 Oct CA (Choice of 1 question with Skinner · Warning: questions may be interrelated):",
             classReadings: [
               {
                 author: "Jean-Jacques Rousseau",
@@ -512,6 +539,12 @@ const portalData = {
               }
             ],
             classProofs: [
+              {
+                sender: "Sujal Vishwakarma (CR)",
+                chat: "WhatsApp (North Campus Announcements)",
+                date: "1 Oct 2026",
+                quote: "Total 16 Mark (1 Question), 2 Questions will be there out of which only 1 needs to be answered. Rousseau and Interpretation of Text (Main Focus on Skinner). And don't think that since there is an option so you can either prepare Skinner or Rousseau. Both the questions can be interrelated or can be from the same topic."
+              },
               {
                 sender: "Akansha (+91 93115 38286)",
                 chat: "WhatsApp (South Campus Pol Sci)",
