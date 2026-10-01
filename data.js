@@ -13,7 +13,7 @@ const portalData = {
     batch: "MA Political Science (2026–2028)",
     campus: "North Campus, University of Delhi",
     classroom: "Room No. 18, Satyakam Bhawan",
-    lastUpdated: "1 October 2026, 7:30 PM IST",
+    lastUpdated: "1 October 2026, 7:50 PM IST",
     curator: "Anshul"
   },
 
@@ -25,8 +25,8 @@ const portalData = {
       id: "va-ir-final",
       title: "IR Internal Assessment Confirmed for 9 Oct (24 Marks · 3 Qs, Attempt 2)",
       date: "1 Oct 2026, 5:52 PM",
-      sender: "Official Department Notice (via Sachin Choudhary)",
-      source: "Official Announcements",
+      sender: "Sachin Choudhary (+91 70666 08751) & Drishti CR (+91 96965 33151)",
+      source: "WhatsApp (North Campus Core Papers & South Campus Announcements)",
       type: "assessment",
       priority: true,
       summary: "24 Marks IA confirmed for Friday, 9 October 2026. Format: 3 questions of which 2 need to be attempted (2 × 12M = 24M). Syllabus: Eurocentrism & Multiple Births of IR, Critical Theory, Post-Modernism & Post-Structuralism.",
@@ -37,20 +37,20 @@ const portalData = {
       id: "va-dpii-final",
       title: "DPII Final Syllabus Confirmed: Unit I(b & c) and Unit IV(a) · 20 Marks",
       date: "1 Oct 2026, 5:50 PM",
-      sender: "Prof. Ujjwal Kumar Singh (Official Course Breakdown)",
-      source: "Faculty Notification",
+      sender: "Sachin Choudhary (+91 70666 08751) / Prof. Ujjwal Kumar Singh",
+      source: "WhatsApp (South Campus Group & Direct Chat)",
       type: "assessment",
       priority: true,
-      summary: "Final syllabus confirmed for Friday, 9 October CA (20 Marks): Unit I covers Topic b (Indian Constitutionalism debates: Constituent Assembly) and Topic c (Freedoms, emergency, preventive detention). Unit IV covers Topic a (Rule of Law & criminal law decolonization). Unit I(a) and Units II & III are excluded.",
-      exactQuote: "Correct syllabus confirmed today by Prof. Ujjwal Kumar Singh: Unit I: Historical Understanding of Democracy and Constitutionalism in India (Topic b: Salient features of Indian constitutionalism: representation, key debates in the Constituent Assembly; Topic c: Constitutional freedoms and reasonable restrictions, emergency provisions, first amendment, preventive detention) & Unit IV: Rule of Law, Rights and Accountability (Topic a: Rule of law and the decolonization of criminal laws). Topic 1a and Units 2 & 3 are excluded.",
+      summary: "Final syllabus confirmed for Friday, 9 October CA (20 Marks): Unit I covers Topic b (Indian Constitutionalism debates: Constituent Assembly) and Topic c (Freedoms, emergency provisions [not coming], preventive detention). Unit IV covers Topic a (Rule of Law & criminal law decolonization). Unit I(a) and Units II & III are excluded.",
+      exactQuote: "Ye hai syllabus aaj south campus me sir ne bataya... Ye highlighted wala hai syllabus sir ne mark karaya hai aaj class me: Unit 1: (b) and (c) [emergency provisions (this is not coming)], Unit 4: (a).",
       tags: ["#CC102", "#DPII", "#Confirmed", "#9Oct", "#20Marks"]
     },
     {
       id: "va-ktpp-final",
       title: "KTPP Continuous Assessment on 9 Oct: 15 Marks (Rousseau vs Skinner) + 30 Oct CA",
       date: "1 Oct 2026, 12:57 PM",
-      sender: "Dr. Ningthoujam Koiremba Singh",
-      source: "Faculty Direct Confirmation",
+      sender: "Akansha (+91 93115 38286 / Confirmed with Dr. Koiremba Singh)",
+      source: "WhatsApp: South campus (Department of Political Science 2026-2028) 🎓",
       type: "assessment",
       priority: true,
       summary: "Continuous Assessment on 9 Oct is 15 Marks with an option between 2 questions (Rousseau: Social Contract or Quentin Skinner 1969; attempt 1 question). The second CA of 20 Marks is scheduled for Friday, 30 October 2026.",
@@ -61,8 +61,8 @@ const portalData = {
       id: "va-sbc-1",
       title: "SBC Internal Assessment: Handwritten Assignment Due 20 Oct (12 Marks)",
       date: "28 Sept 2026, 10:15 PM",
-      sender: "Official Notice",
-      source: "Official Announcements",
+      sender: "Drishti CR (+91 96965 33151) / North Campus Admins",
+      source: "WhatsApp: Dept. Of political science (North campus) -- 2026-2028",
       type: "assessment",
       priority: true,
       summary: "Handwritten Assignment for SBC-Elections and Data-Driven Electoral Analysis (7-8 pages). Submit PDF on Google Classroom by 20th October (12 Marks).",
@@ -153,27 +153,27 @@ const portalData = {
         faculty: "Prof. Ujjwal Kumar Singh",
         clarificationCallout: null,
         footnoteNote: {
-          text: "Unit I Topic a (Ancient Indian Republics), Unit II (Dr. Garima Das and Dr. Binit Kumar Sinha), and Unit III are strictly excluded. This assessment strictly examines Prof. Ujjwal Kumar Singh's portion: Unit I (b & c) and Unit IV (a).",
+          text: "Unit I Topic a (Ancient Indian Republics), Unit II (Dr. Garima Das and Dr. Binit Kumar Sinha), and Unit III are strictly excluded. This assessment strictly examines Prof. Ujjwal Kumar Singh's portion: Unit I (b & c) [emergency provisions excluded] and Unit IV (a).",
           citation: {
-            sender: "Prof. Ujjwal Kumar Singh / Verified Course Breakdown",
-            date: "1 Oct 2026",
-            source: "Official Faculty Syllabus Breakdown",
-            quote: "Unit I (b & c) and Unit IV (a). Topic 1a and Units 2 & 3 are strictly excluded."
+            sender: "Sachin Choudhary (+91 70666 08751)",
+            date: "1 Oct 2026, 5:41 PM & 5:50 PM",
+            source: "WhatsApp Chat (Direct & South Campus Group)",
+            quote: "Ye hai syllabus aaj south campus me sir ne bataya... Ye highlighted wala hai syllabus sir ne mark karaya hai aaj class me. Emergency provisions test me nahi aa raha."
           }
         },
         syllabusCitation: {
-          sender: "Prof. Ujjwal Kumar Singh (Verified Syllabus)",
-          date: "1 Oct 2026, 5:50 PM",
-          source: "Faculty Notice",
-          quote: "Correct syllabus confirmed today by Prof. Ujjwal Kumar Singh: Unit I (Topic b: Salient features of Indian constitutionalism: representation, key debates in the Constituent Assembly; Topic c: Constitutional freedoms and reasonable restrictions, emergency provisions, first amendment, preventive detention) & Unit IV (Topic a: Rule of law and the decolonization of criminal laws)."
+          sender: "Sachin Choudhary (+91 70666 08751)",
+          date: "1 Oct 2026, 5:41 PM & 5:50 PM",
+          source: "WhatsApp (South Campus Group & Direct Chat)",
+          quote: "Ye hai syllabus aaj south campus me sir ne bataya... Ye highlighted wala hai syllabus sir ne mark karaya hai aaj class me: Unit 1: (b) and (c) [emergency provisions (this is not coming)], Unit 4: (a)."
         },
         syllabusTopics: [
           {
             unit: "Unit I",
             unitTitle: "Historical Understanding of Democracy and Constitutionalism in India",
             topics: [
-              "Topic b: Salient features of Indian constitutionalism: representation, key debates in the Constituent Assembly of India (Upendra Baxi, Rajeev Bhargava, Granville Austin)",
-              "Topic c: Constitutional freedoms and reasonable restrictions, emergency provisions, first amendment, preventive detention and debate over extraordinary laws"
+              "Topic b: Salient features of India constitutionalism: representation, key debates in the Constituent Assembly of India",
+              "Topic c: Constitutional freedoms and reasonable restrictions, emergency provisions (this is not coming), first amendment, preventive detention and debate over extraordinary laws"
             ],
             readingsNote: "Exact readings referenced in class & department discussion for Unit I:",
             drives: [
@@ -249,7 +249,7 @@ const portalData = {
             unit: "Unit IV",
             unitTitle: "Rule of Law, Rights and Accountability",
             topics: [
-              "Topic a: Rule of law and the decolonization of criminal laws"
+              "Topic a: Rule of law and the decolonization of criminal law"
             ],
             readingsNote: "Assigned class reading & foundational texts for Unit IV:",
             drives: [
@@ -312,17 +312,17 @@ const portalData = {
         footnoteNote: {
           text: "Continuous Assessment on 9 Oct is 15 Marks (choice between 1 question on Rousseau or 1 question on Quentin Skinner; attempt 1). The remaining 20 Marks CA is scheduled for Friday, 30 October 2026 (Total: 15M + 20M = 35M).",
           citation: {
-            sender: "Dr. Ningthoujam Koiremba Singh",
+            sender: "Akansha (+91 93115 38286)",
             date: "1 Oct 2026, 12:57 PM",
-            source: "Faculty Direct Confirmation",
+            source: "WhatsApp: South campus (Department of Political Science 2026-2028) 🎓",
             quote: "guys I just confirmed with koiremba sir regarding the CA, so it has been reduced to 15 marks and there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1, the next CA of 20 marks will be on 30th Oct."
           }
         },
         syllabusCitation: {
-          sender: "Dr. Ningthoujam Koiremba Singh",
+          sender: "Akansha (+91 93115 38286)",
           date: "1 Oct 2026, 12:57 PM",
-          source: "Faculty Confirmation",
-          quote: "Continuous Assessment on 9th October: 15 Marks (Option between Rousseau and Quentin Skinner; attempt 1). Second CA of 20 Marks on 30th October."
+          source: "WhatsApp: South campus (Department of Political Science 2026-2028) 🎓",
+          quote: "guys I just confirmed with koiremba sir regarding the CA, so it has been reduced to 15 marks and there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1, the next CA of 20 marks will be on 30th Oct."
         },
         syllabusTopics: [
           {
@@ -391,16 +391,16 @@ const portalData = {
         footnoteNote: {
           text: "Total 24 Marks Internal Assessment on Friday, 9 October 2026. The test will have 3 questions, of which students must attempt 2 questions (12 Marks each).",
           citation: {
-            sender: "Official Notice (via Sachin Choudhary)",
-            date: "1 Oct 2026, 5:52 PM",
-            source: "Official Department Announcements",
+            sender: "Sachin Choudhary (+91 70666 08751) & Drishti CR (+91 96965 33151)",
+            date: "1 Oct 2026, 4:49 PM & 5:52 PM",
+            source: "WhatsApp: North Campus Core Papers & South Campus Announcements",
             quote: "Regarding Internal Assessment of CC-Theories of International Relations on 9th October' Friday. Total 24 Marks. 3 Questions of which 2 needs to be attempted. Syllabus: Eurocentrism and Multiple Births of IR, Critical Theory, Post Modernism and Post Structuralism."
           }
         },
         syllabusCitation: {
-          sender: "Official Notice",
-          date: "1 Oct 2026, 5:52 PM",
-          source: "Official Announcements",
+          sender: "Sachin Choudhary (+91 70666 08751) & Drishti CR (+91 96965 33151)",
+          date: "1 Oct 2026, 4:49 PM & 5:52 PM",
+          source: "WhatsApp: North Campus Core Papers & South Campus Announcements",
           quote: "NOTICE: Regarding Internal Assessment of CC-Theories of International Relations on 9th October' Friday. Total 24 Marks. 3 Questions of which 2 needs to be attempted. Syllabus: Eurocentrism and Multiple Births of IR, Critical Theory, Post Modernism and Post Structuralism."
         },
         syllabusTopics: [
@@ -496,9 +496,9 @@ const portalData = {
       "Submission deadline: Tuesday, 20th October 2026."
     ],
     citation: {
-      sender: "Official Notice",
+      sender: "Drishti CR (+91 96965 33151) / North Campus Admins",
       date: "28 Sept 2026, 10:15 PM",
-      source: "Official Announcements",
+      source: "WhatsApp: Dept. Of political science (North campus) -- 2026-2028",
       quote: "NOTICE @all Regarding Internal Assessment in SBC-Elections and Data-Driven Electoral Analysis. As part of the Internal Assessment please prepare a handwritten assignment on the topic: Why it is important to study elections from both micro and macro level? Discuss Various Methods of analysing Electoral Data and their importance in understanding voting behaviour. चुनाव का सूक्षम और वृहत दोनों स्तरो से अध्ययन करना क्यों महत्वपूर्ण है ? चुनावी आंकड़ों के विश्लेषण के विभिन्न तरीको और मतदाता व्यव्हार को समझने में उनके महत्व पर चर्चा करें। Submit it on Google Classroom by 20th October. Total 12 marks. 7 to 8 pages. It must be handwritten. Upload the pdf on Google Classroom after writing it."
     }
   },
