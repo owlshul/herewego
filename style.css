@@ -1183,11 +1183,28 @@ kbd {
   border-color: var(--color-powder-brown);
 }
 
+.btn-toggle-drive {
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+}
+
+.btn-toggle-drive:hover,
+.btn-toggle-drive.active {
+  background: var(--color-powder-brown-bg);
+  color: var(--color-powder-brown);
+  border-color: var(--color-powder-brown);
+}
+
 .unit-panel-syllabus {
   border-left: 2.5px solid var(--color-powder-brown);
 }
 
 .unit-panel-faculty {
+  border-left: 2.5px solid var(--color-powder-brown);
+}
+
+.unit-panel-drive {
   border-left: 2.5px solid var(--color-powder-brown);
 }
 

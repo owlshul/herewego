@@ -163,6 +163,13 @@ def main():
         validate_site()
         return
 
+    if "--sync-drive" in sys.argv:
+        gdrive_script = os.path.join(PROJECT_DIR, "scripts", "gdrive_api.py")
+        chats_dir = os.path.join(SCRATCH_DIR, "chats")
+        os.makedirs(chats_dir, exist_ok=True)
+        subprocess.run(["python3", gdrive_script, "sync-chats", "--out", chats_dir])
+        return
+
     if "--recent" in sys.argv:
         cnt = 25
         idx = sys.argv.index("--recent")

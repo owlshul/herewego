@@ -163,7 +163,7 @@ function renderAssessmentsView() {
             }).join('')}
           </ul>
 
-          <!-- Dual Action Buttons Row -->
+          <!-- Action Buttons Row (3 Blocks: Syllabus Readings, Faculty References & Proofs, Drive for the Unit) -->
           <div class="unit-actions-row">
             ${hasSyllabusReadings ? `
               <button type="button" class="btn-toggle-readings btn-toggle-syllabus" onclick="toggleUnitSyllabusReadings('${unitKey}')" id="btn-toggle-syl-${unitKey}" aria-expanded="false" title="View official DU syllabus prescribed readings for this topic">
@@ -177,6 +177,14 @@ function renderAssessmentsView() {
               <button type="button" class="btn-toggle-readings btn-toggle-faculty" onclick="toggleUnitClassReadings('${unitKey}')" id="btn-toggle-cls-${unitKey}" aria-expanded="false" title="View faculty references and student WhatsApp chat proofs">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
                 <span>Faculty Mentions & Class Proofs (${classReadingsList.length})</span>
+                <span class="toggle-arrow">▾</span>
+              </button>
+            ` : ''}
+
+            ${hasDrives ? `
+              <button type="button" class="btn-toggle-readings btn-toggle-drive" onclick="toggleUnitDrive('${unitKey}')" id="btn-toggle-drv-${unitKey}" aria-expanded="false" title="View exact Drive folders for this unit">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                <span>Drive for the unit (${unit.drives.length})</span>
                 <span class="toggle-arrow">▾</span>
               </button>
             ` : ''}
@@ -268,18 +276,21 @@ function renderAssessmentsView() {
                   `).join('')}
                 </div>
               ` : ''}
+            </div>
+          ` : ''}
 
-              ${hasDrives ? `
-                <div class="folder-rows-list" style="margin-top: 8px;">
-                  ${unit.drives.map(f => `
-                    <a href="${f.url}" target="_blank" rel="noopener noreferrer" class="drive-link-row">
-                      <svg class="drive-link-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-                      <span class="drive-link-label">${escapeHtml(f.name)}${f.scope ? `<span class="drive-link-scope"> · ${escapeHtml(f.scope)}</span>` : ''}</span>
-                      <svg class="drive-link-ext" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                    </a>
-                  `).join('')}
-                </div>
-              ` : ''}
+          <!-- Panel 3: Dedicated Drive for the Unit (Exact subfolders across CR, Prof, and Archive drives) -->
+          ${hasDrives ? `
+            <div class="unit-readings-panel unit-panel-drive" id="panel-drv-${unitKey}" style="display: none;">
+              <div class="folder-rows-list">
+                ${unit.drives.map(f => `
+                  <a href="${f.url}" target="_blank" rel="noopener noreferrer" class="drive-link-row">
+                    <svg class="drive-link-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                    <span class="drive-link-label">${escapeHtml(f.name)}${f.scope ? `<span class="drive-link-scope"> · ${escapeHtml(f.scope)}</span>` : ''}</span>
+                    <svg class="drive-link-ext" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                `).join('')}
+              </div>
             </div>
           ` : ''}
         </div>
@@ -1010,6 +1021,31 @@ function toggleUnitSyllabusReadings(unitKey) {
 function toggleUnitClassReadings(unitKey) {
   const panel = document.getElementById(`panel-cls-${unitKey}`);
   const btn = document.getElementById(`btn-toggle-cls-${unitKey}`);
+  if (!panel) return;
+
+  const isHidden = panel.style.display === 'none';
+  if (isHidden) {
+    panel.style.display = 'block';
+    if (btn) {
+      btn.classList.add('active');
+      btn.setAttribute('aria-expanded', 'true');
+      const arrow = btn.querySelector('.toggle-arrow');
+      if (arrow) arrow.textContent = '▴';
+    }
+  } else {
+    panel.style.display = 'none';
+    if (btn) {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-expanded', 'false');
+      const arrow = btn.querySelector('.toggle-arrow');
+      if (arrow) arrow.textContent = '▾';
+    }
+  }
+}
+
+function toggleUnitDrive(unitKey) {
+  const panel = document.getElementById(`panel-drv-${unitKey}`);
+  const btn = document.getElementById(`btn-toggle-drv-${unitKey}`);
   if (!panel) return;
 
   const isHidden = panel.style.display === 'none';

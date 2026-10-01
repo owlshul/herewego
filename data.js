@@ -233,12 +233,22 @@ const portalData = {
                 url: null
               }
             ],
-            // 2. Exact Topic Google Drive Subfolder
+            // 2. Exact Unit Google Drive Folders (CR Maintained, Prof Shared, Archive)
             drives: [
               {
-                name: "Unit 1 Topic Folder — Constitutionalism, Debates & Preventive Detention",
-                scope: "Faculty Subfolder containing Austin, Baxi, Bhatia, First Amendment debates, CAD Vol IX",
+                name: "CR Maintained Drive · Unit 1 Folder",
+                scope: "CR Maintained Folder containing Austin, Baxi, Bhatia, First Amendment debates, CAD Vol IX",
                 url: "https://drive.google.com/drive/folders/1iUkZ2ItPesSLJL9G5rwJLdj-KhXVGpuV"
+              },
+              {
+                name: "Prof Shared Drive · Unit 1 Folder",
+                scope: "Faculty Shared Subfolder (polscience.du) · Contains Burra, CAD 12 Sept 1949, ssrn-1957588",
+                url: "https://drive.google.com/drive/folders/1LveKm7f8jMRKodPKRWwuYE8sTM_-te4-"
+              },
+              {
+                name: "Archive Drive · Unit 1 Folder",
+                scope: "Previous Year Master Archive · Unit 1 (Democracy & Constitutionalism in India)",
+                url: "https://drive.google.com/drive/folders/1LPajBK1-XYiApxgV9i8dllMzgK01mCeF"
               }
             ],
             // 3. Faculty References & Class Discussions (with WhatsApp proof + student contact info)
@@ -321,12 +331,22 @@ const portalData = {
                 url: "https://drive.google.com/file/d/11YHrGU0BcywUbPojCZ2Rx3VaOC5V4S9w/view"
               }
             ],
-            // 2. Exact Unit 4 Topic Google Drive Subfolder
+            // 2. Exact Unit Google Drive Folders (Prof Shared, CR Maintained, Archive)
             drives: [
               {
-                name: "Unit 4 Topic Folder — Rule of Law & Criminal Law Decolonization",
-                scope: "Official Subfolder containing Burra, Baxi, PIB BNSS release, and syllabus docs",
+                name: "Prof Shared Drive · Unit 4 Folder",
+                scope: "Faculty Shared Subfolder (polscience.du) · Contains Burra, Baxi, Amit Shah BNSS PIB release",
                 url: "https://drive.google.com/drive/folders/1sdPzuuK49RzaY_B9AXogy5TAYMJto9Yq"
+              },
+              {
+                name: "CR Maintained Drive · CC-102 Master Folder",
+                scope: "CR Maintained Folder · Curated by Shiva (Contains Unit 1 & Unit 4 course materials)",
+                url: "https://drive.google.com/drive/folders/166AxhP1W9aM8lwP5-otJKD5hWrv0BEM6"
+              },
+              {
+                name: "Archive Drive · Unit 4 Folder",
+                scope: "Previous Year Master Archive · Unit 4 (Rule of law, rights and accountability)",
+                url: "https://drive.google.com/drive/folders/1D0VqPfbICB5_CQbYGVy4QgGfxj6XJXFG"
               }
             ],
             // 3. Faculty References & Class Discussions
@@ -417,12 +437,17 @@ const portalData = {
                 url: null
               }
             ],
-            // 2. Exact Unit 1 Subfolder
+            // 2. Exact Unit Google Drive Folders (CR Maintained, Archive)
             drives: [
               {
-                name: "Unit 1 Archive Folder — Quentin Skinner & Theories of Interpretation",
-                scope: "Archive Subfolder · includes all readings for 1b",
-                url: "https://drive.google.com/drive/folders/1HSORAokjkAHdZqDAiMqeVNSVDE_t8Yri?usp=drive_link"
+                name: "CR Maintained Drive · Unit 1 Folder",
+                scope: "CR Maintained Folder · Meaning & Context (Dr. Koiremba Singh)",
+                url: "https://drive.google.com/drive/folders/1xHO7J2e5F_PfqupD6mZhSHNTtb3n_4Yo"
+              },
+              {
+                name: "Archive Drive · Unit 1 Folder",
+                scope: "Previous Year Master Archive · Unit 1 Introduction (includes Quentin Skinner 1969 & Terence Ball)",
+                url: "https://drive.google.com/drive/folders/1oAGSv69eXypOBmXShnu1Sam5l5AxUC0u"
               }
             ],
             // 3. Faculty References & Class Discussions
@@ -458,11 +483,21 @@ const portalData = {
                 url: "https://drive.google.com/file/d/16QbinQGaVEMWM-x8K7QWqOhv4WSo9VG9/view?usp=drivesdk"
               }
             ],
-            // 2. Exact Drive Link
+            // 2. Exact Unit Google Drive Folders (CR Maintained, Archive, Prescribed File)
             drives: [
               {
-                name: "Rousseau: On the Social Contract (Judith R. Masters Translation)",
-                scope: "Prescribed PDF shared by Dr. Ningthoujam Koiremba Singh",
+                name: "CR Maintained Drive · Unit 3 Folder",
+                scope: "CR Maintained Subfolder · Rousseau (Social Contract)",
+                url: "https://drive.google.com/drive/folders/1VGh61u9W8u6yqREv8rxTEgU2BBc0ITko"
+              },
+              {
+                name: "Archive Drive · Unit 3 Folder",
+                scope: "Previous Year Master Archive · Unit 3 (Any one thinker)",
+                url: "https://drive.google.com/drive/folders/1MESxR4QYgAdlsq6cvIHrDYICRp39juJz"
+              },
+              {
+                name: "Prescribed Reading File · Social Contract PDF",
+                scope: "Prescribed Judith R. Masters & Roger D. Masters Translation shared by Dr. Ningthoujam Koiremba Singh",
                 url: "https://drive.google.com/file/d/16QbinQGaVEMWM-x8K7QWqOhv4WSo9VG9/view?usp=drivesdk"
               }
             ],
@@ -557,12 +592,17 @@ const portalData = {
                 url: null
               }
             ],
-            // 2. Exact Unit 1 Subfolder
+            // 2. Exact Unit Google Drive Folders (CR Maintained, Archive)
             drives: [
               {
-                name: "Unit 1 Topic Folder — Eurocentrism & Multiple Births of Discipline",
-                scope: "Department IR Archive Folder",
-                url: "https://drive.google.com/drive/folders/1NDn8uOtrcdISW99hR9mB4y9yGxVve0uV"
+                name: "CR Maintained Drive · Unit 1 Folder",
+                scope: "CR Maintained Subfolder · Eurocentric Origins & Multiple Births of IR",
+                url: "https://drive.google.com/drive/folders/11xfaZ6g-iP94C6K9yHCnkgLGrrLQZiZd"
+              },
+              {
+                name: "Archive Drive · Unit 1 Folder",
+                scope: "Previous Year Master Archive · Unit 1 (Introduction: Evolution of the discipline)",
+                url: "https://drive.google.com/drive/folders/1disnm4OTbVrbBGP3DQANj5aOvP6g4HWp"
               }
             ],
             // 3. Faculty References & Class Discussions
@@ -603,12 +643,17 @@ const portalData = {
                 url: null
               }
             ],
-            // 2. Exact Unit 2 Subfolder
+            // 2. Exact Unit Google Drive Folders (CR Maintained, Archive)
             drives: [
               {
-                name: "Unit 2 Topic Folder — Marxism, Neo-Marxism & Critical Theory",
-                scope: "CR Maintained Subfolder",
+                name: "CR Maintained Drive · Unit 2 Folder",
+                scope: "CR Maintained Subfolder · Marxism, Neo-Marxism & Critical Theory (Dr. Robert Mizo)",
                 url: "https://drive.google.com/drive/folders/1zE156TnEDLHwdK2oxEcNTCpurzlICC8Y"
+              },
+              {
+                name: "Archive Drive · Unit 2 Folder",
+                scope: "Previous Year Master Archive · Unit 2 (Major Paradigms in IR)",
+                url: "https://drive.google.com/drive/folders/1uGX3fSL21D7xQRJiOJlUnoTByvgxCLjf"
               }
             ],
             // 3. Faculty References & Class Discussions
@@ -634,12 +679,17 @@ const portalData = {
                 url: null
               }
             ],
-            // 2. Exact Unit 3 Subfolder
+            // 2. Exact Unit Google Drive Folders (CR Maintained, Archive)
             drives: [
               {
-                name: "Unit 3 Topic Folder — Alternative Approaches in IR",
-                scope: "Department IR Archive Folder",
-                url: "https://drive.google.com/drive/folders/1NDn8uOtrcdISW99hR9mB4y9yGxVve0uV"
+                name: "CR Maintained Drive · Unit 3 Folder",
+                scope: "CR Maintained Subfolder · Post-Modernism & Post-Structuralism (Dr. Megha)",
+                url: "https://drive.google.com/drive/folders/1mZUaRhTbhNi35fEB3RDYP-Vb9kap5WuT"
+              },
+              {
+                name: "Archive Drive · Unit 3 Folder",
+                scope: "Previous Year Master Archive · Unit 3 (Alternative Approaches in IR)",
+                url: "https://drive.google.com/drive/folders/1MF8UJdQ52dAWW9h4AqVHp2dXInnfKeBj"
               }
             ],
             // 3. Faculty References & Class Discussions
