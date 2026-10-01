@@ -242,79 +242,58 @@ const portalData = {
               }
             ],
             // 3. Faculty References & Class Discussions (with WhatsApp proof + student contact info)
+            // 3. Faculty References & Class Discussions
             classReadingsNote: "Readings referenced by Prof. Ujjwal Kumar Singh in class & verified in MAPS batch discussions:",
             classReadings: [
               {
                 author: "Granville Austin",
                 title: "The Indian Constitution: Cornerstone of a Nation & Working a Democratic Constitution",
                 scope: "Constituent Assembly debates & constitutional architecture · Unit 1(b)",
-                url: "https://drive.google.com/drive/folders/1iUkZ2ItPesSLJL9G5rwJLdj-KhXVGpuV",
-                proof: {
-                  sender: "Krishna Shreyansh (~ Krishna Shreyansh) & Radha Sharma (~ Radha sharma)",
-                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
-                  date: "1 Oct 2026, 4:28 PM & 4:31 PM",
-                  quote: "Krishna Shreyansh: 'Constitutionalism nd debates -- Baxi and Austin\'s material' (shared both PDFs: 'The Indian Constitution-Cornerstone Of A Nation.pdf' & 'Working A Democratic Constitution-The Indian Experience.pdf'). Radha Sharma: 'for preventive detention : 1. Austin'."
-                }
+                url: "https://drive.google.com/drive/folders/1iUkZ2ItPesSLJL9G5rwJLdj-KhXVGpuV"
               },
               {
                 author: "Upendra Baxi",
                 title: "Accumulation and Legitimacy: The Indian Constitution and State Formation (in Rajeev Bhargava ed.)",
                 scope: "Debates on Indian constitutionalism and representation · Unit 1(b)",
-                url: "https://drive.google.com/file/d/1d_-c8cekO08XxXyrd1zeuGPItqb45K9c/view",
-                proof: {
-                  sender: "Krishna Shreyansh (~ Krishna Shreyansh) & Kritartha KMC (Kritartha KMC)",
-                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
-                  date: "1 Oct 2026, 4:31 PM – 4:32 PM",
-                  quote: "Kritartha: 'Baxi ka kaunsa? Accumulation and Legacy and Rajiv Bhargav waala?' -> Krishna Shreyansh: 'Haaanjii wahii dono'."
-                }
+                url: "https://drive.google.com/file/d/1d_-c8cekO08XxXyrd1zeuGPItqb45K9c/view"
               },
               {
                 author: "Gautam Bhatia",
                 title: "Article 22: Authoritarian Enclave / Offend, Shock, or Disturb: Free Speech under the Indian Constitution",
                 scope: "Preventive detention & fundamental rights · Unit 1(c)",
-                url: "https://drive.google.com/file/d/1h6riYeVxCohwRsxlGpogrkygvFsS8iKA/view",
-                proof: {
-                  sender: "Radha Sharma (~ Radha sharma)",
-                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
-                  date: "1 Oct 2026, 4:28 PM",
-                  quote: "'for preventive detention : 1. Austin, 2. Khosla, 3. Venkat iyer, 4. Gautam bhatia, 5. First amendment original draft'."
-                }
+                url: "https://drive.google.com/file/d/1h6riYeVxCohwRsxlGpogrkygvFsS8iKA/view"
               },
               {
                 author: "Madhav Khosla",
                 title: "The Indian Constitution: An Introduction",
                 scope: "Preventive detention & fundamental rights framework · Unit 1(c)",
-                url: null,
-                proof: {
-                  sender: "Radha Sharma (~ Radha sharma)",
-                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
-                  date: "1 Oct 2026, 4:28 PM",
-                  quote: "'for preventive detention : ... 2. Khosla'."
-                }
+                url: null
               },
               {
                 author: "Venkat Iyer",
                 title: "States of Emergency in States of Asia: A Comparative Study (Preventive Detention)",
                 scope: "Preventive Detention & Extraordinary Powers · Unit 1(c)",
-                url: null,
-                proof: {
-                  sender: "Radha Sharma (~ Radha sharma)",
-                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
-                  date: "1 Oct 2026, 4:28 PM",
-                  quote: "'for preventive detention : ... 3. Venkat iyer'."
-                }
+                url: null
               },
               {
                 author: "Constituent Assembly / Parliamentary Records",
                 title: "First Amendment to the Constitution of India (Original Draft & Syama Prasad Mookerjee Debates)",
                 scope: "Reasonable restrictions and debate over extraordinary laws · Unit 1(c)",
-                url: "https://drive.google.com/file/d/1rhkImGqDBm0tPqikh1VBmWB0agSGG9CM/view",
-                proof: {
-                  sender: "Radha Sharma (~ Radha sharma)",
-                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
-                  date: "1 Oct 2026, 4:28 PM",
-                  quote: "'for preventive detention : ... 5. First amendment original draft'."
-                }
+                url: "https://drive.google.com/file/d/1rhkImGqDBm0tPqikh1VBmWB0agSGG9CM/view"
+              }
+            ],
+            classProofs: [
+              {
+                sender: "~ Radha sharma",
+                chat: "WhatsApp (MAPS Unfiltered)",
+                date: "1 Oct 2026, 4:28 PM",
+                quote: "for preventive detention : 1. Austin, 2. Khosla, 3. Venkat iyer, 4. Gautam bhatia, 5. First amendment original draft"
+              },
+              {
+                sender: "~ Krishna Shreyansh & Kritartha KMC",
+                chat: "WhatsApp (MAPS Unfiltered)",
+                date: "1 Oct 2026, 4:30 PM – 4:32 PM",
+                quote: "Constitutionalism nd debates -- Baxi and Austin's material... Baxi ka kaunsa? Accumulation and Legacy and Rajiv Bhargav waala? -> Haaanjii wahii dono"
               }
             ]
           },
@@ -350,68 +329,40 @@ const portalData = {
                 url: "https://drive.google.com/drive/folders/1sdPzuuK49RzaY_B9AXogy5TAYMJto9Yq"
               }
             ],
-            // 3. Faculty References & Class Discussions (with WhatsApp proof + student contact info)
+            // 3. Faculty References & Class Discussions
             classReadingsNote: "Readings referenced by Prof. Ujjwal Kumar Singh in class & verified in MAPS batch discussions:",
             classReadings: [
               {
                 author: "Moiz Tundawala",
                 title: "On India's post-colonial engagement with the Rule of Law (2013)",
                 scope: "Referenced by Prof. Ujjwal Kumar Singh in class for Rule of Law & Decolonization",
-                url: "https://drive.google.com/drive/folders/1sdPzuuK49RzaY_B9AXogy5TAYMJto9Yq",
-                proof: {
-                  sender: "Radha Sharma (~ Radha sharma)",
-                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
-                  date: "1 Oct 2026, 4:28 PM",
-                  quote: "'For rule of law: 1. Av dicey, 2. Moiz tundawala'."
-                }
+                url: "https://drive.google.com/drive/folders/1sdPzuuK49RzaY_B9AXogy5TAYMJto9Yq"
               },
               {
                 author: "A.V. Dicey",
                 title: "Introduction to the Study of the Law of the Constitution (The Rule of Law)",
                 scope: "Classical formulation of the Rule of Law · Unit 4(a)",
-                url: null,
-                proof: {
-                  sender: "Radha Sharma (~ Radha sharma)",
-                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
-                  date: "1 Oct 2026, 4:28 PM",
-                  quote: "'For rule of law: 1. Av dicey'."
-                }
+                url: null
               },
               {
                 author: "Upendra Baxi",
                 title: "The Rule of Law in India: Theory and Practice (SUR Journal) & The Crisis of the Indian Legal System",
                 scope: "Critical perspective on post-colonial Rule of Law · Unit 4(a)",
-                url: "https://drive.google.com/file/d/1CrRAlk-Gy_ohPuoQK2C81MNt-DsT55ZM/view",
-                proof: {
-                  sender: "Kritartha KMC (Kritartha KMC)",
-                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
-                  date: "1 Oct 2026, 4:31 PM",
-                  quote: "'Phir Baxi ka rule of law waala nahin aayega?' (Shared in official faculty drive as 'upendra baxi.pdf')."
-                }
+                url: "https://drive.google.com/file/d/1CrRAlk-Gy_ohPuoQK2C81MNt-DsT55ZM/view"
+              }
+            ],
+            classProofs: [
+              {
+                sender: "~ Radha sharma",
+                chat: "WhatsApp (MAPS Unfiltered)",
+                date: "1 Oct 2026, 4:28 PM",
+                quote: "For rule of law: 1. Av dicey, 2. Moiz tundawala"
               },
               {
-                author: "Arudra Burra",
-                title: "What's Colonial about Colonial Law (American University International Law Review, 31:2)",
-                scope: "Colonial legacy and criminal jurisprudence · Unit 4(a)",
-                url: "https://drive.google.com/file/d/1Rlf9lQYE6_fHYEuTlHwTVkmy3Vg0lOlR/view",
-                proof: {
-                  sender: "Faculty Repository / North Campus Core Papers",
-                  chat: "WhatsApp: North Campus Core Papers (2026-2028)",
-                  date: "Uploaded in official Unit 4 faculty drive folder",
-                  quote: "File 'What is Colonial About Colonial Laws_.pdf' uploaded in faculty drive for Unit 4(a)."
-                }
-              },
-              {
-                author: "Amit Shah (PIB)",
-                title: "Bharatiya Nyaya Sanhita Bill Introduction (Press Information Bureau Release, 11 Aug 2023)",
-                scope: "Decolonization of criminal laws · Unit 4(a)",
-                url: "https://drive.google.com/file/d/11YHrGU0BcywUbPojCZ2Rx3VaOC5V4S9w/view",
-                proof: {
-                  sender: "Faculty Repository / North Campus Core Papers",
-                  chat: "WhatsApp: North Campus Core Papers (2026-2028)",
-                  date: "Uploaded in official Unit 4 faculty drive folder",
-                  quote: "File 'Amit Shah BNSS Press Release_Press Information Bureau.pdf' shared in faculty drive for Unit 4(a)."
-                }
+                sender: "Kritartha KMC",
+                chat: "WhatsApp (MAPS Unfiltered)",
+                date: "1 Oct 2026, 4:31 PM",
+                quote: "Phir Baxi ka rule of law waala nahin aayega? (Faculty repository includes 'upendra baxi.pdf')"
               }
             ]
           }
@@ -481,13 +432,15 @@ const portalData = {
                 author: "Quentin Skinner",
                 title: "Meaning and Understanding in the History of Ideas (1969)",
                 scope: "Prescribed reading for Unit I Theories of Interpretation · Question option in 9 Oct CA",
-                url: "https://drive.google.com/drive/folders/1HSORAokjkAHdZqDAiMqeVNSVDE_t8Yri?usp=drive_link",
-                proof: {
-                  sender: "Akansha (+91 93115 38286)",
-                  chat: "WhatsApp: South campus (Department of Political Science 2026-2028) 🎓",
-                  date: "1 Oct 2026, 12:57 PM",
-                  quote: "guys I just confirmed with koiremba sir regarding the CA, so it has been reduced to 15 marks and there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1"
-                }
+                url: "https://drive.google.com/drive/folders/1HSORAokjkAHdZqDAiMqeVNSVDE_t8Yri?usp=drive_link"
+              }
+            ],
+            classProofs: [
+              {
+                sender: "Akansha (+91 93115 38286)",
+                chat: "WhatsApp (South Campus Pol Sci)",
+                date: "1 Oct 2026, 12:57 PM",
+                quote: "guys I just confirmed with koiremba sir regarding the CA, so it has been reduced to 15 marks and there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1"
               }
             ]
           },
@@ -520,13 +473,15 @@ const portalData = {
                 author: "Jean-Jacques Rousseau",
                 title: "On the Social Contract (Judith R. Masters & Roger D. Masters Translation)",
                 scope: "Read Book 1 (Chapters 1-9) & Book 2 · Question option in 9 Oct CA",
-                url: "https://drive.google.com/file/d/16QbinQGaVEMWM-x8K7QWqOhv4WSo9VG9/view?usp=drivesdk",
-                proof: {
-                  sender: "Akansha (+91 93115 38286)",
-                  chat: "WhatsApp: South campus (Department of Political Science 2026-2028) 🎓",
-                  date: "1 Oct 2026, 12:57 PM",
-                  quote: "there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1"
-                }
+                url: "https://drive.google.com/file/d/16QbinQGaVEMWM-x8K7QWqOhv4WSo9VG9/view?usp=drivesdk"
+              }
+            ],
+            classProofs: [
+              {
+                sender: "Akansha (+91 93115 38286)",
+                chat: "WhatsApp (South Campus Pol Sci)",
+                date: "1 Oct 2026, 12:57 PM",
+                quote: "there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1"
               }
             ]
           }

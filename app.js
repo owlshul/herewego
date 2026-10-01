@@ -182,14 +182,9 @@ function renderAssessmentsView() {
             ` : ''}
           </div>
 
-          <!-- Panel 1: Official Syllabus Prescribed Readings (clean list, no extra tags) -->
+          <!-- Panel 1: Official Syllabus Prescribed Readings (clean list, no extra tags or bright badges) -->
           ${hasSyllabusReadings ? `
             <div class="unit-readings-panel unit-panel-syllabus" id="panel-syl-${unitKey}" style="display: none;">
-              <div class="panel-section-badge">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                <span>Official DU Syllabus Prescribed Readings</span>
-              </div>
-
               <ul class="clean-syllabus-readings-list">
                 ${unit.syllabusReadings.map(r => `
                   <li class="syllabus-reading-item">
@@ -211,7 +206,7 @@ function renderAssessmentsView() {
             </div>
           ` : ''}
 
-          <!-- Panel 2: Faculty References & Class Discussions (with WhatsApp proofs & exact topic drive) -->
+          <!-- Panel 2: Faculty References & Class Discussions (with collective WhatsApp proof at bottom) -->
           ${hasClassReadings ? `
             <div class="unit-readings-panel unit-panel-faculty" id="panel-cls-${unitKey}" style="display: none;">
               ${(unit.classReadingsNote || unit.readingsNote) ? `
@@ -239,16 +234,9 @@ function renderAssessmentsView() {
                         ${r.scope ? `<span class="reading-scope-note">(${escapeHtml(r.scope)})</span>` : ''}
 
                         ${r.proof ? `
-                          <div class="reading-proof-box">
-                            <div class="proof-meta-header">
-                              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                              <span class="proof-sender-name">${escapeHtml(r.proof.sender)}</span>
-                              <span class="proof-meta-sep">·</span>
-                              <span class="proof-chat-name">${escapeHtml(r.proof.chat)}</span>
-                              <span class="proof-meta-sep">·</span>
-                              <span class="proof-date-time">${escapeHtml(r.proof.date)}</span>
-                            </div>
-                            <div class="proof-quote-text">“${escapeHtml(r.proof.quote)}”</div>
+                          <div class="proof-single-line">
+                            <span class="proof-byline">${escapeHtml(r.proof.sender)}, ${escapeHtml(r.proof.chat)}, ${escapeHtml(r.proof.date)}</span>
+                            ${r.proof.quote ? `<span class="proof-quote-inline">: “${escapeHtml(r.proof.quote)}”</span>` : ''}
                           </div>
                         ` : ''}
                       </div>
@@ -264,6 +252,18 @@ function renderAssessmentsView() {
                           <span class="badge-source-note" style="font-size: 0.72rem; color: var(--text-muted); opacity: 0.85; padding: 2px 6px; border: 1px dashed var(--border-color); border-radius: 4px;">Referenced in Class</span>
                         </div>
                       `}
+                    </div>
+                  `).join('')}
+                </div>
+              ` : ''}
+
+              <!-- Collective WhatsApp Verification Proofs at the end -->
+              ${(unit.classProofs && unit.classProofs.length > 0) ? `
+                <div class="collective-proofs-wrap">
+                  <div class="proofs-header-title">Chat Verification Proof:</div>
+                  ${unit.classProofs.map(p => `
+                    <div class="proof-single-line">
+                      <span class="proof-byline">${escapeHtml(p.sender)}, ${escapeHtml(p.chat)}, ${escapeHtml(p.date)}</span>${p.quote ? `<span class="proof-quote-inline">: “${escapeHtml(p.quote)}”</span>` : ''}
                     </div>
                   `).join('')}
                 </div>
