@@ -13,7 +13,7 @@ const portalData = {
     batch: "MA Political Science (2026–2028)",
     campus: "North Campus, University of Delhi",
     classroom: "Room No. 18, Satyakam Bhawan",
-    lastUpdated: "1 October 2026, 7:55 PM IST",
+    lastUpdated: "1 October 2026, 8:25 PM IST",
     curator: "Anshul"
   },
 
@@ -175,66 +175,146 @@ const portalData = {
               "Topic b: Salient features of India constitutionalism: representation, key debates in the Constituent Assembly of India",
               "Topic c: Constitutional freedoms and reasonable restrictions, emergency provisions (this is not coming), first amendment, preventive detention and debate over extraordinary laws"
             ],
-            readingsNote: "Exact readings referenced in class & department discussion for Unit I:",
-            drives: [
+            // 1. Official DU Syllabus Prescribed Readings for Test Topics
+            syllabusReadings: [
               {
-                name: "Unit 1 — Faculty Shared Drive",
-                scope: "Shared by Dr. Garima Das · Suggested by Prof. Ujjwal Kumar Singh",
-                url: "https://drive.google.com/drive/folders/1LveKm7f8jMRKodPKRWwuYE8sTM_-te4-?usp=drive_link"
+                author: "Granville Austin (1966)",
+                title: "The Indian Constitution: Cornerstone of a Nation (Introduction, Chapters 1, 2, 3 and 13)",
+                url: "https://drive.google.com/file/d/1alrnI8bTcxXr-UfFgaEa2jmgR-34Qblq/view"
               },
               {
-                name: "Unit 1 — CR Maintained Drive",
-                scope: "CR Maintained Drive",
-                url: "https://drive.google.com/drive/folders/1iUkZ2ItPesSLJL9G5rwJLdj-KhXVGpuV?usp=drive_link"
+                author: "Granville Austin (1999)",
+                title: "Working a Democratic Constitution: The Indian Experience (Democracy Rescued or Constitution Subverted: Emergency and 42nd Amendment)",
+                url: "https://drive.google.com/file/d/1BQy9JS_2mCEqdi3ANX7g5OCoY200Eh9g/view"
               },
               {
-                name: "Unit 1 — Archive Drive",
-                scope: "Archive Drive",
-                url: "https://drive.google.com/drive/folders/1LPajBK1-XYiApxgV9i8dllMzgK01mCeF?usp=drive_link"
+                author: "Upendra Baxi (1997)",
+                title: "Accumulation and Legitimacy: The Indian Constitution and State Formation (in Singh, M.P. and Chaube, S. K. eds. Indian Constitution: A Review)",
+                url: "https://drive.google.com/file/d/1d_-c8cekO08XxXyrd1zeuGPItqb45K9c/view"
+              },
+              {
+                author: "Arudra Burra (2018)",
+                title: "Freedom of Speech in the Early Constitution: A Study of the Constitution (First Amendment) Bill (in Bhatia ed. The Indian Constituent Assembly)",
+                url: null
+              },
+              {
+                author: "Constituent Assembly of India (1949)",
+                title: "CAD Volume IX: Proceedings on Draft Article 15-A, Personal Liberty and Procedure Established by Law (Article 22, Sept 15–16, 1949)",
+                url: "http://164.100.47.194/loksabha/writereaddata/cadebatefiles/vol9.html"
+              },
+              {
+                author: "Rohit De & Ornit Shani (2023)",
+                title: "Assembling the Indian Constitution (Past and Present, 263:1)",
+                url: null
+              },
+              {
+                author: "Venkat Iyer (2000)",
+                title: "Emergency Law in India: The Background and the Development of the Law (in States of Emergency, the Indian Experience)",
+                url: null
+              },
+              {
+                author: "Syama Prasad Mookerjee (1951 / 1990)",
+                title: "Preventive Detention (Parliamentary Debates, 13 Feb 1951, Lok Sabha Secretariat, pp. 61–81)",
+                url: "https://drive.google.com/file/d/1rhkImGqDBm0tPqikh1VBmWB0agSGG9CM/view"
+              },
+              {
+                author: "Arvind Narrain (2022)",
+                title: "Roots of the Emergency: Preventive Detention (in India's Undeclared Emergency: Constitutionalism and the Politics of Resistance)",
+                url: null
+              },
+              {
+                author: "Shylashri Shankar (2009)",
+                title: "Scaling Justice: India's Supreme Court, Anti-terror Laws, and Social Rights (Oxford University Press)",
+                url: null
+              },
+              {
+                author: "Ujjwal Kumar Singh & Anupama Roy (2017)",
+                title: "B. R. Ambedkar and the Ideas of Constitutionalism and Constitutional Democracy (Summerhill IIAS Review, XXIII:2)",
+                url: null
               }
             ],
-            items: [
+            // 2. Exact Topic Google Drive Subfolder
+            drives: [
               {
-                title: "The Indian Constitution: Cornerstone of a Nation",
+                name: "Unit 1 Topic Folder — Constitutionalism, Debates & Preventive Detention",
+                scope: "Faculty Subfolder containing Austin, Baxi, Bhatia, First Amendment debates, CAD Vol IX",
+                url: "https://drive.google.com/drive/folders/1iUkZ2ItPesSLJL9G5rwJLdj-KhXVGpuV"
+              }
+            ],
+            // 3. Faculty References & Class Discussions (with WhatsApp proof + student contact info)
+            classReadingsNote: "Readings referenced by Prof. Ujjwal Kumar Singh in class & verified in MAPS batch discussions:",
+            classReadings: [
+              {
                 author: "Granville Austin",
+                title: "The Indian Constitution: Cornerstone of a Nation & Working a Democratic Constitution",
                 scope: "Constituent Assembly debates & constitutional architecture · Unit 1(b)",
-                url: "https://drive.google.com/drive/folders/1LveKm7f8jMRKodPKRWwuYE8sTM_-te4-?usp=drive_link"
+                url: "https://drive.google.com/drive/folders/1iUkZ2ItPesSLJL9G5rwJLdj-KhXVGpuV",
+                proof: {
+                  sender: "Krishna Shreyansh (~ Krishna Shreyansh) & Radha Sharma (~ Radha sharma)",
+                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
+                  date: "1 Oct 2026, 4:28 PM & 4:31 PM",
+                  quote: "Krishna Shreyansh: 'Constitutionalism nd debates -- Baxi and Austin\'s material' (shared both PDFs: 'The Indian Constitution-Cornerstone Of A Nation.pdf' & 'Working A Democratic Constitution-The Indian Experience.pdf'). Radha Sharma: 'for preventive detention : 1. Austin'."
+                }
               },
               {
-                title: "Working a Democratic Constitution: The Indian Experience",
-                author: "Granville Austin",
-                scope: "Freedoms, First Amendment & Preventive Detention debates · Unit 1(b & c)",
-                url: "https://drive.google.com/drive/folders/1LveKm7f8jMRKodPKRWwuYE8sTM_-te4-?usp=drive_link"
-              },
-              {
-                title: "The Indian Constitution: An Introduction",
-                author: "Madhav Khosla",
-                scope: "Preventive detention & fundamental rights framework · Unit 1(c)",
-                url: null
-              },
-              {
-                title: "States of Emergency in States of Asia: A Comparative Study",
-                author: "Venkat Iyer",
-                scope: "Chapters 5 to 7: Preventive Detention & Extraordinary Powers · Unit 1(c)",
-                url: null
-              },
-              {
-                title: "Offend, Shock, or Disturb: Free Speech under the Indian Constitution",
-                author: "Gautam Bhatia",
-                scope: "Constitutional freedoms & reasonable restrictions · Unit 1(c)",
-                url: null
-              },
-              {
-                title: "First Amendment to the Constitution of India (Debates & Original Draft)",
-                author: "Constituent Assembly / Parliamentary Records",
-                scope: "Reasonable restrictions and debate over extraordinary laws · Unit 1(c)",
-                url: null
-              },
-              {
-                title: "Constitutionalism as a Site of State Formative Practices: Accumulation and Legitimacy",
-                author: "Upendra Baxi (in Rajeev Bhargava ed., Politics and Ethics of the Indian Constitution)",
+                author: "Upendra Baxi",
+                title: "Accumulation and Legitimacy: The Indian Constitution and State Formation (in Rajeev Bhargava ed.)",
                 scope: "Debates on Indian constitutionalism and representation · Unit 1(b)",
-                url: null
+                url: "https://drive.google.com/file/d/1d_-c8cekO08XxXyrd1zeuGPItqb45K9c/view",
+                proof: {
+                  sender: "Krishna Shreyansh (~ Krishna Shreyansh) & Kritartha KMC (Kritartha KMC)",
+                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
+                  date: "1 Oct 2026, 4:31 PM – 4:32 PM",
+                  quote: "Kritartha: 'Baxi ka kaunsa? Accumulation and Legacy and Rajiv Bhargav waala?' -> Krishna Shreyansh: 'Haaanjii wahii dono'."
+                }
+              },
+              {
+                author: "Gautam Bhatia",
+                title: "Article 22: Authoritarian Enclave / Offend, Shock, or Disturb: Free Speech under the Indian Constitution",
+                scope: "Preventive detention & fundamental rights · Unit 1(c)",
+                url: "https://drive.google.com/file/d/1h6riYeVxCohwRsxlGpogrkygvFsS8iKA/view",
+                proof: {
+                  sender: "Radha Sharma (~ Radha sharma)",
+                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
+                  date: "1 Oct 2026, 4:28 PM",
+                  quote: "'for preventive detention : 1. Austin, 2. Khosla, 3. Venkat iyer, 4. Gautam bhatia, 5. First amendment original draft'."
+                }
+              },
+              {
+                author: "Madhav Khosla",
+                title: "The Indian Constitution: An Introduction",
+                scope: "Preventive detention & fundamental rights framework · Unit 1(c)",
+                url: null,
+                proof: {
+                  sender: "Radha Sharma (~ Radha sharma)",
+                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
+                  date: "1 Oct 2026, 4:28 PM",
+                  quote: "'for preventive detention : ... 2. Khosla'."
+                }
+              },
+              {
+                author: "Venkat Iyer",
+                title: "States of Emergency in States of Asia: A Comparative Study (Preventive Detention)",
+                scope: "Preventive Detention & Extraordinary Powers · Unit 1(c)",
+                url: null,
+                proof: {
+                  sender: "Radha Sharma (~ Radha sharma)",
+                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
+                  date: "1 Oct 2026, 4:28 PM",
+                  quote: "'for preventive detention : ... 3. Venkat iyer'."
+                }
+              },
+              {
+                author: "Constituent Assembly / Parliamentary Records",
+                title: "First Amendment to the Constitution of India (Original Draft & Syama Prasad Mookerjee Debates)",
+                scope: "Reasonable restrictions and debate over extraordinary laws · Unit 1(c)",
+                url: "https://drive.google.com/file/d/1rhkImGqDBm0tPqikh1VBmWB0agSGG9CM/view",
+                proof: {
+                  sender: "Radha Sharma (~ Radha sharma)",
+                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
+                  date: "1 Oct 2026, 4:28 PM",
+                  quote: "'for preventive detention : ... 5. First amendment original draft'."
+                }
               }
             ]
           },
@@ -244,42 +324,94 @@ const portalData = {
             topics: [
               "Topic a: Rule of law and the decolonization of criminal law"
             ],
-            readingsNote: "Assigned class reading & foundational texts for Unit IV:",
-            drives: [
+            // 1. Official DU Syllabus Prescribed Readings for Topic a
+            syllabusReadings: [
               {
-                name: "Unit 4 — Faculty Shared Drive",
-                scope: "Shared by Dr. Garima Das · Suggested by Prof. Ujjwal Kumar Singh",
-                url: "https://drive.google.com/drive/folders/1sdPzuuK49RzaY_B9AXogy5TAYMJto9Yq?usp=drive_link"
+                author: "Upendra Baxi (2007)",
+                title: "The Rule of Law in India (SUR – International Journal of Human Rights, 4:6)",
+                url: "https://drive.google.com/file/d/1CrRAlk-Gy_ohPuoQK2C81MNt-DsT55ZM/view"
               },
               {
-                name: "Unit 4 — CR Maintained Drive",
-                scope: "CR Maintained Drive",
-                url: "https://drive.google.com/drive/folders/166AxhP1W9aM8lwP5-otJKD5hWrv0BEM6?usp=drive_link"
+                author: "Arudra Burra (2016)",
+                title: "What’s Colonial about Colonial Law (American University International Law Review, 31:2)",
+                url: "https://drive.google.com/file/d/1Rlf9lQYE6_fHYEuTlHwTVkmy3Vg0lOlR/view"
               },
               {
-                name: "Unit 4 — Archive Drive",
-                scope: "Archive Drive",
-                url: "https://drive.google.com/drive/folders/1D0VqPfbICB5_CQbYGVy4QgGfxj6XJXFG?usp=drive_link"
+                author: "Amit Shah (2023)",
+                title: "Union Home Minister and Minister of Cooperation introduces the Bharatiya Nyaya Sanhita Bill in the Lok Sabha (PIB Release, 11 August 2023)",
+                url: "https://drive.google.com/file/d/11YHrGU0BcywUbPojCZ2Rx3VaOC5V4S9w/view"
               }
             ],
-            items: [
+            // 2. Exact Unit 4 Topic Google Drive Subfolder
+            drives: [
               {
-                title: "On India's post-colonial engagement with the Rule of Law (2013)",
+                name: "Unit 4 Topic Folder — Rule of Law & Criminal Law Decolonization",
+                scope: "Official Subfolder containing Burra, Baxi, PIB BNSS release, and syllabus docs",
+                url: "https://drive.google.com/drive/folders/1sdPzuuK49RzaY_B9AXogy5TAYMJto9Yq"
+              }
+            ],
+            // 3. Faculty References & Class Discussions (with WhatsApp proof + student contact info)
+            classReadingsNote: "Readings referenced by Prof. Ujjwal Kumar Singh in class & verified in MAPS batch discussions:",
+            classReadings: [
+              {
                 author: "Moiz Tundawala",
-                scope: "Assigned by Prof. Ujjwal Kumar Singh in class for Rule of Law & Criminal Law Decolonization",
-                url: "https://drive.google.com/drive/folders/1sdPzuuK49RzaY_B9AXogy5TAYMJto9Yq?usp=drive_link"
+                title: "On India's post-colonial engagement with the Rule of Law (2013)",
+                scope: "Referenced by Prof. Ujjwal Kumar Singh in class for Rule of Law & Decolonization",
+                url: "https://drive.google.com/drive/folders/1sdPzuuK49RzaY_B9AXogy5TAYMJto9Yq",
+                proof: {
+                  sender: "Radha Sharma (~ Radha sharma)",
+                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
+                  date: "1 Oct 2026, 4:28 PM",
+                  quote: "'For rule of law: 1. Av dicey, 2. Moiz tundawala'."
+                }
               },
               {
-                title: "Introduction to the Study of the Law of the Constitution (The Rule of Law)",
                 author: "A.V. Dicey",
+                title: "Introduction to the Study of the Law of the Constitution (The Rule of Law)",
                 scope: "Classical formulation of the Rule of Law · Unit 4(a)",
-                url: null
+                url: null,
+                proof: {
+                  sender: "Radha Sharma (~ Radha sharma)",
+                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
+                  date: "1 Oct 2026, 4:28 PM",
+                  quote: "'For rule of law: 1. Av dicey'."
+                }
               },
               {
-                title: "The Rule of Law in India: Theory and Practice",
                 author: "Upendra Baxi",
+                title: "The Rule of Law in India: Theory and Practice (SUR Journal) & The Crisis of the Indian Legal System",
                 scope: "Critical perspective on post-colonial Rule of Law · Unit 4(a)",
-                url: null
+                url: "https://drive.google.com/file/d/1CrRAlk-Gy_ohPuoQK2C81MNt-DsT55ZM/view",
+                proof: {
+                  sender: "Kritartha KMC (Kritartha KMC)",
+                  chat: "WhatsApp: MAPS | M.A. Political Science (Unfiltered)",
+                  date: "1 Oct 2026, 4:31 PM",
+                  quote: "'Phir Baxi ka rule of law waala nahin aayega?' (Shared in official faculty drive as 'upendra baxi.pdf')."
+                }
+              },
+              {
+                author: "Arudra Burra",
+                title: "What's Colonial about Colonial Law (American University International Law Review, 31:2)",
+                scope: "Colonial legacy and criminal jurisprudence · Unit 4(a)",
+                url: "https://drive.google.com/file/d/1Rlf9lQYE6_fHYEuTlHwTVkmy3Vg0lOlR/view",
+                proof: {
+                  sender: "Faculty Repository / North Campus Core Papers",
+                  chat: "WhatsApp: North Campus Core Papers (2026-2028)",
+                  date: "Uploaded in official Unit 4 faculty drive folder",
+                  quote: "File 'What is Colonial About Colonial Laws_.pdf' uploaded in faculty drive for Unit 4(a)."
+                }
+              },
+              {
+                author: "Amit Shah (PIB)",
+                title: "Bharatiya Nyaya Sanhita Bill Introduction (Press Information Bureau Release, 11 Aug 2023)",
+                scope: "Decolonization of criminal laws · Unit 4(a)",
+                url: "https://drive.google.com/file/d/11YHrGU0BcywUbPojCZ2Rx3VaOC5V4S9w/view",
+                proof: {
+                  sender: "Faculty Repository / North Campus Core Papers",
+                  chat: "WhatsApp: North Campus Core Papers (2026-2028)",
+                  date: "Uploaded in official Unit 4 faculty drive folder",
+                  quote: "File 'Amit Shah BNSS Press Release_Press Information Bureau.pdf' shared in faculty drive for Unit 4(a)."
+                }
               }
             ]
           }
@@ -321,25 +453,41 @@ const portalData = {
             topics: [
               "Topic b: Theories of Interpretation (Specifically Quentin Skinner 1969 & Terence Ball)"
             ],
-            readingsNote: "Folders and core text for Unit 1 (Theories of Interpretation):",
-            drives: [
+            // 1. Official DU Syllabus Prescribed Readings
+            syllabusReadings: [
               {
-                name: "Unit 1 — CR Maintained Drive",
-                scope: "CR Maintained Drive",
-                url: "https://drive.google.com/drive/folders/1xHO7J2e5F_PfqupD6mZhSHNTtb3n_4Yo?usp=drive_link"
+                author: "Quentin Skinner (1969)",
+                title: "Meaning and Understanding in the History of Ideas (History and Theory, 8:1)",
+                url: "https://drive.google.com/drive/folders/1HSORAokjkAHdZqDAiMqeVNSVDE_t8Yri?usp=drive_link"
               },
               {
-                name: "Unit 1 (Theories of Interpretation) — Archive Drive",
-                scope: "Archive Drive · includes all readings for 1b",
+                author: "Terence Ball (1988)",
+                title: "Transforming Political Discourse: Political Theory and Critical Conceptual History (Oxford: Blackwell)",
+                url: null
+              }
+            ],
+            // 2. Exact Unit 1 Subfolder
+            drives: [
+              {
+                name: "Unit 1 Archive Folder — Quentin Skinner & Theories of Interpretation",
+                scope: "Archive Subfolder · includes all readings for 1b",
                 url: "https://drive.google.com/drive/folders/1HSORAokjkAHdZqDAiMqeVNSVDE_t8Yri?usp=drive_link"
               }
             ],
-            items: [
+            // 3. Faculty References & Class Discussions
+            classReadingsNote: "Dr. Ningthoujam Koiremba Singh confirmed choice of 1 question between Skinner (1969) or Rousseau:",
+            classReadings: [
               {
-                title: "Meaning and Understanding in the History of Ideas (1969)",
                 author: "Quentin Skinner",
+                title: "Meaning and Understanding in the History of Ideas (1969)",
                 scope: "Prescribed reading for Unit I Theories of Interpretation · Question option in 9 Oct CA",
-                url: "https://drive.google.com/drive/folders/1HSORAokjkAHdZqDAiMqeVNSVDE_t8Yri?usp=drive_link"
+                url: "https://drive.google.com/drive/folders/1HSORAokjkAHdZqDAiMqeVNSVDE_t8Yri?usp=drive_link",
+                proof: {
+                  sender: "Akansha (+91 93115 38286)",
+                  chat: "WhatsApp: South campus (Department of Political Science 2026-2028) 🎓",
+                  date: "1 Oct 2026, 12:57 PM",
+                  quote: "guys I just confirmed with koiremba sir regarding the CA, so it has been reduced to 15 marks and there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1"
+                }
               }
             ]
           },
@@ -349,14 +497,36 @@ const portalData = {
             topics: [
               "Topic c: Rousseau - Social Contract (Books 1 & 2)"
             ],
-            readingsNote: "Prescribed translation shared by Dr. Ningthoujam Koiremba Singh:",
-            drives: [],
-            items: [
+            // 1. Official DU Syllabus Prescribed Readings
+            syllabusReadings: [
               {
-                title: "On the Social Contract (Judith R. Masters & Roger D. Masters Translation)",
-                author: "Jean-Jacques Rousseau",
-                scope: "Read Book 1 (Chapters 1-9) & Book 2 · Question option in 9 Oct CA",
+                author: "Jean-Jacques Rousseau (1978 ed.)",
+                title: "On the Social Contract, with the Geneva Manuscript and Political Economy (Judith R. Masters & Roger D. Masters Translation)",
                 url: "https://drive.google.com/file/d/16QbinQGaVEMWM-x8K7QWqOhv4WSo9VG9/view?usp=drivesdk"
+              }
+            ],
+            // 2. Exact Drive Link
+            drives: [
+              {
+                name: "Rousseau: On the Social Contract (Judith R. Masters Translation)",
+                scope: "Prescribed PDF shared by Dr. Ningthoujam Koiremba Singh",
+                url: "https://drive.google.com/file/d/16QbinQGaVEMWM-x8K7QWqOhv4WSo9VG9/view?usp=drivesdk"
+              }
+            ],
+            // 3. Faculty References & Class Discussions
+            classReadingsNote: "Prescribed translation shared by Dr. Ningthoujam Koiremba Singh for 9 Oct CA:",
+            classReadings: [
+              {
+                author: "Jean-Jacques Rousseau",
+                title: "On the Social Contract (Judith R. Masters & Roger D. Masters Translation)",
+                scope: "Read Book 1 (Chapters 1-9) & Book 2 · Question option in 9 Oct CA",
+                url: "https://drive.google.com/file/d/16QbinQGaVEMWM-x8K7QWqOhv4WSo9VG9/view?usp=drivesdk",
+                proof: {
+                  sender: "Akansha (+91 93115 38286)",
+                  chat: "WhatsApp: South campus (Department of Political Science 2026-2028) 🎓",
+                  date: "1 Oct 2026, 12:57 PM",
+                  quote: "there will be an option between 2 questions (Rousseau and skinner) and we will have to attend 1"
+                }
               }
             ]
           }
@@ -399,20 +569,50 @@ const portalData = {
               "Topic a: The Eurocentric Origin of the Discipline",
               "Topic b: Understanding the Multiple Births of the Discipline"
             ],
-            readingsNote: "Readings and drives available for Unit I:",
-            drives: [
+            // 1. Official DU Syllabus Prescribed Readings
+            syllabusReadings: [
               {
-                name: "Unit 1 Drive (Eurocentrism & Births of Discipline)",
-                scope: "Shared by Prof. Navnita C. Behera / CR Drive",
-                url: "https://drive.google.com/drive/folders/14aDMmng2MdpaOqH-WRKY724J598sfuJx"
+                author: "Scott Burchill & Andrew Linklater (1996)",
+                title: "Introduction, in Burchill et al. eds. Theories of International Relations (St Martin Press, pp. 67–92)",
+                url: null
               },
               {
-                name: "IR Master Archive Drive",
-                scope: "Archive Drive",
+                author: "Martin Hollis & Steve Smith (1991)",
+                title: "The Growth of a Discipline, in Explaining and Understanding International Relations (Oxford: Clarendon Press, pp. 16–44)",
+                url: null
+              },
+              {
+                author: "Milja Kurki & Colin Wight (2013)",
+                title: "International Relations and Social Science, in International Relations Theories: Discipline and Diversity (pp. 14–35)",
+                url: null
+              },
+              {
+                author: "Stephen M. Walt (1998)",
+                title: "International Relations: One World, Many Theories (Foreign Policy, 110, pp. 29–32)",
+                url: null
+              },
+              {
+                author: "Vineet Thakur, Alexander E. Davis & Peter Vale (2017)",
+                title: "Imperial Mission, 'Scientific Method': An Alternative Account of the Origins of IR (Millennium: Journal of International Studies, 46:1, pp. 3–22)",
+                url: null
+              },
+              {
+                author: "Robert Vitalis (2005)",
+                title: "Birth of a Discipline, in D. Long & B. C. Schmidt eds. Imperialism and Internationalism in the Discipline of International Relations (pp. 159–182)",
+                url: null
+              }
+            ],
+            // 2. Exact Unit 1 Subfolder
+            drives: [
+              {
+                name: "Unit 1 Topic Folder — Eurocentrism & Multiple Births of Discipline",
+                scope: "Department IR Archive Folder",
                 url: "https://drive.google.com/drive/folders/1NDn8uOtrcdISW99hR9mB4y9yGxVve0uV"
               }
             ],
-            items: []
+            // 3. Faculty References & Class Discussions
+            classReadingsNote: "Notice confirms Unit I (Eurocentrism & Multiple Births of IR) is in the 24 Marks IA. Exact chapter selections to be confirmed by Prof. Navnita C. Behera.",
+            classReadings: []
           },
           {
             unit: "Unit II",
@@ -420,15 +620,45 @@ const portalData = {
             topics: [
               "Topic c: Critical Theory"
             ],
-            readingsNote: "Readings uploaded on Department Google Drive (Unit II folder). Specific chapter selections awaited from faculty.",
+            // 1. Official DU Syllabus Prescribed Readings
+            syllabusReadings: [
+              {
+                author: "Richard Devetak (1996)",
+                title: "Critical Theory, in Burchill et al. eds. Theories of International Relations (Macmillan Press, pp. 145–178)",
+                url: null
+              },
+              {
+                author: "Richard Devetak (2014)",
+                title: "A Rival Enlightenment? Critical International Theory in Historical Mode (International Theory, 6:3, pp. 417–453)",
+                url: null
+              },
+              {
+                author: "Andrew Linklater (2006)",
+                title: "Realism, Marxism and Critical International Theory, in Chan & Moore eds. Theories of International Relations, Vol. 3 (Sage, pp. 110–125)",
+                url: null
+              },
+              {
+                author: "Justin Rosenberg (1994)",
+                title: "Social Structures and Geopolitical Systems, in The Empire of Civil Society (Verso, pp. 54–58)",
+                url: null
+              },
+              {
+                author: "Benno Teschke (2003)",
+                title: "The Myth of 1648: Class, Geopolitics and the Making of Modern International Relations (Bath Press, pp. 1–12, 42–46)",
+                url: null
+              }
+            ],
+            // 2. Exact Unit 2 Subfolder
             drives: [
               {
-                name: "Unit 2 Drive (Marxism, Neo-Marxism & Critical Theory)",
-                scope: "CR Maintained Drive",
+                name: "Unit 2 Topic Folder — Marxism, Neo-Marxism & Critical Theory",
+                scope: "CR Maintained Subfolder",
                 url: "https://drive.google.com/drive/folders/1zE156TnEDLHwdK2oxEcNTCpurzlICC8Y"
               }
             ],
-            items: []
+            // 3. Faculty References & Class Discussions
+            classReadingsNote: "Notice confirms Critical Theory is included in the 9 Oct IA (attempt 2 of 3 questions). Specific chapter/article selection by faculty awaited.",
+            classReadings: []
           },
           {
             unit: "Unit III",
@@ -436,20 +666,30 @@ const portalData = {
             topics: [
               "Topic c: Post-Modernism and Post-Structuralism"
             ],
-            readingsNote: "Readings uploaded on Department Google Drive. As discussed in department groups, specific reading portions/chapters for Post-Modernism & Post-Structuralism will be clarified by faculty.",
-            drives: [
+            // 1. Official DU Syllabus Prescribed Readings
+            syllabusReadings: [
               {
-                name: "IR Master Archive Drive",
-                scope: "Archive Drive",
-                url: "https://drive.google.com/drive/folders/1NDn8uOtrcdISW99hR9mB4y9yGxVve0uV"
+                author: "Richard Devetak (1996)",
+                title: "Post-Modernism, in Burchill & Linklater eds. Theories of International Relations (St Martin Press, pp. 179–209)",
+                url: null
               },
               {
-                name: "CR Maintained Drive (North Campus)",
-                scope: "CR Maintained Drive",
-                url: "https://drive.google.com/drive/folders/14aDMmng2MdpaOqH-WRKY724J598sfuJx"
+                author: "Pauline Marie Rosenau (1992)",
+                title: "Post-Modernism and the Social Sciences: Insights, Inroads and Intrusions (Princeton University Press, pp. 3–41)",
+                url: null
               }
             ],
-            items: []
+            // 2. Exact Unit 3 Subfolder
+            drives: [
+              {
+                name: "Unit 3 Topic Folder — Alternative Approaches in IR",
+                scope: "Department IR Archive Folder",
+                url: "https://drive.google.com/drive/folders/1NDn8uOtrcdISW99hR9mB4y9yGxVve0uV"
+              }
+            ],
+            // 3. Faculty References & Class Discussions
+            classReadingsNote: "Notice confirms Post-Modernism and Post-Structuralism are included in the 9 Oct IA. Specific chapter/article selection by faculty awaited.",
+            classReadings: []
           }
         ]
       }

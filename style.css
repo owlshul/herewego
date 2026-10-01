@@ -1148,6 +1148,168 @@ kbd {
   margin-top: 2px;
 }
 
+/* Dual Reading Action Buttons & Panels */
+.unit-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.btn-toggle-syllabus {
+  border-color: rgba(16, 185, 129, 0.35);
+  background: rgba(16, 185, 129, 0.08);
+  color: #10b981;
+}
+
+.btn-toggle-syllabus:hover,
+.btn-toggle-syllabus.active {
+  background: #10b981;
+  color: #fff;
+  border-color: #10b981;
+}
+
+.btn-toggle-faculty {
+  border-color: var(--color-powder-brown-border, var(--border-subtle));
+  background: var(--color-powder-brown-bg);
+  color: var(--color-powder-brown);
+}
+
+.btn-toggle-faculty:hover,
+.btn-toggle-faculty.active {
+  background: var(--color-powder-brown);
+  color: #fff;
+  border-color: var(--color-powder-brown);
+}
+
+.unit-panel-syllabus {
+  border-left: 3px solid #10b981;
+}
+
+.unit-panel-faculty {
+  border-left: 3px solid var(--color-powder-brown);
+}
+
+.panel-section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #10b981;
+  margin-bottom: 8px;
+}
+
+.clean-syllabus-readings-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.syllabus-reading-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.syllabus-reading-item .reading-bullet {
+  color: #10b981;
+  font-size: 0.95rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.syllabus-reading-item .reading-author-name {
+  font-weight: var(--font-bold);
+  color: var(--text-heading);
+  margin-right: 4px;
+}
+
+.syllabus-reading-item .reading-title-text {
+  color: var(--text-primary);
+}
+
+.syllabus-reading-link {
+  color: var(--color-saddle-brown);
+  text-decoration: underline;
+  text-underline-offset: 2.5px;
+  font-weight: var(--font-medium);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: opacity var(--trans-fast);
+}
+
+.syllabus-reading-link:hover {
+  opacity: 0.8;
+  color: var(--color-powder-brown);
+}
+
+.reading-drive-icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* WhatsApp Verification Proof Box */
+.reading-proof-box {
+  margin-top: 6px;
+  padding: 6px 10px;
+  background: color-mix(in srgb, var(--color-surface, #1e1e24) 80%, rgba(37, 211, 102, 0.08));
+  border-left: 2.5px solid #25d366;
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+  font-size: 0.74rem;
+}
+
+.proof-meta-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  margin-bottom: 3px;
+  line-height: 1.2;
+}
+
+.proof-meta-header svg {
+  color: #25d366;
+}
+
+.proof-sender-name {
+  font-weight: var(--font-bold);
+  color: #25d366;
+}
+
+.proof-meta-sep {
+  opacity: 0.5;
+}
+
+.proof-chat-name {
+  color: var(--text-muted);
+}
+
+.proof-date-time {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+}
+
+.proof-quote-text {
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
 /* =============================================================================
    BROAD FOLDERS & TOPIC SUBFOLDERS
    ============================================================================= */

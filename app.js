@@ -138,12 +138,13 @@ function renderAssessmentsView() {
       </h4>
     `;
 
-    // Syllabus Clean List with direct Readings/Drives toggle button
+    // Syllabus Clean List with Dual Readings Blocks (Syllabus Prescribed + Faculty Mentions with Proofs)
     const syllabusHtml = paper.syllabusTopics.map((unit, uIdx) => {
       const unitKey = `${paper.id}-u${uIdx}`;
       const hasDrives = unit.drives && unit.drives.length > 0;
-      const hasItems = unit.items && unit.items.length > 0;
-      const hasReadings = hasDrives || hasItems || unit.readingsNote;
+      const classReadingsList = unit.classReadings || unit.items || [];
+      const hasClassReadings = classReadingsList.length > 0 || hasDrives || unit.classReadingsNote || unit.readingsNote;
+      const hasSyllabusReadings = unit.syllabusReadings && unit.syllabusReadings.length > 0;
 
       return `
         <div class="syllabus-item-group">
@@ -162,26 +163,67 @@ function renderAssessmentsView() {
             }).join('')}
           </ul>
 
-          ${hasReadings ? `
-            <button type="button" class="btn-toggle-readings" onclick="toggleUnitReadings('${unitKey}')" id="btn-toggle-${unitKey}" aria-expanded="false">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-              <span>Readings / Drives</span>
-              <span class="toggle-arrow">▾</span>
-            </button>
+          <!-- Dual Action Buttons Row -->
+          <div class="unit-actions-row">
+            ${hasSyllabusReadings ? `
+              <button type="button" class="btn-toggle-readings btn-toggle-syllabus" onclick="toggleUnitSyllabusReadings('${unitKey}')" id="btn-toggle-syl-${unitKey}" aria-expanded="false" title="View official DU syllabus prescribed readings for this topic">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>Syllabus Prescribed Readings (${unit.syllabusReadings.length})</span>
+                <span class="toggle-arrow">▾</span>
+              </button>
+            ` : ''}
+
+            ${hasClassReadings ? `
+              <button type="button" class="btn-toggle-readings btn-toggle-faculty" onclick="toggleUnitClassReadings('${unitKey}')" id="btn-toggle-cls-${unitKey}" aria-expanded="false" title="View faculty references and student WhatsApp chat proofs">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                <span>Faculty Mentions & Class Proofs (${classReadingsList.length})</span>
+                <span class="toggle-arrow">▾</span>
+              </button>
+            ` : ''}
+          </div>
+
+          <!-- Panel 1: Official Syllabus Prescribed Readings (clean list, no extra tags) -->
+          ${hasSyllabusReadings ? `
+            <div class="unit-readings-panel unit-panel-syllabus" id="panel-syl-${unitKey}" style="display: none;">
+              <div class="panel-section-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>Official DU Syllabus Prescribed Readings</span>
+              </div>
+
+              <ul class="clean-syllabus-readings-list">
+                ${unit.syllabusReadings.map(r => `
+                  <li class="syllabus-reading-item">
+                    <span class="reading-bullet">•</span>
+                    <div class="reading-text-wrap">
+                      <span class="reading-author-name">${escapeHtml(r.author)}:</span>
+                      ${r.url ? `
+                        <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="syllabus-reading-link" title="Open Drive Link">
+                          <span>${escapeHtml(r.title)}</span>
+                          <svg class="reading-drive-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                      ` : `
+                        <span class="reading-title-text">${escapeHtml(r.title)}</span>
+                      `}
+                    </div>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
           ` : ''}
 
-          ${hasReadings ? `
-            <div class="unit-readings-panel" id="panel-${unitKey}" style="display: none;">
-              ${unit.readingsNote ? `
+          <!-- Panel 2: Faculty References & Class Discussions (with WhatsApp proofs & exact topic drive) -->
+          ${hasClassReadings ? `
+            <div class="unit-readings-panel unit-panel-faculty" id="panel-cls-${unitKey}" style="display: none;">
+              ${(unit.classReadingsNote || unit.readingsNote) ? `
                 <div class="unit-readings-note">
                   <svg class="fallback-icon-svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                  <span>${escapeHtml(unit.readingsNote)}</span>
+                  <span>${escapeHtml(unit.classReadingsNote || unit.readingsNote)}</span>
                 </div>
               ` : ''}
 
-              ${hasItems ? `
+              ${classReadingsList.length > 0 ? `
                 <div class="clean-reading-list">
-                  ${unit.items.map(r => `
+                  ${classReadingsList.map(r => `
                     <div class="reading-row">
                       <div class="reading-info">
                         ${r.url ? `
@@ -195,6 +237,20 @@ function renderAssessmentsView() {
                         `}
                         <span class="reading-author-meta">${escapeHtml(r.author)}</span>
                         ${r.scope ? `<span class="reading-scope-note">(${escapeHtml(r.scope)})</span>` : ''}
+
+                        ${r.proof ? `
+                          <div class="reading-proof-box">
+                            <div class="proof-meta-header">
+                              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                              <span class="proof-sender-name">${escapeHtml(r.proof.sender)}</span>
+                              <span class="proof-meta-sep">·</span>
+                              <span class="proof-chat-name">${escapeHtml(r.proof.chat)}</span>
+                              <span class="proof-meta-sep">·</span>
+                              <span class="proof-date-time">${escapeHtml(r.proof.date)}</span>
+                            </div>
+                            <div class="proof-quote-text">“${escapeHtml(r.proof.quote)}”</div>
+                          </div>
+                        ` : ''}
                       </div>
                       ${r.url ? `
                         <div class="reading-actions">
@@ -214,7 +270,7 @@ function renderAssessmentsView() {
               ` : ''}
 
               ${hasDrives ? `
-                <div class="folder-rows-list" style="margin-top: 6px;">
+                <div class="folder-rows-list" style="margin-top: 8px;">
                   ${unit.drives.map(f => `
                     <a href="${f.url}" target="_blank" rel="noopener noreferrer" class="drive-link-row">
                       <svg class="drive-link-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
@@ -904,6 +960,56 @@ function initCitationHovercards() {
 function toggleUnitReadings(unitKey) {
   const panel = document.getElementById(`panel-${unitKey}`);
   const btn = document.getElementById(`btn-toggle-${unitKey}`);
+  if (!panel) return;
+
+  const isHidden = panel.style.display === 'none';
+  if (isHidden) {
+    panel.style.display = 'block';
+    if (btn) {
+      btn.classList.add('active');
+      btn.setAttribute('aria-expanded', 'true');
+      const arrow = btn.querySelector('.toggle-arrow');
+      if (arrow) arrow.textContent = '▴';
+    }
+  } else {
+    panel.style.display = 'none';
+    if (btn) {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-expanded', 'false');
+      const arrow = btn.querySelector('.toggle-arrow');
+      if (arrow) arrow.textContent = '▾';
+    }
+  }
+}
+
+function toggleUnitSyllabusReadings(unitKey) {
+  const panel = document.getElementById(`panel-syl-${unitKey}`);
+  const btn = document.getElementById(`btn-toggle-syl-${unitKey}`);
+  if (!panel) return;
+
+  const isHidden = panel.style.display === 'none';
+  if (isHidden) {
+    panel.style.display = 'block';
+    if (btn) {
+      btn.classList.add('active');
+      btn.setAttribute('aria-expanded', 'true');
+      const arrow = btn.querySelector('.toggle-arrow');
+      if (arrow) arrow.textContent = '▴';
+    }
+  } else {
+    panel.style.display = 'none';
+    if (btn) {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-expanded', 'false');
+      const arrow = btn.querySelector('.toggle-arrow');
+      if (arrow) arrow.textContent = '▾';
+    }
+  }
+}
+
+function toggleUnitClassReadings(unitKey) {
+  const panel = document.getElementById(`panel-cls-${unitKey}`);
+  const btn = document.getElementById(`btn-toggle-cls-${unitKey}`);
   if (!panel) return;
 
   const isHidden = panel.style.display === 'none';
