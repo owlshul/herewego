@@ -184,20 +184,20 @@ function renderAssessmentsView() {
             }).join('')}
           </ul>
 
-          <!-- Action Buttons Row (3 Blocks: Official syllabus wali readings, Prof suggested readings, Drive for the unit) -->
+          <!-- Action Buttons Row (3 Blocks: Prof suggested readings, Official syllabus readings, Drive for the unit) -->
           <div class="unit-actions-row">
-            ${hasSyllabusReadings ? `
-              <button type="button" class="btn-toggle-readings btn-toggle-syllabus" onclick="toggleUnitSyllabusReadings('${unitKey}')" id="btn-toggle-syl-${unitKey}" aria-expanded="false" title="View official DU syllabus prescribed readings for this topic">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                <span>Official syllabus wali readings (${unit.syllabusReadings.length})</span>
-                <span class="toggle-arrow">▾</span>
-              </button>
-            ` : ''}
-
             ${hasClassReadings ? `
               <button type="button" class="btn-toggle-readings btn-toggle-faculty" onclick="toggleUnitClassReadings('${unitKey}')" id="btn-toggle-cls-${unitKey}" aria-expanded="false" title="View professor suggested readings and student WhatsApp chat proofs">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
                 <span>Prof suggested readings (${classReadingsList.length})</span>
+                <span class="toggle-arrow">▾</span>
+              </button>
+            ` : ''}
+
+            ${hasSyllabusReadings ? `
+              <button type="button" class="btn-toggle-readings btn-toggle-syllabus" onclick="toggleUnitSyllabusReadings('${unitKey}')" id="btn-toggle-syl-${unitKey}" aria-expanded="false" title="View official DU syllabus prescribed readings for this topic">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>Official syllabus readings (${unit.syllabusReadings.length})</span>
                 <span class="toggle-arrow">▾</span>
               </button>
             ` : ''}
@@ -211,31 +211,7 @@ function renderAssessmentsView() {
             ` : ''}
           </div>
 
-          <!-- Panel 1: Official Syllabus Prescribed Readings (clean list, no extra tags or bright badges) -->
-          ${hasSyllabusReadings ? `
-            <div class="unit-readings-panel unit-panel-syllabus" id="panel-syl-${unitKey}" style="display: none;">
-              <ul class="clean-syllabus-readings-list">
-                ${unit.syllabusReadings.map(r => `
-                  <li class="syllabus-reading-item">
-                    <span class="reading-bullet">•</span>
-                    <div class="reading-text-wrap">
-                      <span class="reading-author-name">${escapeHtml(r.author)}:</span>
-                      ${r.url ? `
-                        <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="syllabus-reading-link" title="Open Drive Link">
-                          <span>${escapeHtml(r.title)}</span>
-                          <svg class="reading-drive-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        </a>
-                      ` : `
-                        <span class="reading-title-text">${escapeHtml(r.title)}</span>
-                      `}
-                    </div>
-                  </li>
-                `).join('')}
-              </ul>
-            </div>
-          ` : ''}
-
-          <!-- Panel 2: Faculty References & Class Discussions (with collective WhatsApp proof at bottom) -->
+          <!-- Panel 1: Professor Suggested Readings (Faculty References & Class Discussions) -->
           ${hasClassReadings ? `
             <div class="unit-readings-panel unit-panel-faculty" id="panel-cls-${unitKey}" style="display: none;">
               ${(unit.classReadingsNote || unit.readingsNote) ? `
@@ -297,6 +273,30 @@ function renderAssessmentsView() {
                   `).join('')}
                 </div>
               ` : ''}
+            </div>
+          ` : ''}
+
+          <!-- Panel 2: Official Syllabus Prescribed Readings (clean list, no extra tags or bright badges) -->
+          ${hasSyllabusReadings ? `
+            <div class="unit-readings-panel unit-panel-syllabus" id="panel-syl-${unitKey}" style="display: none;">
+              <ul class="clean-syllabus-readings-list">
+                ${unit.syllabusReadings.map(r => `
+                  <li class="syllabus-reading-item">
+                    <span class="reading-bullet">•</span>
+                    <div class="reading-text-wrap">
+                      <span class="reading-author-name">${escapeHtml(r.author)}:</span>
+                      ${r.url ? `
+                        <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="syllabus-reading-link" title="Open Drive Link">
+                          <span>${escapeHtml(r.title)}</span>
+                          <svg class="reading-drive-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                      ` : `
+                        <span class="reading-title-text">${escapeHtml(r.title)}</span>
+                      `}
+                    </div>
+                  </li>
+                `).join('')}
+              </ul>
             </div>
           ` : ''}
 
