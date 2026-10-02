@@ -25,7 +25,7 @@ const portalData = {
       id: "va-ir-unit1-readings",
       title: "IR Unit 1: Specific Chapters for Hobson and Tickner Books Confirmed",
       date: "2 Oct 2026, 10:45 AM",
-      sender: "Kritartha KMC",
+      sender: "Kritartha",
       source: "WhatsApp (MAPS Unfiltered / Batch Discussion)",
       type: "readings",
       priority: true,
@@ -37,7 +37,7 @@ const portalData = {
       id: "va-ir-readings-1",
       title: "IR: 2 Readings Uploaded for Post Modernism & Post Structuralism (Devetak & Campbell)",
       date: "2 Oct 2026, 10:30 AM",
-      sender: "Kritartha KMC",
+      sender: "Kritartha",
       source: "WhatsApp (MAPS Unfiltered / Batch Discussion)",
       type: "readings",
       priority: true,
@@ -336,7 +336,7 @@ const portalData = {
                 quote: "for preventive detention : 1. Austin, 2. Khosla, 3. Venkat iyer, 4. Gautam bhatia, 5. First amendment original draft"
               },
               {
-                sender: "~ Krishna Shreyansh & Kritartha KMC",
+                sender: "~ Krishna Shreyansh & Kritartha",
                 chat: "WhatsApp (MAPS Unfiltered)",
                 date: "1 Oct 2026, 4:30 PM – 4:32 PM",
                 quote: "Constitutionalism nd debates -- Baxi and Austin's material... Baxi ka kaunsa? Accumulation and Legacy and Rajiv Bhargav waala? -> Haaanjii wahii dono"
@@ -415,7 +415,7 @@ const portalData = {
                 quote: "For rule of law: 1. Av dicey, 2. Moiz tundawala"
               },
               {
-                sender: "Kritartha KMC",
+                sender: "Kritartha",
                 chat: "WhatsApp (MAPS Unfiltered)",
                 date: "1 Oct 2026, 4:31 PM",
                 quote: "Phir Baxi ka rule of law waala nahin aayega? (Faculty repository includes 'upendra baxi.pdf')"
@@ -673,7 +673,7 @@ const portalData = {
               }
             ],
             // 3. Faculty References & Class Discussions
-            classReadingsNote: "Specific chapters covered by Prof. Navnita C. Behera in class (verified by Kritartha KMC):",
+            classReadingsNote: "Specific chapters covered by Prof. Navnita C. Behera in class (verified by Kritartha):",
             classReadings: [
               {
                 author: "John M. Hobson",
@@ -690,7 +690,7 @@ const portalData = {
             ],
             classProofs: [
               {
-                sender: "Kritartha KMC",
+                sender: "Kritartha",
                 chat: "WhatsApp (MAPS Unfiltered / Batch Discussion)",
                 date: "2 Oct 2026, 10:45 AM",
                 quote: "Navnita ma'am covered the intro and conclusion from Hobson's book. I'm assuming it'd be best to cover intro from Tickner's book."
@@ -786,7 +786,7 @@ const portalData = {
               }
             ],
             // 3. Faculty References & Class Discussions
-            classReadingsNote: "2 readings uploaded on Google Drive folder for Post-Modernism & Post-Structuralism (verified by Kritartha KMC):",
+            classReadingsNote: "2 readings uploaded on Google Drive folder for Post-Modernism & Post-Structuralism (verified by Kritartha):",
             classReadings: [
               {
                 author: "Richard Devetak",
@@ -803,7 +803,7 @@ const portalData = {
             ],
             classProofs: [
               {
-                sender: "Kritartha KMC",
+                sender: "Kritartha",
                 chat: "WhatsApp (MAPS Unfiltered / Batch Discussion)",
                 date: "2 Oct 2026, 10:30 AM – 10:34 AM",
                 quote: "2 readings have been uploaded on the drive folder: One by Richard Devetak, the other by David Campbell. Chapters in broader books. Devetak ka 25-30pgs ka hai, Campbell waala 20-22pgs."
