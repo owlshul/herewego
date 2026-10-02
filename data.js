@@ -425,26 +425,26 @@ const portalData = {
         ],
         classNotesGallery: {
           title: "Still uncertainty on what prof taught / asked to read?",
-          attendeeNotice: "Both students attended Prof. Ujjwal Kumar Singh's classes in person.",
+          attendeeNotice: "Both students attended the classes and kept track of the readings mentioned by the professor.",
           errorDisclaimer: "There might be minor errors; will update them after clarifying.",
           humorNote: "Couldn't OCR these Harappan scripts (jk)",
           contributors: [
             {
               id: "abhilasha",
               name: "Abhilasha",
-              badge: "Attended Class",
-              summary: "2 Pages of Handwritten Lecture Notes",
-              notesContext: "Notes taken during Prof. Ujjwal Kumar Singh's class covering Unit 1(b, c) & Unit 4(a) reading references and topics.",
+              badge: "Class Attendee",
+              summary: "2 Pages of Tracked Readings",
+              notesContext: "Tracked readings mentioned by Prof. Ujjwal Kumar Singh in class covering Unit 1(b, c) & Unit 4(a).",
               pages: [
                 {
                   id: "abhilasha-1",
-                  title: "Abhilasha · Page 1: Unit 1 & Unit 4 Readings Reference",
+                  title: "Abhilasha · Page 1: Tracked Readings for Unit 1 & Unit 4",
                   caption: "Unit 1: Granville Austin, Pitkin, Bhargava, Baxi · Unit 4: Dicey, Sekhri, Gautam Bhatia, Baxi, Moiz Tundawala",
                   src: "assets/notes/abhilasha-1.jpeg"
                 },
                 {
                   id: "abhilasha-2",
-                  title: "Abhilasha · Page 2: Extended Notes & Context",
+                  title: "Abhilasha · Page 2: Extended Readings Tracking",
                   caption: "Post-colonial legal perspectives & course reading themes",
                   src: "assets/notes/abhilasha-2.jpeg"
                 }
@@ -453,19 +453,19 @@ const portalData = {
             {
               id: "diksha",
               name: "Diksha",
-              badge: "Attended Class",
-              summary: "2 Pages of Handwritten Lecture Notes",
-              notesContext: "Detailed class notes outlining Prof. Ujjwal Kumar Singh's recommended readings, chapter numbers, and page ranges.",
+              badge: "Class Attendee",
+              summary: "2 Pages of Tracked Readings",
+              notesContext: "Tracked reading recommendations, chapter numbers, and page ranges mentioned by Prof. Ujjwal Kumar Singh in class.",
               pages: [
                 {
                   id: "diksha-1",
-                  title: "Diksha · Page 1: Unit 1(b) & Unit 1(c) Readings & Chapters",
+                  title: "Diksha · Page 1: Unit 1(b) & Unit 1(c) Tracked Readings",
                   caption: "Granville Austin (Cornerstone Ch 1, 2, 3, 13; Working a Democratic Constitution pp. 53-54), Hanna Pitkin, Upendra Baxi, Rajiv Bhargava, Gautam Bhatia",
                   src: "assets/notes/diksha-1.jpeg"
                 },
                 {
                   id: "diksha-2",
-                  title: "Diksha · Page 2: Unit 4(a) Rule of Law & Criminal Law References",
+                  title: "Diksha · Page 2: Unit 4(a) Tracked Readings",
                   caption: "A.V. Dicey, Upendra Baxi, Moiz Tundawala, criminal law decolonization citations",
                   src: "assets/notes/diksha-2.jpeg"
                 }

@@ -335,7 +335,7 @@ function renderAssessmentsView() {
             <details class="notes-student-box" id="notes-box-${c.id}" ${cIdx === 0 ? 'open' : ''}>
               <summary class="notes-box-summary">
                 <div class="notes-summary-left">
-                  <span class="notes-student-name">${escapeHtml(c.name)}’s Notes</span>
+                  <span class="notes-student-name">${escapeHtml(c.name)}’s Tracked Readings</span>
                   <span class="pill pill-attendee-badge">${escapeHtml(c.badge)}</span>
                   <span class="notes-summary-count">${escapeHtml(c.summary)}</span>
                 </div>
@@ -349,7 +349,7 @@ function renderAssessmentsView() {
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                   </div>
                   <div class="notes-credit-info">
-                    <span class="notes-credit-by">Lecture Notes contributed by <strong>${escapeHtml(c.name)}</strong> (In-Person Attendee)</span>
+                    <span class="notes-credit-by">Readings tracked during class by <strong>${escapeHtml(c.name)}</strong></span>
                     <span class="notes-credit-context">${escapeHtml(c.notesContext)}</span>
                   </div>
                 </div>
@@ -358,12 +358,12 @@ function renderAssessmentsView() {
                 <div class="notes-thumbnails-grid">
                   ${c.pages.map((p) => `
                     <div class="note-thumb-card">
-                      <div class="note-thumb-img-wrap" onclick="openNoteZoom('${escapeJsString(p.src)}', '${escapeJsString(p.title)}', '${escapeJsString(c.badge)}', '${escapeJsString(p.caption)}')" role="button" tabindex="0" title="Click to enlarge note" aria-label="Click to zoom ${escapeHtml(p.title)}">
+                      <div class="note-thumb-img-wrap" onclick="openNoteZoom('${escapeJsString(p.src)}', '${escapeJsString(p.title)}', '${escapeJsString(c.badge)}', '${escapeJsString(p.caption)}')" role="button" tabindex="0" title="Click to enlarge" aria-label="Click to zoom ${escapeHtml(p.title)}">
                         <img src="${escapeHtml(p.src)}" alt="${escapeHtml(p.title)}" class="note-thumb-img" loading="lazy" />
                         <div class="note-thumb-overlay">
                           <span class="btn-thumb-zoom">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-                            <span>Zoom Note</span>
+                            <span>View / Zoom</span>
                           </span>
                         </div>
                       </div>
@@ -372,7 +372,7 @@ function renderAssessmentsView() {
                         <div class="note-thumb-caption">${escapeHtml(p.caption)}</div>
                         <button type="button" class="btn-note-zoom-direct" onclick="openNoteZoom('${escapeJsString(p.src)}', '${escapeJsString(p.title)}', '${escapeJsString(c.badge)}', '${escapeJsString(p.caption)}')">
                           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-                          <span>Zoom</span>
+                          <span>View</span>
                         </button>
                       </div>
                     </div>
@@ -1226,26 +1226,26 @@ function closeSyllabusModal() {
 const allNotesGalleryItems = [
   {
     src: 'assets/notes/abhilasha-1.jpeg',
-    title: 'Abhilasha · Page 1: Unit 1 & Unit 4 Readings Reference',
-    badge: 'In-Person Class Attendee',
+    title: 'Abhilasha · Page 1: Tracked Readings for Unit 1 & Unit 4',
+    badge: 'Class Attendee',
     caption: 'Unit 1: Granville Austin, Pitkin, Bhargava, Baxi · Unit 4: Dicey, Sekhri, Gautam Bhatia, Baxi, Moiz Tundawala'
   },
   {
     src: 'assets/notes/abhilasha-2.jpeg',
-    title: 'Abhilasha · Page 2: Extended Notes & Context',
-    badge: 'In-Person Class Attendee',
+    title: 'Abhilasha · Page 2: Extended Readings Tracking',
+    badge: 'Class Attendee',
     caption: 'Post-colonial legal perspectives & course reading themes'
   },
   {
     src: 'assets/notes/diksha-1.jpeg',
-    title: 'Diksha · Page 1: Unit 1(b) & Unit 1(c) Readings & Chapters',
-    badge: 'In-Person Class Attendee',
+    title: 'Diksha · Page 1: Unit 1(b) & Unit 1(c) Tracked Readings',
+    badge: 'Class Attendee',
     caption: 'Granville Austin (Cornerstone Ch 1, 2, 3, 13; Working a Democratic Constitution pp. 53-54), Hanna Pitkin, Upendra Baxi, Rajiv Bhargava, Gautam Bhatia'
   },
   {
     src: 'assets/notes/diksha-2.jpeg',
-    title: 'Diksha · Page 2: Unit 4(a) Rule of Law & Criminal Law References',
-    badge: 'In-Person Class Attendee',
+    title: 'Diksha · Page 2: Unit 4(a) Tracked Readings',
+    badge: 'Class Attendee',
     caption: 'A.V. Dicey, Upendra Baxi, Moiz Tundawala, criminal law decolonization citations'
   }
 ];
