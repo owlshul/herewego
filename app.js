@@ -184,20 +184,20 @@ function renderAssessmentsView() {
             }).join('')}
           </ul>
 
-          <!-- Action Buttons Row (3 Blocks: Syllabus Readings, Faculty References & Proofs, Drive for the Unit) -->
+          <!-- Action Buttons Row (3 Blocks: Official syllabus wali readings, Prof suggested readings, Drive for the unit) -->
           <div class="unit-actions-row">
             ${hasSyllabusReadings ? `
               <button type="button" class="btn-toggle-readings btn-toggle-syllabus" onclick="toggleUnitSyllabusReadings('${unitKey}')" id="btn-toggle-syl-${unitKey}" aria-expanded="false" title="View official DU syllabus prescribed readings for this topic">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                <span>Syllabus Prescribed Readings (${unit.syllabusReadings.length})</span>
+                <span>Official syllabus wali readings (${unit.syllabusReadings.length})</span>
                 <span class="toggle-arrow">▾</span>
               </button>
             ` : ''}
 
             ${hasClassReadings ? `
-              <button type="button" class="btn-toggle-readings btn-toggle-faculty" onclick="toggleUnitClassReadings('${unitKey}')" id="btn-toggle-cls-${unitKey}" aria-expanded="false" title="View faculty references and student WhatsApp chat proofs">
+              <button type="button" class="btn-toggle-readings btn-toggle-faculty" onclick="toggleUnitClassReadings('${unitKey}')" id="btn-toggle-cls-${unitKey}" aria-expanded="false" title="View professor suggested readings and student WhatsApp chat proofs">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-                <span>Faculty Mentions & Class Proofs (${classReadingsList.length})</span>
+                <span>Prof suggested readings (${classReadingsList.length})</span>
                 <span class="toggle-arrow">▾</span>
               </button>
             ` : ''}
