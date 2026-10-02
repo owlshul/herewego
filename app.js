@@ -318,6 +318,84 @@ function renderAssessmentsView() {
       `;
     }).join('');
 
+    // Class Notes Gallery (e.g. Abhilasha & Diksha notes for PS-CC 102)
+    const gallery = paper.classNotesGallery;
+    const galleryHtml = gallery ? `
+      <section class="class-notes-uncertainty-block" aria-label="Class Notes and Reading Clarification">
+        <div class="uncertainty-header">
+          <div class="uncertainty-title-wrap">
+            <svg class="uncertainty-title-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <h4 class="uncertainty-heading">${escapeHtml(gallery.title)}</h4>
+          </div>
+          <p class="uncertainty-subtext">${escapeHtml(gallery.attendeeNotice)}</p>
+        </div>
+
+        <div class="notes-boxes-container">
+          ${gallery.contributors.map((c, cIdx) => `
+            <details class="notes-student-box" id="notes-box-${c.id}" ${cIdx === 0 ? 'open' : ''}>
+              <summary class="notes-box-summary">
+                <div class="notes-summary-left">
+                  <span class="notes-student-name">${escapeHtml(c.name)}’s Notes</span>
+                  <span class="pill pill-attendee-badge">${escapeHtml(c.badge)}</span>
+                  <span class="notes-summary-count">${escapeHtml(c.summary)}</span>
+                </div>
+                <span class="notes-summary-arrow">▾</span>
+              </summary>
+
+              <div class="notes-box-body">
+                <!-- Credits & Context -->
+                <div class="notes-credit-row">
+                  <div class="notes-credit-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  </div>
+                  <div class="notes-credit-info">
+                    <span class="notes-credit-by">Lecture Notes contributed by <strong>${escapeHtml(c.name)}</strong> (In-Person Attendee)</span>
+                    <span class="notes-credit-context">${escapeHtml(c.notesContext)}</span>
+                  </div>
+                </div>
+
+                <!-- Note Pages Grid -->
+                <div class="notes-thumbnails-grid">
+                  ${c.pages.map((p) => `
+                    <div class="note-thumb-card">
+                      <div class="note-thumb-img-wrap" onclick="openNoteZoom('${escapeJsString(p.src)}', '${escapeJsString(p.title)}', '${escapeJsString(c.badge)}', '${escapeJsString(p.caption)}')" role="button" tabindex="0" title="Click to enlarge note" aria-label="Click to zoom ${escapeHtml(p.title)}">
+                        <img src="${escapeHtml(p.src)}" alt="${escapeHtml(p.title)}" class="note-thumb-img" loading="lazy" />
+                        <div class="note-thumb-overlay">
+                          <span class="btn-thumb-zoom">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                            <span>Zoom Note</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="note-thumb-meta">
+                        <div class="note-thumb-title">${escapeHtml(p.title)}</div>
+                        <div class="note-thumb-caption">${escapeHtml(p.caption)}</div>
+                        <button type="button" class="btn-note-zoom-direct" onclick="openNoteZoom('${escapeJsString(p.src)}', '${escapeJsString(p.title)}', '${escapeJsString(c.badge)}', '${escapeJsString(p.caption)}')">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                          <span>Zoom</span>
+                        </button>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            </details>
+          `).join('')}
+        </div>
+
+        <!-- Footnotes & Humor Line below the boxes -->
+        <div class="uncertainty-footer-notes">
+          <p class="uncertainty-disclaimer">
+            <em>*Note: ${escapeHtml(gallery.attendeeNotice)} ${escapeHtml(gallery.errorDisclaimer)}</em>
+          </p>
+          <p class="uncertainty-humor">
+            <span class="humor-glyph">🗿</span>
+            <span>${escapeHtml(gallery.humorNote)}</span>
+          </p>
+        </div>
+      </section>
+    ` : '';
+
     return `
       <article class="paper-entry" data-paper-code="${paper.code}">
         <div class="paper-header">
@@ -340,6 +418,7 @@ function renderAssessmentsView() {
           ${syllabusHeaderHtml}
           ${syllabusHtml}
           ${footnoteHtml}
+          ${galleryHtml}
         </div>
       </article>
     `;
@@ -1141,10 +1220,108 @@ function closeSyllabusModal() {
   }, 250);
 }
 
-// Close modal on Escape key press
+// -----------------------------------------------------------------------------
+// CLASS NOTES ZOOM / LIGHTBOX MODAL
+// -----------------------------------------------------------------------------
+const allNotesGalleryItems = [
+  {
+    src: 'assets/notes/abhilasha-1.jpeg',
+    title: 'Abhilasha · Page 1: Unit 1 & Unit 4 Readings Reference',
+    badge: 'In-Person Class Attendee',
+    caption: 'Unit 1: Granville Austin, Pitkin, Bhargava, Baxi · Unit 4: Dicey, Sekhri, Gautam Bhatia, Baxi, Moiz Tundawala'
+  },
+  {
+    src: 'assets/notes/abhilasha-2.jpeg',
+    title: 'Abhilasha · Page 2: Extended Notes & Context',
+    badge: 'In-Person Class Attendee',
+    caption: 'Post-colonial legal perspectives & course reading themes'
+  },
+  {
+    src: 'assets/notes/diksha-1.jpeg',
+    title: 'Diksha · Page 1: Unit 1(b) & Unit 1(c) Readings & Chapters',
+    badge: 'In-Person Class Attendee',
+    caption: 'Granville Austin (Cornerstone Ch 1, 2, 3, 13; Working a Democratic Constitution pp. 53-54), Hanna Pitkin, Upendra Baxi, Rajiv Bhargava, Gautam Bhatia'
+  },
+  {
+    src: 'assets/notes/diksha-2.jpeg',
+    title: 'Diksha · Page 2: Unit 4(a) Rule of Law & Criminal Law References',
+    badge: 'In-Person Class Attendee',
+    caption: 'A.V. Dicey, Upendra Baxi, Moiz Tundawala, criminal law decolonization citations'
+  }
+];
+
+let currentNoteIndex = 0;
+
+function openNoteZoom(src, title, badge, caption) {
+  const modal = document.getElementById('notes-zoom-modal');
+  if (!modal) return;
+
+  const idx = allNotesGalleryItems.findIndex(item => item.src === src);
+  if (idx !== -1) {
+    currentNoteIndex = idx;
+  }
+
+  updateNoteZoomDisplay();
+
+  modal.style.display = 'flex';
+  void modal.offsetWidth; // force reflow for CSS transition
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function updateNoteZoomDisplay() {
+  const item = allNotesGalleryItems[currentNoteIndex];
+  if (!item) return;
+
+  const titleEl = document.getElementById('notes-zoom-title');
+  const badgeEl = document.getElementById('notes-zoom-badge');
+  const captionEl = document.getElementById('notes-zoom-caption');
+  const imgEl = document.getElementById('notes-zoom-img');
+  const rawLinkEl = document.getElementById('notes-zoom-raw-link');
+  const counterEl = document.getElementById('notes-zoom-counter');
+
+  if (titleEl) titleEl.textContent = item.title;
+  if (badgeEl) badgeEl.textContent = item.badge;
+  if (captionEl) captionEl.textContent = item.caption;
+  if (imgEl) {
+    imgEl.src = item.src;
+    imgEl.alt = item.title;
+  }
+  if (rawLinkEl) rawLinkEl.href = item.src;
+  if (counterEl) counterEl.textContent = `${currentNoteIndex + 1} / ${allNotesGalleryItems.length}`;
+}
+
+function navigateNoteZoom(direction) {
+  const total = allNotesGalleryItems.length;
+  currentNoteIndex = (currentNoteIndex + direction + total) % total;
+  updateNoteZoomDisplay();
+}
+
+function closeNoteZoom() {
+  const modal = document.getElementById('notes-zoom-modal');
+  if (!modal) return;
+
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+
+  setTimeout(() => {
+    modal.style.display = 'none';
+  }, 250);
+}
+
+// Close modal on Escape key press & arrows for note zoom
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     closeSyllabusModal();
+    closeNoteZoom();
+  } else if (e.key === 'ArrowRight') {
+    const modal = document.getElementById('notes-zoom-modal');
+    if (modal && modal.classList.contains('open')) navigateNoteZoom(1);
+  } else if (e.key === 'ArrowLeft') {
+    const modal = document.getElementById('notes-zoom-modal');
+    if (modal && modal.classList.contains('open')) navigateNoteZoom(-1);
   }
 });
 
