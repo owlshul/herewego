@@ -1302,6 +1302,63 @@ kbd {
   color: var(--text-primary);
 }
 
+/* Author-First Tracked Reading Row Styles */
+.unit-panel-faculty .reading-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.reading-primary-line {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--text-heading);
+}
+
+.reading-writer-name {
+  font-weight: var(--font-bold);
+  color: var(--text-heading);
+}
+
+.reading-sep {
+  color: var(--text-muted);
+  margin: 0 4px;
+}
+
+.reading-desc-line {
+  font-size: 0.77rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+  margin-top: 1px;
+}
+
+.proofs-sources-byline {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 0.76rem;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.03);
+  border-left: 2.5px solid var(--color-powder-brown);
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+  margin-bottom: 6px;
+}
+
+.proofs-sources-label {
+  font-weight: var(--font-bold);
+  color: var(--text-heading);
+  letter-spacing: 0.01em;
+}
+
+.proofs-sources-names {
+  color: var(--text-body);
+  font-weight: var(--font-medium);
+}
+
+
 /* =============================================================================
    BROAD FOLDERS & TOPIC SUBFOLDERS
    ============================================================================= */

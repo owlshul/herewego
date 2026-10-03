@@ -205,13 +205,12 @@ const portalData = {
         },
         syllabusTopics: [
           {
-            unit: "Unit I",
-            unitTitle: "Historical Understanding of Democracy and Constitutionalism in India",
+            unit: "Unit I (b)",
+            unitTitle: "Salient features of Indian constitutionalism: representation & CAI debates",
             topics: [
-              "Topic b: Salient features of India constitutionalism: representation, key debates in the Constituent Assembly of India",
-              "Topic c: Constitutional freedoms and reasonable restrictions, emergency provisions (this is not coming), first amendment, preventive detention and debate over extraordinary laws"
+              "Topic b: Salient features of Indian constitutionalism: representation, key debates in the Constituent Assembly of India"
             ],
-            // 1. Official DU Syllabus Prescribed Readings for Test Topics
+            // 1. Official DU Syllabus Prescribed Readings for Unit 1(b)
             syllabusReadings: [
               {
                 author: "Granville Austin (1966)",
@@ -229,6 +228,98 @@ const portalData = {
                 url: "https://drive.google.com/file/d/1d_-c8cekO08XxXyrd1zeuGPItqb45K9c/view"
               },
               {
+                author: "Rohit De & Ornit Shani (2023)",
+                title: "Assembling the Indian Constitution (Past and Present, 263:1)",
+                url: null
+              },
+              {
+                author: "Ujjwal Kumar Singh & Anupama Roy (2017)",
+                title: "B. R. Ambedkar and the Ideas of Constitutionalism and Constitutional Democracy (Summerhill IIAS Review, XXIII:2)",
+                url: null
+              }
+            ],
+            // 2. Exact Unit Google Drive Folders
+            drives: [
+              {
+                name: "CR Maintained Drive · Unit 1 Folder",
+                scope: "CR Maintained Folder containing Austin, Baxi, Bhatia, First Amendment debates, CAD Vol IX",
+                url: "https://drive.google.com/drive/folders/1iUkZ2ItPesSLJL9G5rwJLdj-KhXVGpuV"
+              },
+              {
+                name: "Prof Shared Drive · Unit 1 Folder",
+                scope: "Faculty Shared Subfolder (polscience.du) · Contains Burra, CAD 12 Sept 1949, ssrn-1957588",
+                url: "https://drive.google.com/drive/folders/1LveKm7f8jMRKodPKRWwuYE8sTM_-te4-"
+              },
+              {
+                name: "Archive Drive · Unit 1 Folder",
+                scope: "Previous Year Master Archive · Unit 1 (Democracy & Constitutionalism in India)",
+                url: "https://drive.google.com/drive/folders/1LPajBK1-XYiApxgV9i8dllMzgK01mCeF"
+              }
+            ],
+            // 3. Faculty References & Class Discussions
+            classSources: "Abhilasha, Diksha, Radha, Kritartha & Krishna Shreyansh",
+            classReadingsNote: "Readings referenced by Prof. Ujjwal Kumar Singh in class & verified in batch discussions:",
+            classReadings: [
+              {
+                author: "Granville Austin",
+                title: "The Indian Constitution: Cornerstone of a Nation",
+                description: "[Intro, Ch. 1, 2, 3 & 13]",
+                url: "https://drive.google.com/file/d/1alrnI8bTcxXr-UfFgaEa2jmgR-34Qblq/view"
+              },
+              {
+                author: "Granville Austin",
+                title: "Working a Democratic Constitution",
+                description: "[Pages 53–68]",
+                url: "https://drive.google.com/file/d/1BQy9JS_2mCEqdi3ANX7g5OCoY200Eh9g/view"
+              },
+              {
+                author: "Hanna Pitkin",
+                title: "The Idea of Constitution",
+                description: null,
+                url: null
+              },
+              {
+                author: "Rajeev Bhargava",
+                title: "Politics & Ethics of the Indian Constitution",
+                description: "[Introduction: \"Why Constitution?\"]",
+                url: null
+              },
+              {
+                author: "Upendra Baxi",
+                title: "Accumulation and Legitimacy: The Indian Constitution and State Formation",
+                description: "(in Rajeev Bhargava ed.)",
+                url: "https://drive.google.com/file/d/1d_-c8cekO08XxXyrd1zeuGPItqb45K9c/view"
+              },
+              {
+                author: "Extra / Alternatives to Constitution",
+                title: "M.N. Roy, Gandhi essay, HSRA",
+                description: "M.N. Roy (p. 40, fn 61), Gandhi essay, HSRA",
+                url: null
+              }
+            ],
+            classProofs: [
+              {
+                sender: "~ Krishna Shreyansh & Kritartha",
+                chat: "WhatsApp (MAPS Unfiltered)",
+                date: "1 Oct 2026, 4:30 PM – 4:32 PM",
+                quote: "Constitutionalism nd debates -- Baxi and Austin's material... Baxi ka kaunsa? Accumulation and Legacy and Rajiv Bhargav waala? -> Haaanjii wahii dono"
+              }
+            ]
+          },
+          {
+            unit: "Unit I (c)",
+            unitTitle: "Constitutional freedoms, reasonable restrictions, first amendment, preventive detention & extraordinary laws",
+            topics: [
+              "Topic c: Constitutional freedoms and reasonable restrictions, emergency provisions (this is not coming), first amendment, preventive detention and debate over extraordinary laws"
+            ],
+            // 1. Official DU Syllabus Prescribed Readings for Unit 1(c)
+            syllabusReadings: [
+              {
+                author: "Granville Austin (1966)",
+                title: "The Indian Constitution: Cornerstone of a Nation (pp. 102–103 / Art. 21 & 22)",
+                url: "https://drive.google.com/file/d/1alrnI8bTcxXr-UfFgaEa2jmgR-34Qblq/view"
+              },
+              {
                 author: "Arudra Burra (2018)",
                 title: "Freedom of Speech in the Early Constitution: A Study of the Constitution (First Amendment) Bill (in Bhatia ed. The Indian Constituent Assembly)",
                 url: null
@@ -237,11 +328,6 @@ const portalData = {
                 author: "Constituent Assembly of India (1949)",
                 title: "CAD Volume IX: Proceedings on Draft Article 15-A, Personal Liberty and Procedure Established by Law (Article 22, Sept 15–16, 1949)",
                 url: "http://164.100.47.194/loksabha/writereaddata/cadebatefiles/vol9.html"
-              },
-              {
-                author: "Rohit De & Ornit Shani (2023)",
-                title: "Assembling the Indian Constitution (Past and Present, 263:1)",
-                url: null
               },
               {
                 author: "Venkat Iyer (2000)",
@@ -262,14 +348,9 @@ const portalData = {
                 author: "Shylashri Shankar (2009)",
                 title: "Scaling Justice: India's Supreme Court, Anti-terror Laws, and Social Rights (Oxford University Press)",
                 url: null
-              },
-              {
-                author: "Ujjwal Kumar Singh & Anupama Roy (2017)",
-                title: "B. R. Ambedkar and the Ideas of Constitutionalism and Constitutional Democracy (Summerhill IIAS Review, XXIII:2)",
-                url: null
               }
             ],
-            // 2. Exact Unit Google Drive Folders (CR Maintained, Prof Shared, Archive)
+            // 2. Exact Unit Google Drive Folders
             drives: [
               {
                 name: "CR Maintained Drive · Unit 1 Folder",
@@ -287,45 +368,63 @@ const portalData = {
                 url: "https://drive.google.com/drive/folders/1LPajBK1-XYiApxgV9i8dllMzgK01mCeF"
               }
             ],
-            // 3. Faculty References & Class Discussions (with WhatsApp proof + student contact info)
             // 3. Faculty References & Class Discussions
-            classReadingsNote: "Readings referenced by Prof. Ujjwal Kumar Singh in class & verified in MAPS batch discussions:",
+            classSources: "Abhilasha, Diksha, Radha, Kritartha & Krishna Shreyansh",
+            classReadingsNote: "Readings referenced by Prof. Ujjwal Kumar Singh in class & verified in batch discussions:",
             classReadings: [
               {
                 author: "Granville Austin",
-                title: "The Indian Constitution: Cornerstone of a Nation & Working a Democratic Constitution",
-                scope: "Constituent Assembly debates & constitutional architecture · Unit 1(b)",
-                url: "https://drive.google.com/drive/folders/1iUkZ2ItPesSLJL9G5rwJLdj-KhXVGpuV"
+                title: "The Indian Constitution: Cornerstone of a Nation",
+                description: "[pp. 102–103: Art. 21 & 22 / Origin of Preventive Detention]",
+                url: "https://drive.google.com/file/d/1alrnI8bTcxXr-UfFgaEa2jmgR-34Qblq/view"
               },
               {
-                author: "Upendra Baxi",
-                title: "Accumulation and Legitimacy: The Indian Constitution and State Formation (in Rajeev Bhargava ed.)",
-                scope: "Debates on Indian constitutionalism and representation · Unit 1(b)",
-                url: "https://drive.google.com/file/d/1d_-c8cekO08XxXyrd1zeuGPItqb45K9c/view"
+                author: "Granville Austin",
+                title: "Working a Democratic Constitution",
+                description: "[pp. 53–54: Individual Liberty & Preventive Detention]",
+                url: "https://drive.google.com/file/d/1BQy9JS_2mCEqdi3ANX7g5OCoY200Eh9g/view"
               },
               {
                 author: "Gautam Bhatia",
-                title: "Article 22: Authoritarian Enclave / Offend, Shock, or Disturb: Free Speech under the Indian Constitution",
-                scope: "Preventive detention & fundamental rights · Unit 1(c)",
+                title: "The Indian Constitution: A Conversation with Power / Offend, Shock, or Disturb",
+                description: "[pp. 149–158: Authoritarian enclave, dark hold, gap between Art. 21 & 22]",
                 url: "https://drive.google.com/file/d/1h6riYeVxCohwRsxlGpogrkygvFsS8iKA/view"
               },
               {
                 author: "Madhav Khosla",
                 title: "The Indian Constitution: An Introduction",
-                scope: "Preventive detention & fundamental rights framework · Unit 1(c)",
+                description: "(Procedure established by law vs. due process & preventive detention framework)",
+                url: null
+              },
+              {
+                author: "Abhinav Chandrachud",
+                title: "Republic of Rhetoric",
+                description: "[Chapter 5: First Amendment triggers & speech restrictions]",
+                url: null
+              },
+              {
+                author: "Upendra Baxi",
+                title: "Courts of India / Crisis of the Indian Legal System",
+                description: "[Ch. 2 / Pg. 31: A.K. Gopalan, Preventive Detention, Habeas Corpus]",
                 url: null
               },
               {
                 author: "Venkat Iyer",
-                title: "States of Emergency in States of Asia: A Comparative Study (Preventive Detention)",
-                scope: "Preventive Detention & Extraordinary Powers · Unit 1(c)",
+                title: "States of Emergency in States of Asia: A Comparative",
+                description: "(Ch-5 & 7)",
                 url: null
               },
               {
-                author: "Constituent Assembly / Parliamentary Records",
-                title: "First Amendment to the Constitution of India (Original Draft & Syama Prasad Mookerjee Debates)",
-                scope: "Reasonable restrictions and debate over extraordinary laws · Unit 1(c)",
+                author: "Parliamentary / CA Debates",
+                title: "First Amendment to the Constitution of India",
+                description: "(Original Draft & Syama Prasad Mookerjee Debates)",
                 url: "https://drive.google.com/file/d/1rhkImGqDBm0tPqikh1VBmWB0agSGG9CM/view"
+              },
+              {
+                author: "Abhinav Sekhri",
+                title: "Proof of Guilt",
+                description: "(Blog)",
+                url: null
               }
             ],
             classProofs: [
@@ -334,18 +433,12 @@ const portalData = {
                 chat: "WhatsApp (MAPS Unfiltered)",
                 date: "1 Oct 2026, 4:28 PM",
                 quote: "for preventive detention : 1. Austin, 2. Khosla, 3. Venkat iyer, 4. Gautam bhatia, 5. First amendment original draft"
-              },
-              {
-                sender: "~ Krishna Shreyansh & Kritartha",
-                chat: "WhatsApp (MAPS Unfiltered)",
-                date: "1 Oct 2026, 4:30 PM – 4:32 PM",
-                quote: "Constitutionalism nd debates -- Baxi and Austin's material... Baxi ka kaunsa? Accumulation and Legacy and Rajiv Bhargav waala? -> Haaanjii wahii dono"
               }
             ]
           },
           {
-            unit: "Unit IV",
-            unitTitle: "Rule of Law, Rights and Accountability",
+            unit: "Unit IV (a)",
+            unitTitle: "Rule of law and the decolonization of criminal law",
             topics: [
               "Topic a: Rule of law and the decolonization of criminal law"
             ],
@@ -367,7 +460,7 @@ const portalData = {
                 url: "https://drive.google.com/file/d/11YHrGU0BcywUbPojCZ2Rx3VaOC5V4S9w/view"
               }
             ],
-            // 2. Exact Unit Google Drive Folders (Prof Shared, CR Maintained, Archive)
+            // 2. Exact Unit Google Drive Folders
             drives: [
               {
                 name: "Prof Shared Drive · Unit 4 Folder",
@@ -386,25 +479,38 @@ const portalData = {
               }
             ],
             // 3. Faculty References & Class Discussions
-            classReadingsNote: "Readings referenced by Prof. Ujjwal Kumar Singh in class & verified in MAPS batch discussions:",
+            classSources: "Abhilasha, Diksha, Radha, Kritartha & Krishna Shreyansh",
+            classReadingsNote: "Readings referenced by Prof. Ujjwal Kumar Singh in class & verified in batch discussions:",
             classReadings: [
               {
-                author: "Moiz Tundawala",
-                title: "On India's post-colonial engagement with the Rule of Law (2013)",
-                scope: "Referenced by Prof. Ujjwal Kumar Singh in class for Rule of Law & Decolonization",
-                url: "https://drive.google.com/drive/folders/1sdPzuuK49RzaY_B9AXogy5TAYMJto9Yq"
-              },
-              {
                 author: "A.V. Dicey",
-                title: "Introduction to the Study of the Law of the Constitution (The Rule of Law)",
-                scope: "Classical formulation of the Rule of Law · Unit 4(a)",
+                title: "An Introduction to the Study of the Law of the Constitution",
+                description: "[pp. 202–203]",
                 url: null
               },
               {
+                author: "Moiz Tundawala",
+                title: "On India’s Post-Colonial Engagement with the Rule of Law",
+                description: "(NUJS Law Review)",
+                url: "https://drive.google.com/drive/folders/1sdPzuuK49RzaY_B9AXogy5TAYMJto9Yq"
+              },
+              {
                 author: "Upendra Baxi",
-                title: "The Rule of Law in India: Theory and Practice (SUR Journal) & The Crisis of the Indian Legal System",
-                scope: "Critical perspective on post-colonial Rule of Law · Unit 4(a)",
+                title: "Rule of Law in India",
+                description: "[Prof. Sitharaman]",
                 url: "https://drive.google.com/file/d/1CrRAlk-Gy_ohPuoQK2C81MNt-DsT55ZM/view"
+              },
+              {
+                author: "Statutory Reading",
+                title: "Bharatiya Nyaya Sanhita (BNS)",
+                description: "[Key concepts / Decolonization of criminal law]",
+                url: "https://drive.google.com/file/d/11YHrGU0BcywUbPojCZ2Rx3VaOC5V4S9w/view"
+              },
+              {
+                author: "Abhinav Sekhri",
+                title: "Proof of Guilt",
+                description: "[Blog on criminal procedure & preventive powers]",
+                url: null
               }
             ],
             classProofs: [

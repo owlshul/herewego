@@ -226,17 +226,21 @@ function renderAssessmentsView() {
                   ${classReadingsList.map(r => `
                     <div class="reading-row">
                       <div class="reading-info">
-                        ${r.url ? `
-                          <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="reading-link">
-                            <span>${escapeHtml(r.title)}</span>
-                          </a>
-                        ` : `
-                          <span class="reading-link reading-link--no-url" style="color: var(--text-main); font-weight: 600;">
-                            <span>${escapeHtml(r.title)}</span>
-                          </span>
-                        `}
-                        <span class="reading-author-meta">${escapeHtml(r.author)}</span>
-                        ${r.scope ? `<span class="reading-scope-note">(${escapeHtml(r.scope)})</span>` : ''}
+                        <div class="reading-primary-line">
+                          ${r.author ? `<span class="reading-writer-name">${escapeHtml(r.author)}</span> <span class="reading-sep">—</span> ` : ''}
+                          ${r.url ? `
+                            <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="reading-link">
+                              <span>${escapeHtml(r.title)}</span>
+                            </a>
+                          ` : `
+                            <span class="reading-link reading-link--no-url" style="color: var(--text-heading); font-weight: var(--font-medium);">
+                              <span>${escapeHtml(r.title)}</span>
+                            </span>
+                          `}
+                        </div>
+                        ${(r.description || r.scope) ? `
+                          <div class="reading-desc-line">${escapeHtml(r.description || r.scope)}</div>
+                        ` : ''}
 
                         ${r.proof ? `
                           <div class="proof-single-line">
@@ -262,15 +266,23 @@ function renderAssessmentsView() {
                 </div>
               ` : ''}
 
-              <!-- Collective WhatsApp Verification Proofs at the end -->
-              ${(unit.classProofs && unit.classProofs.length > 0) ? `
+              <!-- Collective WhatsApp Verification Proofs & Sources at the end -->
+              ${(unit.classSources || (unit.classProofs && unit.classProofs.length > 0)) ? `
                 <div class="collective-proofs-wrap">
-                  <div class="proofs-header-title">Chat Verification Proof:</div>
-                  ${unit.classProofs.map(p => `
-                    <div class="proof-single-line">
-                      <span class="proof-byline">${escapeHtml(p.sender)}, ${escapeHtml(p.chat)}, ${escapeHtml(p.date)}</span>${p.quote ? `<span class="proof-quote-inline">: “${escapeHtml(p.quote)}”</span>` : ''}
+                  ${unit.classSources ? `
+                    <div class="proofs-sources-byline">
+                      <span class="proofs-sources-label">Sources:</span>
+                      <span class="proofs-sources-names">${escapeHtml(unit.classSources)}</span>
                     </div>
-                  `).join('')}
+                  ` : ''}
+                  ${(unit.classProofs && unit.classProofs.length > 0) ? `
+                    <div class="proofs-header-title">Chat Verification Proof:</div>
+                    ${unit.classProofs.map(p => `
+                      <div class="proof-single-line">
+                        <span class="proof-byline">${escapeHtml(p.sender)}, ${escapeHtml(p.chat)}, ${escapeHtml(p.date)}</span>${p.quote ? `<span class="proof-quote-inline">: “${escapeHtml(p.quote)}”</span>` : ''}
+                      </div>
+                    `).join('')}
+                  ` : ''}
                 </div>
               ` : ''}
             </div>
