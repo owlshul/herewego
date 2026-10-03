@@ -350,7 +350,7 @@ function renderAssessmentsView() {
 
         <div class="notes-boxes-container">
           ${gallery.contributors.map((c, cIdx) => `
-            <details class="notes-student-box" id="notes-box-${c.id}" open>
+            <details class="notes-student-box" id="notes-box-${c.id}" ${cIdx === 0 ? 'open' : ''}>
               <summary class="notes-box-summary">
                 <div class="notes-summary-left">
                   <span class="notes-student-name">${escapeHtml(c.name)}’s Tracked Readings</span>
@@ -1399,6 +1399,31 @@ function filterDrivesSection(filterId) {
   });
 }
 
+// -----------------------------------------------------------------------------
+// STUDENT TRACKED READINGS BOXES: SHOW LATEST UNTOGGLED ON TOP & TOGGLE PREVIOUS
+// -----------------------------------------------------------------------------
+document.addEventListener('toggle', (e) => {
+  const box = e.target.closest && e.target.closest('.notes-student-box');
+  if (!box || !box.open) return;
+  const container = box.closest('.notes-boxes-container');
+  if (!container) return;
 
+  // 1. Toggle (collapse) any other currently untoggled (open) box in this container
+  container.querySelectorAll('.notes-student-box').forEach(other => {
+    if (other !== box && other.open) {
+      other.open = false;
+    }
+  });
 
-
+  // 2. Show the latest untoggled box on top
+  if (container.firstElementChild !== box) {
+    container.prepend(box);
+    // Smoothly keep the untoggled box in view
+    requestAnimationFrame(() => {
+      const summary = box.querySelector('.notes-box-summary');
+      if (summary) {
+        summary.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+  }
+}, true);
