@@ -350,7 +350,7 @@ function renderAssessmentsView() {
 
         <div class="notes-boxes-container">
           ${gallery.contributors.map((c, cIdx) => `
-            <details class="notes-student-box" id="notes-box-${c.id}" ${cIdx === 0 ? 'open' : ''}>
+            <details class="notes-student-box" id="notes-box-${c.id}" open>
               <summary class="notes-box-summary">
                 <div class="notes-summary-left">
                   <span class="notes-student-name">${escapeHtml(c.name)}’s Tracked Readings</span>
@@ -1086,7 +1086,24 @@ function initCitationHovercards() {
 
 // -----------------------------------------------------------------------------
 // TOGGLE UNIT READINGS / DRIVES IN SYLLABUS SECTION
+// Mutual exclusivity: Tapping any toggle opens it and closes previous sibling panels
 // -----------------------------------------------------------------------------
+function closeUnitPanel(type, unitKey) {
+  const panelId = type ? `panel-${type}-${unitKey}` : `panel-${unitKey}`;
+  const btnId = type ? `btn-toggle-${type}-${unitKey}` : `btn-toggle-${unitKey}`;
+  const panel = document.getElementById(panelId);
+  const btn = document.getElementById(btnId);
+  if (panel) {
+    panel.style.display = 'none';
+  }
+  if (btn) {
+    btn.classList.remove('active');
+    btn.setAttribute('aria-expanded', 'false');
+    const arrow = btn.querySelector('.toggle-arrow');
+    if (arrow) arrow.textContent = '▾';
+  }
+}
+
 function toggleUnitReadings(unitKey) {
   const panel = document.getElementById(`panel-${unitKey}`);
   const btn = document.getElementById(`btn-toggle-${unitKey}`);
@@ -1094,6 +1111,10 @@ function toggleUnitReadings(unitKey) {
 
   const isHidden = panel.style.display === 'none';
   if (isHidden) {
+    closeUnitPanel('cls', unitKey);
+    closeUnitPanel('syl', unitKey);
+    closeUnitPanel('drv', unitKey);
+
     panel.style.display = 'block';
     if (btn) {
       btn.classList.add('active');
@@ -1119,6 +1140,10 @@ function toggleUnitSyllabusReadings(unitKey) {
 
   const isHidden = panel.style.display === 'none';
   if (isHidden) {
+    closeUnitPanel('cls', unitKey);
+    closeUnitPanel('drv', unitKey);
+    closeUnitPanel('', unitKey);
+
     panel.style.display = 'block';
     if (btn) {
       btn.classList.add('active');
@@ -1144,6 +1169,10 @@ function toggleUnitClassReadings(unitKey) {
 
   const isHidden = panel.style.display === 'none';
   if (isHidden) {
+    closeUnitPanel('syl', unitKey);
+    closeUnitPanel('drv', unitKey);
+    closeUnitPanel('', unitKey);
+
     panel.style.display = 'block';
     if (btn) {
       btn.classList.add('active');
@@ -1169,6 +1198,10 @@ function toggleUnitDrive(unitKey) {
 
   const isHidden = panel.style.display === 'none';
   if (isHidden) {
+    closeUnitPanel('cls', unitKey);
+    closeUnitPanel('syl', unitKey);
+    closeUnitPanel('', unitKey);
+
     panel.style.display = 'block';
     if (btn) {
       btn.classList.add('active');
@@ -1398,32 +1431,3 @@ function filterDrivesSection(filterId) {
     }
   });
 }
-
-// -----------------------------------------------------------------------------
-// STUDENT TRACKED READINGS BOXES: SHOW LATEST UNTOGGLED ON TOP & TOGGLE PREVIOUS
-// -----------------------------------------------------------------------------
-document.addEventListener('toggle', (e) => {
-  const box = e.target.closest && e.target.closest('.notes-student-box');
-  if (!box || !box.open) return;
-  const container = box.closest('.notes-boxes-container');
-  if (!container) return;
-
-  // 1. Toggle (collapse) any other currently untoggled (open) box in this container
-  container.querySelectorAll('.notes-student-box').forEach(other => {
-    if (other !== box && other.open) {
-      other.open = false;
-    }
-  });
-
-  // 2. Show the latest untoggled box on top
-  if (container.firstElementChild !== box) {
-    container.prepend(box);
-    // Smoothly keep the untoggled box in view
-    requestAnimationFrame(() => {
-      const summary = box.querySelector('.notes-box-summary');
-      if (summary) {
-        summary.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
-    });
-  }
-}, true);
