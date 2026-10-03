@@ -225,7 +225,7 @@ const portalData = {
               {
                 author: "Upendra Baxi (1997)",
                 title: "Accumulation and Legitimacy: The Indian Constitution and State Formation (in Singh, M.P. and Chaube, S. K. eds. Indian Constitution: A Review)",
-                url: "https://drive.google.com/file/d/1d_-c8cekO08XxXyrd1zeuGPItqb45K9c/view"
+                url: "https://drive.google.com/file/d/1i0C4Ea8Rdtz3-AmVADU5U-z61kSxSf4b/view"
               },
               {
                 author: "Rohit De & Ornit Shani (2023)",
@@ -244,6 +244,11 @@ const portalData = {
                 name: "CR Maintained Drive · Unit 1 Folder",
                 scope: "CR Maintained Folder containing Austin, Baxi, Bhatia, First Amendment debates, CAD Vol IX",
                 url: "https://drive.google.com/drive/folders/1iUkZ2ItPesSLJL9G5rwJLdj-KhXVGpuV"
+              },
+              {
+                name: "Unit 1 Uploads & Course Materials",
+                scope: "Contains Baxi (Accumulation & Legitimacy), Madhav Khosla, Venkat Iyer",
+                url: "https://drive.google.com/drive/folders/1ubYL4mFUeVFBr9ViRE02fs92E_-2D5ie"
               },
               {
                 name: "Prof Shared Drive · Unit 1 Folder",
@@ -282,13 +287,13 @@ const portalData = {
                 author: "Rajeev Bhargava",
                 title: "Politics & Ethics of the Indian Constitution",
                 description: "[Introduction: \"Why Constitution?\"]",
-                url: null
+                url: "https://drive.google.com/file/d/1d_-c8cekO08XxXyrd1zeuGPItqb45K9c/view"
               },
               {
                 author: "Upendra Baxi",
                 title: "Accumulation and Legitimacy: The Indian Constitution and State Formation",
                 description: "(in Rajeev Bhargava ed.)",
-                url: "https://drive.google.com/file/d/1d_-c8cekO08XxXyrd1zeuGPItqb45K9c/view"
+                url: "https://drive.google.com/file/d/1i0C4Ea8Rdtz3-AmVADU5U-z61kSxSf4b/view"
               },
               {
                 author: "Extra / Alternatives to Constitution",
@@ -322,7 +327,7 @@ const portalData = {
               {
                 author: "Arudra Burra (2018)",
                 title: "Freedom of Speech in the Early Constitution: A Study of the Constitution (First Amendment) Bill (in Bhatia ed. The Indian Constituent Assembly)",
-                url: null
+                url: "https://drive.google.com/file/d/1wVARDU5s9dyrClj-C1cup8im9E16muye/view"
               },
               {
                 author: "Constituent Assembly of India (1949)",
@@ -332,7 +337,7 @@ const portalData = {
               {
                 author: "Venkat Iyer (2000)",
                 title: "Emergency Law in India: The Background and the Development of the Law (in States of Emergency, the Indian Experience)",
-                url: null
+                url: "https://drive.google.com/file/d/1Ta9XmpSj40kq6N1__IbOhavIy3g_FTrO/view"
               },
               {
                 author: "Syama Prasad Mookerjee (1951 / 1990)",
@@ -356,6 +361,11 @@ const portalData = {
                 name: "CR Maintained Drive · Unit 1 Folder",
                 scope: "CR Maintained Folder containing Austin, Baxi, Bhatia, First Amendment debates, CAD Vol IX",
                 url: "https://drive.google.com/drive/folders/1iUkZ2ItPesSLJL9G5rwJLdj-KhXVGpuV"
+              },
+              {
+                name: "Unit 1 Uploads & Course Materials",
+                scope: "Contains Baxi (Accumulation & Legitimacy), Madhav Khosla, Venkat Iyer",
+                url: "https://drive.google.com/drive/folders/1ubYL4mFUeVFBr9ViRE02fs92E_-2D5ie"
               },
               {
                 name: "Prof Shared Drive · Unit 1 Folder",
@@ -388,31 +398,31 @@ const portalData = {
                 author: "Gautam Bhatia",
                 title: "The Indian Constitution: A Conversation with Power / Offend, Shock, or Disturb",
                 description: "[pp. 149–158: Authoritarian enclave, dark hold, gap between Art. 21 & 22]",
-                url: "https://drive.google.com/file/d/1h6riYeVxCohwRsxlGpogrkygvFsS8iKA/view"
+                url: "https://drive.google.com/file/d/1z8lj-kdnjD6LobY6ZqPaIGbZXomdTyBI/view"
               },
               {
                 author: "Madhav Khosla",
                 title: "The Indian Constitution: An Introduction",
                 description: "(Procedure established by law vs. due process & preventive detention framework)",
-                url: null
+                url: "https://drive.google.com/file/d/1oerkkdnngrGAC-Qx7iJbmc7Zyj7tTgBE/view"
               },
               {
                 author: "Abhinav Chandrachud",
                 title: "Republic of Rhetoric",
                 description: "[Chapter 5: First Amendment triggers & speech restrictions]",
-                url: null
+                url: "https://drive.google.com/file/d/1rhkImGqDBm0tPqikh1VBmWB0agSGG9CM/view"
               },
               {
                 author: "Upendra Baxi",
                 title: "Courts of India / Crisis of the Indian Legal System",
                 description: "[Ch. 2 / Pg. 31: A.K. Gopalan, Preventive Detention, Habeas Corpus]",
-                url: null
+                url: "https://drive.google.com/file/d/1amF-FPOnOuW_BlyGE3JxZVoTrY-XEUrg/view"
               },
               {
                 author: "Venkat Iyer",
                 title: "States of Emergency in States of Asia: A Comparative",
                 description: "(Ch-5 & 7)",
-                url: null
+                url: "https://drive.google.com/file/d/1Ta9XmpSj40kq6N1__IbOhavIy3g_FTrO/view"
               },
               {
                 author: "Parliamentary / CA Debates",
@@ -424,7 +434,7 @@ const portalData = {
                 author: "Abhinav Sekhri",
                 title: "Proof of Guilt",
                 description: "(Blog)",
-                url: null
+                url: "https://theproofofguilt.blogspot.com/"
               }
             ],
             classProofs: [
@@ -464,6 +474,11 @@ const portalData = {
             drives: [
               {
                 name: "Prof Shared Drive · Unit 4 Folder",
+                scope: "Have added readings shared by Ujjwal sir under the Unit 4 (Decolonising Laws)",
+                url: "https://drive.google.com/drive/folders/1ej3CI3Rfvpbakz50qlbvnvrw3d_MfeZD"
+              },
+              {
+                name: "Prof Shared Drive · Unit 4 Folder (Alternate Archive)",
                 scope: "Faculty Shared Subfolder (polscience.du) · Contains Burra, Baxi, Amit Shah BNSS PIB release",
                 url: "https://drive.google.com/drive/folders/1sdPzuuK49RzaY_B9AXogy5TAYMJto9Yq"
               },
@@ -480,19 +495,20 @@ const portalData = {
             ],
             // 3. Faculty References & Class Discussions
             classSources: "Abhilasha, Diksha, Radha, Kritartha & Krishna Shreyansh",
-            classReadingsNote: "Readings referenced by Prof. Ujjwal Kumar Singh in class & verified in batch discussions:",
+            classReadingsNote: "Have added readings shared by Ujjwal sir under the Unit 4 (Decolonising Laws) · Readings referenced by Prof. Ujjwal Kumar Singh in class & verified in batch discussions:",
+            classReadingsDriveUrl: "https://drive.google.com/drive/folders/1ej3CI3Rfvpbakz50qlbvnvrw3d_MfeZD",
             classReadings: [
               {
                 author: "A.V. Dicey",
                 title: "An Introduction to the Study of the Law of the Constitution",
                 description: "[pp. 202–203]",
-                url: null
+                url: "https://drive.google.com/file/d/15VxcKuFFd9TWYwWzqw4Hdjk6Pst5-Eyo/view"
               },
               {
                 author: "Moiz Tundawala",
                 title: "On India’s Post-Colonial Engagement with the Rule of Law",
                 description: "(NUJS Law Review)",
-                url: "https://drive.google.com/drive/folders/1sdPzuuK49RzaY_B9AXogy5TAYMJto9Yq"
+                url: "https://drive.google.com/file/d/1kr-QZgKBU4HBR7EHdoIOOe8MBXtMKXRm/view"
               },
               {
                 author: "Upendra Baxi",
@@ -504,13 +520,13 @@ const portalData = {
                 author: "Statutory Reading",
                 title: "Bharatiya Nyaya Sanhita (BNS)",
                 description: "[Key concepts / Decolonization of criminal law]",
-                url: "https://drive.google.com/file/d/11YHrGU0BcywUbPojCZ2Rx3VaOC5V4S9w/view"
+                url: "https://drive.google.com/file/d/13h0xXkEH34R_GMW6SFj0ZDIcABAymTLX/view"
               },
               {
                 author: "Abhinav Sekhri",
                 title: "Proof of Guilt",
                 description: "[Blog on criminal procedure & preventive powers]",
-                url: null
+                url: "https://theproofofguilt.blogspot.com/"
               }
             ],
             classProofs: [

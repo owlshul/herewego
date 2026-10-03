@@ -218,6 +218,12 @@ function renderAssessmentsView() {
                 <div class="unit-readings-note">
                   <svg class="fallback-icon-svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
                   <span>${escapeHtml(unit.classReadingsNote || unit.readingsNote)}</span>
+                  ${unit.classReadingsDriveUrl ? `
+                    <a href="${unit.classReadingsDriveUrl}" target="_blank" rel="noopener noreferrer" class="unit-note-drive-link" style="margin-left: 6px; font-weight: 600; text-decoration: underline; color: var(--accent-color, #0284c7); display: inline-flex; align-items: center; gap: 3px;" title="Open Unit 4 Google Drive">
+                      <span>[Open Unit 4 Google Drive]</span>
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                  ` : ''}
                 </div>
               ` : ''}
 

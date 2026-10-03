@@ -27,7 +27,8 @@ except ImportError:
     print("Error: Could not import auth_manager from /Users/apple/.credentials")
     sys.exit(1)
 
-from googleapiclient.http import MediaIoBaseDownload
+from googleapiclient.http import MediaIoBaseDownload, MediaFileUpload
+import mimetypes
 
 def get_drive():
     return get_service("kmc", "drive", "v3")
@@ -99,6 +100,62 @@ def sync_whatsapp_chats(output_dir):
             print(f"  Already exists locally: {target}")
     return downloaded
 
+def upload_file(file_path, folder_id, display_name=None, make_public=True):
+    drive = get_drive()
+    file_path = os.path.expanduser(file_path)
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"File not found: {file_path}")
+
+    name = display_name or os.path.basename(file_path)
+    mime_type, _ = mimetypes.guess_type(file_path)
+    if not mime_type:
+        mime_type = "application/octet-stream"
+
+    file_metadata = {
+        "name": name,
+        "parents": [folder_id]
+    }
+    media = MediaFileUpload(file_path, mimetype=mime_type, resumable=True)
+
+    print(f"Uploading {name} ({os.path.getsize(file_path)/(1024*1024):.2f} MB) to folder {folder_id}...")
+    request = drive.files().create(
+        body=file_metadata,
+        media_body=media,
+        fields="id, name, webViewLink, webContentLink",
+        supportsAllDrives=True
+    )
+    
+    response = None
+    while response is None:
+        status, response = request.next_chunk()
+        if status:
+            print(f"Upload progress: {int(status.progress() * 100)}%", end="\r")
+
+    file_id = response.get("id")
+    web_link = response.get("webViewLink")
+    print(f"\n✓ Uploaded: {name} (ID: {file_id})")
+
+    if make_public:
+        try:
+            drive.permissions().create(
+                fileId=file_id,
+                body={"type": "anyone", "role": "reader"},
+                supportsAllDrives=True
+            ).execute()
+            print("  ✓ Public read permission granted ('anyone with link')")
+        except Exception as e:
+            print(f"  Note on permissions: {e}")
+
+    # Canonical view link
+    view_url = f"https://drive.google.com/file/d/{file_id}/view"
+    print(f"  Direct Link: {view_url}")
+    return {
+        "id": file_id,
+        "name": name,
+        "url": view_url,
+        "webViewLink": web_link
+    }
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Official Google Drive API Helper")
     subparsers = parser.add_subparsers(dest="cmd")
@@ -114,6 +171,12 @@ if __name__ == "__main__":
     down_p.add_argument("--file-id", required=True)
     down_p.add_argument("--out", required=True, help="Destination file or dir")
 
+    upload_p = subparsers.add_parser("upload")
+    upload_p.add_argument("--file", required=True, help="Local file path to upload")
+    upload_p.add_argument("--folder-id", required=True, help="Target Google Drive folder ID")
+    upload_p.add_argument("--name", default=None, help="Optional display name in Drive")
+    upload_p.add_argument("--private", action="store_true", help="Do not make file public to anyone with link")
+
     sync_p = subparsers.add_parser("sync-chats")
     sync_p.add_argument("--out", default="/Users/apple/.gemini/antigravity-cli/brain/e0a5a62f-ab9b-4eec-9c63-b8d53761ea35/scratch/chats")
 
@@ -126,7 +189,10 @@ if __name__ == "__main__":
             print(f"{r['id']} | {r['mimeType']} | {r['name']}")
     elif args.cmd == "download":
         download_file(args.file_id, args.out)
+    elif args.cmd == "upload":
+        upload_file(args.file, args.folder_id, display_name=args.name, make_public=not args.private)
     elif args.cmd == "sync-chats":
         sync_whatsapp_chats(args.out)
     else:
         parser.print_help()
+
