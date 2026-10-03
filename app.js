@@ -332,7 +332,7 @@ function renderAssessmentsView() {
 
         <div class="notes-boxes-container">
           ${gallery.contributors.map((c, cIdx) => `
-            <details class="notes-student-box" id="notes-box-${c.id}" ${cIdx === 0 ? 'open' : ''}>
+            <details class="notes-student-box" id="notes-box-${c.id}" open>
               <summary class="notes-box-summary">
                 <div class="notes-summary-left">
                   <span class="notes-student-name">${escapeHtml(c.name)}’s Tracked Readings</span>
