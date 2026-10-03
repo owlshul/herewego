@@ -13,7 +13,7 @@ const portalData = {
     batch: "MA Political Science (2026–2028)",
     campus: "North Campus, University of Delhi",
     classroom: "Room No. 18, Satyakam Bhawan",
-    lastUpdated: "3 October 2026, 10:35 PM IST",
+    lastUpdated: "3 October 2026, 11:30 PM IST",
     curator: "Anshul"
   },
 
@@ -421,7 +421,7 @@ const portalData = {
               {
                 author: "Venkat Iyer",
                 title: "States of Emergency in States of Asia: A Comparative",
-                description: "(Ch-5 & 7)",
+                description: "[Ch. 5 & 7: Ch. 7 is on Preventive Detention (Ch. 5 is on Emergency, dropped from syllabus)]",
                 url: "https://drive.google.com/file/d/1Ta9XmpSj40kq6N1__IbOhavIy3g_FTrO/view"
               },
               {
