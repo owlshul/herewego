@@ -218,12 +218,21 @@ function renderAssessmentsView() {
                 <div class="unit-readings-note">
                   <svg class="fallback-icon-svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
                   <span>${escapeHtml(unit.classReadingsNote || unit.readingsNote)}</span>
-                  ${unit.classReadingsDriveUrl ? `
-                    <a href="${unit.classReadingsDriveUrl}" target="_blank" rel="noopener noreferrer" class="unit-note-drive-link" style="margin-left: 6px; font-weight: 600; text-decoration: underline; color: var(--accent-color, #0284c7); display: inline-flex; align-items: center; gap: 3px;" title="Open Unit 4 Google Drive">
-                      <span>[Open Unit 4 Google Drive]</span>
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                    </a>
-                  ` : ''}
+                </div>
+              ` : ''}
+
+              ${unit.classReadingsDriveUrl ? `
+                <div class="prof-readings-drive-header" style="margin: 6px 0 10px 0;">
+                  <a href="${unit.classReadingsDriveUrl}" target="_blank" rel="noopener noreferrer" class="drive-link-row" style="background: var(--bg-card, #fff); border-color: var(--color-powder-brown-border, #d1d5db); padding: 8px 12px; display: flex; align-items: center; justify-content: space-between; gap: 8px; border-radius: var(--radius-xs, 6px); text-decoration: none;">
+                    <div style="display: flex; align-items: center; gap: 8px; min-width: 0;">
+                      <svg class="drive-link-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                      <span class="drive-link-label" style="font-size: 0.88rem; font-weight: 600; color: var(--text-heading);">${escapeHtml(unit.classReadingsDriveTitle || 'Google Drive Folder for this Topic')}</span>
+                    </div>
+                    <span style="font-size: 0.78rem; font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 3px; flex-shrink: 0;">
+                      <span>Open Drive</span>
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </span>
+                  </a>
                 </div>
               ` : ''}
 

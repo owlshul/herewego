@@ -13,7 +13,7 @@ const portalData = {
     batch: "MA Political Science (2026–2028)",
     campus: "North Campus, University of Delhi",
     classroom: "Room No. 18, Satyakam Bhawan",
-    lastUpdated: "3 October 2026, 11:30 PM IST",
+    lastUpdated: "4 October 2026, 8:35 PM IST",
     curator: "Anshul"
   },
 
@@ -373,6 +373,11 @@ const portalData = {
                 url: "https://drive.google.com/drive/folders/1LveKm7f8jMRKodPKRWwuYE8sTM_-te4-"
               },
               {
+                name: "Prof Shared Drive · Extraordinary Laws (Topic 1c)",
+                scope: "Shared folder for Extraordinary Laws / Preventive Detention materials",
+                url: "https://drive.google.com/drive/folders/1BntoUZSY9iO3ZVoOffgrb3eCsP9Jrs6G?usp=drive_link"
+              },
+              {
                 name: "Archive Drive · Unit 1 Folder",
                 scope: "Previous Year Master Archive · Unit 1 (Democracy & Constitutionalism in India)",
                 url: "https://drive.google.com/drive/folders/1LPajBK1-XYiApxgV9i8dllMzgK01mCeF"
@@ -380,6 +385,8 @@ const portalData = {
             ],
             // 3. Faculty References & Class Discussions
             classSources: "Abhilasha, Diksha, Radha, Kritartha & Krishna Shreyansh",
+            classReadingsDriveTitle: "Prof Shared Google Drive · Extraordinary Laws & Preventive Detention (Topic 1c)",
+            classReadingsDriveUrl: "https://drive.google.com/drive/folders/1BntoUZSY9iO3ZVoOffgrb3eCsP9Jrs6G?usp=drive_link",
             classReadingsNote: "Readings referenced by Prof. Ujjwal Kumar Singh in class & verified in batch discussions:",
             classReadings: [
               {
@@ -475,7 +482,7 @@ const portalData = {
               {
                 name: "Prof Shared Drive · Unit 4 Folder",
                 scope: "Have added readings shared by Ujjwal sir under the Unit 4 (Decolonising Laws)",
-                url: "https://drive.google.com/drive/folders/1ej3CI3Rfvpbakz50qlbvnvrw3d_MfeZD"
+                url: "https://drive.google.com/drive/folders/1cQOVwREnov-lbNWW48k0DUgoEaQ3dk9W?usp=drive_link"
               },
               {
                 name: "Prof Shared Drive · Unit 4 Folder (Alternate Archive)",
@@ -495,8 +502,9 @@ const portalData = {
             ],
             // 3. Faculty References & Class Discussions
             classSources: "Abhilasha, Diksha, Radha, Kritartha & Krishna Shreyansh",
-            classReadingsNote: "Have added readings shared by Ujjwal sir under the Unit 4 (Decolonising Laws) · Readings referenced by Prof. Ujjwal Kumar Singh in class & verified in batch discussions:",
-            classReadingsDriveUrl: "https://drive.google.com/drive/folders/1ej3CI3Rfvpbakz50qlbvnvrw3d_MfeZD",
+            classReadingsDriveTitle: "Prof Shared Google Drive · Decolonising Laws (Unit 4)",
+            classReadingsDriveUrl: "https://drive.google.com/drive/folders/1cQOVwREnov-lbNWW48k0DUgoEaQ3dk9W?usp=drive_link",
+            classReadingsNote: "Readings referenced by Prof. Ujjwal Kumar Singh in class & verified in batch discussions:",
             classReadings: [
               {
                 author: "A.V. Dicey",
