@@ -13,7 +13,7 @@ const portalData = {
     batch: "MA Political Science (2026–2028)",
     campus: "North Campus, University of Delhi",
     classroom: "Room No. 18, Satyakam Bhawan",
-    lastUpdated: "5 October 2026, 9:40 AM IST",
+    lastUpdated: "5 October 2026, 12:50 PM IST",
     curator: "Anshul"
   },
 
@@ -21,6 +21,18 @@ const portalData = {
   // MERGED ANNOUNCEMENTS & VERIFIED CITATIONS (One unified dispute-settler feed)
   // ---------------------------------------------------------------------------
   verifiedAnnouncements: [
+    {
+      id: "va-sujal-5oct-ktpp-dpii",
+      title: "KTPP (1 Single Q · 15M) & DPII (Emergency & First Amendment Excluded)",
+      date: "5 Oct 2026, 11:13 AM",
+      sender: "Sujal Vishwakarma (CR)",
+      source: "WhatsApp: North Campus Announcements (Core Papers)",
+      type: "assessment",
+      priority: true,
+      summary: "KTPP Continuous Assessment will have only 1 single question of 15 Marks (either on Rousseau or Quentin Skinner's Interpretation). In DPII CA, Emergency Provisions and the First Amendment will NOT be part of the test.",
+      exactQuote: "IN KTPP CA THERE WILL BE ONLY 1 SINGLE QUESTION EITHER ON ROUSSEAU OR SKINNER INTERPRETATION OF 15 MARKS. EMERGENCY PROVISIONS AND FIRST AMENDMENT WILL NOT BE PART OF DPII CA",
+      tags: ["#CC101", "#CC102", "#KTPP", "#DPII", "#Confirmed", "#5Oct", "#15Marks"]
+    },
     {
       id: "va-ir-unit1-readings",
       title: "IR Unit 1: Specific Chapters for Hobson and Tickner Books Confirmed",
@@ -187,21 +199,30 @@ const portalData = {
         status: "confirmed",
         statusText: "Syllabus Confirmed",
         faculty: "Prof. Ujjwal Kumar Singh",
-        clarificationCallout: null,
-        footnoteNote: {
-          text: "Unit I Topic a (Ancient Indian Republics), Unit II (Dr. Garima Das and Dr. Binit Kumar Sinha), and Unit III are strictly excluded. This assessment strictly examines Prof. Ujjwal Kumar Singh's portion: Unit I (b & c) [emergency provisions excluded] and Unit IV (a).",
+        warningCallout: {
+          title: "Syllabus Exclusions: Emergency & First Amendment Out",
+          text: "Emergency provisions and the First Amendment will strictly NOT be part of this DPII CA. Test covers Unit I (b) CAI debates, Preventive Detention / Extraordinary Laws under Unit I (c), and Unit IV (a) Decolonisation of Criminal Law.",
           citation: {
-            sender: "Sachin Choudhary (+91 70666 08751)",
-            date: "1 Oct 2026, 5:41 PM & 5:50 PM",
-            source: "WhatsApp Chat (Direct & South Campus Group)",
-            quote: "Ye hai syllabus aaj south campus me sir ne bataya... Ye highlighted wala hai syllabus sir ne mark karaya hai aaj class me. Emergency provisions test me nahi aa raha."
+            sender: "Sujal Vishwakarma (CR)",
+            date: "5 Oct 2026, 11:13 AM",
+            source: "WhatsApp: North Campus Announcements (Core Papers)",
+            quote: "EMERGENCY PROVISIONS AND FIRST AMENDMENT WILL NOT BE PART OF DPII CA"
+          }
+        },
+        footnoteNote: {
+          text: "Unit I Topic a (Ancient Indian Republics), Unit II, and Unit III are strictly excluded. For Prof. Ujjwal Kumar Singh's portion: Emergency Provisions and the First Amendment are strictly NOT part of this CA (test covers Unit I-b debates, Preventive Detention / Extraordinary Laws in Unit I-c, and Unit IV-a).",
+          citation: {
+            sender: "Sujal Vishwakarma (CR)",
+            date: "5 Oct 2026, 11:13 AM",
+            source: "WhatsApp: North Campus Announcements (Core Papers)",
+            quote: "EMERGENCY PROVISIONS AND FIRST AMENDMENT WILL NOT BE PART OF DPII CA"
           }
         },
         syllabusCitation: {
-          sender: "Sachin Choudhary (+91 70666 08751)",
-          date: "1 Oct 2026, 5:41 PM & 5:50 PM",
-          source: "WhatsApp (South Campus Group & Direct Chat)",
-          quote: "Ye hai syllabus aaj south campus me sir ne bataya... Ye highlighted wala hai syllabus sir ne mark karaya hai aaj class me: Unit 1: (b) and (c) [emergency provisions (this is not coming)], Unit 4: (a)."
+          sender: "Sujal Vishwakarma (CR)",
+          date: "5 Oct 2026, 11:13 AM",
+          source: "WhatsApp: North Campus Announcements (Core Papers)",
+          quote: "EMERGENCY PROVISIONS AND FIRST AMENDMENT WILL NOT BE PART OF DPII CA"
         },
         syllabusTopics: [
           {
@@ -313,9 +334,9 @@ const portalData = {
           },
           {
             unit: "Unit I (c)",
-            unitTitle: "Constitutional freedoms, reasonable restrictions, first amendment, preventive detention & extraordinary laws",
+            unitTitle: "Constitutional freedoms, preventive detention & extraordinary laws",
             topics: [
-              "Topic c: Constitutional freedoms and reasonable restrictions, emergency provisions (this is not coming), first amendment, preventive detention and debate over extraordinary laws"
+              "Topic c: Constitutional freedoms, preventive detention and debate over extraordinary laws (Note: Emergency provisions and First Amendment will NOT be part of DPII CA)"
             ],
             // 1. Official DU Syllabus Prescribed Readings for Unit 1(c)
             syllabusReadings: [
@@ -327,6 +348,7 @@ const portalData = {
               {
                 author: "Arudra Burra (2018)",
                 title: "Freedom of Speech in the Early Constitution: A Study of the Constitution (First Amendment) Bill (in Bhatia ed. The Indian Constituent Assembly)",
+                description: "[First Amendment — excluded from 9 Oct CA]",
                 url: "https://drive.google.com/file/d/1wVARDU5s9dyrClj-C1cup8im9E16muye/view"
               },
               {
@@ -387,7 +409,7 @@ const portalData = {
             classSources: "Abhilasha, Diksha, Radha, Kritartha & Krishna Shreyansh",
             classReadingsDriveTitle: "Prof Shared Google Drive · Extraordinary Laws & Preventive Detention (Topic 1c)",
             classReadingsDriveUrl: "https://drive.google.com/drive/folders/1BntoUZSY9iO3ZVoOffgrb3eCsP9Jrs6G?usp=drive_link",
-            classReadingsNote: "Readings referenced by Prof. Ujjwal Kumar Singh in class & verified in batch discussions:",
+            classReadingsNote: "Readings referenced by Prof. Ujjwal Kumar Singh in class (Note: Emergency provisions and First Amendment are excluded from this CA):",
             classReadings: [
               {
                 author: "Granville Austin",
@@ -416,7 +438,7 @@ const portalData = {
               {
                 author: "Abhinav Chandrachud",
                 title: "Republic of Rhetoric",
-                description: "[Chapter 5: First Amendment triggers & speech restrictions]",
+                description: "[Chapter 5: First Amendment triggers & speech restrictions — Excluded from 9 Oct CA]",
                 url: "https://drive.google.com/file/d/1rhkImGqDBm0tPqikh1VBmWB0agSGG9CM/view"
               },
               {
@@ -434,7 +456,7 @@ const portalData = {
               {
                 author: "Parliamentary / CA Debates",
                 title: "First Amendment to the Constitution of India",
-                description: "(Original Draft & Syama Prasad Mookerjee Debates)",
+                description: "(Original Draft & Syama Prasad Mookerjee Debates — Excluded from 9 Oct CA)",
                 url: "https://drive.google.com/file/d/1rhkImGqDBm0tPqikh1VBmWB0agSGG9CM/view"
               },
               {
@@ -445,6 +467,12 @@ const portalData = {
               }
             ],
             classProofs: [
+              {
+                sender: "Sujal Vishwakarma (CR)",
+                chat: "WhatsApp (North Campus Announcements)",
+                date: "5 Oct 2026, 11:13 AM",
+                quote: "EMERGENCY PROVISIONS AND FIRST AMENDMENT WILL NOT BE PART OF DPII CA"
+              },
               {
                 sender: "~ Radha sharma",
                 chat: "WhatsApp (MAPS Unfiltered)",
@@ -612,35 +640,35 @@ const portalData = {
         shortName: "KTPP",
         date: "Friday, 9 October 2026",
         mode: "Continuous Assessment (CA)",
-        totalMarks: 16,
-        pattern: "Continuous Assessment · 16 Marks (1 Question to be answered out of 2)",
+        totalMarks: 15,
+        pattern: "Continuous Assessment · 15 Marks (Only 1 Single Question either on Rousseau or Skinner interpretation)",
         status: "confirmed",
-        statusText: "Syllabus Confirmed",
+        statusText: "Pattern Confirmed (15 Marks)",
         faculty: "Dr. Ningthoujam Koiremba Singh",
         warningCallout: {
-          title: "Strategy Warning on Choice: Prepare Both Topics!",
-          text: "Don't think that since there is an option so you can either prepare Skinner or Rousseau. Both the questions can be interrelated or can be from the same topic!",
+          title: "Pattern Update: Only 1 Single Question (15 Marks)",
+          text: "There will be only 1 single question of 15 Marks, either on Rousseau or on Quentin Skinner's Interpretation. Prepare both topics thoroughly because either one will appear as the single question on the paper!",
           citation: {
             sender: "Sujal Vishwakarma (CR)",
-            date: "1 Oct 2026",
+            date: "5 Oct 2026, 11:13 AM",
             source: "WhatsApp: North Campus Announcements (Core Papers)",
-            quote: "Regarding Continuous Assessment of CC-Key Texts In Political Philosophy on 9th October' Friday. Total 16 Mark (1 Question), 2 Questions will be there out of which only 1 needs to be answered. Rousseau and Interpretation of Text (Main Focus on Skinner). And don't think that since there is an option so you can either prepare Skinner or Rousseau. Both the questions can be interrelated or can be from the same topic."
+            quote: "IN KTPP CA THERE WILL BE ONLY 1 SINGLE QUESTION EITHER ON ROUSSEAU OR SKINNER INTERPRETATION OF 15 MARKS"
           }
         },
         footnoteNote: {
-          text: "Continuous Assessment on 9 Oct is 16 Marks (1 question out of 2). Covers Rousseau and Interpretation of Text (Main Focus on Skinner). Warning: Do not prepare only one topic thinking there is choice — questions can be interrelated or drawn from the same topic.",
+          text: "Continuous Assessment on 9 Oct is 15 Marks (only 1 single question either on Rousseau or Skinner interpretation). Covers Rousseau and Interpretation of Text (Main Focus on Skinner).",
           citation: {
             sender: "Sujal Vishwakarma (CR)",
-            date: "1 Oct 2026",
+            date: "5 Oct 2026, 11:13 AM",
             source: "WhatsApp: North Campus Announcements (Core Papers)",
-            quote: "Regarding Continuous Assessment of CC-Key Texts In Political Philosophy on 9th October' Friday. Total 16 Mark (1 Question), 2 Questions will be there out of which only 1 needs to be answered. Rousseau and Interpretation of Text (Main Focus on Skinner). And don't think that since there is an option so you can either prepare Skinner or Rousseau. Both the questions can be interrelated or can be from the same topic."
+            quote: "IN KTPP CA THERE WILL BE ONLY 1 SINGLE QUESTION EITHER ON ROUSSEAU OR SKINNER INTERPRETATION OF 15 MARKS"
           }
         },
         syllabusCitation: {
           sender: "Sujal Vishwakarma (CR)",
-          date: "1 Oct 2026",
+          date: "5 Oct 2026, 11:13 AM",
           source: "WhatsApp: North Campus Announcements (Core Papers)",
-          quote: "Regarding Continuous Assessment of CC-Key Texts In Political Philosophy on 9th October' Friday. Total 16 Mark (1 Question), 2 Questions will be there out of which only 1 needs to be answered. Rousseau and Interpretation of Text (Main Focus on Skinner). And don't think that since there is an option so you can either prepare Skinner or Rousseau. Both the questions can be interrelated or can be from the same topic."
+          quote: "IN KTPP CA THERE WILL BE ONLY 1 SINGLE QUESTION EITHER ON ROUSSEAU OR SKINNER INTERPRETATION OF 15 MARKS"
         },
         syllabusTopics: [
           {
@@ -686,6 +714,12 @@ const portalData = {
               }
             ],
             classProofs: [
+              {
+                sender: "Sujal Vishwakarma (CR)",
+                chat: "WhatsApp (North Campus Announcements)",
+                date: "5 Oct 2026, 11:13 AM",
+                quote: "IN KTPP CA THERE WILL BE ONLY 1 SINGLE QUESTION EITHER ON ROUSSEAU OR SKINNER INTERPRETATION OF 15 MARKS"
+              },
               {
                 sender: "Sujal Vishwakarma (CR)",
                 chat: "WhatsApp (North Campus Announcements)",
@@ -743,6 +777,12 @@ const portalData = {
               }
             ],
             classProofs: [
+              {
+                sender: "Sujal Vishwakarma (CR)",
+                chat: "WhatsApp (North Campus Announcements)",
+                date: "5 Oct 2026, 11:13 AM",
+                quote: "IN KTPP CA THERE WILL BE ONLY 1 SINGLE QUESTION EITHER ON ROUSSEAU OR SKINNER INTERPRETATION OF 15 MARKS"
+              },
               {
                 sender: "Sujal Vishwakarma (CR)",
                 chat: "WhatsApp (North Campus Announcements)",
