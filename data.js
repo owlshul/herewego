@@ -682,7 +682,7 @@ const portalData = {
               {
                 author: "Quentin Skinner (1969)",
                 title: "Meaning and Understanding in the History of Ideas (History and Theory, 8:1)",
-                url: "https://drive.google.com/drive/folders/1HSORAokjkAHdZqDAiMqeVNSVDE_t8Yri?usp=drive_link"
+                url: "https://drive.google.com/file/d/1uLiOu2D6e20S9B6aWb91FKc_DQ36WzZS/view?usp=sharing"
               },
               {
                 author: "Terence Ball (1988)",
@@ -692,6 +692,11 @@ const portalData = {
             ],
             // 2. Exact Unit Google Drive Folders (CR Maintained, Archive)
             drives: [
+              {
+                name: "Prescribed Reading File · Skinner (1969) PDF",
+                scope: "Meaning and Understanding in the History of Ideas (Direct File)",
+                url: "https://drive.google.com/file/d/1uLiOu2D6e20S9B6aWb91FKc_DQ36WzZS/view?usp=sharing"
+              },
               {
                 name: "CR Maintained Drive · Unit 1 Folder",
                 scope: "CR Maintained Folder · Meaning & Context (Dr. Koiremba Singh)",
@@ -710,7 +715,7 @@ const portalData = {
                 author: "Quentin Skinner",
                 title: "Meaning and Understanding in the History of Ideas (1969)",
                 scope: "Prescribed reading for Unit I Theories of Interpretation · Question option in 9 Oct CA",
-                url: "https://drive.google.com/drive/folders/1HSORAokjkAHdZqDAiMqeVNSVDE_t8Yri?usp=drive_link"
+                url: "https://drive.google.com/file/d/1uLiOu2D6e20S9B6aWb91FKc_DQ36WzZS/view?usp=sharing"
               }
             ],
             classProofs: [
