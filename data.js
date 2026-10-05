@@ -13,7 +13,7 @@ const portalData = {
     batch: "MA Political Science (2026–2028)",
     campus: "North Campus, University of Delhi",
     classroom: "Room No. 18, Satyakam Bhawan",
-    lastUpdated: "4 October 2026, 8:35 PM IST",
+    lastUpdated: "5 October 2026, 9:40 AM IST",
     curator: "Anshul"
   },
 
