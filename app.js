@@ -552,7 +552,7 @@ function renderAssessmentsView() {
   // Playable Game Embed at the Bottom
   const upcoming = portalData.upcomingCycle || {};
   const game = upcoming.game || {
-    headline: "Abhi kaafi time hai, lo game khelo -",
+    headline: "thak gye honge padhte padhte, lijiye game kheliye",
     url: "https://owlshul.github.io/demockracy/",
     title: "DeMOCKracy - The Game"
   };
@@ -571,11 +571,8 @@ function renderAssessmentsView() {
         <div class="game-invitation-left">
           <div class="game-callout-title">
             <span>🕹️</span>
-            <span>${escapeHtml(game.headline || 'Abhi kaafi time hai, lo game khelo -')}</span>
+            <span>${escapeHtml(game.headline || 'thak gye honge padhte padhte, lijiye game kheliye')}</span>
           </div>
-          <p class="game-callout-desc">
-            All upcoming test and assignment schedules are mapped above. Take a quick break and dodge obstacles in <em>DeMOCKracy</em>!
-          </p>
         </div>
         <a href="${escapeHtml(game.url)}" target="_blank" rel="noopener noreferrer" class="game-fullscreen-btn">
           <span>Play Fullscreen</span>

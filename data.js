@@ -236,7 +236,7 @@ const portalData = {
     isoTarget: "2026-10-16T11:10:00+05:30",
     statusText: "Next: DSE Written Tests (16 Oct)",
     game: {
-      headline: "Abhi kaafi time hai, lo game khelo -",
+      headline: "thak gye honge padhte padhte, lijiye game kheliye",
       url: "https://owlshul.github.io/demockracy/",
       title: "DeMOCKracy - The Game",
       tagline: "A satirical runner game by Anshul. Dodge obstacles while democracy keeps running!"
