@@ -5066,3 +5066,443 @@ kbd {
   }
 }
 
+/* =============================================================================
+   NEXT CYCLE & PLAYABLE GAME EMBED (DeMOCKracy)
+   ============================================================================= */
+.next-cycle-game-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-m);
+  padding: var(--space-l);
+  margin-bottom: var(--space-xl);
+  box-shadow: var(--shadow-subtle);
+}
+
+.next-cycle-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.next-cycle-meta-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill-next-cycle {
+  background: var(--color-powder-brown-bg);
+  color: var(--color-saddle-brown);
+  border: 1px solid var(--color-powder-brown-border);
+  font-size: 0.72rem;
+  font-weight: var(--font-bold);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.next-cycle-date-text {
+  font-size: 1.05rem;
+  font-weight: var(--font-bold);
+  color: var(--text-heading);
+}
+
+.status-pill-tba {
+  background: #fdf6ec;
+  color: #b88230;
+  border: 1px solid #faecd8;
+  font-size: 0.74rem;
+  font-weight: var(--font-semibold);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.game-invitation-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 16px;
+  background: color-mix(in srgb, var(--color-powder-brown-bg) 35%, var(--bg-surface));
+  padding: 14px 18px;
+  border-radius: var(--radius-s);
+  border: 1px solid var(--color-powder-brown-border);
+}
+
+.game-invitation-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.game-callout-title {
+  font-size: 1.12rem;
+  font-weight: var(--font-bold);
+  color: var(--text-heading);
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.game-callout-desc {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.48;
+  margin: 0;
+}
+
+.game-fullscreen-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-saddle-brown);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: var(--radius-s);
+  font-size: 0.82rem;
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+  transition: var(--trans-fast);
+  white-space: nowrap;
+}
+
+.game-fullscreen-btn:hover {
+  background: var(--color-saddle-brown-hover);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.game-iframe-shell {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: var(--radius-s);
+  overflow: hidden;
+  border: 1px solid var(--border-card);
+  background: #f7f7f7;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.game-iframe-el {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.game-under-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.game-under-link {
+  color: var(--color-saddle-brown);
+  text-decoration: none;
+  font-weight: var(--font-semibold);
+}
+
+.game-under-link:hover {
+  text-decoration: underline;
+}
+
+/* 9 Oct Cycle Archive Collapsible Toggle Box */
+.cycle-9oct-toggle {
+  margin-top: var(--space-m);
+  margin-bottom: var(--space-xl);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-m);
+  background: var(--bg-surface);
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+}
+
+.cycle-9oct-toggle summary {
+  padding: 16px 20px;
+  cursor: pointer;
+  user-select: none;
+  background: var(--bg-surface);
+  border-bottom: 1px solid transparent;
+  transition: background var(--trans-fast);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.cycle-9oct-toggle summary::-webkit-details-marker {
+  display: none;
+}
+
+.cycle-9oct-toggle summary:hover {
+  background: var(--bg-subtle);
+}
+
+.cycle-9oct-toggle[open] summary {
+  border-bottom: 1px solid var(--border-card);
+  background: color-mix(in srgb, var(--color-powder-brown-bg) 20%, var(--bg-surface));
+}
+
+.cycle-summary-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cycle-summary-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.cycle-summary-title {
+  font-size: 1rem;
+  font-weight: var(--font-bold);
+  color: var(--text-heading);
+}
+
+.cycle-summary-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 2px;
+}
+
+.cycle-summary-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: var(--font-semibold);
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+}
+
+.cycle-summary-arrow {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+}
+
+.cycle-9oct-toggle[open] .cycle-summary-arrow {
+  transform: rotate(180deg);
+}
+
+.cycle-9oct-content {
+  padding: var(--space-m);
+  background: var(--bg-body);
+}
+
+.cycle-9oct-content .paper-entry:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .next-cycle-game-card {
+    padding: var(--space-m);
+  }
+  .game-iframe-shell {
+    height: 440px;
+  }
+  .game-invitation-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .game-fullscreen-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .cycle-9oct-toggle summary {
+    padding: 14px 16px;
+  }
+}
+
+/* =============================================================================
+   SIMPLIFIED TECHNICAL ENGLISH (ASD-STE100) ASSESSMENT CARDS
+   ============================================================================= */
+.ste-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-m);
+  padding: var(--space-l);
+  margin-bottom: var(--space-xl);
+  box-shadow: var(--shadow-subtle);
+  transition: border-color var(--trans-fast);
+}
+
+.ste-card:hover {
+  border-color: var(--color-powder-brown-border);
+}
+
+.ste-sub-card {
+  background: var(--bg-body);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-s);
+  padding: 14px 16px;
+  margin-top: 14px;
+}
+
+.ste-sub-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.ste-sub-title {
+  font-size: 0.95rem;
+  font-weight: var(--font-bold);
+  color: var(--text-heading);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ste-badge-tag {
+  font-size: 0.72rem;
+  font-weight: var(--font-semibold);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-powder-brown-bg);
+  color: var(--color-saddle-brown);
+  border: 1px solid var(--color-powder-brown-border);
+}
+
+.ste-badge-tag.tag-postponed {
+  background: #fef2f2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+
+.ste-badge-tag.tag-due {
+  background: #eff6ff;
+  color: #1e40af;
+  border-color: #bfdbfe;
+}
+
+.ste-spec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.86rem;
+  line-height: 1.48;
+  color: var(--text-primary);
+}
+
+.ste-spec-row {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.ste-label {
+  font-weight: var(--font-bold);
+  color: var(--text-heading);
+  min-width: 120px;
+  flex-shrink: 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.ste-val {
+  flex: 1;
+  color: var(--text-primary);
+  font-size: 0.86rem;
+}
+
+.ste-bullet-list {
+  margin: 4px 0 0 16px;
+  padding: 0;
+  list-style-type: disc;
+}
+
+.ste-bullet-list li {
+  margin-bottom: 4px;
+}
+
+.ste-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ste-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-s);
+  font-size: 0.78rem;
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  background: var(--bg-surface);
+  color: var(--text-heading);
+  transition: var(--trans-fast);
+}
+
+.ste-btn:hover {
+  background: var(--bg-subtle);
+  border-color: var(--color-saddle-brown);
+  color: var(--color-saddle-brown);
+}
+
+.ste-btn-primary {
+  background: var(--color-saddle-brown);
+  color: #ffffff;
+  border-color: var(--color-saddle-brown);
+}
+
+.ste-btn-primary:hover {
+  background: var(--color-saddle-brown-hover);
+  color: #ffffff;
+}
+
+.bottom-game-card {
+  margin-top: var(--space-xl);
+  border: 1px solid var(--border-card);
+}
+
+@media (max-width: 640px) {
+  .ste-card {
+    padding: var(--space-m);
+  }
+  .ste-sub-card {
+    padding: 12px;
+  }
+  .ste-spec-row {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .ste-label {
+    min-width: unset;
+  }
+  .ste-bullet-list {
+    margin-left: 14px;
+  }
+}
+
+
+

@@ -13,7 +13,7 @@ const portalData = {
     batch: "MA Political Science (2026–2028)",
     campus: "North Campus, University of Delhi",
     classroom: "Room No. 18, Satyakam Bhawan",
-    lastUpdated: "5 October 2026, 12:50 PM IST",
+    lastUpdated: "14 October 2026, 7:00 PM IST",
     curator: "Anshul"
   },
 
@@ -21,6 +21,54 @@ const portalData = {
   // MERGED ANNOUNCEMENTS & VERIFIED CITATIONS (One unified dispute-settler feed)
   // ---------------------------------------------------------------------------
   verifiedAnnouncements: [
+    {
+      id: "va-dse16-ia-ca",
+      title: "DSE 16 (USA): IA Written Test on 16 Oct (2-3 PM) & CA Submissions Confirmed",
+      date: "14 Oct 2026",
+      sender: "Dwarika (CR)",
+      source: "WhatsApp: DSE 16 USA Transforming Global Order",
+      type: "assessment",
+      priority: true,
+      summary: "IA Written Test on Friday, 16 October (2:00 PM – 3:00 PM). Pattern: 3 questions, attempt 2 (2 from Unit 1, 1 from Unit 4). CA Book Review due 20 Oct; CA Written Assignment (900–1,100 words) due 25 Oct via email.",
+      exactQuote: "Internal Assessment: 16th October, 2:00 PM to 3:00 PM. 3 questions, attempt 2 (Two from Unit 1, One from Unit 4). Topics: Unit 1 Subtopic A (Readings 3 & 6), Unit 2 Subtopic A (Readings 2 & 3), Unit 4 Subtopic A. CA Book review due 20th Oct, CA Assignment due 25th Oct via email.",
+      tags: ["#DSE16", "#USA", "#IA", "#CA", "#16Oct", "#20Oct", "#25Oct"]
+    },
+    {
+      id: "va-dse47-iepp-ia",
+      title: "DSE 47 (IEPP): IA Written Test on 16 Oct (11:10 AM, Room 18) & CA PPT Due 20 Oct",
+      date: "14 Oct 2026",
+      sender: "Miranda Ma'am / Class Representative",
+      source: "WhatsApp: DSE 47 Enlightenment Political Philosophy",
+      type: "assessment",
+      priority: true,
+      summary: "Written Test on Friday, 16 October (11:10 AM – 12:45 PM, Room 18). 3 questions, attempt 2 (12M each = 24M total). Syllabus: Unit 1 & Unit 3 (Hobbes, Locke, Paine, Wollstonecraft Ch 12). CA Book review & PPT due 20 October (groups of 5–7).",
+      exactQuote: "Date: Friday, October 16, 2026. Time: 11:10 AM – 12:45 PM. Venue: Room 18. Written test: 3 questions, attempt 2 (12 marks each). Syllabus: Unit 1 & Unit 3. Thinkers: Hobbes, Locke, Paine, Wollstonecraft (Focus on Chapter 12 of Rights of Woman). CA Book Review & PPT due October 20.",
+      tags: ["#DSE47", "#IEPP", "#IA", "#CA", "#16Oct", "#24Marks", "#Room18"]
+    },
+    {
+      id: "va-dse13-south-asia",
+      title: "DSE 13 (South Asia): Research Paper Due 30 Oct & Online IA (Google Classroom)",
+      date: "14 Oct 2026",
+      sender: "Swarnam Jha",
+      source: "WhatsApp: South Asia DSE Group",
+      type: "assessment",
+      priority: true,
+      summary: "Research paper submission deadline is 30th October. Internal assessment will be an online exam of 1 question submitted on Google Classroom (6-hour or 1-day window).",
+      exactQuote: "Sir has informed us that the last date for submitting the research paper is 30th October. Regarding the internal assessment, we will have an online exam consisting of one question, which we must submit on Google Classroom. The submission deadline will be either 6 hours or 1 day.",
+      tags: ["#DSE13", "#SouthAsia", "#ResearchPaper", "#IA", "#30Oct", "#GoogleClassroom"]
+    },
+    {
+      id: "va-dse06-cpt",
+      title: "DSE 06 (CPT): Written Test Postponed (New Date Post-18 Oct) & Assignment Due 31 Oct",
+      date: "14 Oct 2026",
+      sender: "Shruti Gupta (CR) & Prof. Mithila Bagai",
+      source: "WhatsApp: DSE 06 Comparative Political Theory",
+      type: "assessment",
+      priority: true,
+      summary: "Written test postponed due to Dr. Anjali Yogi's academic leave (12–18 Oct); new date announced post-break (readings: Chakrabarty & Antony Black). Written assignment due 31 October (12 Marks). CA verbal presentations underway.",
+      exactQuote: "Written test postponed/cancelled for now. Dr. Anjali Yogi on academic leave from October 12 to 18, 2026. Official test date will be announced on or after October 18, 2026. Written Assignment (12 Marks) due October 31, 2026 on deparochializing political theory (Black & Carens).",
+      tags: ["#DSE06", "#CPT", "#Postponed", "#Assignment", "#31Oct", "#12Marks"]
+    },
     {
       id: "va-sujal-5oct-ktpp-dpii",
       title: "KTPP (1 Single Q · 15M) & DPII (Emergency & First Amendment Excluded)",
@@ -180,12 +228,291 @@ const portalData = {
   ],
 
   // ---------------------------------------------------------------------------
-  // UPCOMING ASSESSMENTS CYCLE (9 October 2026)
+  // UPCOMING ASSESSMENTS & ASSIGNMENTS (Chronological Order)
   // ---------------------------------------------------------------------------
   upcomingCycle: {
-    title: "Upcoming Assessments Cycle",
+    title: "Upcoming Assessments & Deadlines",
+    dateFormatted: "Friday, 16 October 2026",
+    isoTarget: "2026-10-16T11:10:00+05:30",
+    statusText: "Next: DSE Written Tests (16 Oct)",
+    game: {
+      headline: "Abhi kaafi time hai, lo game khelo —",
+      url: "https://owlshul.github.io/demockracy/",
+      title: "DeMOCKracy - The Game",
+      tagline: "A satirical runner game by Anshul. Dodge obstacles while democracy keeps running!"
+    },
+    papers: []
+  },
+
+  upcomingAssessments: [
+    {
+      id: "dse-47-iepp",
+      code: "PS-DSE 47",
+      shortCode: "dse47",
+      title: "Introduction to Enlightenment Political Philosophy",
+      shortTitle: "IEPP",
+      category: "Discipline Specific Elective (DSE 1)",
+      faculty: "Dr. Miranda Das",
+      primaryDate: "Friday, 16 October 2026",
+      statusText: "Written Test · 16 Oct",
+      statusClass: "status-found",
+      components: [
+        {
+          title: "Internal Assessment (IA) — Written Test",
+          badge: "Friday, 16 Oct · 11:10 AM",
+          badgeType: "due",
+          specs: [
+            { label: "Date & Time", value: "Friday, 16 October 2026 · 11:10 AM – 12:45 PM (90 minutes)" },
+            { label: "Venue", value: "Room 18, Satyakam Bhawan (Early exit not permitted)" },
+            { label: "Format", value: "3 questions. Attempt any 2 questions (12 marks each = 24 marks total + 6 marks attendance)" },
+            {
+              label: "Syllabus Scope",
+              value: [
+                "Unit 1 & Unit 3: Historiography and Background of Enlightenment.",
+                "Thinkers: Thomas Hobbes, John Locke, Thomas Paine, Mary Wollstonecraft.",
+                "Mandatory Reading Focus: Mary Wollstonecraft, A Vindication of the Rights of Woman, Chapter 12."
+              ]
+            },
+            { label: "Answer Rules", value: "Answer directly (~2.5 to 3 pages per question). Label question numbers and roll number clearly." }
+          ],
+          actions: [
+            { label: "Open Course Google Drive ↗", url: "https://drive.google.com/drive/folders/1ntQ3Eux1jh8Miz02DtEEarMUo98WtUir", primary: true },
+            { label: "Hourly History: Age of Enlightenment ↗", url: "https://hourlyhistory.com/free-history-ebooks/age-of-enlightenment/" }
+          ]
+        },
+        {
+          title: "Continuous Assessment (CA) — Book Review & PPT",
+          badge: "Due: 20 Oct",
+          badgeType: "normal",
+          specs: [
+            { label: "Weightage", value: "35 Marks (+ 5 marks attendance)" },
+            { label: "Group Size", value: "5 to 7 members per group (self-formed)" },
+            { label: "Submission", value: "Upload PPT to Google Classroom by Tuesday, 20 October 2026 (one representative submits with all names)" },
+            { label: "Presentations", value: "Online evening sessions post-break (~20 minutes per group). Instructor randomly selects the speaker." },
+            { label: "Topic Guideline", value: "Book must relate to Enlightenment philosophy (preference for post-2015 publications; secondary sources permitted)." }
+          ]
+        }
+      ]
+    },
+    {
+      id: "dse-16-usa",
+      code: "PS-DSE 16",
+      shortCode: "dse16",
+      title: "United States of America in the Transforming Global Order",
+      shortTitle: "USA",
+      category: "Discipline Specific Elective (DSE 2)",
+      faculty: "Dr. Nishtha (Friday) & Prof. Shivam (Saturday)",
+      cr: "Dwarika",
+      primaryDate: "Friday, 16 October 2026",
+      statusText: "Written Test · 16 Oct",
+      statusClass: "status-found",
+      components: [
+        {
+          title: "Internal Assessment (IA) — Written Test",
+          badge: "Friday, 16 Oct · 2:00 PM",
+          badgeType: "due",
+          specs: [
+            { label: "Date & Time", value: "Friday, 16 October 2026 · 2:00 PM – 3:00 PM (1 hour, regular class timing)" },
+            { label: "Format", value: "3 questions. Attempt any 2 questions (2 from Unit 1, 1 from Unit 4)" },
+            {
+              label: "Syllabus Scope",
+              value: [
+                "Unit 1: Subtopic A (Readings 3 and 6).",
+                "Unit 2: Subtopic A (Readings 2 and 3).",
+                "Unit 4: Subtopic A (USA–India bilateral relations reading).",
+                "Introductory level questions focused strictly on topics taught in class."
+              ]
+            },
+            { label: "Course Materials", value: "PDF files shared directly in the WhatsApp class group by CR (no Google Drive folder)." }
+          ]
+        },
+        {
+          title: "Continuous Assessment (CA) — Two Email Submissions",
+          badge: "Due: 20 & 25 Oct",
+          badgeType: "normal",
+          specs: [
+            { label: "1. Book Review", value: "Review of a book relevant to the paper. Submit typed soft copy via email by Tuesday, 20 October 2026." },
+            { label: "2. Assignment", value: "Written assignment on any student-selected paper topic (900–1,100 words). Submit typed soft copy via email by Sunday, 25 October 2026." }
+          ]
+        }
+      ]
+    },
+    {
+      id: "sbc-01-elections",
+      code: "PS-SBC 01",
+      shortCode: "sbc",
+      title: "Elections and Data-Driven Electoral Analysis",
+      shortTitle: "SBC",
+      category: "Skill-Based Course (SBC)",
+      faculty: "Dr. Anjali Yogi & Prof. Sudhir Singh",
+      primaryDate: "Tuesday, 20 October 2026",
+      statusText: "Handwritten Assignment · 20 Oct",
+      statusClass: "status-found",
+      components: [
+        {
+          title: "Internal Assessment (IA) — Handwritten Assignment",
+          badge: "Due: 20 Oct · 12 Marks",
+          badgeType: "due",
+          specs: [
+            { label: "Deadline", value: "Tuesday, 20 October 2026" },
+            { label: "Format", value: "Strictly handwritten (7 to 8 pages). Digital typing is not permitted." },
+            { label: "Submission", value: "Scan clearly into a single PDF and upload to Google Classroom." },
+            {
+              label: "Question (EN)",
+              value: "“Why it is important to study elections from both micro and macro level? Discuss Various Methods of analysing Electoral Data and their importance in understanding voting behaviour.”"
+            },
+            {
+              label: "Question (HI)",
+              value: "“चुनाव का सूक्ष्म और वृहत दोनों स्तरों से अध्ययन करना क्यों महत्वपूर्ण है? चुनावी आंकड़ों के विश्लेषण के विभिन्न तरीकों और मतदाता व्यवहार को समझने में उनके महत्व पर चर्चा करें।”"
+            },
+            { label: "Access Rule", value: "Join only ONE Classroom section using a personal Gmail ID (institutional @polscience.du.ac.in IDs restricted)." }
+          ],
+          actions: [
+            { label: "Join Section 1 (qoog5g65) ↗", url: "https://classroom.google.com/c/ODg2NzU0OTA4MDMw?cjc=qoog5g65&authuser=1" },
+            { label: "Join Section 2 (rsl7sj4t) ↗", url: "https://classroom.google.com/c/ODg3NTUxNjE5Njg0?cjc=rsl7sj4t&authuser=1" },
+            { label: "Join Section 3 (cvlacuay) ↗", url: "https://classroom.google.com/c/ODkwMzQ4NjcyNzIz?cjc=cvlacuay&authuser=1" },
+            { label: "Sanjay Kumar Analysis Post (X) ↗", url: "https://x.com/sanjay_election/status/2092535414171066430" }
+          ]
+        },
+        {
+          title: "Continuous Assessment (CA) & Practical",
+          badge: "Practical (1 Credit)",
+          badgeType: "normal",
+          specs: [
+            { label: "Status", value: "Practical electoral data analysis discussion. Viva and schedule TBA. No written exam announced." }
+          ]
+        }
+      ]
+    },
+    {
+      id: "cc-101-ktpp-ca2",
+      code: "PS-CC 101",
+      shortCode: "101",
+      title: "Key Texts in Political Philosophy",
+      shortTitle: "KTPP",
+      category: "Core Course (CC 1)",
+      faculty: "Dr. Ningthoujam Koiremba Singh",
+      primaryDate: "Friday, 30 October 2026",
+      statusText: "CA-2 · 30 Oct",
+      statusClass: "status-missing",
+      components: [
+        {
+          title: "Continuous Assessment 2 (CA-2) · 20 Marks",
+          badge: "Friday, 30 Oct",
+          badgeType: "due",
+          specs: [
+            { label: "Date", value: "Friday, 30 October 2026" },
+            { label: "Weightage", value: "20 Marks" },
+            { label: "Status", value: "Test date confirmed by faculty. Syllabus topics and question pattern will be updated once officially announced." }
+          ]
+        }
+      ]
+    },
+    {
+      id: "dse-13-south-asia",
+      code: "PS-DSE 13",
+      shortCode: "dse13",
+      title: "International Relations of South Asia",
+      shortTitle: "South Asia",
+      category: "Discipline Specific Elective (DSE 1)",
+      faculty: "Dr. Ningthoujam Koiremba Singh & Dr. Abhishek Choudhary",
+      cr: "Swarnam Jha",
+      primaryDate: "Friday, 30 October 2026",
+      statusText: "Research Paper · 30 Oct",
+      statusClass: "status-found",
+      components: [
+        {
+          title: "Research Paper Submission",
+          badge: "Due: 30 Oct",
+          badgeType: "due",
+          specs: [
+            { label: "Deadline", value: "Friday, 30 October 2026" },
+            { label: "Requirement", value: "Submit research paper as instructed by the course instructor." }
+          ]
+        },
+        {
+          title: "Internal Assessment (IA) — Online Exam",
+          badge: "Date TBA",
+          badgeType: "normal",
+          specs: [
+            { label: "Format", value: "Online examination consisting of 1 question." },
+            { label: "Submission", value: "Submit on Google Classroom. Submission window will be either 6 hours or 1 day." },
+            { label: "Status", value: "Date and topic details will be provided by faculty." }
+          ]
+        }
+      ]
+    },
+    {
+      id: "dse-06-cpt",
+      code: "PS-DSE 06",
+      shortCode: "dse06",
+      title: "Comparative Political Theory",
+      shortTitle: "CPT",
+      category: "Discipline Specific Elective (DSE 2)",
+      faculty: "Prof. Mithila Bagai & Dr. Anjali Yogi",
+      cr: "Shruti Gupta (active) & Shiva Kumar",
+      primaryDate: "Saturday, 31 October 2026",
+      statusText: "Assignment 31 Oct · Test Postponed",
+      statusClass: "status-found",
+      components: [
+        {
+          title: "Internal Assessment (IA) — Written Assignment",
+          badge: "Due: 31 Oct · 12 Marks",
+          badgeType: "due",
+          specs: [
+            { label: "Deadline", value: "Saturday, 31 October 2026" },
+            { label: "Weightage", value: "12 Marks" },
+            { label: "Format", value: "Handwritten or typed (clean, legible font)." },
+            {
+              label: "Topic Prompt",
+              value: "“What is Comparative Political Theory? Critically examine the need for deparochializing political theory beyond the Western canon. In your answer, discuss Antony Black’s argument on the way forward in comparative political thought and Joseph Carens’ contextual approach to political theory.”"
+            }
+          ]
+        },
+        {
+          title: "Internal Assessment (IA) — Written Test",
+          badge: "Postponed",
+          badgeType: "postponed",
+          specs: [
+            { label: "Status", value: "Postponed. Dr. Anjali Yogi is on academic leave (12–18 October 2026). Date announced on or after 18 October." },
+            { label: "Weightage", value: "12 Marks (1 question based on 2 assigned readings)" },
+            {
+              label: "Assigned Readings",
+              value: [
+                "1. Dipesh Chakrabarty (2000), Provincializing Europe: Postcolonial Thought and Historical Difference.",
+                "2. Antony Black (2011), The Way Forward in Comparative Political Thought."
+              ]
+            }
+          ],
+          actions: [
+            { label: "Antony Black (2011) SAGE Article PDF ↗", url: "https://journals.sagepub.com/doi/pdf/10.3366/jipt.2011.0017" }
+          ]
+        },
+        {
+          title: "Continuous Assessment (CA) — In-Class Verbal Presentation",
+          badge: "35 Marks · Verbal",
+          badgeType: "normal",
+          specs: [
+            { label: "Format", value: "Strictly verbal presentation (no PPT or written report permitted). Mandatory attendance." },
+            { label: "Structure", value: "1. Central author question · 2. Methodology · 3. Key findings and arguments." }
+          ],
+          actions: [
+            { label: "Presentation Allocation Sheet ↗", url: "https://docs.google.com/spreadsheets/d/1ymg_u5xv2fkrBOiFfROhuYqFSSgHvk-S/edit?usp=drivesdk&ouid=107012363468081244822&rtpof=true&sd=true&authuser=1" },
+            { label: "Student Record Form ↗", url: "https://docs.google.com/spreadsheets/d/1hKNE9V7v5gHq8lCJXPWBcZG2wajhQ7XTvM4L0t-fJfw/edit?usp=drivesdk&authuser=1" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  // ---------------------------------------------------------------------------
+  // CONCLUDED ASSESSMENTS CYCLE (Friday, 9 October 2026) — ARCHIVE
+  // ---------------------------------------------------------------------------
+  oct9Cycle: {
+    title: "Concluded Assessments Cycle",
+    heldOn: "Friday, 9 October 2026",
     dateFormatted: "Friday, 9 October 2026",
-    isoTarget: "2026-10-09T09:00:00+05:30",
+    summary: "The 9th October continuous assessment & internal assessment cycle. Preserved as it was for revision.",
     papers: [
       {
         id: "cc-102-dp-9oct",

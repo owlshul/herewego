@@ -99,7 +99,7 @@ function renderAssessmentsView() {
   const container = document.getElementById('assessments-container');
   if (!container) return;
 
-  const papers = portalData.upcomingCycle.papers;
+  const papers = (portalData.oct9Cycle && portalData.oct9Cycle.papers) || (portalData.upcomingCycle && portalData.upcomingCycle.papers) || [];
 
   const corePapersHtml = papers.map(paper => {
     // Important Strategy Warning Callout
@@ -451,84 +451,160 @@ function renderAssessmentsView() {
     `;
   }).join('');
 
-    // Skill-Based Course (SBC) Internal Assessment Card
-    let sbcHtml = '';
-    const sbc = portalData.sbcAssessment;
-    if (sbc) {
-      const sbcCit = sbc.citation;
-      const sbcCitAttrs = sbcCit ? `
-        data-citation-sender="${escapeHtml(sbcCit.sender)}"
-        data-citation-date="${escapeHtml(sbcCit.date)}"
-        data-citation-source="${escapeHtml(sbcCit.source)}"
-        data-citation-quote="${escapeHtml(sbcCit.quote)}"
+  // Upcoming Assessments in ASD-STE100 Direct Style
+  const upcomingAssessments = portalData.upcomingAssessments || [];
+  const upcomingAssessmentsHtml = upcomingAssessments.map(item => {
+    const compHtml = (item.components || []).map(comp => {
+      const specsHtml = (comp.specs || []).map(spec => {
+        let valHtml = '';
+        if (Array.isArray(spec.value)) {
+          valHtml = `
+            <ul class="ste-bullet-list">
+              ${spec.value.map(v => `<li>${escapeHtml(v)}</li>`).join('')}
+            </ul>
+          `;
+        } else {
+          valHtml = escapeHtml(spec.value);
+        }
+
+        return `
+          <div class="ste-spec-row">
+            <span class="ste-label">${escapeHtml(spec.label)}:</span>
+            <div class="ste-val">${valHtml}</div>
+          </div>
+        `;
+      }).join('');
+
+      const actionsHtml = comp.actions && comp.actions.length > 0 ? `
+        <div class="ste-btn-row">
+          ${comp.actions.map(act => `
+            <a href="${escapeHtml(act.url)}" target="_blank" rel="noopener noreferrer" class="ste-btn ${act.primary ? 'ste-btn-primary' : ''}">
+              ${escapeHtml(act.label)}
+            </a>
+          `).join('')}
+        </div>
       ` : '';
 
-      sbcHtml = `
-        <article class="paper-entry sbc-paper-entry" data-paper-code="PS-SBC 01 sbc">
-          <div class="sbc-badge-row">
-            <span class="pill pill-sbc">Skill-Based Course (SBC)</span>
-            <span class="status-pill status-found" style="font-size: 0.74rem;">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              Due: ${escapeHtml(sbc.deadlineFormatted)}
-            </span>
+      const badgeClass = comp.badgeType === 'postponed' ? 'tag-postponed' : (comp.badgeType === 'due' ? 'tag-due' : '');
+
+      return `
+        <div class="ste-sub-card">
+          <div class="ste-sub-header">
+            <span class="ste-sub-title">📌 ${escapeHtml(comp.title)}</span>
+            ${comp.badge ? `<span class="ste-badge-tag ${badgeClass}">${escapeHtml(comp.badge)}</span>` : ''}
           </div>
-
-          <div class="paper-header" style="margin-top: 10px;">
-            <div class="paper-title-wrap">
-              <h3 class="paper-title">
-                <span class="code">${escapeHtml(sbc.code)}:</span> ${escapeHtml(sbc.name)}
-              </h3>
-              <div class="paper-meta-strip">
-                <span class="meta-item"><strong>Due Date:</strong> ${escapeHtml(sbc.deadlineFormatted)}</span>
-                <span class="meta-dot">·</span>
-                <span class="meta-item"><strong>Marks:</strong> ${escapeHtml(sbc.totalMarks)} Marks</span>
-                <span class="meta-dot">·</span>
-                <span class="meta-item"><strong>Length:</strong> ${escapeHtml(sbc.pageRequirement)}</span>
-                <span class="meta-dot">·</span>
-                <span class="meta-item"><strong>Submission:</strong> ${escapeHtml(sbc.submissionMode)}</span>
-                <span class="meta-dot">·</span>
-                <span class="meta-item"><strong>Faculty:</strong> ${escapeHtml(sbc.faculty)}</span>
-              </div>
-            </div>
+          <div class="ste-spec-list">
+            ${specsHtml}
           </div>
-
-          <!-- Assignment Prompt Card -->
-          <div class="sbc-prompt-card">
-            <div class="sbc-prompt-header">
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-                <strong>Internal Assessment Assignment Topic (Handwritten Assignment)</strong>
-              </div>
-              ${sbcCit ? `<button type="button" class="proof-qmark citation-trigger" ${sbcCitAttrs} title="View WhatsApp Notice Proof" aria-label="View WhatsApp Notice Proof">?</button>` : ''}
-            </div>
-
-            <div class="sbc-topic-box">
-              <div class="sbc-topic-en">
-                <span class="sbc-lang-tag">English</span>
-                <p class="sbc-question-text">“${escapeHtml(sbc.topicEnglish)}”</p>
-              </div>
-              <div class="sbc-topic-hi">
-                <span class="sbc-lang-tag">हिन्दी (Hindi)</span>
-                <p class="sbc-question-text">“${escapeHtml(sbc.topicHindi)}”</p>
-              </div>
-            </div>
-
-            <div class="sbc-guidelines-box">
-              <h5 class="sbc-guidelines-title">Submission Instructions &amp; Checklist:</h5>
-              <ul class="sbc-guidelines-list">
-                <li><strong>Strictly Handwritten:</strong> Write the assignment by hand (length: <strong>7 to 8 pages</strong>).</li>
-                <li><strong>Weightage:</strong> Total <strong>12 Marks</strong>.</li>
-                <li><strong>Submission:</strong> Scan your handwritten sheets into a clean single PDF and upload it to <strong>Google Classroom</strong>.</li>
-                <li><strong>Deadline:</strong> <strong>Tuesday, 20 October 2026</strong>.</li>
-              </ul>
-            </div>
-          </div>
-        </article>
+          ${actionsHtml}
+        </div>
       `;
-    }
+    }).join('');
 
-    container.innerHTML = corePapersHtml + sbcHtml;
-  }
+    return `
+      <article class="paper-entry ste-card upcoming-assessment-card" data-paper-code="${escapeHtml(item.code)} ${escapeHtml(item.shortCode || '')} ${escapeHtml(item.id)}">
+        <div class="paper-header">
+          <div class="paper-title-wrap">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;">
+              <span class="pill">${escapeHtml(item.category || 'Course')}</span>
+              <span class="status-pill ${escapeHtml(item.statusClass || 'status-found')}">${escapeHtml(item.statusText || 'Active')}</span>
+            </div>
+            <h3 class="paper-title">
+              <span class="code">${escapeHtml(item.code)}:</span> ${escapeHtml(item.title)}
+            </h3>
+            <div class="paper-meta-strip">
+              <span class="meta-item"><strong>Date:</strong> ${escapeHtml(item.primaryDate)}</span>
+              ${item.faculty ? `<span class="meta-dot">·</span><span class="meta-item"><strong>Faculty:</strong> ${escapeHtml(item.faculty)}</span>` : ''}
+              ${item.cr ? `<span class="meta-dot">·</span><span class="meta-item"><strong>CR:</strong> ${escapeHtml(item.cr)}</span>` : ''}
+            </div>
+          </div>
+        </div>
+
+        <div class="ste-components-body">
+          ${compHtml}
+        </div>
+      </article>
+    `;
+  }).join('');
+
+  // Concluded 9th October Cycle Archive (Preserved with all readings, syllabi, warnings)
+  const oct9ArchiveToggleHtml = `
+    <details class="cycle-9oct-toggle" id="toggle-9oct-archive">
+      <summary class="cycle-9oct-summary">
+        <div class="cycle-summary-left">
+          <span class="cycle-summary-icon">📁</span>
+          <div>
+            <span class="cycle-summary-title">Concluded Cycle Archive: Friday, 9 October 2026</span>
+            <span class="cycle-summary-sub">Click to toggle / view full syllabus, readings &amp; warnings for KTPP, DPII, and IR (as held on 9 Oct)</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span class="cycle-summary-badge">3 Papers</span>
+          <span class="cycle-summary-arrow">▾</span>
+        </div>
+      </summary>
+      <div class="cycle-9oct-content">
+        ${corePapersHtml}
+      </div>
+    </details>
+  `;
+
+  // Playable Game Embed at the Bottom
+  const upcoming = portalData.upcomingCycle || {};
+  const game = upcoming.game || {
+    headline: "Abhi kaafi time hai, lo game khelo —",
+    url: "https://owlshul.github.io/demockracy/",
+    title: "DeMOCKracy - The Game"
+  };
+
+  const gameEmbedHtml = `
+    <article class="next-cycle-game-card bottom-game-card" id="next-cycle-game-card">
+      <div class="next-cycle-header-bar">
+        <div class="next-cycle-meta-left">
+          <span class="pill-next-cycle">Study Break Game</span>
+          <span class="next-cycle-date-text">🎮 DeMOCKracy</span>
+        </div>
+        <span class="status-pill-tba">Fully Playable Web Game</span>
+      </div>
+
+      <div class="game-invitation-banner">
+        <div class="game-invitation-left">
+          <div class="game-callout-title">
+            <span>🕹️</span>
+            <span>${escapeHtml(game.headline || 'Abhi kaafi time hai, lo game khelo —')}</span>
+          </div>
+          <p class="game-callout-desc">
+            All upcoming test and assignment schedules are mapped above. Take a quick break and dodge obstacles in <em>DeMOCKracy</em>!
+          </p>
+        </div>
+        <a href="${escapeHtml(game.url)}" target="_blank" rel="noopener noreferrer" class="game-fullscreen-btn">
+          <span>Play Fullscreen</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+      </div>
+
+      <!-- Completely Playable Embedded Game -->
+      <div class="game-iframe-shell">
+        <iframe
+          src="${escapeHtml(game.url)}"
+          title="${escapeHtml(game.title || 'DeMOCKracy - The Game')}"
+          class="game-iframe-el"
+          loading="lazy"
+          allow="fullscreen; gamepad"
+        ></iframe>
+      </div>
+
+      <div class="game-under-bar">
+        <span>Controls: <strong>SPACE / ↑</strong> Jump &nbsp;·&nbsp; <strong>↓</strong> Duck &nbsp;·&nbsp; On mobile: Use on-screen touch buttons</span>
+        <a href="${escapeHtml(game.url)}" target="_blank" rel="noopener noreferrer" class="game-under-link">
+          owlshul.github.io/demockracy ↗
+        </a>
+      </div>
+    </article>
+  `;
+
+  container.innerHTML = upcomingAssessmentsHtml + oct9ArchiveToggleHtml + gameEmbedHtml;
+}
 
 // 2. Master Drives & Important Links View (Categorized)
 function renderDrivesView() {
@@ -788,15 +864,63 @@ function filterAssessments(filter) {
   const activeChip = Array.from(chips).find(c => c.getAttribute('data-filter') === filter);
   if (activeChip) activeChip.classList.add('active');
 
-  const cards = document.querySelectorAll('#assessments-container .paper-entry');
-  cards.forEach(card => {
-    const code = card.getAttribute('data-paper-code').toLowerCase();
-    if (filter === 'all' || code.includes(filter.toLowerCase())) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
+  const upcomingCards = document.querySelectorAll('.upcoming-assessment-card');
+  const gameCard = document.getElementById('next-cycle-game-card');
+  const oct9Toggle = document.getElementById('toggle-9oct-archive');
+  const oct9Cards = document.querySelectorAll('#toggle-9oct-archive .paper-entry');
+
+  if (filter === 'all') {
+    upcomingCards.forEach(c => c.style.display = 'block');
+    if (oct9Toggle) {
+      oct9Toggle.style.display = 'block';
+      oct9Toggle.open = false;
     }
-  });
+    oct9Cards.forEach(card => card.style.display = 'block');
+    if (gameCard) gameCard.style.display = 'block';
+  } else if (filter === 'archive9oct') {
+    upcomingCards.forEach(c => c.style.display = 'none');
+    if (gameCard) gameCard.style.display = 'none';
+    if (oct9Toggle) {
+      oct9Toggle.style.display = 'block';
+      oct9Toggle.open = true;
+      oct9Cards.forEach(card => card.style.display = 'block');
+      oct9Toggle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  } else {
+    // Specific filter: dse47, dse16, sbc, dse13, dse06, 101, 102, 103
+    let matchedUpcoming = 0;
+    upcomingCards.forEach(c => {
+      const code = (c.getAttribute('data-paper-code') || '').toLowerCase();
+      if (code.includes(filter.toLowerCase())) {
+        c.style.display = 'block';
+        matchedUpcoming++;
+      } else {
+        c.style.display = 'none';
+      }
+    });
+
+    let matchedOct9 = 0;
+    oct9Cards.forEach(card => {
+      const code = (card.getAttribute('data-paper-code') || '').toLowerCase();
+      if (code.includes(filter.toLowerCase())) {
+        card.style.display = 'block';
+        matchedOct9++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (matchedOct9 > 0) {
+      if (oct9Toggle) {
+        oct9Toggle.style.display = 'block';
+        oct9Toggle.open = true;
+      }
+    } else {
+      if (oct9Toggle) oct9Toggle.style.display = 'none';
+    }
+
+    if (gameCard) gameCard.style.display = 'none';
+  }
 }
 
 // -----------------------------------------------------------------------------
@@ -846,12 +970,48 @@ function performSearch(query) {
   const matchedReadings = [];
   const matchedNotices = [];
 
-  portalData.upcomingCycle.papers.forEach(p => {
+  // Search in Upcoming Assessments
+  if (portalData.upcomingAssessments) {
+    portalData.upcomingAssessments.forEach(item => {
+      const itemTitle = (item.title || '').toLowerCase();
+      const itemCode = (item.code || '').toLowerCase();
+      const itemFac = (item.faculty || '').toLowerCase();
+      const compStr = JSON.stringify(item.components || '').toLowerCase();
+
+      if (itemTitle.includes(query) || itemCode.includes(query) || itemFac.includes(query) || compStr.includes(query)) {
+        matchedReadings.push({
+          title: `${item.code}: ${item.title}`,
+          author: item.faculty || item.category || 'Upcoming Assessment',
+          url: `#view-assessments`,
+          paper: item.code,
+          type: item.statusText || 'Assessment'
+        });
+      }
+    });
+  }
+
+  const allSearchPapers = [
+    ...((portalData.upcomingCycle && portalData.upcomingCycle.papers) || []),
+    ...((portalData.oct9Cycle && portalData.oct9Cycle.papers) || []),
+    ...((portalData.concludedCycle && portalData.concludedCycle.papers) || [])
+  ];
+
+  allSearchPapers.forEach(p => {
     if (p.broadFolders) {
       p.broadFolders.forEach(bf => {
         if (bf.name.toLowerCase().includes(query) || (bf.scope && bf.scope.toLowerCase().includes(query))) {
           matchedReadings.push({ title: bf.name, author: bf.scope || 'Broad Drive Folder', url: bf.url, paper: p.code, type: 'Broad Folder' });
         }
+      });
+    }
+    if (p.syllabusTopics) {
+      p.syllabusTopics.forEach(unit => {
+        const list = [...(unit.syllabusReadings || []), ...(unit.classReadings || []), ...(unit.items || [])];
+        list.forEach(item => {
+          if ((item.title && item.title.toLowerCase().includes(query)) || (item.author && item.author.toLowerCase().includes(query))) {
+            matchedReadings.push({ ...item, paper: p.code });
+          }
+        });
       });
     }
     if (p.readings) {
@@ -863,11 +1023,13 @@ function performSearch(query) {
             }
           });
         }
-        sec.items.forEach(item => {
-          if (item.title.toLowerCase().includes(query) || item.author.toLowerCase().includes(query)) {
-            matchedReadings.push({ ...item, paper: p.code });
-          }
-        });
+        if (sec.items) {
+          sec.items.forEach(item => {
+            if ((item.title && item.title.toLowerCase().includes(query)) || (item.author && item.author.toLowerCase().includes(query))) {
+              matchedReadings.push({ ...item, paper: p.code });
+            }
+          });
+        }
       });
     }
   });
