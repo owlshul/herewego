@@ -386,30 +386,6 @@ const portalData = {
       ]
     },
     {
-      id: "cc-101-ktpp-ca2",
-      code: "PS-CC 101",
-      shortCode: "101",
-      title: "Key Texts in Political Philosophy",
-      shortTitle: "KTPP",
-      category: "Core Course (CC 1)",
-      faculty: "Dr. Ningthoujam Koiremba Singh",
-      primaryDate: "Friday, 30 October 2026",
-      statusText: "CA-2 · 30 Oct",
-      statusClass: "status-missing",
-      components: [
-        {
-          title: "Continuous Assessment 2 (CA-2) - 20 Marks",
-          badge: "Friday, 30 Oct",
-          badgeType: "due",
-          specs: [
-            { label: "Date", value: "Friday, 30 October 2026" },
-            { label: "Weightage", value: "20 Marks" },
-            { label: "Status", value: "Test date confirmed by faculty. Syllabus topics and question pattern will be updated once officially announced." }
-          ]
-        }
-      ]
-    },
-    {
       id: "dse-13-south-asia",
       code: "PS-DSE 13",
       shortCode: "dse13",

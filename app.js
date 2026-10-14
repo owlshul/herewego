@@ -886,6 +886,18 @@ function filterAssessments(filter) {
       oct9Cards.forEach(card => card.style.display = 'block');
       oct9Toggle.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  } else if (filter === 'game') {
+    upcomingCards.forEach(c => c.style.display = 'block');
+    if (oct9Toggle) {
+      oct9Toggle.style.display = 'block';
+    }
+    oct9Cards.forEach(card => card.style.display = 'block');
+    if (gameCard) {
+      gameCard.style.display = 'block';
+      setTimeout(() => {
+        gameCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 40);
+    }
   } else {
     // Specific filter: dse47, dse16, sbc, dse13, dse06, 101, 102, 103
     let matchedUpcoming = 0;
