@@ -1,5 +1,5 @@
 /* =============================================================================
-   HEREWEGO — Department of Political Science Portal (DU North Campus)
+   HEREWEGO - Department of Political Science Portal (DU North Campus)
    Minimalist, decluttered edition inspired by Obsidian's "Primary" Theme by Cecilia May
    Warm retro paper warmth, quiet borders, elegant reading lists, and spacious layout.
    ============================================================================= */
@@ -505,12 +505,12 @@ kbd {
   border-radius: inherit;
 }
 
-/* HOVER — fill rises from bottom */
+/* HOVER - fill rises from bottom */
 .tab-btn:hover::before { transform: translateY(0); }
 .tab-btn:hover { color: #fff; border-color: var(--color-powder-brown); }
 .tab-btn:hover svg { color: #fff; }
 
-/* ACTIVE — fill stays, button stays brown */
+/* ACTIVE - fill stays, button stays brown */
 .tab-btn.active {
   color: #fff;
   border-color: var(--color-powder-brown);
@@ -823,7 +823,7 @@ kbd {
 .chip:hover::before { transform: translateY(0); }
 .chip:hover { color: #fff; border-color: var(--color-powder-brown); }
 
-/* ACTIVE — stays filled */
+/* ACTIVE - stays filled */
 .chip.active { color: #fff; border-color: var(--color-powder-brown); }
 .chip.active::before { transform: translateY(0); }
 
@@ -1115,7 +1115,7 @@ kbd {
 }
 
 .clean-topic-row::before {
-  content: "—";
+  content: "-";
   position: absolute;
   left: 0;
   color: var(--color-powder-brown);
@@ -1942,7 +1942,7 @@ kbd {
 }
 
 /* =============================================================================
-   DIRECTORY (WHO'S WHO) — BY PAPER & STREAMLINED CRs
+   DIRECTORY (WHO'S WHO) - BY PAPER & STREAMLINED CRs
    ============================================================================= */
 .curator-card {
   background: var(--bg-surface);

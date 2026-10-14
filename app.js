@@ -1,5 +1,5 @@
 // =============================================================================
-// HEREWEGO APP CONTROLLER — MINIMAL & DECLUTTERED
+// HEREWEGO APP CONTROLLER - MINIMAL & DECLUTTERED
 // Department of Political Science (North Campus, Delhi University)
 // =============================================================================
 
@@ -242,7 +242,7 @@ function renderAssessmentsView() {
                     <div class="reading-row">
                       <div class="reading-info">
                         <div class="reading-primary-line">
-                          ${r.author ? `<span class="reading-writer-name">${escapeHtml(r.author)}</span> <span class="reading-sep">—</span> ` : ''}
+                          ${r.author ? `<span class="reading-writer-name">${escapeHtml(r.author)}</span> <span class="reading-sep">-</span> ` : ''}
                           ${r.url ? `
                             <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="reading-link">
                               <span>${escapeHtml(r.title)}</span>
@@ -552,7 +552,7 @@ function renderAssessmentsView() {
   // Playable Game Embed at the Bottom
   const upcoming = portalData.upcomingCycle || {};
   const game = upcoming.game || {
-    headline: "Abhi kaafi time hai, lo game khelo —",
+    headline: "Abhi kaafi time hai, lo game khelo -",
     url: "https://owlshul.github.io/demockracy/",
     title: "DeMOCKracy - The Game"
   };
@@ -571,7 +571,7 @@ function renderAssessmentsView() {
         <div class="game-invitation-left">
           <div class="game-callout-title">
             <span>🕹️</span>
-            <span>${escapeHtml(game.headline || 'Abhi kaafi time hai, lo game khelo —')}</span>
+            <span>${escapeHtml(game.headline || 'Abhi kaafi time hai, lo game khelo -')}</span>
           </div>
           <p class="game-callout-desc">
             All upcoming test and assignment schedules are mapped above. Take a quick break and dodge obstacles in <em>DeMOCKracy</em>!
@@ -682,7 +682,7 @@ function renderMergedNoticesView() {
   if (!container) return;
 
   container.innerHTML = portalData.verifiedAnnouncements.map(notice => {
-    const rawCitation = `[Verified Notice] ${notice.title} | Source: ${notice.sender} (${notice.date}) — "${notice.exactQuote}"`;
+    const rawCitation = `[Verified Notice] ${notice.title} | Source: ${notice.sender} (${notice.date}) - "${notice.exactQuote}"`;
 
     return `
       <div class="notice-card" data-priority="${notice.priority}">
@@ -1415,7 +1415,7 @@ function openSyllabusModal(paperCode) {
     if (paperName) {
       titleEl.innerHTML = `<span class="reader-code-badge">${escapeHtml(paperCode)}:</span> <span class="reader-paper-title">${escapeHtml(paperName)}</span>`;
     } else {
-      titleEl.textContent = paperCode ? `${paperCode} — Official Syllabus` : 'Official Course Syllabus';
+      titleEl.textContent = paperCode ? `${paperCode}: Official Syllabus` : 'Official Course Syllabus';
     }
   }
 

@@ -1,7 +1,7 @@
 // =============================================================================
-// HEREWEGO DATA STORE — MA POLITICAL SCIENCE (NORTH CAMPUS, DELHI UNIVERSITY)
+// HEREWEGO DATA STORE - MA POLITICAL SCIENCE (NORTH CAMPUS, DELHI UNIVERSITY)
 // Batch 2026-2028 | Curated by Anshul
-// "Ah shit, here we go again." — Minimalist, clean single source of truth.
+// "Ah shit, here we go again." - Minimalist, clean single source of truth.
 // =============================================================================
 
 const portalData = {
@@ -113,7 +113,7 @@ const portalData = {
       source: "WhatsApp: North Campus Announcements (Core Papers)",
       type: "assessment",
       priority: true,
-      summary: "Official pattern confirmed for Friday, 9 October: Total 16 Marks (1 question to be answered out of 2). Topics: Rousseau & Interpretation of Text (Main Focus on Skinner). Warning: Do not prepare only one topic thinking there is choice — questions can be interrelated or drawn from the same topic.",
+      summary: "Official pattern confirmed for Friday, 9 October: Total 16 Marks (1 question to be answered out of 2). Topics: Rousseau & Interpretation of Text (Main Focus on Skinner). Warning: Do not prepare only one topic thinking there is choice - questions can be interrelated or drawn from the same topic.",
       exactQuote: "Regarding Continuous Assessment of CC-Key Texts In Political Philosophy on 9th October' Friday. Total 16 Mark (1 Question), 2 Questions will be there out of which only 1 needs to be answered. Rousseau and Interpretation of Text (Main Focus on Skinner). And don't think that since there is an option so you can either prepare Skinner or Rousseau. Both the questions can be interrelated or can be from the same topic.",
       tags: ["#CC101", "#KTPP", "#ContinuousAssessment", "#Warning", "#16Marks"]
     },
@@ -236,7 +236,7 @@ const portalData = {
     isoTarget: "2026-10-16T11:10:00+05:30",
     statusText: "Next: DSE Written Tests (16 Oct)",
     game: {
-      headline: "Abhi kaafi time hai, lo game khelo —",
+      headline: "Abhi kaafi time hai, lo game khelo -",
       url: "https://owlshul.github.io/demockracy/",
       title: "DeMOCKracy - The Game",
       tagline: "A satirical runner game by Anshul. Dodge obstacles while democracy keeps running!"
@@ -258,11 +258,11 @@ const portalData = {
       statusClass: "status-found",
       components: [
         {
-          title: "Internal Assessment (IA) — Written Test",
+          title: "Internal Assessment (IA) - Written Test",
           badge: "Friday, 16 Oct · 11:10 AM",
           badgeType: "due",
           specs: [
-            { label: "Date & Time", value: "Friday, 16 October 2026 · 11:10 AM – 12:45 PM (90 minutes)" },
+            { label: "Date & Time", value: "Friday, 16 October 2026 · 11:10 AM - 12:45 PM (90 minutes)" },
             { label: "Venue", value: "Room 18, Satyakam Bhawan (Early exit not permitted)" },
             { label: "Format", value: "3 questions. Attempt any 2 questions (12 marks each = 24 marks total + 6 marks attendance)" },
             {
@@ -276,18 +276,17 @@ const portalData = {
             { label: "Answer Rules", value: "Answer directly (~2.5 to 3 pages per question). Label question numbers and roll number clearly." }
           ],
           actions: [
-            { label: "Open Course Google Drive ↗", url: "https://drive.google.com/drive/folders/1ntQ3Eux1jh8Miz02DtEEarMUo98WtUir", primary: true },
-            { label: "Hourly History: Age of Enlightenment ↗", url: "https://hourlyhistory.com/free-history-ebooks/age-of-enlightenment/" }
+            { label: "Open Course Google Drive ↗", url: "https://drive.google.com/drive/folders/1ntQ3Eux1jh8Miz02DtEEarMUo98WtUir", primary: true }
           ]
         },
         {
-          title: "Continuous Assessment (CA) — Book Review & PPT",
+          title: "Continuous Assessment (CA) - Book Review & PPT",
           badge: "Due: 20 Oct",
           badgeType: "normal",
           specs: [
             { label: "Weightage", value: "35 Marks (+ 5 marks attendance)" },
             { label: "Group Size", value: "5 to 7 members per group (self-formed)" },
-            { label: "Submission", value: "Upload PPT to Google Classroom by Tuesday, 20 October 2026 (one representative submits with all names)" },
+            { label: "Submission", value: "Upload PPT to Google Classroom by Tuesday, 20 October 2026 (one representative submits with all member names)" },
             { label: "Presentations", value: "Online evening sessions post-break (~20 minutes per group). Instructor randomly selects the speaker." },
             { label: "Topic Guideline", value: "Book must relate to Enlightenment philosophy (preference for post-2015 publications; secondary sources permitted)." }
           ]
@@ -308,31 +307,32 @@ const portalData = {
       statusClass: "status-found",
       components: [
         {
-          title: "Internal Assessment (IA) — Written Test",
+          title: "Internal Assessment (IA) - Written Test",
           badge: "Friday, 16 Oct · 2:00 PM",
           badgeType: "due",
           specs: [
-            { label: "Date & Time", value: "Friday, 16 October 2026 · 2:00 PM – 3:00 PM (1 hour, regular class timing)" },
-            { label: "Format", value: "3 questions. Attempt any 2 questions (2 from Unit 1, 1 from Unit 4)" },
+            { label: "Date & Time", value: "Friday, 16 October 2026 · 2:00 PM - 3:00 PM (1 hour, shifted to usual class timing to avoid clashes)" },
+            { label: "Format", value: "3 questions. Attempt any 2 questions (Two questions from Unit 1, One question from Unit 4)" },
             {
               label: "Syllabus Scope",
               value: [
                 "Unit 1: Subtopic A (Readings 3 and 6).",
-                "Unit 2: Subtopic A (Readings 2 and 3).",
-                "Unit 4: Subtopic A (USA–India bilateral relations reading).",
-                "Introductory level questions focused strictly on topics taught in class."
+                "Unit 2: Subtopic A only (Readings 2 and 3).",
+                "Unit 4: Subtopic A only (USA-India relationship / bilateral reading provided).",
+                "Questions will be mostly introductory. Strictly focused on topics taught in class (no need to panic, focus on covered material)."
               ]
             },
-            { label: "Course Materials", value: "PDF files shared directly in the WhatsApp class group by CR (no Google Drive folder)." }
+            { label: "Course Materials", value: "PDF files shared directly in the WhatsApp class group by CR Dwarika (no Google Drive folder maintained; Unit 1 readings sent on 29 Aug & 10 Oct, Unit 4 readings on 13 & 14 Oct)." },
+            { label: "Class Schedule", value: "Fridays: 2:00 PM - 4:00 PM (Dr. Nishtha) | Saturdays: 11:10 AM - 1:10 PM, Room 17/16 (Prof. Shivam)" }
           ]
         },
         {
-          title: "Continuous Assessment (CA) — Two Email Submissions",
+          title: "Continuous Assessment (CA) - Two Email Submissions",
           badge: "Due: 20 & 25 Oct",
           badgeType: "normal",
           specs: [
-            { label: "1. Book Review", value: "Review of a book relevant to the paper. Submit typed soft copy via email by Tuesday, 20 October 2026." },
-            { label: "2. Assignment", value: "Written assignment on any student-selected paper topic (900–1,100 words). Submit typed soft copy via email by Sunday, 25 October 2026." }
+            { label: "1. Book Review", value: "Write a book review of a book relevant to 'United States in a Transforming Global Order'. Submit typed soft copy via email by Tuesday, 20 October 2026." },
+            { label: "2. Assignment", value: "Written assignment on any student-selected topic relevant to the paper (900-1,100 words). Submit typed soft copy via email by Sunday, 25 October 2026." }
           ]
         }
       ]
@@ -350,7 +350,7 @@ const portalData = {
       statusClass: "status-found",
       components: [
         {
-          title: "Internal Assessment (IA) — Handwritten Assignment",
+          title: "Internal Assessment (IA) - Handwritten Assignment",
           badge: "Due: 20 Oct · 12 Marks",
           badgeType: "due",
           specs: [
@@ -365,12 +365,12 @@ const portalData = {
               label: "Question (HI)",
               value: "“चुनाव का सूक्ष्म और वृहत दोनों स्तरों से अध्ययन करना क्यों महत्वपूर्ण है? चुनावी आंकड़ों के विश्लेषण के विभिन्न तरीकों और मतदाता व्यवहार को समझने में उनके महत्व पर चर्चा करें।”"
             },
-            { label: "Access Rule", value: "Join only ONE Classroom section using a personal Gmail ID (institutional @polscience.du.ac.in IDs restricted)." }
+            { label: "Classroom Access", value: "These 3 Google Classroom links are alternatives for all students (created due to the 250+ student capacity cap per classroom). Join ANY ONE link if the others are full - all 3 links are for the same course for both campuses. Use personal Gmail (institutional @polscience.du.ac.in IDs are restricted)." }
           ],
           actions: [
-            { label: "Join Section 1 (qoog5g65) ↗", url: "https://classroom.google.com/c/ODg2NzU0OTA4MDMw?cjc=qoog5g65&authuser=1" },
-            { label: "Join Section 2 (rsl7sj4t) ↗", url: "https://classroom.google.com/c/ODg3NTUxNjE5Njg0?cjc=rsl7sj4t&authuser=1" },
-            { label: "Join Section 3 (cvlacuay) ↗", url: "https://classroom.google.com/c/ODkwMzQ4NjcyNzIz?cjc=cvlacuay&authuser=1" },
+            { label: "Join Google Classroom (Code: qoog5g65) ↗", url: "https://classroom.google.com/c/ODg2NzU0OTA4MDMw?cjc=qoog5g65&authuser=1" },
+            { label: "Alternative Link (Code: rsl7sj4t) ↗", url: "https://classroom.google.com/c/ODg3NTUxNjE5Njg0?cjc=rsl7sj4t&authuser=1" },
+            { label: "Alternative Link (Code: cvlacuay) ↗", url: "https://classroom.google.com/c/ODkwMzQ4NjcyNzIz?cjc=cvlacuay&authuser=1" },
             { label: "Sanjay Kumar Analysis Post (X) ↗", url: "https://x.com/sanjay_election/status/2092535414171066430" }
           ]
         },
@@ -379,7 +379,8 @@ const portalData = {
           badge: "Practical (1 Credit)",
           badgeType: "normal",
           specs: [
-            { label: "Status", value: "Practical electoral data analysis discussion. Viva and schedule TBA. No written exam announced." }
+            { label: "Structure", value: "1 credit lecture + 1 credit practical. Class schedule: Fridays, 9:00 AM - 11:00 AM (Room 18 when offline, North Campus)." },
+            { label: "Status", value: "Practical electoral data analysis discussion. Viva and schedule TBA. No written exam announced yet." }
           ]
         }
       ]
@@ -397,7 +398,7 @@ const portalData = {
       statusClass: "status-missing",
       components: [
         {
-          title: "Continuous Assessment 2 (CA-2) · 20 Marks",
+          title: "Continuous Assessment 2 (CA-2) - 20 Marks",
           badge: "Friday, 30 Oct",
           badgeType: "due",
           specs: [
@@ -431,7 +432,7 @@ const portalData = {
           ]
         },
         {
-          title: "Internal Assessment (IA) — Online Exam",
+          title: "Internal Assessment (IA) - Online Exam",
           badge: "Date TBA",
           badgeType: "normal",
           specs: [
@@ -450,13 +451,13 @@ const portalData = {
       shortTitle: "CPT",
       category: "Discipline Specific Elective (DSE 2)",
       faculty: "Prof. Mithila Bagai & Dr. Anjali Yogi",
-      cr: "Shruti Gupta (active) & Shiva Kumar",
+      cr: "Shruti Gupta (active) & Shiva Kumar (assisting informally)",
       primaryDate: "Saturday, 31 October 2026",
       statusText: "Assignment 31 Oct · Test Postponed",
       statusClass: "status-found",
       components: [
         {
-          title: "Internal Assessment (IA) — Written Assignment",
+          title: "Internal Assessment (IA) - Written Assignment",
           badge: "Due: 31 Oct · 12 Marks",
           badgeType: "due",
           specs: [
@@ -470,11 +471,11 @@ const portalData = {
           ]
         },
         {
-          title: "Internal Assessment (IA) — Written Test",
+          title: "Internal Assessment (IA) - Written Test",
           badge: "Postponed",
           badgeType: "postponed",
           specs: [
-            { label: "Status", value: "Postponed. Dr. Anjali Yogi is on academic leave (12–18 October 2026). Date announced on or after 18 October." },
+            { label: "Status", value: "Postponed. Previously proposed dates (11 & 16 Oct) cancelled. Dr. Anjali Yogi is on academic leave (12-18 October 2026). Official test date announced on or after 18 October (post-vacation/break)." },
             { label: "Weightage", value: "12 Marks (1 question based on 2 assigned readings)" },
             {
               label: "Assigned Readings",
@@ -483,22 +484,16 @@ const portalData = {
                 "2. Antony Black (2011), The Way Forward in Comparative Political Thought."
               ]
             }
-          ],
-          actions: [
-            { label: "Antony Black (2011) SAGE Article PDF ↗", url: "https://journals.sagepub.com/doi/pdf/10.3366/jipt.2011.0017" }
           ]
         },
         {
-          title: "Continuous Assessment (CA) — In-Class Verbal Presentation",
+          title: "Continuous Assessment (CA) - In-Class Verbal Presentation",
           badge: "35 Marks · Verbal",
           badgeType: "normal",
           specs: [
-            { label: "Format", value: "Strictly verbal presentation (no PPT or written report permitted). Mandatory attendance." },
-            { label: "Structure", value: "1. Central author question · 2. Methodology · 3. Key findings and arguments." }
-          ],
-          actions: [
-            { label: "Presentation Allocation Sheet ↗", url: "https://docs.google.com/spreadsheets/d/1ymg_u5xv2fkrBOiFfROhuYqFSSgHvk-S/edit?usp=drivesdk&ouid=107012363468081244822&rtpof=true&sd=true&authuser=1" },
-            { label: "Student Record Form ↗", url: "https://docs.google.com/spreadsheets/d/1hKNE9V7v5gHq8lCJXPWBcZG2wajhQ7XTvM4L0t-fJfw/edit?usp=drivesdk&authuser=1" }
+            { label: "Format", value: "Strictly verbal presentation (no PPT or written report required). Mandatory attendance: if a member is absent, other group members must present on their behalf to ensure full coverage; unpresented slots receive 0 marks." },
+            { label: "Structure", value: "1. Central question addressed by author · 2. Methodology used · 3. Key findings and major arguments of reading." },
+            { label: "Sequence & Division", value: "Progresses unit-wise and reading-wise sequentially (1 reading per class slot). Prof. Mithila Bagai takes the first 7-8 presentations; Dr. Anjali Yogi handles subsequent groups (~1 hour per group in Dr. Yogi's sessions)." }
           ]
         }
       ]
@@ -506,7 +501,7 @@ const portalData = {
   ],
 
   // ---------------------------------------------------------------------------
-  // CONCLUDED ASSESSMENTS CYCLE (Friday, 9 October 2026) — ARCHIVE
+  // CONCLUDED ASSESSMENTS CYCLE (Friday, 9 October 2026) - ARCHIVE
   // ---------------------------------------------------------------------------
   oct9Cycle: {
     title: "Concluded Assessments Cycle",
@@ -675,7 +670,7 @@ const portalData = {
               {
                 author: "Arudra Burra (2018)",
                 title: "Freedom of Speech in the Early Constitution: A Study of the Constitution (First Amendment) Bill (in Bhatia ed. The Indian Constituent Assembly)",
-                description: "[First Amendment — excluded from 9 Oct CA]",
+                description: "[First Amendment - excluded from 9 Oct CA]",
                 url: "https://drive.google.com/file/d/1wVARDU5s9dyrClj-C1cup8im9E16muye/view"
               },
               {
@@ -765,7 +760,7 @@ const portalData = {
               {
                 author: "Abhinav Chandrachud",
                 title: "Republic of Rhetoric",
-                description: "[Chapter 5: First Amendment triggers & speech restrictions — Excluded from 9 Oct CA]",
+                description: "[Chapter 5: First Amendment triggers & speech restrictions - Excluded from 9 Oct CA]",
                 url: "https://drive.google.com/file/d/1rhkImGqDBm0tPqikh1VBmWB0agSGG9CM/view"
               },
               {
@@ -783,7 +778,7 @@ const portalData = {
               {
                 author: "Parliamentary / CA Debates",
                 title: "First Amendment to the Constitution of India",
-                description: "(Original Draft & Syama Prasad Mookerjee Debates — Excluded from 9 Oct CA)",
+                description: "(Original Draft & Syama Prasad Mookerjee Debates - Excluded from 9 Oct CA)",
                 url: "https://drive.google.com/file/d/1rhkImGqDBm0tPqikh1VBmWB0agSGG9CM/view"
               },
               {
@@ -1229,13 +1224,13 @@ const portalData = {
             classReadings: [
               {
                 author: "John M. Hobson",
-                title: "The Eurocentric Conception of World Politics (2012) — Introduction & Conclusion",
+                title: "The Eurocentric Conception of World Politics (2012) - Introduction & Conclusion",
                 scope: "Taught by Prof. Navnita C. Behera in class · Cover Intro & Conclusion",
                 url: "https://drive.google.com/drive/folders/11xfaZ6g-iP94C6K9yHCnkgLGrrLQZiZd"
               },
               {
                 author: "Arlene B. Tickner & Steve Smith",
-                title: "International Relations Scholarship Around the World (2009) — Introduction",
+                title: "International Relations Scholarship Around the World (2009) - Introduction",
                 scope: "Cover Introduction (batch discussion confirmation)",
                 url: "https://drive.google.com/drive/folders/11xfaZ6g-iP94C6K9yHCnkgLGrrLQZiZd"
               }
