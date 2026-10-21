@@ -827,180 +827,171 @@ kbd {
 .chip.active { color: #fff; border-color: var(--color-powder-brown); }
 .chip.active::before { transform: translateY(0); }
 
-/* ---- Grouped Filter Clusters (CC, DSE, SBC) ---- */
-.grouped-filter-row {
+/* ---- Course Filters (Powdered Earthy & Pastel Hues) ---- */
+.sub-filter-row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 6px;
   margin-top: var(--space-m);
   margin-bottom: var(--space-m);
   padding: var(--space-s) 0;
   border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
 }
 
-.filter-cluster {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  flex-wrap: wrap;
-  padding: 4px 6px;
-  border-radius: var(--radius-pill);
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+.chip-divider {
+  display: inline-block;
+  width: 1px;
+  height: 18px;
+  background-color: var(--border-subtle);
+  margin: 0 4px;
+  align-self: center;
 }
 
-/* Cluster Badges (Clickable Group Headers) */
-.cluster-badge {
+/* Category Filter Tags (Clickable Prefixes) */
+.chip-cat-tag {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: var(--font-bold);
-  padding: 4px 9px;
+  padding: 3px 8px;
   border-radius: var(--radius-pill);
   border: 1px solid transparent;
   cursor: pointer;
-  letter-spacing: 0.04em;
-  line-height: 1;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
   transition: all var(--trans-fast);
   white-space: nowrap;
 }
 
-/* Core Course (CC) - Warm Terracotta Theme */
-.cluster-cc {
-  border-color: hsla(24, 55%, 50%, 0.22);
-  background: hsla(24, 55%, 50%, 0.04);
+/* 1. Core Course (CC) - Faded Powder Terracotta / Warm Clay */
+.cat-cc {
+  background: #f8f2ed;
+  border-color: #e6d5c5;
+  color: #8c5b35;
 }
-.badge-cc {
-  background: hsla(24, 60%, 46%, 0.12);
-  color: hsl(24, 65%, 38%);
-  border-color: hsla(24, 60%, 46%, 0.32);
-}
-.badge-cc:hover, .badge-cc.active {
-  background: hsl(24, 60%, 44%);
+.cat-cc:hover, .cat-cc.active {
+  background: #b07850;
+  border-color: #9e6942;
   color: #ffffff;
-  border-color: hsl(24, 60%, 44%);
 }
 .chip-cc {
-  border-color: hsla(24, 55%, 48%, 0.26);
-  color: hsl(24, 50%, 36%);
+  background: #fbf7f4;
+  border-color: #e6d5c5;
+  color: #8c5b35;
 }
 .chip-cc::before {
-  background: hsl(24, 60%, 44%);
+  background: #b07850;
 }
 .chip-cc:hover, .chip-cc.active {
   color: #ffffff;
-  border-color: hsl(24, 60%, 44%);
+  border-color: #9e6942;
 }
 
-/* Discipline Specific Electives (DSE) - Forest Sage Theme */
-.cluster-dse {
-  border-color: hsla(150, 40%, 38%, 0.22);
-  background: hsla(150, 40%, 38%, 0.04);
+/* 2. Discipline Specific Electives (DSE) - Faded Powder Sage / Dusty Eucalyptus */
+.cat-dse {
+  background: #eef4f0;
+  border-color: #c8dbcf;
+  color: #3f6b52;
 }
-.badge-dse {
-  background: hsla(150, 42%, 36%, 0.12);
-  color: hsl(150, 50%, 28%);
-  border-color: hsla(150, 42%, 36%, 0.32);
-}
-.badge-dse:hover, .badge-dse.active {
-  background: hsl(150, 44%, 34%);
+.cat-dse:hover, .cat-dse.active {
+  background: #58836b;
+  border-color: #49725b;
   color: #ffffff;
-  border-color: hsl(150, 44%, 34%);
 }
 .chip-dse {
-  border-color: hsla(150, 38%, 38%, 0.26);
-  color: hsl(150, 44%, 30%);
+  background: #f5f8f6;
+  border-color: #c8dbcf;
+  color: #3f6b52;
 }
 .chip-dse::before {
-  background: hsl(150, 44%, 34%);
+  background: #58836b;
 }
 .chip-dse:hover, .chip-dse.active {
   color: #ffffff;
-  border-color: hsl(150, 44%, 34%);
+  border-color: #49725b;
 }
 
-/* Skill-Based Course (SBC) - Slate Denim Theme */
-.cluster-sbc {
-  border-color: hsla(206, 50%, 42%, 0.22);
-  background: hsla(206, 50%, 42%, 0.04);
+/* 3. Skill-Based Course (SBC) - Faded Powder Slate / Dusty Denim */
+.cat-sbc {
+  background: #eef3f7;
+  border-color: #c7d8e6;
+  color: #3a617e;
 }
-.badge-sbc {
-  background: hsla(206, 52%, 40%, 0.12);
-  color: hsl(206, 62%, 32%);
-  border-color: hsla(206, 52%, 40%, 0.32);
-}
-.badge-sbc:hover, .badge-sbc.active {
-  background: hsl(206, 54%, 38%);
+.cat-sbc:hover, .cat-sbc.active {
+  background: #537896;
+  border-color: #436582;
   color: #ffffff;
-  border-color: hsl(206, 54%, 38%);
 }
 .chip-sbc {
-  border-color: hsla(206, 45%, 42%, 0.26);
-  color: hsl(206, 54%, 32%);
+  background: #f5f8fa;
+  border-color: #c7d8e6;
+  color: #3a617e;
 }
 .chip-sbc::before {
-  background: hsl(206, 54%, 38%);
+  background: #537896;
 }
 .chip-sbc:hover, .chip-sbc.active {
   color: #ffffff;
-  border-color: hsl(206, 54%, 38%);
+  border-color: #436582;
 }
 
-/* All Papers & Extras */
+/* All Papers & Extras - Faded Powder Tones */
 .chip-all {
+  background: var(--bg-surface);
   border-color: var(--border-card);
+  color: var(--text-muted);
 }
 .chip-all::before {
-  background: var(--color-gray-120);
+  background: #655b4d;
 }
 .chip-all:hover, .chip-all.active {
   color: #ffffff;
-  border-color: var(--color-gray-120);
+  border-color: #655b4d;
 }
 
 .chip-archive {
-  border-color: hsla(38, 55%, 42%, 0.3);
-  color: hsl(38, 55%, 32%);
+  background: #f8f5ee;
+  border-color: #dfd6c0;
+  color: #7a6639;
 }
 .chip-archive::before {
-  background: hsl(38, 55%, 40%);
+  background: #94804e;
 }
 .chip-archive:hover, .chip-archive.active {
   color: #ffffff;
-  border-color: hsl(38, 55%, 40%);
+  border-color: #857242;
 }
 
 .chip-game {
-  border-color: hsla(275, 45%, 52%, 0.3);
-  color: hsl(275, 48%, 42%);
+  background: #f6f1f8;
+  border-color: #dccee0;
+  color: #6f497a;
 }
 .chip-game::before {
-  background: hsl(275, 48%, 46%);
+  background: #875f92;
 }
 .chip-game:hover, .chip-game.active {
   color: #ffffff;
-  border-color: hsl(275, 48%, 46%);
+  border-color: #775082;
 }
 
-/* Category Pills on Assessment Cards */
+/* Category Pills on Assessment Cards (Matching Soft Faded Powder Tones) */
 .ste-cat-cc {
-  background: hsla(24, 60%, 46%, 0.10) !important;
-  border-color: hsla(24, 60%, 46%, 0.30) !important;
-  color: hsl(24, 65%, 38%) !important;
+  background: #f8f2ed !important;
+  border-color: #e6d5c5 !important;
+  color: #8c5b35 !important;
   font-weight: var(--font-semibold);
 }
 .ste-cat-dse {
-  background: hsla(150, 42%, 36%, 0.10) !important;
-  border-color: hsla(150, 42%, 36%, 0.30) !important;
-  color: hsl(150, 50%, 28%) !important;
+  background: #eef4f0 !important;
+  border-color: #c8dbcf !important;
+  color: #3f6b52 !important;
   font-weight: var(--font-semibold);
 }
 .ste-cat-sbc {
-  background: hsla(206, 52%, 40%, 0.10) !important;
-  border-color: hsla(206, 52%, 40%, 0.30) !important;
-  color: hsl(206, 62%, 32%) !important;
+  background: #eef3f7 !important;
+  border-color: #c7d8e6 !important;
+  color: #3a617e !important;
   font-weight: var(--font-semibold);
 }
 
@@ -2955,20 +2946,19 @@ kbd {
   .sub-filter-row {
     margin-top: 10px;
     margin-bottom: 14px;
-    gap: 8px;
+    gap: 6px;
     padding-top: 4px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
   }
-  .filter-cluster {
-    padding: 3px 5px;
-    gap: 4px;
+  .chip-divider {
+    display: none;
   }
-  .cluster-badge {
-    min-height: 32px;
-    font-size: 0.72rem;
-    padding: 5px 9px;
+  .chip-cat-tag {
+    font-size: 0.70rem;
+    padding: 6px 10px;
+    min-height: 34px;
     display: inline-flex;
     align-items: center;
     justify-content: center;

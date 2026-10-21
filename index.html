@@ -19,7 +19,7 @@
   <meta name="twitter:description" content="Test ka info abhi tak. Last updated: 21 October 2026, 2:30 PM IST." />
   <meta name="twitter:image"       content="icon-512.png" />
 
-  <link rel="stylesheet" href="style.css?v=16" />
+  <link rel="stylesheet" href="style.css?v=17" />
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="icon-192.png" />
@@ -115,17 +115,11 @@
             <summary class="assessment-notes-summary">
               <span class="summary-left">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                <span>Important Notes &amp; Deadlines</span>
+                <span>Important Notes</span>
               </span>
               <span class="summary-arrow">▾</span>
             </summary>
             <div class="assessment-notes-body">
-              <div class="note-item">
-                <span class="note-num-badge">📌</span>
-                <div class="note-text">
-                  <strong>Next Main CA Deadline: 30th October 2026</strong> (KTPP CA-2 test &amp; South Asia research paper). Specific IA tests, presentations, and assignment submission deadlines are listed in each individual paper section below.
-                </div>
-              </div>
               <div class="note-item">
                 <span class="note-num-badge">1</span>
                 <div class="note-text">
@@ -143,40 +137,33 @@
         </div>
 
           <!-- Course Categorized Filter Chips -->
-          <div class="sub-filter-row grouped-filter-row">
-            <!-- All Papers -->
-            <div class="filter-cluster cluster-all">
-              <button class="chip chip-all active" data-filter="all" onclick="filterAssessments('all')">All Papers</button>
-            </div>
+          <div class="sub-filter-row">
+            <button class="chip chip-all active" data-filter="all" onclick="filterAssessments('all')">All Papers</button>
 
-            <!-- Core Courses (CC) Group -->
-            <div class="filter-cluster cluster-cc">
-              <button class="cluster-badge badge-cc" data-filter="cc" onclick="filterAssessments('cc')" title="Filter all Core Courses (CC)">CC</button>
-              <button class="chip chip-cc" data-filter="cc101" onclick="filterAssessments('cc101')">PS-CC 101 (KTPP)</button>
-            </div>
+            <span class="chip-divider"></span>
 
-            <!-- Discipline Specific Electives (DSE) Group -->
-            <div class="filter-cluster cluster-dse">
-              <button class="cluster-badge badge-dse" data-filter="dse" onclick="filterAssessments('dse')" title="Filter all Electives (DSE)">DSE</button>
-              <button class="chip chip-dse" data-filter="dse47" onclick="filterAssessments('dse47')">PS-DSE 47 (IEPP)</button>
-              <button class="chip chip-dse" data-filter="dse25" onclick="filterAssessments('dse25')">PS-DSE 25 (IPT)</button>
-              <button class="chip chip-dse" data-filter="dse16" onclick="filterAssessments('dse16')">PS-DSE 16 (USA)</button>
-              <button class="chip chip-dse" data-filter="dse13" onclick="filterAssessments('dse13')">PS-DSE 13 (South Asia)</button>
-              <button class="chip chip-dse" data-filter="dse35" onclick="filterAssessments('dse35')">PS-DSE 35 (IPE)</button>
-              <button class="chip chip-dse" data-filter="dse06" onclick="filterAssessments('dse06')">PS-DSE 06 (CPT)</button>
-            </div>
+            <button class="chip-cat-tag cat-cc" data-filter="cc" onclick="filterAssessments('cc')" title="Filter all Core Courses (CC)">CC</button>
+            <button class="chip chip-cc" data-filter="cc101" onclick="filterAssessments('cc101')">PS-CC 101 (KTPP)</button>
 
-            <!-- Skill-Based Course (SBC) Group -->
-            <div class="filter-cluster cluster-sbc">
-              <button class="cluster-badge badge-sbc" data-filter="sbc" onclick="filterAssessments('sbc')" title="Filter Skill-Based Course (SBC)">SBC</button>
-              <button class="chip chip-sbc" data-filter="sbc" onclick="filterAssessments('sbc')">PS-SBC 01 (Elections)</button>
-            </div>
+            <span class="chip-divider"></span>
 
-            <!-- Archives & Study Break Game -->
-            <div class="filter-cluster cluster-extras">
-              <button class="chip chip-archive" data-filter="archive9oct" onclick="filterAssessments('archive9oct')">📁 9 Oct Archive</button>
-              <button class="chip chip-game" data-filter="game" onclick="filterAssessments('game')">🎮 Game</button>
-            </div>
+            <button class="chip-cat-tag cat-dse" data-filter="dse" onclick="filterAssessments('dse')" title="Filter all Electives (DSE)">DSE</button>
+            <button class="chip chip-dse" data-filter="dse47" onclick="filterAssessments('dse47')">PS-DSE 47 (IEPP)</button>
+            <button class="chip chip-dse" data-filter="dse25" onclick="filterAssessments('dse25')">PS-DSE 25 (IPT)</button>
+            <button class="chip chip-dse" data-filter="dse16" onclick="filterAssessments('dse16')">PS-DSE 16 (USA)</button>
+            <button class="chip chip-dse" data-filter="dse13" onclick="filterAssessments('dse13')">PS-DSE 13 (South Asia)</button>
+            <button class="chip chip-dse" data-filter="dse35" onclick="filterAssessments('dse35')">PS-DSE 35 (IPE)</button>
+            <button class="chip chip-dse" data-filter="dse06" onclick="filterAssessments('dse06')">PS-DSE 06 (CPT)</button>
+
+            <span class="chip-divider"></span>
+
+            <button class="chip-cat-tag cat-sbc" data-filter="sbc" onclick="filterAssessments('sbc')" title="Filter Skill-Based Course (SBC)">SBC</button>
+            <button class="chip chip-sbc" data-filter="sbc" onclick="filterAssessments('sbc')">PS-SBC 01 (Elections)</button>
+
+            <span class="chip-divider"></span>
+
+            <button class="chip chip-archive" data-filter="archive9oct" onclick="filterAssessments('archive9oct')">📁 9 Oct Archive</button>
+            <button class="chip chip-game" data-filter="game" onclick="filterAssessments('game')">🎮 Game</button>
           </div>
 
         <div id="assessments-container">
@@ -391,9 +378,9 @@
     </div>
   </div>
 
-  <script src="syllabi_data.js?v=28"></script>
-  <script src="data.js?v=28"></script>
-  <script src="app.js?v=28"></script>
+  <script src="syllabi_data.js?v=29"></script>
+  <script src="data.js?v=29"></script>
+  <script src="app.js?v=29"></script>
   <script>
     // Service Worker
     if ('serviceWorker' in navigator) {

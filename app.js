@@ -857,7 +857,7 @@ function renderArchiveView() {
 // FILTER PAPERS IN ASSESSMENTS VIEW
 // -----------------------------------------------------------------------------
 function filterAssessments(filter) {
-  const chips = document.querySelectorAll('.chip, .cluster-badge');
+  const chips = document.querySelectorAll('.chip, .chip-cat-tag');
   chips.forEach(c => c.classList.remove('active'));
 
   const activeChip = Array.from(chips).find(c => c.getAttribute('data-filter') === filter);
