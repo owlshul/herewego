@@ -501,12 +501,14 @@ function renderAssessmentsView() {
       `;
     }).join('');
 
+    const catClass = item.code.includes('CC') ? 'ste-cat-cc' : (item.code.includes('DSE') ? 'ste-cat-dse' : (item.code.includes('SBC') ? 'ste-cat-sbc' : ''));
+
     return `
-      <article class="paper-entry ste-card upcoming-assessment-card" data-paper-code="${escapeHtml(item.code)} ${escapeHtml(item.shortCode || '')} ${escapeHtml(item.shortTitle || '')} ${escapeHtml(item.id)}">
+      <article class="paper-entry ste-card upcoming-assessment-card" data-paper-code="${escapeHtml(item.code)} ${escapeHtml(item.shortCode || '')} ${escapeHtml(item.shortTitle || '')} ${escapeHtml(item.id)} ${escapeHtml(item.category || '')}">
         <div class="paper-header">
           <div class="paper-title-wrap">
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;">
-              <span class="pill">${escapeHtml(item.category || 'Course')}</span>
+              <span class="pill ${catClass}">${escapeHtml(item.category || 'Course')}</span>
               <span class="status-pill ${escapeHtml(item.statusClass || 'status-found')}">${escapeHtml(item.statusText || 'Active')}</span>
             </div>
             <h3 class="paper-title">
@@ -855,7 +857,7 @@ function renderArchiveView() {
 // FILTER PAPERS IN ASSESSMENTS VIEW
 // -----------------------------------------------------------------------------
 function filterAssessments(filter) {
-  const chips = document.querySelectorAll('.chip');
+  const chips = document.querySelectorAll('.chip, .cluster-badge');
   chips.forEach(c => c.classList.remove('active'));
 
   const activeChip = Array.from(chips).find(c => c.getAttribute('data-filter') === filter);

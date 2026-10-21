@@ -13,7 +13,7 @@ const portalData = {
     batch: "MA Political Science (2026–2028)",
     campus: "North Campus, University of Delhi",
     classroom: "Room No. 18, Satyakam Bhawan",
-    lastUpdated: "21 October 2026, 1:45 PM IST",
+    lastUpdated: "21 October 2026, 2:30 PM IST",
     curator: "Anshul"
   },
 
@@ -268,9 +268,11 @@ const portalData = {
   // ---------------------------------------------------------------------------
   upcomingCycle: {
     title: "Upcoming Assessments & Deadlines",
-    dateFormatted: "Friday, 16 October 2026",
-    isoTarget: "2026-10-16T11:10:00+05:30",
-    statusText: "Next: DSE Written Tests (16 Oct)",
+    cycleType: "Continuous Assessment (CA)",
+    dateFormatted: "Friday, 30 October 2026",
+    isoTarget: "2026-10-30T10:00:00+05:30",
+    statusText: "Next Main CA Deadline: 30 October 2026",
+    mainDeadlineNotice: "30th October is the main deadline for the Continuous Assessment (CA) cycle (KTPP CA-2 test & South Asia research paper). Individual IA written tests, presentations, and assignment deadlines are detailed in each respective section below.",
     game: {
       headline: "thak gye honge padhte padhte, lijiye game kheliye",
       url: "https://owlshul.github.io/demockracy/",

@@ -827,6 +827,183 @@ kbd {
 .chip.active { color: #fff; border-color: var(--color-powder-brown); }
 .chip.active::before { transform: translateY(0); }
 
+/* ---- Grouped Filter Clusters (CC, DSE, SBC) ---- */
+.grouped-filter-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: var(--space-m);
+  margin-bottom: var(--space-m);
+  padding: var(--space-s) 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.filter-cluster {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  padding: 4px 6px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+/* Cluster Badges (Clickable Group Headers) */
+.cluster-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: var(--font-bold);
+  padding: 4px 9px;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  transition: all var(--trans-fast);
+  white-space: nowrap;
+}
+
+/* Core Course (CC) - Warm Terracotta Theme */
+.cluster-cc {
+  border-color: hsla(24, 55%, 50%, 0.22);
+  background: hsla(24, 55%, 50%, 0.04);
+}
+.badge-cc {
+  background: hsla(24, 60%, 46%, 0.12);
+  color: hsl(24, 65%, 38%);
+  border-color: hsla(24, 60%, 46%, 0.32);
+}
+.badge-cc:hover, .badge-cc.active {
+  background: hsl(24, 60%, 44%);
+  color: #ffffff;
+  border-color: hsl(24, 60%, 44%);
+}
+.chip-cc {
+  border-color: hsla(24, 55%, 48%, 0.26);
+  color: hsl(24, 50%, 36%);
+}
+.chip-cc::before {
+  background: hsl(24, 60%, 44%);
+}
+.chip-cc:hover, .chip-cc.active {
+  color: #ffffff;
+  border-color: hsl(24, 60%, 44%);
+}
+
+/* Discipline Specific Electives (DSE) - Forest Sage Theme */
+.cluster-dse {
+  border-color: hsla(150, 40%, 38%, 0.22);
+  background: hsla(150, 40%, 38%, 0.04);
+}
+.badge-dse {
+  background: hsla(150, 42%, 36%, 0.12);
+  color: hsl(150, 50%, 28%);
+  border-color: hsla(150, 42%, 36%, 0.32);
+}
+.badge-dse:hover, .badge-dse.active {
+  background: hsl(150, 44%, 34%);
+  color: #ffffff;
+  border-color: hsl(150, 44%, 34%);
+}
+.chip-dse {
+  border-color: hsla(150, 38%, 38%, 0.26);
+  color: hsl(150, 44%, 30%);
+}
+.chip-dse::before {
+  background: hsl(150, 44%, 34%);
+}
+.chip-dse:hover, .chip-dse.active {
+  color: #ffffff;
+  border-color: hsl(150, 44%, 34%);
+}
+
+/* Skill-Based Course (SBC) - Slate Denim Theme */
+.cluster-sbc {
+  border-color: hsla(206, 50%, 42%, 0.22);
+  background: hsla(206, 50%, 42%, 0.04);
+}
+.badge-sbc {
+  background: hsla(206, 52%, 40%, 0.12);
+  color: hsl(206, 62%, 32%);
+  border-color: hsla(206, 52%, 40%, 0.32);
+}
+.badge-sbc:hover, .badge-sbc.active {
+  background: hsl(206, 54%, 38%);
+  color: #ffffff;
+  border-color: hsl(206, 54%, 38%);
+}
+.chip-sbc {
+  border-color: hsla(206, 45%, 42%, 0.26);
+  color: hsl(206, 54%, 32%);
+}
+.chip-sbc::before {
+  background: hsl(206, 54%, 38%);
+}
+.chip-sbc:hover, .chip-sbc.active {
+  color: #ffffff;
+  border-color: hsl(206, 54%, 38%);
+}
+
+/* All Papers & Extras */
+.chip-all {
+  border-color: var(--border-card);
+}
+.chip-all::before {
+  background: var(--color-gray-120);
+}
+.chip-all:hover, .chip-all.active {
+  color: #ffffff;
+  border-color: var(--color-gray-120);
+}
+
+.chip-archive {
+  border-color: hsla(38, 55%, 42%, 0.3);
+  color: hsl(38, 55%, 32%);
+}
+.chip-archive::before {
+  background: hsl(38, 55%, 40%);
+}
+.chip-archive:hover, .chip-archive.active {
+  color: #ffffff;
+  border-color: hsl(38, 55%, 40%);
+}
+
+.chip-game {
+  border-color: hsla(275, 45%, 52%, 0.3);
+  color: hsl(275, 48%, 42%);
+}
+.chip-game::before {
+  background: hsl(275, 48%, 46%);
+}
+.chip-game:hover, .chip-game.active {
+  color: #ffffff;
+  border-color: hsl(275, 48%, 46%);
+}
+
+/* Category Pills on Assessment Cards */
+.ste-cat-cc {
+  background: hsla(24, 60%, 46%, 0.10) !important;
+  border-color: hsla(24, 60%, 46%, 0.30) !important;
+  color: hsl(24, 65%, 38%) !important;
+  font-weight: var(--font-semibold);
+}
+.ste-cat-dse {
+  background: hsla(150, 42%, 36%, 0.10) !important;
+  border-color: hsla(150, 42%, 36%, 0.30) !important;
+  color: hsl(150, 50%, 28%) !important;
+  font-weight: var(--font-semibold);
+}
+.ste-cat-sbc {
+  background: hsla(206, 52%, 40%, 0.10) !important;
+  border-color: hsla(206, 52%, 40%, 0.30) !important;
+  color: hsl(206, 62%, 32%) !important;
+  font-weight: var(--font-semibold);
+}
+
 /* =============================================================================
    ASSESSMENT PAPERS (DECLUTTERED & MINIMAL)
    ============================================================================= */
@@ -2783,6 +2960,20 @@ kbd {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+  }
+  .filter-cluster {
+    padding: 3px 5px;
+    gap: 4px;
+  }
+  .cluster-badge {
+    min-height: 32px;
+    font-size: 0.72rem;
+    padding: 5px 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
   .chip {
     font-size: 0.82rem;
