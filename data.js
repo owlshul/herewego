@@ -22,6 +22,18 @@ const portalData = {
   // ---------------------------------------------------------------------------
   verifiedAnnouncements: [
     {
+      id: "va-dse25-ipt",
+      title: "DSE 25 (IPT): IA Written Test on 16 Oct (11:15 AM - 12:30 PM) & CA Book Review Details",
+      date: "14 Oct 2026",
+      sender: "Dr. Smita Agarwal & Group Admins",
+      source: "WhatsApp: DSE Key Concepts in Indian Political Thought",
+      type: "assessment",
+      priority: true,
+      summary: "IA Written Test confirmed for Friday, 16 October (11:15 AM - 12:30 PM, North Campus only). 3 questions, attempt 2 (Intro, Satya, Swaraj, Dharma). No re-test. CA Individual Book Review due 4 November (online). Group presentation (5 members per group, common PPT, 5-7 mins online mode) post-4 November.",
+      exactQuote: "As per request received the exam date is on 16th october 2026 11.15 -12.30. I am attaching today reading also. Thanks, Dr. Smita Agarwal. CA: Individual written book review due 4 November (online). Group presentation: strictly 5 members per group, common PPT, 5-7 minutes online mode.",
+      tags: ["#DSE25", "#IPT", "#IA", "#CA", "#16Oct", "#4Nov", "#NorthCampus"]
+    },
+    {
       id: "va-dse16-ia-ca",
       title: "DSE 16 (USA): IA Written Test on 16 Oct (2-3 PM) & CA Submissions Confirmed",
       date: "14 Oct 2026",
@@ -289,6 +301,82 @@ const portalData = {
             { label: "Submission", value: "Upload PPT to Google Classroom by Tuesday, 20 October 2026 (one representative submits with all member names)" },
             { label: "Presentations", value: "Online evening sessions post-break (~20 minutes per group). Instructor randomly selects the speaker." },
             { label: "Topic Guideline", value: "Book must relate to Enlightenment philosophy (preference for post-2015 publications; secondary sources permitted)." }
+          ]
+        }
+      ]
+    },
+    {
+      id: "dse-25-ipt",
+      code: "PS-DSE 25",
+      shortCode: "dse25",
+      title: "Key Concepts in Indian Political Thought",
+      shortTitle: "IPT",
+      category: "Discipline Specific Elective (DSE 1)",
+      faculty: "Dr. Smita Agarwal & Dr. Radha Kumari",
+      primaryDate: "Friday, 16 October 2026",
+      statusText: "Written Test · 16 Oct",
+      statusClass: "status-found",
+      components: [
+        {
+          title: "Internal Assessment (IA) - Written Test",
+          badge: "Friday, 16 Oct · 11:15 AM",
+          badgeType: "due",
+          specs: [
+            { label: "Date & Time", value: "Friday, 16 October 2026 · 11:15 AM - 12:30 PM (1 hour 15 minutes, revised from 14 Oct)" },
+            { label: "Venue", value: "North Campus only (Mandatory in-person)" },
+            { label: "Format", value: "3 questions in total. Students must attempt any 2 questions." },
+            {
+              label: "Syllabus Scope",
+              value: [
+                "1. Introduction - covered by Dr. Smita Agarwal",
+                "2. Satya - covered by Dr. Smita Agarwal",
+                "3. Swaraj - covered by Dr. Radha Kumari",
+                "4. Dharma - covered by Dr. Radha Kumari"
+              ]
+            },
+            {
+              label: "Important Rules",
+              value: [
+                "Examination will be conducted at North Campus only.",
+                "Examination cannot be postponed beyond the mid-semester break.",
+                "Strict instruction: No re-test will be conducted under any circumstances."
+              ]
+            }
+          ],
+          actions: [
+            { label: "Open Course Google Drive ↗", url: "https://drive.google.com/drive/folders/1-FkMt_e90dReLvaaRussYNO71BUz88_9", primary: true }
+          ]
+        },
+        {
+          title: "Continuous Assessment (CA) - Book Review & Group Presentation",
+          badge: "Due: 4 Nov & Beyond",
+          badgeType: "normal",
+          specs: [
+            {
+              label: "1. Individual Book Review",
+              value: [
+                "Submission Deadline: Wednesday, 4 November 2026.",
+                "Submission Mode: Online (most probably Google Classroom; joining link to be shared by Ma'am).",
+                "Individual Submission: Each student must prepare and submit an independent written book review.",
+                "Mandatory Topic Rule: The selected book must relate to the subject 'Key Concepts in Indian Political Thought', but MUST NOT directly cover any of the topics explicitly listed in the syllabus."
+              ]
+            },
+            {
+              label: "2. Group PPT & Presentation",
+              value: [
+                "Group Formation: Students must form groups of strictly five (5) members.",
+                "Common Book: The 5 members collectively choose one common book for the group presentation.",
+                "Anti-Duplication Rule: Each group must cover a different book. No two groups are permitted to present the same book. Register your book and group members in the Google Sheet to prevent duplication.",
+                "PowerPoint (PPT): Each group prepares a single common PPT. Recommended limit: no more than 2-3 slides per member.",
+                "Presentation Duration: 5 to 7 minutes total per group (1-2 minutes per individual speaker, max 7-8 minutes overall across 40+ groups).",
+                "Presentation Mode: Strictly Online Mode.",
+                "Tentative Schedule: Presentations will begin post-4 November; exact schedule will be announced subsequently."
+              ]
+            }
+          ],
+          actions: [
+            { label: "Book & Group Allocation Sheet ↗", url: "https://docs.google.com/spreadsheets/d/1ac79YtysmCIDk2CUGBlsm5hu2eqst493gBDxQbLCi_o/edit?usp=drivesdk", primary: true },
+            { label: "Course Google Drive ↗", url: "https://drive.google.com/drive/folders/1-FkMt_e90dReLvaaRussYNO71BUz88_9" }
           ]
         }
       ]
@@ -1504,6 +1592,15 @@ const portalData = {
           curators: "Batch Archive",
           url: "https://drive.google.com/drive/folders/1NDn8uOtrcdISW99hR9mB4y9yGxVve0uV",
           badge: "Archive Drive",
+          btnText: "Open Drive Repository"
+        },
+        {
+          id: "drive-dse25-ipt",
+          name: "PS-DSE 25: Key Concepts in Indian Political Thought",
+          curatorLabel: "Course Drive",
+          curators: "Dr. Smita Agarwal & Dr. Radha Kumari",
+          url: "https://drive.google.com/drive/folders/1-FkMt_e90dReLvaaRussYNO71BUz88_9",
+          badge: "Course Drive",
           btnText: "Open Drive Repository"
         }
       ]
