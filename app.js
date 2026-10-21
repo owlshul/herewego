@@ -424,7 +424,7 @@ function renderAssessmentsView() {
     ` : '';
 
     return `
-      <article class="paper-entry" data-paper-code="${paper.code}">
+      <article class="paper-entry" data-paper-code="${escapeHtml(paper.code)} ${escapeHtml(paper.shortName || '')} ${escapeHtml(paper.id || '')}">
         <div class="paper-header">
           <div class="paper-title-wrap">
             <h3 class="paper-title">
@@ -896,11 +896,12 @@ function filterAssessments(filter) {
       }, 40);
     }
   } else {
-    // Specific filter: dse47, dse16, sbc, dse13, dse06, 101, 102, 103
+    // Specific filter: dse47, dse25, dse16, sbc, cc101, dse13, dse35, dse06, etc.
+    const normalizedFilter = filter.toLowerCase().replace(/[-\s]/g, '');
     let matchedUpcoming = 0;
     upcomingCards.forEach(c => {
-      const code = (c.getAttribute('data-paper-code') || '').toLowerCase();
-      if (code.includes(filter.toLowerCase())) {
+      const code = (c.getAttribute('data-paper-code') || '').toLowerCase().replace(/[-\s]/g, '');
+      if (code.includes(normalizedFilter)) {
         c.style.display = 'block';
         matchedUpcoming++;
       } else {
@@ -910,8 +911,8 @@ function filterAssessments(filter) {
 
     let matchedOct9 = 0;
     oct9Cards.forEach(card => {
-      const code = (card.getAttribute('data-paper-code') || '').toLowerCase();
-      if (code.includes(filter.toLowerCase())) {
+      const code = (card.getAttribute('data-paper-code') || '').toLowerCase().replace(/[-\s]/g, '');
+      if (code.includes(normalizedFilter)) {
         card.style.display = 'block';
         matchedOct9++;
       } else {

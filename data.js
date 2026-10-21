@@ -13,7 +13,7 @@ const portalData = {
     batch: "MA Political Science (2026–2028)",
     campus: "North Campus, University of Delhi",
     classroom: "Room No. 18, Satyakam Bhawan",
-    lastUpdated: "14 October 2026, 7:00 PM IST",
+    lastUpdated: "21 October 2026, 1:45 PM IST",
     curator: "Anshul"
   },
 
@@ -21,6 +21,30 @@ const portalData = {
   // MERGED ANNOUNCEMENTS & VERIFIED CITATIONS (One unified dispute-settler feed)
   // ---------------------------------------------------------------------------
   verifiedAnnouncements: [
+    {
+      id: "va-dse35-ipe",
+      title: "DSE 35 (IPE): Assignment Due 31 Oct, Library Plagiarism Check (<10%) & Presentations",
+      date: "21 Oct 2026, 1:37 PM",
+      sender: "Drishti Falwaria",
+      source: "WhatsApp: IPE Group / Class Updates",
+      type: "assessment",
+      priority: true,
+      summary: "Typed assignment (8-10 pages, font 14, citations required, topic from syllabus) due 31 October on Google Classroom (Class Code: j4en4dcx). Mandatory Turnitin plagiarism report (< 10%) by emailing South Campus Library (fast 24h reply) or North Campus Library. Individual 10-minute presentations start next class.",
+      exactQuote: "Assignment-IPE: Everybody is required to choose a topic selected from the syllabus only. Typed (8-10 pages), font 14, proper citation. Email to library (South Campus library replies fast in 24 hours, North Campus may take >1 day) for Turnitin report (plagiarism must be less than 10%). Submit on Google Classroom (Code: j4en4dcx) by 31st October. In-class individual presentation (10 mins) starts from next class.",
+      tags: ["#DSE35", "#IPE", "#Assignment", "#31Oct", "#Plagiarism", "#Turnitin", "#GoogleClassroom"]
+    },
+    {
+      id: "va-cc101-ktpp-ca2",
+      title: "CC 101 (KTPP): CA-2 Written Test on 30 Oct - Friedrich Nietzsche Scope Confirmed",
+      date: "21 Oct 2026, 1:41 PM",
+      sender: "Drishti Falwaria",
+      source: "WhatsApp: Key Texts in Political Philosophy Updates",
+      type: "assessment",
+      priority: true,
+      summary: "Continuous Assessment 2 (CA-2) scheduled for Friday, 30 October 2026. Confirmed reading: Friedrich Nietzsche, Chapters 1 and 2, On the Genealogy of Morals (Ian Johnston translation). Remaining two thinkers / readings will be confirmed soon.",
+      exactQuote: "For CA- 30th october: Friedrich Nietzsche Chapter 1 and 2 on the Genealogy of Morals. Ian Johnston's translation of Genealogy of Morals in key texts in political philosophy. And rest two I will send you after confirmation.",
+      tags: ["#CC101", "#KTPP", "#CA2", "#30Oct", "#Nietzsche", "#GenealogyOfMorals"]
+    },
     {
       id: "va-dse25-ipt",
       title: "DSE 25 (IPT): IA Written Test on 16 Oct (11:15 AM - 12:30 PM) & CA Book Review Details",
@@ -474,6 +498,43 @@ const portalData = {
       ]
     },
     {
+      id: "cc-101-ktpp-ca2",
+      code: "PS-CC 101",
+      shortCode: "cc101 101",
+      title: "Key Texts in Political Philosophy",
+      shortTitle: "KTPP",
+      category: "Core Course (CC 1)",
+      faculty: "Dr. Saroj Giri & Dr. Ningthoujam Koiremba Singh",
+      primaryDate: "Friday, 30 October 2026",
+      statusText: "CA-2 · 30 Oct",
+      statusClass: "status-found",
+      components: [
+        {
+          title: "Continuous Assessment 2 (CA-2) - Written Test",
+          badge: "Friday, 30 Oct · 20 Marks",
+          badgeType: "due",
+          specs: [
+            { label: "Date", value: "Friday, 30 October 2026" },
+            { label: "Evaluation", value: "Continuous Assessment 2 (CA-2) · 20 Marks" },
+            {
+              label: "Confirmed Syllabus Reading",
+              value: [
+                "Friedrich Nietzsche: Chapters 1 and 2, 'On the Genealogy of Morals' (Ian Johnston translation)."
+              ]
+            },
+            {
+              label: "Additional Readings Status",
+              value: "Remaining syllabus topics / readings for CA-2 will be updated immediately upon confirmation by faculty."
+            }
+          ],
+          actions: [
+            { label: "Open Course Google Drive ↗", url: "https://drive.google.com/drive/folders/14aDMmng2MdpaOqH-WRKY724J598sfuJx", primary: true },
+            { label: "Comprehensive Syllabus & PYQs Drive ↗", url: "https://drive.google.com/drive/folders/1NDn8uOtrcdISW99hR9mB4y9yGxVve0uV" }
+          ]
+        }
+      ]
+    },
+    {
       id: "dse-13-south-asia",
       code: "PS-DSE 13",
       shortCode: "dse13",
@@ -503,6 +564,53 @@ const portalData = {
             { label: "Format", value: "Online examination consisting of 1 question." },
             { label: "Submission", value: "Submit on Google Classroom. Submission window will be either 6 hours or 1 day." },
             { label: "Status", value: "Date and topic details will be provided by faculty." }
+          ]
+        }
+      ]
+    },
+    {
+      id: "dse-35-ipe",
+      code: "PS-DSE 35",
+      shortCode: "dse35",
+      title: "International Political Economy",
+      shortTitle: "IPE",
+      category: "Discipline Specific Elective (DSE 2)",
+      faculty: "Dr. Sudhir Singh",
+      primaryDate: "Saturday, 31 October 2026",
+      statusText: "Assignment & Plagiarism Report · 31 Oct",
+      statusClass: "status-found",
+      components: [
+        {
+          title: "Continuous Assessment (CA) - Typed Assignment & Turnitin Report",
+          badge: "Due: 31 Oct · Typed (8-10 Pages)",
+          badgeType: "due",
+          specs: [
+            { label: "Submission Deadline", value: "Saturday, 31 October 2026" },
+            { label: "Submission Platform", value: "Google Classroom (Class Code: j4en4dcx)" },
+            { label: "Topic Scope", value: "Each student must choose a topic selected strictly from the official IPE syllabus only." },
+            { label: "Document Format", value: "Typed assignment (8 to 10 pages). Font size 14, with proper academic citations and bibliography format." },
+            {
+              label: "Mandatory Plagiarism Protocol (Turnitin < 10%)",
+              value: [
+                "1. Write Assignment: Prepare a typed assignment (8-10 pages, font 14) with proper academic citations and references.",
+                "2. Email University Library: Send your completed assignment to the library (South Campus Library or North Campus Library) for plagiarism verification. (Advice: South Campus Library is recommended as they typically reply quickly within 24 hours, whereas North Campus Library may take more than 1 day).",
+                "3. Plagiarism Clearance: Library runs Turnitin (checks plagiarism, academic theft, AI content) and emails back the plagiarism report in 1-2 days. The similarity index must be strictly less than 10%.",
+                "4. Final Submission: Upload both the typed assignment and the official Turnitin plagiarism report to Google Classroom before 31 October."
+              ]
+            }
+          ],
+          actions: [
+            { label: "Open Google Classroom (Code: j4en4dcx) ↗", url: "https://classroom.google.com/c/ODg2NjUxOTg1MjU5/a/ODg5MTc5NTg1ODAz/details", primary: true }
+          ]
+        },
+        {
+          title: "In-Class Individual Presentation",
+          badge: "10 Mins / Student · In Class",
+          badgeType: "normal",
+          specs: [
+            { label: "Topic", value: "Individual presentation on the exact same topic chosen for your written assignment." },
+            { label: "Duration", value: "Strictly 10 minutes allocated per student." },
+            { label: "Schedule", value: "Presentations commence starting from the very next class session." }
           ]
         }
       ]
