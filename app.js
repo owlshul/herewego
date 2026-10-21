@@ -502,7 +502,7 @@ function renderAssessmentsView() {
     }).join('');
 
     return `
-      <article class="paper-entry ste-card upcoming-assessment-card" data-paper-code="${escapeHtml(item.code)} ${escapeHtml(item.shortCode || '')} ${escapeHtml(item.id)}">
+      <article class="paper-entry ste-card upcoming-assessment-card" data-paper-code="${escapeHtml(item.code)} ${escapeHtml(item.shortCode || '')} ${escapeHtml(item.shortTitle || '')} ${escapeHtml(item.id)}">
         <div class="paper-header">
           <div class="paper-title-wrap">
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;">
