@@ -13,7 +13,7 @@ const portalData = {
     batch: "MA Political Science (2026–2028)",
     campus: "North Campus, University of Delhi",
     classroom: "Room No. 18, Satyakam Bhawan",
-    lastUpdated: "21 October 2026, 2:30 PM IST",
+    lastUpdated: "26 October 2026, 3:00 PM IST",
     curator: "Anshul"
   },
 
@@ -21,6 +21,18 @@ const portalData = {
   // MERGED ANNOUNCEMENTS & VERIFIED CITATIONS (One unified dispute-settler feed)
   // ---------------------------------------------------------------------------
   verifiedAnnouncements: [
+    {
+      id: "va-30oct-ca-cycle",
+      title: "Core Papers (30 Oct CA): KTPP (20M), DPII (15M) Syllabus & KP Jayaswal PDF Released",
+      date: "26 Oct 2026",
+      sender: "Official Announcements",
+      source: "WhatsApp: Official Announcements (Core Papers)",
+      type: "assessment",
+      priority: true,
+      summary: "Continuous Assessment on Friday, 30 October for all Core Papers. KTPP (20M): Nietzsche 2nd Essay (Guilt, Bad Conscience). DPII (15M): Ancient Republics, KP Jayaswal Hindu Polity Ch 2, 3, 4, 6, 7, 10; all questions compulsory (1x15M or 2x7.5M). IR CA syllabus updating tonight.",
+      exactQuote: "Syllabus for Continuous Assessment on 30th October' Friday. -Key Texts In Political Philosophy (20 Marks): Only 2nd Essay of Friedrich Nietzsche (“Guilt,” “Bad Conscience,” and Related Matters) (Ian Johnston Translation) till whatever will be taught in the class. -Democracy and Political Institutions in India (15 Marks): Unit I Topic A (Republics and constitutions in ancient India), Reading: KP Jaiswal Hindu Polity Chapters 2, 3, 4, 6, 7, 10. Pattern: All questions compulsory (1 for 15 or 2 for 7.5). SYLLABUS FOR THEORIES OF INTERNATIONAL RELATIONS WILL BE UPDATED TONIGHT.",
+      tags: ["#CorePapers", "#30Oct", "#KTPP", "#DPII", "#IR", "#Nietzsche", "#KPJayaswal", "#HinduPolity"]
+    },
     {
       id: "va-dse35-ipe",
       title: "DSE 35 (IPE): Assignment Due 31 Oct, Library Plagiarism Check (<10%) & Presentations",
@@ -271,8 +283,8 @@ const portalData = {
     cycleType: "Continuous Assessment (CA)",
     dateFormatted: "Friday, 30 October 2026",
     isoTarget: "2026-10-30T10:00:00+05:30",
-    statusText: "Next Main CA Deadline: 30 October 2026",
-    mainDeadlineNotice: "30th October is the main deadline for the Continuous Assessment (CA) cycle (KTPP CA-2 test & South Asia research paper). Individual IA written tests, presentations, and assignment deadlines are detailed in each respective section below.",
+    statusText: "Next: Core Papers CA Cycle (30 Oct)",
+    mainDeadlineNotice: "Friday, 30 October 2026 is the main Continuous Assessment (CA) date for Core Courses: KTPP (20M), DPII (15M), and IR. Individual paper IA written tests, presentations, and assignment deadlines are detailed in each respective section below.",
     game: {
       headline: "thak gye honge padhte padhte, lijiye game kheliye",
       url: "https://owlshul.github.io/demockracy/",
@@ -283,6 +295,121 @@ const portalData = {
   },
 
   upcomingAssessments: [
+    {
+      id: "cc-101-ktpp-ca2",
+      code: "PS-CC 101",
+      shortCode: "cc101 101",
+      title: "Key Texts in Political Philosophy",
+      shortTitle: "KTPP",
+      category: "Core Course (CC 1)",
+      faculty: "Dr. Saroj Giri & Dr. Ningthoujam Koiremba Singh",
+      primaryDate: "Friday, 30 October 2026",
+      statusText: "CA Written Test · 30 Oct · 20M",
+      statusClass: "status-found",
+      components: [
+        {
+          title: "Continuous Assessment (CA) - Written Test",
+          badge: "Friday, 30 Oct · 20 Marks",
+          badgeType: "due",
+          specs: [
+            { label: "Date & Weightage", value: "Friday, 30 October 2026 · 20 Marks" },
+            { label: "Exam Pattern", value: "Question pattern to be announced by faculty." },
+            {
+              label: "Syllabus Scope",
+              value: [
+                "Only 2nd Essay of Friedrich Nietzsche: “Guilt,” “Bad Conscience,” and Related Matters (Ian Johnston Translation), up to whatever will be taught in class."
+              ]
+            },
+            { label: "Assigned Reading", value: "Friedrich Nietzsche, On the Genealogy of Morals: A Polemical Tract, Second Essay (Translated by Ian Johnston)." }
+          ],
+          actions: [
+            { label: "Open Course Google Drive ↗", url: "https://drive.google.com/drive/folders/14aDMmng2MdpaOqH-WRKY724J598sfuJx", primary: true },
+            { label: "Comprehensive Syllabus & PYQs Drive ↗", url: "https://drive.google.com/drive/folders/1NDn8uOtrcdISW99hR9mB4y9yGxVve0uV" }
+          ]
+        }
+      ]
+    },
+    {
+      id: "cc-102-dpii-ca2",
+      code: "PS-CC 102",
+      shortCode: "cc102 102",
+      title: "Democracy and Political Institutions in India",
+      shortTitle: "DPII",
+      category: "Core Course (CC 2)",
+      faculty: "Prof. Ujjwal Kumar Singh",
+      primaryDate: "Friday, 30 October 2026",
+      statusText: "CA Written Test · 30 Oct · 15M",
+      statusClass: "status-found",
+      components: [
+        {
+          title: "Continuous Assessment (CA) - Written Test",
+          badge: "Friday, 30 Oct · 15 Marks",
+          badgeType: "due",
+          specs: [
+            { label: "Date & Weightage", value: "Friday, 30 October 2026 · 15 Marks" },
+            {
+              label: "Exam Pattern",
+              value: "All questions are compulsory. Faculty decides exact question distribution (e.g., 1 question for 15 Marks, or 2 questions for 7.5 Marks each, etc.)."
+            },
+            {
+              label: "Syllabus Scope",
+              value: "Unit I Topic A: Republics and constitutions in ancient India."
+            },
+            {
+              label: "Assigned Reading",
+              value: "K.P. Jayaswal, Hindu Polity: A Constitutional History of India."
+            },
+            {
+              label: "Assigned Chapters",
+              value: [
+                "Chapter 2: Samiti",
+                "Chapter 3: Sabha",
+                "Chapter 4: Rise of Hindu Republics",
+                "Chapter 6: Republic of Buddhist (Republics of the Buddhists)",
+                "Chapter 7: Republics in Arthashastra",
+                "Chapter 10: Technical Hindu Constitution"
+              ]
+            }
+          ],
+          actions: [
+            { label: "Download K.P. Jayaswal PDF ↗", url: "https://drive.google.com/file/d/14IytD1voo-vOmFJRnHAtgXtVRZHNEx06/view?usp=drive_link", primary: true },
+            { label: "Open Faculty Shared Drive (DPII) ↗", url: "https://drive.google.com/drive/folders/1gL9IVzLxIhe4BSoghS_FbXaAT6qkcTjZ" },
+            { label: "Open CR Maintained Drive ↗", url: "https://drive.google.com/drive/folders/14aDMmng2MdpaOqH-WRKY724J598sfuJx" }
+          ]
+        }
+      ]
+    },
+    {
+      id: "cc-103-ir-ca2",
+      code: "PS-CC 103",
+      shortCode: "cc103 103",
+      title: "Theories of International Relations",
+      shortTitle: "IR",
+      category: "Core Course (CC 3)",
+      faculty: "Prof. Navnita C. Behera & Department Faculty",
+      primaryDate: "Friday, 30 October 2026",
+      statusText: "CA Written Test · 30 Oct · Scope Updating Tonight",
+      statusClass: "status-found",
+      components: [
+        {
+          title: "Continuous Assessment (CA) - Written Test",
+          badge: "Friday, 30 Oct · Scope Updating Tonight",
+          badgeType: "due",
+          specs: [
+            { label: "Date", value: "Friday, 30 October 2026" },
+            { label: "Evaluation", value: "Continuous Assessment (CA)" },
+            {
+              label: "Syllabus Status",
+              value: "Syllabus topics and assigned readings for Theories of International Relations will be updated tonight as per official faculty announcement."
+            }
+          ],
+          actions: [
+            { label: "Open CR Maintained Drive ↗", url: "https://drive.google.com/drive/folders/14aDMmng2MdpaOqH-WRKY724J598sfuJx", primary: true },
+            { label: "Batch Master Archive Drive ↗", url: "https://drive.google.com/drive/folders/1NDn8uOtrcdISW99hR9mB4y9yGxVve0uV" }
+          ]
+        }
+      ]
+    },
     {
       id: "dse-47-iepp",
       code: "PS-DSE 47",
@@ -495,43 +622,6 @@ const portalData = {
           specs: [
             { label: "Structure", value: "1 credit lecture + 1 credit practical. Class schedule: Fridays, 9:00 AM - 11:00 AM (Room 18 when offline, North Campus)." },
             { label: "Status", value: "Practical electoral data analysis discussion. Viva and schedule TBA. No written exam announced yet." }
-          ]
-        }
-      ]
-    },
-    {
-      id: "cc-101-ktpp-ca2",
-      code: "PS-CC 101",
-      shortCode: "cc101 101",
-      title: "Key Texts in Political Philosophy",
-      shortTitle: "KTPP",
-      category: "Core Course (CC 1)",
-      faculty: "Dr. Saroj Giri & Dr. Ningthoujam Koiremba Singh",
-      primaryDate: "Friday, 30 October 2026",
-      statusText: "CA-2 · 30 Oct",
-      statusClass: "status-found",
-      components: [
-        {
-          title: "Continuous Assessment 2 (CA-2) - Written Test",
-          badge: "Friday, 30 Oct · 20 Marks",
-          badgeType: "due",
-          specs: [
-            { label: "Date", value: "Friday, 30 October 2026" },
-            { label: "Evaluation", value: "Continuous Assessment 2 (CA-2) · 20 Marks" },
-            {
-              label: "Confirmed Syllabus Reading",
-              value: [
-                "Friedrich Nietzsche: Chapters 1 and 2, 'On the Genealogy of Morals' (Ian Johnston translation)."
-              ]
-            },
-            {
-              label: "Additional Readings Status",
-              value: "Remaining syllabus topics / readings for CA-2 will be updated immediately upon confirmation by faculty."
-            }
-          ],
-          actions: [
-            { label: "Open Course Google Drive ↗", url: "https://drive.google.com/drive/folders/14aDMmng2MdpaOqH-WRKY724J598sfuJx", primary: true },
-            { label: "Comprehensive Syllabus & PYQs Drive ↗", url: "https://drive.google.com/drive/folders/1NDn8uOtrcdISW99hR9mB4y9yGxVve0uV" }
           ]
         }
       ]
