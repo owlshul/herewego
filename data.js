@@ -323,8 +323,7 @@ const portalData = {
             { label: "Assigned Reading", value: "Friedrich Nietzsche, On the Genealogy of Morals: A Polemical Tract, Second Essay (Translated by Ian Johnston)." }
           ],
           actions: [
-            { label: "Open Course Google Drive ↗", url: "https://drive.google.com/drive/folders/14aDMmng2MdpaOqH-WRKY724J598sfuJx", primary: true },
-            { label: "Comprehensive Syllabus & PYQs Drive ↗", url: "https://drive.google.com/drive/folders/1NDn8uOtrcdISW99hR9mB4y9yGxVve0uV" }
+            { label: "Download Nietzsche PDF ↗", url: "https://drive.google.com/file/d/1opuvf2YeI5XHpwrPqaQSAmcThdxfFPym/view", primary: true }
           ]
         }
       ]
@@ -372,9 +371,7 @@ const portalData = {
             }
           ],
           actions: [
-            { label: "Download K.P. Jayaswal PDF ↗", url: "https://drive.google.com/file/d/14IytD1voo-vOmFJRnHAtgXtVRZHNEx06/view?usp=drive_link", primary: true },
-            { label: "Open Faculty Shared Drive (DPII) ↗", url: "https://drive.google.com/drive/folders/1gL9IVzLxIhe4BSoghS_FbXaAT6qkcTjZ" },
-            { label: "Open CR Maintained Drive ↗", url: "https://drive.google.com/drive/folders/14aDMmng2MdpaOqH-WRKY724J598sfuJx" }
+            { label: "Download K.P. Jayaswal PDF ↗", url: "https://drive.google.com/file/d/14IytD1voo-vOmFJRnHAtgXtVRZHNEx06/view?usp=drive_link", primary: true }
           ]
         }
       ]
