@@ -13,7 +13,7 @@ const portalData = {
     batch: "MA Political Science (2026–2028)",
     campus: "North Campus, University of Delhi",
     classroom: "Room No. 18, Satyakam Bhawan",
-    lastUpdated: "26 October 2026, 3:00 PM IST",
+    lastUpdated: "29 October 2026, 3:00 PM IST",
     curator: "Anshul"
   },
 
@@ -21,6 +21,18 @@ const portalData = {
   // MERGED ANNOUNCEMENTS & VERIFIED CITATIONS (One unified dispute-settler feed)
   // ---------------------------------------------------------------------------
   verifiedAnnouncements: [
+    {
+      id: "va-ir-ca2-syllabus-29oct",
+      title: "CC 103 (IR): CA Syllabus & Pattern Released (15 Marks · 3 Compulsory Questions)",
+      date: "29 Oct 2026",
+      sender: "Official Announcements",
+      source: "WhatsApp: Official Announcements (Core Papers)",
+      type: "assessment",
+      priority: true,
+      summary: "Syllabus and pattern confirmed for CC-Theories of International Relations (15 Marks) on Friday, 30 October. Topics: 1. Postcolonial/Decolonial Approaches to IR; 2. Indian Contributions to Theorizing IR; 3. Post Modernism/Post Structuralism. Format: Same as 1st round of CA (3 short questions of 5 marks each, all compulsory).",
+      exactQuote: "ANNOUNCEMENT: Syllabus for Continuous Assessment CC-Theories of International Relations (15 Marks): 1. Postcolonial/Decolonial Approches to IR, 2. Indian Contributions to Theorizing IR, 3. Post Modernism/Post Structuralism. Format will be same as the first round of CA! 3 short questions of 5 marks each! All must be attempted.",
+      tags: ["#CorePapers", "#30Oct", "#IR", "#PSCC103", "#Postcolonial", "#IndianContributions", "#Postmodernism"]
+    },
     {
       id: "va-30oct-ca-cycle",
       title: "Core Papers (30 Oct CA): KTPP (20M), DPII (15M) Syllabus & KP Jayaswal PDF Released",
@@ -284,7 +296,7 @@ const portalData = {
     dateFormatted: "Friday, 30 October 2026",
     isoTarget: "2026-10-30T10:00:00+05:30",
     statusText: "Next: Core Papers CA Cycle (30 Oct)",
-    mainDeadlineNotice: "Friday, 30 October 2026 is the main Continuous Assessment (CA) date for Core Courses: KTPP (20M), DPII (15M), and IR. Individual paper IA written tests, presentations, and assignment deadlines are detailed in each respective section below.",
+    mainDeadlineNotice: "Friday, 30 October 2026 is the main Continuous Assessment (CA) date for Core Courses: KTPP (20M), DPII (15M), and IR (15M). Individual paper IA written tests, presentations, and assignment deadlines are detailed in each respective section below.",
     game: {
       headline: "thak gye honge padhte padhte, lijiye game kheliye",
       url: "https://owlshul.github.io/demockracy/",
@@ -385,19 +397,26 @@ const portalData = {
       category: "Core Course (CC 3)",
       faculty: "Prof. Navnita C. Behera & Department Faculty",
       primaryDate: "Friday, 30 October 2026",
-      statusText: "CA Written Test · 30 Oct · Scope Updating Tonight",
+      statusText: "CA Written Test · 30 Oct · 15M",
       statusClass: "status-found",
       components: [
         {
           title: "Continuous Assessment (CA) - Written Test",
-          badge: "Friday, 30 Oct · Scope Updating Tonight",
+          badge: "Friday, 30 Oct · 15 Marks",
           badgeType: "due",
           specs: [
-            { label: "Date", value: "Friday, 30 October 2026" },
-            { label: "Evaluation", value: "Continuous Assessment (CA)" },
+            { label: "Date & Weightage", value: "Friday, 30 October 2026 · 15 Marks" },
             {
-              label: "Syllabus Status",
-              value: "Syllabus topics and assigned readings for Theories of International Relations will be updated tonight as per official faculty announcement."
+              label: "Exam Pattern",
+              value: "Same format as 1st round of CA: 3 short questions of 5 marks each (3 Qs × 5M = 15 Marks). All questions are compulsory and must be attempted."
+            },
+            {
+              label: "Syllabus Scope",
+              value: [
+                "1. Postcolonial / Decolonial Approaches to IR",
+                "2. Indian Contributions to Theorizing IR",
+                "3. Post Modernism / Post Structuralism"
+              ]
             }
           ],
           actions: [

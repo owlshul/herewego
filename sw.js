@@ -1,12 +1,12 @@
 // herewego. - minimal service worker for PWA installability
-const CACHE = 'herewego-v18';
+const CACHE = 'herewego-v19';
 const ASSETS = [
   '/',
   '/index.html',
-  '/style.css?v=19',
-  '/syllabi_data.js?v=31',
-  '/app.js?v=31',
-  '/data.js?v=31',
+  '/style.css?v=20',
+  '/syllabi_data.js?v=32',
+  '/app.js?v=32',
+  '/data.js?v=32',
   '/icon-192.png',
   '/icon-512.png'
 ];
